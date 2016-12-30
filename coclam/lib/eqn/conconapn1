@@ -1,0 +1,1 @@
+problem([]==>x:int list=>h1:int=>h:int=>appn(0, h1::(::(h)), x)= x in int,_,_,_).

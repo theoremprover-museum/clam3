@@ -1,0 +1,43 @@
+problem([]==>x:int=>n:pnat=>l:int list=>member(x,nth(n,l))=>member(x,l),
+induction(s(v0),n:pnat),lambda(v0,lambda(v1,lambda(v2,lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v0],[v5]),[v3 of v1],[v4]))of lambda(n,p_ind(n,_240,[v0,v1,_246]))))),
+[problem([n:pnat]==>x:int=>l:int list=>member(x,nth(0,l))=>member(x,l),
+ sym_eval([base([2,1],nth1)]),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _319,[nth1 of v1],[v2]),[term_of(nth1)],[nth1]))),
+ [problem([n:pnat]==>x:int=>l:int list=>member(x,l)=>member(x,l),
+  tautology((intro then wfftacs)then(intro then wfftacs)then intro then[hyp(v0),wfftacs]),lambda(x,lambda(l,lambda(v0,v0))),
+  [
+  ]) ext _319
+ ]) ext _240,
+ problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l)]==>x:int=>l:int list=>member(x,nth(s(v0),l))=>member(x,l),
+ induction(v2::v3,l:int list),lambda(v2,lambda(v3,lambda(v4,su(su(v6,[v5 of v2],[v6]),[v4 of v3],[v5]))of lambda(l,list_ind(l,_563,[v2,v3,v4,_571])))),
+ [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list]==>x:int=>member(x,nth(s(v0),nil))=>member(x,nil),
+  sym_eval([base([2,1],nth2),base([2],member1),base([1],member1)]),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _748,[member1 of v2],[v3]),[term_of(member1)],[member1])),[member1 of v2],[v3]),[term_of(member1)],[member1])),[nth2 of s(v0)],[v3]),[term_of(nth2)],[nth2])),
+  [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list]==>x:int=>void=>void,
+   tautology((intro then wfftacs)then intro then[hyp(v2),wfftacs]),lambda(x,lambda(v2,v2)),
+   [
+   ]) ext _748
+  ]) ext _563,
+  problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3)]==>x:int=>member(x,nth(s(v0),v2::v3))=>member(x,v2::v3),
+  wave([2,1],[nth3,left]),lambda(v5,su(su(su(su(lambda(v6,su(v7,[v6 of v5],[v7]))of _1053,[v7 of v3],[v8]),[v6 of v2],[v7]),[nth3 of v0],[v6]),[term_of(nth3)],[nth3])),
+  [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3)]==>x:int=>member(x,nth(v0,v3))=>member(x,v2::v3),
+   casesplit([x=v2 in int=>void,x=v2 in int]),lambda(x,lambda(v6,decide(v6,[v7,lambda(v5,_1257)of v7],[v8,lambda(v5,_1267)of v8]))of su(su(su(v7,[v6 of v2],[v7]),[v5 of x],[v6]),[term_of(deceqint)],[v5])),
+   [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3),x:int,v5:x=v2 in int=>void]==>member(x,nth(v0,v3))=>member(x,v2::v3),
+    wave([2],[member3,left]),su(su(su(su(su(_1458,[v8 of v5],[v6]),[v7 of v3],[v8]),[v6 of v2],[v7]),[member3 of x],[v6]),[term_of(member3)],[member3]),
+    [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3),x:int,v5:x=v2 in int=>void]==>member(x,nth(v0,v3))=>member(x,v3),
+     strong_fertilize(v1),su(su(v7,[v6 of v3],[v7]),[v1 of x],[v6]),
+     [
+     ]) ext _1458
+    ]) ext _1257,
+    problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3),x:int,v5:x=v2 in int]==>member(x,nth(v0,v3))=>member(x,v2::v3),
+    sym_eval([equal(v5,left)]),_1656,
+    [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3),x:int]==>member(v2,nth(v0,v3))=>member(v2,v2::v3),
+     wave([2],[member2,left]),su(su(su(su(su(_1928,[v7 of axiom],[v5]),[v6 of v3],[v7]),[v5 of v2],[v6]),[member2 of v2],[v5]),[term_of(member2)],[member2]),
+     [problem([n:pnat,v0:pnat,v1:x:int=>l:int list=>member(x,nth(v0,l))=>member(x,l),l:int list,v2:int,v3:int list,v4:x:int=>member(x,nth(s(v0),v3))=>member(x,v3),x:int]==>member(v2,nth(v0,v3))=>{true},
+      tautology(intro then[istrue,wfftacs]),lambda(v5,0),
+      [
+      ]) ext _1928
+     ]) ext _1656
+    ]) ext _1267
+   ]) ext _1053
+  ]) ext _571
+ ]) ext _246
+]).

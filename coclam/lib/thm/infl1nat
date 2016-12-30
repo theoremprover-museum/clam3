@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>infl1(a, idnat, s)=jump(a, s(0))in pnat list,_,_,_).

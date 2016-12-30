@@ -1,0 +1,10 @@
+problem([]==>symbol:{sexp}=>{bool},
+normalize_goal([[unroll,_2990]]),_2969,
+[problem([]==>symbol:rec(sexp,unary\atom\pnat\sexp#sexp)=>unary\unary,
+ intro_hyps([]),lambda(symbol,_3033),
+ [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp)]==>unary\unary,
+  intro(explicit(decide(symbol,[l,{false}],[r,decide(r,[l,{true}],[r,{false}])])))then prove_mem,decide(symbol,[l,{false}],[r,decide(r,[l,{true}],[r,{false}])]),
+  [
+  ]) ext _3033
+ ]) ext _2969
+]).

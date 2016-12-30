@@ -1,0 +1,1066 @@
+/usr/local/achtriochtan/src/emacs-18.57/etc/env: Cannot execute "/home/sin1/santiago/onachclam": Permission denied
+
+Process prolog exited abnormally with code 13
+
+Quintus Prolog Release 2.5 (Sun-3, SunOS 4.0)
+Copyright (C) 1990, Quintus Computer Systems, Inc.  All rights reserved.
+1310 Villa Street, Mountain View, California  (415) 965-7700
+
+CLaM Proof Planner Version 1.5 (libraries only) (9/9/91 18:47)
+
+CLaM Proof Planner Version 1.5 (9/9/91 19:01)
+
+| ?- ['/home/sin1/santiago/Oyster/Clam/Hints/hints'].
+[consulting /home/sin1/santiago/Oyster/Clam/Hints/hints.pl...]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/plan-dht.pl...]
+ [plan-dht.pl consulted 0.817 sec 2,236 bytes]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/plan-idht.pl...]
+
+Procedure bound/1 is being redefined in a different file - 
+    Previous file: /home/morar1/oyster/clam.v1.5/proof_planning/plan_id
+    New file:      /home/sin1/santiago/Oyster/Clam/Hints/plan-idht.pl
+Do you really want to redefine it? (y, n, p, or ?) p
+ [plan-idht.pl consulted 1.083 sec 2,260 bytes]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/plan-gdht.pl...]
+
+Procedure g_applicable/1 is being redefined in a different file - 
+    Previous file: /home/morar1/oyster/clam.v1.5/proof_planning/plan_gdf
+    New file:      /home/sin1/santiago/Oyster/Clam/Hints/plan-gdht.pl
+Do you really want to redefine it? (y, n, p, or ?) p
+ [plan-gdht.pl consulted 1.567 sec 3,664 bytes]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/hint_context.pl...]
+ [hint_context.pl consulted 0.667 sec 2,212 bytes]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/mylibrary...]
+
+Procedure logical_object/1 is being redefined in a different file - 
+    Previous file: /home/morar1/oyster/clam.v1.5/proof_planning/library
+    New file:      /home/sin1/santiago/Oyster/Clam/Hints/mylibrary
+Do you really want to redefine it? (y, n, p, or ?) p
+ [mylibrary consulted 6.867 sec 22,388 bytes]
+ [consulting /home/sin1/santiago/Oyster/Clam/Hints/mymethod_db...]
+
+Procedure load_method/1 is being redefined in a different file - 
+    Previous file: /home/morar1/oyster/clam.v1.5/proof_planning/method_db
+    New file:      /home/sin1/santiago/Oyster/Clam/Hints/mymethod_db
+Do you really want to redefine it? (y, n, p, or ?) p
+ [mymethod_db consulted 3.633 sec 9,856 bytes]
+loading hint(gen_hint/3) . done
+loading hint(casesplit_hint/2) . done
+loading hint(consider_finished/2) . done
+loading hint(existential_hint/3) . done
+loading hint(normal/1) . done
+loading hint(normalize/1) . done
+
+Procedure applcble/4 is being redefined in a different file - 
+    Previous file: /home/morar1/oyster/clam.v1.5/proof_planning/applicable
+    New file:      /home/sin1/santiago/Oyster/Clam/Hints/hints.pl
+Do you really want to redefine it? (y, n, p, or ?) p
+[hints.pl consulted 21.483 sec 62,312 bytes]
+
+yes
+| ?- lib_load(thm(assp)).
+loading def(plus)...done
+loading eqn(plus1)...done
+loading eqn(plus2)...done
+ adding wave-record for plus2...done
+ adding wave-record (backwards) for plus2...done
+ adding base-defeqn-record for plus1...done 
+ adding base-defeqn-record for plus2...done 
+ adding sym-eval-set-record for [plus2]...done
+ adding condition-set-record for [plus1,plus2]...done
+loading thm(cnc_s)...done
+ adding wave-record for cnc_s...done
+loading thm(assp)...done
+
+yes
+| ?- select(assp).
+
+yes
+| ?- idhtplan([]).
+Increased max depth to 0
+Increased max depth to 1
+Increased max depth to 2
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+|Selected method at depth 1: induction([s(v0)],y:pnat)
+Increased max depth to 3
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+||Selected method at depth 2: sym_eval(...)
+|||Terminating method at depth 3: tautology(...)
+||Selected method at depth 2: ripple(...)
+|||Terminating method at depth 3: strong_fertilize(v1)
+induction([s(v0)],x:pnat) then 
+  [sym_eval(...) then 
+     tautology(...),
+   ripple(...) then 
+     strong_fertilize(v1)
+  ]
+
+yes
+| ?- idhtplan([alw_after(_,askme)]).
+Increased max depth to 0
+Increased max depth to 1
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> pla.
+
+
+
+<current>
+
+
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> seq.
+
+
+
+==> x:pnat=>
+     y:pnat=>
+       z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat
+
+
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+Increased max depth to 2
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+** Syntax error:  **
+[t,pro,seq,pla,c,a,e,sel,r,h]
+** here **
+<?>r
+
+|: r.
+
+
+
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+|Selected method at depth 1: induction([s(v0)],y:pnat)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+Increased max depth to 3
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> pla.
+
+
+
+<current>
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+||Selected method at depth 2: sym_eval(...)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+|||Terminating method at depth 3: tautology(...)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+||Selected method at depth 2: ripple(...)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+|||Terminating method at depth 3: strong_fertilize(v1)
+induction([s(v0)],x:pnat) then 
+  [sym_eval(...) then 
+     tautology(...),
+   ripple(...) then 
+     strong_fertilize(v1)
+  ]
+
+yes
+| ?- lib_load(thm(assoc_plus),'/home/sin1/santiago/Oyster/Clam/lib').
+loading thm(assoc_plus)...done
+
+yes
+| ?- select(assoc_plus).
+
+yes
+| ?- idhtplan([after(_,gen_hint(_,_,_))]).
+Increased max depth to 0
+Increased max depth to 1
+
+
+ (Hint-)Method: gen_hint(_47,_56,_822:pnat) is not applicable for _1616 effects.
+|Terminating method at depth 1: apply_lemma(assp)
+apply_lemma(assp)
+
+yes
+| ?- lib_delete(thm(assp)).
+deleting theorem record for assp...done
+deleting thm(assp)...done
+
+yes
+| ?- idhtplan([after(_,gen_hint(_,_,_))]).
+Increased max depth to 0
+Increased max depth to 1
+
+
+ (Hint-)Method: gen_hint(_47,_56,_822:pnat) is not applicable for _1616 effects.
+Increased max depth to 2
+|Selected method at depth 1: gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v0:pnat)
+|Selected method at depth 1: generalise(plus(x,x),v0:pnat)
+
+
+ (Hint-)Method: gen_hint(_47,_56,_822:pnat) is not applicable for _4158 effects.
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+
+
+ (Hint-)Method: gen_hint(_47,_56,_822:pnat) is not applicable for _5961 effects.
+Increased max depth to 3
+|Selected method at depth 1: gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v0:pnat)
+||Selected method at depth 2: induction([s(v1)],v0:pnat)
+||Selected method at depth 2: induction([s(v1)],x:pnat)
+|Selected method at depth 1: generalise(plus(x,x),v0:pnat)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _3171 effects.
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _3251 effects.
+||Selected method at depth 2: induction([s(v1)],v0:pnat)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _5306 effects.
+||Selected method at depth 2: induction([s(v1)],x:pnat)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _5309 effects.
+|Selected method at depth 1: induction([s(v0)],x:pnat)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _4737 effects.
+||Selected method at depth 2: gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v0:pnat)
+||Selected method at depth 2: sym_eval(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _5484 effects.
+|||Terminating method at depth 3: tautology(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _7228 effects.
+||Selected method at depth 2: gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v1:pnat)
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _30904 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _25616 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _23601 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _18995 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _12818 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _9774 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _7315 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37179 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _31891 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38197 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _32909 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _21774 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37299 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38317 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _27147 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _20369 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _15031 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37181 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _31893 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38199 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _32911 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _21776 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _15374 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37299 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38317 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _27147 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _20369 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37299 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38317 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _27147 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _20745 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _13969 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _8631 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37303 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _38321 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _27151 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _20749 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _15393 effects.
+||Selected method at depth 2: ripple(...)
+
+
+ (Hint-)Method: gen_hint(_1,_2,_247:pnat) is not applicable for _37299 effects.
+
+Prolog interruption (h for help)? a
+[ Execution aborted ]
+
+
+| ?- dhtplan([imm_after(_,gen_hint(_,_,_))]).
+
+
+ (Hint-)Method: gen_hint(_66,_75,_846:pnat) is not applicable for _1291 effects.
+
+------> Position: root reached.
+
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> pro.
+
+
+
+<prolog ?> app_notice(input,caca,_,[]).
+
+[Warning: the procedure app_notice/4 is undefined (warning 2100)]
+[However, app_notice/5 is defined]
+   (1) 13 Call: app_notice(input,caca,_1952,[]) ? n
+
+-no
+<prolog ?> <prolog ?> app_notice(method,input,caca,_,[]).
+
+** Syntax error:  **
+<
+** here **
+prolog?>app_notice(method,input,caca,_,[])
+
+|: app_notice(method,input,caca,_,[]).
+
+
+
+ (Hint-)Method: caca is not applicable for _1958 effects.
+
+-no
+<prolog ?> true.
+
+
+-yes
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+Selected method at depth 0: gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v0:pnat)
+|Selected method at depth 1: induction([s(v1)],v0:pnat)
+||Selected method at depth 2: sym_eval(...)
+|||Terminating method at depth 3: tautology(...)
+||Selected method at depth 2: ripple(...)
+|||Terminating method at depth 3: strong_fertilize(v2)
+gen_hint(plus_assoc,[[1,1,1],[1,1,2,1]],v0:pnat) then 
+  induction([s(v1)],v0:pnat) then 
+    [sym_eval(...) then 
+       tautology(...),
+     ripple(...) then 
+       strong_fertilize(v2)
+    ]
+
+yes
+| ?- lib_load(hint(gen_thm),'/home/sin1/santiago/Oyster/Clam/lib').
+CLaM ERROR: Illegal specification of logical object: hint(gen_thm).
+            Should be one of:
+    thm(A)
+    lemma(B)
+    wave(C)
+    synth(D)
+    scheme(E)
+    def(F)
+    eqn(G)
+    red(H)
+    mthd(I/J)
+    smthd(K/L)
+    ndef(M)
+    rtype(N)
+    templ(O)
+    hint(P/Q)
+
+no
+| ?- lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib').
+loading hint(gen_thm/2) . done
+
+yes
+| ?- lib_load(thm(rotlen)).
+loading def(app)...done
+loading eqn(app1)...done
+loading eqn(app2)...done
+ adding wave-record for app2...done
+ adding wave-record (backwards) for app2...done
+ adding base-defeqn-record for app1...done 
+ adding base-defeqn-record for app2...done 
+ adding sym-eval-set-record for [app2]...done
+ adding condition-set-record for [app1,app2]...done
+loading def(hd)...done
+loading eqn(hd1)...done
+loading eqn(hd2)...done
+ adding base-defeqn-record for hd1...done 
+ adding base-defeqn-record for hd2...done 
+loading def(tl)...done
+loading eqn(tl1)...done
+loading eqn(tl2)...done
+ adding base-defeqn-record for tl1...done 
+ adding base-defeqn-record for tl2...done 
+loading def(rotate)...done
+loading eqn(rotate1)...done
+loading eqn(rotate2)...done
+loading eqn(rotate3)...done
+ adding wave-record for rotate2...done
+ adding complementary-rewrite-record for rotate3...done 
+ adding base-defeqn-record for rotate1...done 
+ adding base-defeqn-record for rotate2...done 
+ adding base-defeqn-record for rotate3...done 
+ adding sym-eval-set-record for [rotate2,rotate3]...done
+ adding condition-set-record for [rotate1,rotate2,rotate3]...done
+ adding recursive-record for rotate...done
+loading def(length)...done
+loading eqn(length1)...done
+loading eqn(length2)...done
+ adding wave-record for length2...done
+ adding wave-record (backwards) for length2...done
+ adding base-defeqn-record for length1...done 
+ adding base-defeqn-record for length2...done 
+ adding sym-eval-set-record for [length2]...done
+ adding condition-set-record for [length1,length2]...done
+loading thm(app1right)...done
+ adding reduction-record for app1right...done
+loading thm(assapp)...done
+ adding wave-record for assapp...done
+ adding wave-record for assapp...done
+ adding wave-record (backwards) for assapp...done
+ adding wave-record for assapp...done
+ adding wave-record for assapp...done
+ adding wave-record (backwards) for assapp...done
+loading thm(cnc_app)...done
+ adding wave-record for cnc_app...done
+loading thm(rotlen)...done
+
+yes
+| ?- lib_load(thm(rot),'/home/sin1/santiago/Oyster/Clam/lib').
+loading thm(rot)...done
+
+yes
+| ?- select(rot).
+
+yes
+| ?- lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib').
+loading hint(gen_thm/2) . done
+
+yes
+| ?- display.
+rot: [] incomplete autotactic(idtac) 
+==> l:int list=>rotate(length(l),l)=l in int list
+by _
+
+
+yes
+| ?- applicble(hint,H).
+[Warning: the procedure applicble/2 is undefined (warning 2100)]
+   (1) 0 Call: applicble(hint,_30) ? n
+
+no
+| ?- applcble(hint,H).
+
+H = consider_finished(interactive,[]==>l:int list=>rotate(length(l),l)=l in int list) ;
+
+H = normalize([.]) ;
+
+no
+| ?- dhtplan([alw_after(_,askme)]).
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> seq.
+
+
+
+==> l:int list=>rotate(length(l),l)=l in int list
+
+
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> a.
+
+
+
+Methods: 
+induction([v0::v1],l:int list)
+
+
+Hints: 
+normalize([.])
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> pro.
+
+
+
+<prolog ?> theorem(rotlen,T).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+
+-yes
+<prolog ?> display.
+
+rot: [] incomplete autotactic(idtac) 
+==> l:int list=>rotate(length(l),l)=l in int list
+by _
+
+
+-yes
+<prolog ?> theorem(rotlen,T), goal(G), applicable([]==>T,M,_,[]==>G).
+
+
+-no
+<prolog ?>  theorem(rotlen,T), goal(G), applicable([]==>T,M,_,O).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+var(2)= (l:int list=>rotate(length(l),l)=l in int list)
+var(3)=apply_lemma(rotlen)
+var(4)=[]
+var(5)=[]
+
+-yes
+<prolog ?> lib_delete(thm(apply_lemma)).
+
+CLaM ERROR: thm(apply_lemma) not present, so cannot be deleted
+
+-no
+<prolog ?> lib_delete(mthd(apply_lemma/1)).
+
+deleting mthd(apply_lemma/1)...done
+
+-yes
+<prolog ?> theorem(rotlen,T), goal(G), applicable([]==>T,M,_,O).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+var(2)= (l:int list=>rotate(length(l),l)=l in int list)
+var(3)=induction([v0::v1],l:int list)
+var(4)=[set_indhyp_state([],notraw(_2457),[]),scheme([v0::v1],l:int list,[]==>l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list,[[p:int list,l:int list]==>rotate(length(nil),app(nil,p))=app(p,nil)in int list],[[v0:int,v1:int list,ih:[ihmarker(_3207,[]),v2:p:int list=>rotate(length(v1),app(v1,p))=app(p,v1)in int list],p:int list,l:int list]==>rotate(length(``v0::{v1}''<out>),app(``v0::{v1}''<out>,\p/))=app(\p/,``v0::{v1}''<out>)in int list]),append([[p:int list,l:int list]==>rotate(length(nil),app(nil,p))=app(p,nil)in int list],[[v0:int,v1:int list,ih:[ihmarker(_3207,[]),v2:p:int list=>rotate(length(v1),app(v1,p))=app(p,v1)in int list],p:int list,l:int list]==>rotate(length(``v0::{v1}''<out>),app(``v0::{v1}''<out>,\p/))=app(\p/,``v0::{v1}''<out>)in int list],[[p:int list,l:int list]==>rotate(length(nil),app(nil,p))=app(p,nil)in int list,[v0:int,v1:int list,ih:[ihmarker(_3207,[]),v2:p:int list=>rotate(length(v1),app(v1,p))=app(p,v1)in int list],p:int list,l:int list]==>rotate(length(``v0::{v1}''<out>),app(``v0::{v1}''<out>,\p/))=app(\p/,``v0::{v1}''<out>)in int list])]
+var(5)=[[p:int list,l:int list]==>rotate(length(nil),app(nil,p))=app(p,nil)in int list,[v0:int,v1:int list,ih:[ihmarker(_3207,[]),v2:p:int list=>rotate(length(v1),app(v1,p))=app(p,v1)in int list],p:int list,l:int list]==>rotate(length(``v0::{v1}''<out>),app(``v0::{v1}''<out>,\p/))=app(\p/,``v0::{v1}''<out>)in int list]
+
+-yes
+<prolog ?> theorem(rotlen,T), goal(G), applicable([]==>T,M,_,[G]).
+
+
+-no
+<prolog ?> <prolog ?> theorem(rotlen,T), goal(G), applicable([]==>T,M,_,[G]).
+
+** Syntax error:  **
+<
+** here **
+prolog?>theorem(rotlen,T),goal(G),applicable([]==>T,M,_,[G])
+
+|: theorem(rotlen,T), goal(G), applicable([]==>T,M,_,[G]).
+
+
+-no
+<prolog ?> theorem(rotlen,T), goal(G), applicable([]==>T,sym_eval(_),_,O).
+
+
+-no
+<prolog ?> list_methods.
+
+
+    tautology/1
+    sym_eval/1
+    eval_case/1
+    ripple/1
+    strong_fertilize/1
+    weak_fertilize/2
+    backchain_lemma/1
+    normalize/1
+    generalise/2
+    induction/2
+
+-yes
+
+|: theorem(rotlen,T).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+
+-yes
+<prolog ?> theorem(rotlen,T), matrix(V,M,T).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+var(2)=[l:int list,p:int list]
+var(3)= (rotate(length(l),app(l,p))=app(p,l)in int list)
+
+-yes
+<prolog ?> theorem(rotlen,T), matrix([_:_|V],M,T), matrix(V,M,T1].
+
+** Syntax error:  **
+theorem(rotlen,T),matrix([_:_|V],M,T),matrix(V,M,T1
+** here **
+]
+
+|: theorem(rotlen,T), matrix([_:_|V],M,T), matrix(V,M,T1).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+var(2)=l
+var(3)=int list
+var(4)= (p:int list)
+var(5)= (rotate(length(l),app(l,p))=app(p,l)in int list)
+var(6)= (p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+
+-yes
+<prolog ?> lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib/hint').
+
+CLaM ERROR: cannot find file /home/sin1/santiago/Oyster/Clam/lib/hint/hint/gen_thm
+
+-no
+<prolog ?> lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib').
+
+** Syntax error:  **
+<
+** here **
+prolog?>lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib')
+
+|: lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib').
+
+loading hint(gen_thm/2) . done
+
+-yes
+<prolog ?> true.
+
+
+-yes
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> a.
+
+
+
+Methods: 
+induction([v0::v1],l:int list)
+
+
+Hints: 
+normalize([.])
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> t.
+
+
+
+Method/Hint ?:gen_thm(_,_).
+
+Preconditions tried: 
+
+[
+  hint_context(
+     gen_thm
+     rot
+     []==>l:int list=>rotate(length(l),l)=l in int list
+     [
+       rotlen
+     ]
+  theorem(
+     rotlen
+     l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list
+  matrix(
+     [
+       l:int list
+       p:int list
+     ]
+     rotate(length(l),app(l,p))=app(p,l)in int list
+     l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list
+  select(
+     l:int list
+     [
+       l:int list
+       p:int list
+     ]
+     [
+       p:int list
+     ]
+  replace_all(
+     l
+     _4154
+     rotate(length(l),app(l,p))=app(p,l)in int list
+     rotate(length(_4154),app(_4154,p))=app(p,_4154)in int list
+  matrix(
+     [
+       p:int list
+     ]
+     rotate(length(_4154),app(_4154,p))=app(p,_4154)in int list
+     p:int list=>rotate(length(_4154),app(_4154,p))=app(p,_4154)in int list
+  <end_of_evaluation>
+]
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> pro.
+
+
+
+<prolog ?> theorem(rotlen,Goal),matrix(V,M,Goal),select(Var:_,V,V1).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+var(2)=[l:int list,p:int list]
+var(3)= (rotate(length(l),app(l,p))=app(p,l)in int list)
+var(4)=l
+var(5)=int list
+var(6)=[p:int list]
+
+-yes
+<prolog ?> theorem(rotlen,Goal),matrix(V,M,Goal),select(Var:_,V,V1),write(Var),fail.
+
+lp
+-no
+<prolog ?>  theorem(rotlen,Goal),matrix(V,M,Goal),select(Var:_,V,V1),write(Var),fail.
+
+** Syntax error:  **
+theorem(rotlen,Goal),matrix(V,M,Goal),select(Var:_,V,V1),write(Var),\
+** here **
+fail
+
+|: theorem(rotlen,T).
+
+var(1)= (l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list)
+
+-yes
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,G).
+
+
+-no
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,G).
+
+
+-no
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,[G]).
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,[G]).
+
+** Syntax error:  **
+<
+** here **
+prolog?>goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,[G])
+
+|: goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,[G]).
+
+
+-no
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,[G]).
+<prolog ?> goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,[G]).
+
+** Syntax error:  **
+<
+** here **
+prolog?>goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,[G])
+
+|: goal(G),applicable(l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,[G]).
+
+
+-no
+<prolog ?> goal(G),applicable([]==>l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,M,_,[[]==>G]).
+
+var(1)= (l:int list=>rotate(length(l),l)=l in int list)
+var(2)=_1854
+var(3)=_1855
+var(4)=sym_eval(...)
+var(5)=[(apply(applicable,[[]==>l:int list=>rotate(length(l),l)=app(_3686,l)in int list,sym_eval(...),[(apply(applicable,[[]==>l:int list=>rotate(length(l),l)=l in int list,sym_eval(...),_4245,[[]==>l:int list=>rotate(length(l),l)=l in int list]])orelse[[]==>l:int list=>rotate(length(l),l)=l in int list]=[[]==>l:int list=>rotate(length(l),l)=l in int list],[]=[])],[[]==>l:int list=>rotate(length(l),l)=l in int list]])orelse[[]==>l:int list=>rotate(length(l),l)=l in int list]=[[]==>l:int list=>rotate(length(l),l)=app(_3686,l)in int list],[eval_def([2,1],app1)]=[])]
+
+-yes
+<prolog ?> goal(G),applicable([]==>l:int list=>rotate(length(l),app(l,_))=app(_,l)in int list,sym_eval(_),_,[[]==>G]).
+
+var(1)= (l:int list=>rotate(length(l),l)=l in int list)
+var(2)=_1854
+var(3)=_1855
+var(4)=[reduction([2,1,1],app1right),eval_def([2,1],app1)]
+var(5)=[(apply(applicable,[[]==>l:int list=>rotate(length(l),l)=app(_3770,l)in int list,sym_eval(...),[(apply(applicable,[[]==>l:int list=>rotate(length(l),l)=l in int list,sym_eval(...),_4329,[[]==>l:int list=>rotate(length(l),l)=l in int list]])orelse[[]==>l:int list=>rotate(length(l),l)=l in int list]=[[]==>l:int list=>rotate(length(l),l)=l in int list],[]=[])],[[]==>l:int list=>rotate(length(l),l)=l in int list]])orelse[[]==>l:int list=>rotate(length(l),l)=l in int list]=[[]==>l:int list=>rotate(length(l),l)=app(_3770,l)in int list],[eval_def([2,1],app1)]=[])]
+
+-yes
+<prolog ?> lib_load(hint(gen_thm/2),'/home/sin1/santiago/Oyster/Clam/lib').
+
+loading hint(gen_thm/2) . done
+
+-yes
+<prolog ?> true.
+
+
+-yes
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> a.
+
+
+
+Methods: 
+induction([v0::v1],l:int list)
+
+
+Hints: 
+normalize([.])
+gen_thm(rot,rotlen)
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> sel.
+
+
+
+Method/Hint ?:gen_thm(_,_).
+
+Selected method at depth 0: gen_thm(rot,rotlen)
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> seq.
+
+
+
+==> l:(int list)=>
+     p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list
+
+
+
+
+Looking for effects: []
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> r.
+
+
+
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> e.
+
+
+
+[alw_after(_0,askme)]
+[ i(n), (u)ndo, (a)dd, (d)elete, (q)uit ] <?> d.
+[]
+[ i(n), (u)ndo, (a)dd, (d)elete, (q)uit ] <?> q.
+
+[t,pro,seq,pla,c,a,e,sel,r,h] <?> sel.
+
+
+
+Method/Hint ?:_.
+
+|Selected method at depth 1: induction([v0::v1],l:int list)
+||Selected method at depth 2: sym_eval(...)
+|||Terminating method at depth 3: tautology(...)
+||Selected method at depth 2: ripple(...)
+|||Selected method at depth 3: weak_fertilize(left,[.])
+||||Selected method at depth 4: ripple(...)
+|||||Terminating method at depth 5: tautology(...)
+gen_thm(rot,rotlen) then 
+  induction([v0::v1],l:int list) then 
+    [sym_eval(...) then 
+       tautology(...),
+     ripple(...) then 
+       weak_fertilize(left,[.]) then 
+         ripple(...) then 
+           tautology(...)
+    ]
+
+yes
+| ?- display.
+rot: [] incomplete autotactic(idtac) 
+==> l:int list=>rotate(length(l),l)=l in int list
+by _
+
+
+yes
+| ?- dhtplan([after(_,gen_thm(_,_))]).
+
+
+ (Hint-)Method: gen_thm(_47,_56) is not applicable for _1186 effects.
+Selected method at depth 0: gen_thm(rot,rotlen)
+|Selected method at depth 1: induction([v0::v1],l:int list)
+||Selected method at depth 2: sym_eval(...)
+|||Terminating method at depth 3: tautology(...)
+||Selected method at depth 2: ripple(...)
+|||Selected method at depth 3: weak_fertilize(left,[.])
+||||Selected method at depth 4: ripple(...)
+|||||Terminating method at depth 5: tautology(...)
+gen_thm(rot,rotlen) then 
+  induction([v0::v1],l:int list) then 
+    [sym_eval(...) then 
+       tautology(...),
+     ripple(...) then 
+       weak_fertilize(left,[.]) then 
+         ripple(...) then 
+           tautology(...)
+    ]
+
+yes
+
+| ?- theorem(rotlen,T).
+
+T = l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list 
+
+| ?- 
+

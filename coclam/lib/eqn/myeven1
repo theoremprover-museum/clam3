@@ -1,0 +1,4 @@
+problem([]==>myeven(0)=true in bool,
+simplify,axiom,
+[
+]).

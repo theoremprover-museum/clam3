@@ -1,0 +1,49 @@
+problem([]==>symbol:{sexp}=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),
+intro_type_hyps_upto(symbol),lambda(symbol,_105600),
+[problem([symbol:{sexp}]==>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),
+ normalize_hyp([[unroll,_105662]],symbol),_105609,
+ [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp)]==>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),
+  elim_shell_type(symbol),rec_ind(symbol,[v2,v3,decide(v3,[v4,_105748],[v5,decide(v5,[v4,_105760],[v6,decide(v6,[v4,_105772],[v8,spread(v8,[v4,v10,_105785])])])])]),
+  [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v4:unary]==>v0:nj(nulp(inl(unit)))=>v1:nj(numberp(inl(unit)))=>v2:nj(consp(inl(unit)))=>j(symbolp(inl(unit))),
+   normalize_goal([[unroll,_105971]]),_105795,
+   [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v4:unary]==>v0:void=>v1:unary=>v2:unary=>void,
+    intro_hyps([]),lambda(v5,lambda(v6,lambda(v7,_106137))),
+    [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v4:unary,v5:void,v6:unary,v7:unary]==>void,
+     elim(v5),any(v5),
+     [
+     ]) ext _106137
+    ]) ext _105795
+   ]) ext _105748,
+   problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>v0:nj(nulp(inr(inl(v4))))=>v1:nj(numberp(inr(inl(v4))))=>v2:nj(consp(inr(inl(v4))))=>j(symbolp(inr(inl(v4)))),
+   normalize_goal([[unroll,_106546]]),_106301,
+   [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>v0:unary=>v1:unary=>v2:unary=>unary,
+    intro_hyps([]),lambda(v6,lambda(v9,lambda(v10,_106773))),
+    [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0),v6:unary,v9:unary,v10:unary]==>unary,
+     intro,v6,
+     [
+     ]) ext _106773
+    ]) ext _106301
+   ]) ext _105760,
+   problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>v0:nj(nulp(inr(inr(inl(v4)))))=>v1:nj(numberp(inr(inr(inl(v4)))))=>v2:nj(consp(inr(inr(inl(v4)))))=>j(symbolp(inr(inr(inl(v4))))),
+   normalize_goal([[unroll,_107277]]),_106994,
+   [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>v0:unary=>v1:void=>v2:unary=>void,
+    intro_hyps([]),lambda(v8,lambda(v11,lambda(v12,_107534))),
+    [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0),v8:unary,v11:void,v12:unary]==>void,
+     elim(v11),any(v11),
+     [
+     ]) ext _107534
+    ]) ext _106994
+   ]) ext _105772,
+   problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>v0:nj(nulp(inr(inr(inr(v4&v10)))))=>v1:nj(numberp(inr(inr(inr(v4&v10)))))=>v2:nj(consp(inr(inr(inr(v4&v10)))))=>j(symbolp(inr(inr(inr(v4&v10))))),
+   normalize_goal([[unroll,_108114]]),_107789,
+   [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>v0:unary=>v1:unary=>v2:void=>void,
+    intro_hyps([]),lambda(v13,lambda(v14,lambda(v15,_108401))),
+    [problem([symbol:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:symbol:v0=>symbol in rec(sexp,unary\atom\pnat\sexp#sexp),v2:symbol:v0=>v0:nj(nulp(symbol))=>v1:nj(numberp(symbol))=>v2:nj(consp(symbol))=>j(symbolp(symbol)),v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0),v13:unary,v14:unary,v15:void]==>void,
+     elim(v15),any(v15),
+     [
+     ]) ext _108401
+    ]) ext _107789
+   ]) ext _105785
+  ]) ext _105609
+ ]) ext _105600
+]).

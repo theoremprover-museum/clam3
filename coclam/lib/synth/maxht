@@ -1,0 +1,1 @@
+problem([]==>t:int tree=>pnat,_,_,_).

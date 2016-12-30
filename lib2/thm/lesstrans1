@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>((less(x,z)=>void)#less(x,z))=>less(x,y),
+tautology((intro then wfftacs)then(intro then wfftacs)then(intro then wfftacs)then intro then[elim(v0)then elim(v1)then[intro,elim(v4)],repeat intro]),lambda(x,lambda(y,lambda(z,lambda(v0,spread(v0,[v1,v2,su(any(v4),[v1 of v2],[v4])]))))),
+[
+]).

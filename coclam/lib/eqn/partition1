@@ -1,0 +1,2 @@
+problem([]==> a:pnat list => b:pnat list => 
+               partition(nil,a,b) = app(a,b) in pnat list,_,_,_).

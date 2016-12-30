@@ -1,0 +1,1 @@
+problem([]==>cps2ls(done)=nilST in st(char, char),_,_,_).

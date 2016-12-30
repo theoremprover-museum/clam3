@@ -1,0 +1,1 @@
+problem([]==>m:int=>lconst(m)=zig_zag(lconst(m)::nil, nil, nil)in int list,_,_,_).

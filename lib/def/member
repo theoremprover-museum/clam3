@@ -1,0 +1,1 @@
+member(m,l)<==>term_of(member)of m of l.

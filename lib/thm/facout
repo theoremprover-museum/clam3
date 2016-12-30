@@ -1,0 +1,2 @@
+problem([]==>j:pnat=> out(s(0),j,j) = fac(j) in pnat,_,_,_).
+

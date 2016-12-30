@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>h:pnat=>t:(pnat list)=>(a=h in pnat=>void)=>count(a,h::t)=count(a,t)in pnat,_,_,_).

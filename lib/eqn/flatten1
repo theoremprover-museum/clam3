@@ -1,0 +1,4 @@
+problem([]==>flatten(nil)=nil in int list,
+simplify then identity,axiom,
+[
+]).

@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>multSpec(x,y)=times(word2nat(x),word2nat(y))in pnat,_,_,_).

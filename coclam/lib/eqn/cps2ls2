@@ -1,0 +1,1 @@
+problem([]==>k:(char=>cps)=>cps2ls(input(k))=getST(lam(c, cps2ls(k of c))) in st(char, char),_,_,_).

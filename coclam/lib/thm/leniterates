@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>m:int=>infinity=length(iterates(f, m)) in int,_,_,_).

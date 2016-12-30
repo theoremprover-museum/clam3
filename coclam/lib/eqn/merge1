@@ -1,0 +1,1 @@
+problem([]==>a:int list=>merge(nil, a)=a in int list,_,_,_).

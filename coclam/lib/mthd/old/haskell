@@ -1,0 +1,10 @@
+method(haskell(NewG),
+       H==>G,
+       [ matrix(Vs, lts(R, L, Lang) in T, G)
+       ],
+       [ matrix(Vs, R=L in lts(Lang, T), NewG),
+	 [All|Seqs] = [H==>NewG]
+	],
+       [All|Seqs],
+	[]
+      ).

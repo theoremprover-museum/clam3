@@ -1,0 +1,2 @@
+problem([]==>h:pnat=>t:pnat list=>
+           even(h)=>oddel(h::t) = oddel(t) in pnat list,_,_,_).

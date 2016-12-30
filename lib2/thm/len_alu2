@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y)in pnat=>length(tl(aluImp(s0,s1,s2,x,y,ci)))=length(x)in pnat,_,_,_).

@@ -1,0 +1,1 @@
+fa_i(a,b,s,ci,co)<==>(s=xor(xor(a,b),ci)in int)#(co=or(and(a,b),and(xor(a,b),ci))in int).

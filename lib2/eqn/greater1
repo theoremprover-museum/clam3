@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>greater(0,x)=void in u(1),_,_,_).

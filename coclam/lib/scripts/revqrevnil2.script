@@ -1,0 +1,596 @@
+* Approximate line: 607, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 5 of skeleton_term_/3: F
+* Approximate line: 675, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of construct_context/3: Mat
+* Approximate line: 689, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+%  critics_pre.pl compiled in module user, 1.300 sec 92 bytes
+% load.pl compiled in module user, 3.016 sec 3,804 bytes
+
+yes
+| ?- plan(revqrevnil2).
+loading def(app)...done
+loading eqn(app1)...done
+loading eqn(app2)...done
+adding wave-rules for app1:..done
+adding wave-rules for app2:..............................done
+ adding defeqn-record for app1...done 
+ adding defeqn-record for app2...done 
+loading def(rev)...done
+loading eqn(rev1)...done
+loading eqn(rev2)...done
+adding wave-rules for rev1:..done
+adding wave-rules for rev2:...............done
+ adding defeqn-record for rev1...done 
+ adding defeqn-record for rev2...done 
+loading synth(qrev)...done
+loading def(qrev)...done
+loading eqn(qrev1)...done
+loading eqn(qrev2)...done
+adding wave-rules for qrev1:..done
+adding wave-rules for qrev2:..done
+ adding defeqn-record for qrev1...done 
+ adding defeqn-record for qrev2...done 
+loading thm(assconsapp)...done
+adding wave-rules for assconsapp:.....done
+loading thm(tailrev1)...done
+adding wave-rules for tailrev1:..............done
+loading thm(revqrevnil2)...done
+revqrevnil2([])
+==>l:pnat list=>rev(qrev(l,nil))=l in pnat list
+SELECTED METHOD at depth 0: induction([v0::l],[l:pnat list])
+|revqrevnil2([2])
+|v0:pnat
+|l:pnat list
+|v1:ih(rev(qrev(l,nil))=l in pnat list)
+|==>rev(qrev(``v0::{l}''<out>,nil))=``v0::{l}''<out>in pnat list
+
+>>>>> INVOKING generalize CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[l:pnat list,v2:pnat list]
+
+|- rev(qrev(l,M1(v2)))=M2(l,v2)in pnat list
+
+saving thm(lemma1)...done
+Depth bound set to 4
+lemma1([])
+==>l:pnat list=>v2:pnat list=>rev(qrev(l,M1(v2)))=M2(l,v2)in pnat list
+SELECTED METHOD at depth 0: induction([v0::l],[l:pnat list])
+|lemma1([2])
+|v0:pnat
+|l:pnat list
+|v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=M2(l,v2)in pnat list)
+|==>v2:pnat list=>rev(qrev(``v0::{l}''<out>,M1(\v2/)))=M2(``v0::{l}''<out>,\v2/)in pnat list
+|SELECTED METHOD at depth 1: wave([2,1],[app2,equ(left)])
+||lemma1([1,2])
+||v0:pnat
+||l:pnat list
+||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=app(l,Var3(l,v2))in pnat list)
+||==>v2:pnat list=>rev(qrev(``v0::{l}''<out>,M1(\v2/)))=``v0::{app(l,Var3(l,\v2/))}''<out>in pnat list
+||SELECTED METHOD at depth 2: wave([1,1,1],[qrev2,equ(left)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=app(l,Var3(l,v2))in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=``v0::{app(l,Var3(l,\v2/))}''<out>in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[app2,equ(right)])
+
+Backtracking to [2] (choice point)
+|SELECTED METHOD at depth 1: wave([1,1,1],[qrev2,equ(left)])
+||lemma1([1,2])
+||v0:pnat
+||l:pnat list
+||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=M2(l,v2)in pnat list)
+||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=M2(``v0::{l}''<out>,\v2/)in pnat list
+||SELECTED METHOD at depth 2: wave([2,1,1,1],[tailrev1,equ(right)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,rev(Var19(v2))))=M2(l,v2)in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,rev(``app({Var19(\v2/)},v0::nil)''<in>)))=M2(``v0::{l}''<out>,\v2/)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1],[app2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,1,1,1],[rev2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,1,1,1],[app2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[assconsapp,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1,1,1],[app2,equ(right)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,app(Var20(v2),Var21(v2))))=M2(l,v2)in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,app(``v0::{Var20(\v2/)}''<in>,Var21(\v2/))))=M2(``v0::{l}''<out>,\v2/)in pnat list
+|||SELECTED METHOD at depth 3: wave([1,2,1,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,1,1,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[app2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[assconsapp,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[app2,equ(left)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=app(l,Var25(l,v2))in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=``v0::{app(l,Var25(l,\v2/))}''<out>in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[app2,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[assconsapp,equ(left)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=app(Var29(l,v2),l)in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=app(``app({Var29(l,\v2/)},v0::nil)''<in>,l)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,1],[rev2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,1],[app2,equ(left)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[qrev2,equ(left)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=qrev(l,Var32(l,v2))in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=qrev(l,``v0::{Var32(l,\v2/)}''<in>)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1,1,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,2,1],[app2,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[qrev2,equ(right)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(v2:pnat list=>rev(qrev(l,M1(v2)))=qrev(Var33(l,v2),l)in pnat list)
+|||==>v2:pnat list=>rev(qrev(l,``v0::{M1(\v2/)}''<in>))=qrev(``v0::{Var33(l,\v2/)}''<in>,l)in pnat list
+[v0:pnat,l:pnat list,v1:ih(v2:pnat list=>rev(qrev(l,v2))=qrev(v2,l)in pnat list)]==>v2:pnat list=>rev(qrev(l,v0::v2))=qrev(v0::v2,l)in pnat list
+|||TERMINATING METHOD at depth 3: fertilize(strong(v1))
+|lemma1([1])
+|l:pnat list
+|==>v2:pnat list=>rev(qrev(nil,v2))=qrev(v2,nil)in pnat list
+|SELECTED METHOD at depth 1: eval_def([1,1,1],qrev1)
+||lemma1([1,1])
+||l:pnat list
+||==>v2:pnat list=>rev(v2)=qrev(v2,nil)in pnat list
+||SELECTED METHOD at depth 2: induction([v0::v2],[v2:pnat list])
+|||lemma1([2,1,1])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(rev(v2)=qrev(v2,nil)in pnat list)
+|||l:pnat list
+|||==>rev(``v0::{v2}''<out>)=qrev(``v0::{v2}''<out>,nil)in pnat list
+|||SELECTED METHOD at depth 3: wave([1,1],[rev2,equ(left)])
+||||lemma1([1,2,1,1])
+||||v0:pnat
+||||v2:pnat list
+||||v1:ih(rev(v2)=qrev(v2,nil)in pnat list)
+||||l:pnat list
+||||==>``app({rev(v2)},v0::nil)''<out> =qrev(``v0::{v2}''<out>,nil)in pnat list
+
+>>>>> INVOKING generalize CRITIC <<<<<
+
+------------------------------------------------------------
+lemma2:
+
+[v2:pnat list,v3:pnat list]
+
+|- M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list
+
+saving thm(lemma2)...done
+Depth bound set to 4
+lemma2([])
+==>v2:pnat list=>v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list
+SELECTED METHOD at depth 0: induction([v0::v2],[v2:pnat list])
+|lemma2([2])
+|v0:pnat
+|v2:pnat list
+|v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+|==>v3:pnat list=>M4(rev(``v0::{v2}''<out>),\v3/)=qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+|SELECTED METHOD at depth 1: wave([1,1,1],[rev2,equ(left)])
+||lemma2([1,2])
+||v0:pnat
+||v2:pnat list
+||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+||SELECTED METHOD at depth 2: wave([1,1],[app2,equ(right)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>Var95(rev(v2),v3)::rev(v2)=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>``app({Var95(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(left)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[qrev2,equ(left)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,``v0::{M3(\v3/)}''<in>)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,2,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,1],[assconsapp,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([1,1],[assconsapp,equ(right)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>app(rev(v2),Var104(rev(v2),v3))=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>app(rev(v2),``v0::{Var104(rev(v2),\v3/)}''<in>)=qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,1,1],[app2,equ(right)])
+
+Backtracking to [2] (choice point)
+|SELECTED METHOD at depth 1: wave([2,1],[qrev2,equ(left)])
+||lemma2([1,2])
+||v0:pnat
+||v2:pnat list
+||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+||==>v3:pnat list=>M4(rev(``v0::{v2}''<out>),\v3/)=qrev(v2,``v0::{M3(\v3/)}''<in>)in pnat list
+||SELECTED METHOD at depth 2: wave([1,1,1],[rev2,equ(left)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,``v0::{M3(\v3/)}''<in>)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([2,2,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,1],[app2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,1],[assconsapp,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,2,1],[tailrev1,equ(right)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,rev(Var133(v3)))in pnat list)
+|||==>v3:pnat list=>M4(rev(``v0::{v2}''<out>),\v3/)=qrev(v2,rev(``app({Var133(\v3/)},v0::nil)''<in>))in pnat list
+|||SELECTED METHOD at depth 3: wave([1,1,1],[rev2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,2,1],[rev2,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,2,1],[app2,equ(left)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,2,1],[app2,equ(right)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,app(Var134(v3),Var135(v3)))in pnat list)
+|||==>v3:pnat list=>M4(rev(``v0::{v2}''<out>),\v3/)=qrev(v2,app(``v0::{Var134(\v3/)}''<in>,Var135(\v3/)))in pnat list
+|||SELECTED METHOD at depth 3: wave([1,1,1],[rev2,equ(left)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,2] (choice point)
+|||SELECTED METHOD at depth 3: wave([1,2,2,1],[app2,equ(right)])
+
+Failed at depth 4
+Depth bound set to 7
+lemma2([])
+==>v2:pnat list=>v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list
+SELECTED METHOD at depth 0: induction([v0::v2],[v2:pnat list])
+|lemma2([2])
+|v0:pnat
+|v2:pnat list
+|v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+|==>v3:pnat list=>M4(rev(``v0::{v2}''<out>),\v3/)=qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+|SELECTED METHOD at depth 1: wave([1,1,1],[rev2,equ(left)])
+||lemma2([1,2])
+||v0:pnat
+||v2:pnat list
+||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+||SELECTED METHOD at depth 2: wave([1,1],[app2,equ(right)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(``v0::{v2}''<out>,M3(\v3/))in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1],[qrev2,equ(left)])
+||||lemma2([1,1,1,2])
+||||v0:pnat
+||||v2:pnat list
+||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,M3(v3))in pnat list)
+||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,``v0::{M3(\v3/)}''<in>)in pnat list
+||||SELECTED METHOD at depth 4: wave([2,2,1],[tailrev1,equ(right)])
+|||||lemma2([1,1,1,1,2])
+|||||v0:pnat
+|||||v2:pnat list
+|||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,rev(Var181(v3)))in pnat list)
+|||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,rev(``app({Var181(\v3/)},v0::nil)''<in>))in pnat list
+|||||SELECTED METHOD at depth 5: wave([1,2,2,1],[rev2,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,rev(rev(Var185(v3))))in pnat list)
+||||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,rev(rev(``v0::{Var185(\v3/)}''<in>)))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[app2,equ(right)])
+
+Backtracking to [1,1,1,1,2] (choice point)
+|||||SELECTED METHOD at depth 5: wave([1,2,2,1],[app2,equ(left)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,rev(Var186(v3)::Var187(v3)))in pnat list)
+||||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,rev(Var186(\v3/)::``app({Var187(\v3/)},v0::nil)''<in>))in pnat list
+||||||SELECTED METHOD at depth 6: wave([2,1,2,2,1],[rev2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([2,1,2,2,1],[app2,equ(left)])
+
+Backtracking to [1,1,1,2] (choice point)
+||||SELECTED METHOD at depth 4: wave([2,2,1],[app2,equ(right)])
+|||||lemma2([1,1,1,1,2])
+|||||v0:pnat
+|||||v2:pnat list
+|||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,app(Var182(v3),Var183(v3)))in pnat list)
+|||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,app(``v0::{Var182(\v3/)}''<in>,Var183(\v3/)))in pnat list
+|||||SELECTED METHOD at depth 5: wave([1,2,2,1],[tailrev1,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,app(rev(Var197(v3)),Var183(v3)))in pnat list)
+||||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,app(rev(``app({Var197(\v3/)},v0::nil)''<in>),Var183(\v3/)))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[rev2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[app2,equ(left)])
+
+Backtracking to [1,1,1,1,2] (choice point)
+|||||SELECTED METHOD at depth 5: wave([1,2,2,1],[app2,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>Var167(rev(v2),v3)::rev(v2)=qrev(v2,app(app(Var198(v3),Var199(v3)),Var183(v3)))in pnat list)
+||||||==>v3:pnat list=>``app({Var167(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,app(app(``v0::{Var198(\v3/)}''<in>,Var199(\v3/)),Var183(\v3/)))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[app2,equ(right)])
+
+Backtracking to [1,2] (choice point)
+||SELECTED METHOD at depth 2: wave([2,1],[qrev2,equ(left)])
+|||lemma2([1,1,2])
+|||v0:pnat
+|||v2:pnat list
+|||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,M3(v3))in pnat list)
+|||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,``v0::{M3(\v3/)}''<in>)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,2,1],[tailrev1,equ(right)])
+||||lemma2([1,1,1,2])
+||||v0:pnat
+||||v2:pnat list
+||||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,rev(Var209(v3)))in pnat list)
+||||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,rev(``app({Var209(\v3/)},v0::nil)''<in>))in pnat list
+||||SELECTED METHOD at depth 4: wave([1,2,2,1],[rev2,equ(right)])
+|||||lemma2([1,1,1,1,2])
+|||||v0:pnat
+|||||v2:pnat list
+|||||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,rev(rev(Var229(v3))))in pnat list)
+|||||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,rev(rev(``v0::{Var229(\v3/)}''<in>)))in pnat list
+|||||SELECTED METHOD at depth 5: wave([1,1,2,2,1],[tailrev1,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,rev(rev(rev(Var249(v3)))))in pnat list)
+||||||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,rev(rev(rev(``app({Var249(\v3/)},v0::nil)''<in>))))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,1,2,2,1],[rev2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,1,2,2,1],[app2,equ(left)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1],[app2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1],[assconsapp,equ(right)])
+
+Backtracking to [1,1,1,1,2] (choice point)
+|||||SELECTED METHOD at depth 5: wave([1,1,2,2,1],[app2,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>M4(rev(v2),v3)=qrev(v2,rev(rev(app(Var250(v3),Var251(v3)))))in pnat list)
+||||||==>v3:pnat list=>M4(``app({rev(v2)},v0::nil)''<out>,\v3/)=qrev(v2,rev(rev(app(``v0::{Var250(\v3/)}''<in>,Var251(\v3/)))))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,1,2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,1,2,2,1],[app2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1],[app2,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1],[assconsapp,equ(right)])
+
+Backtracking to [1,1,1,1,2] (choice point)
+|||||SELECTED METHOD at depth 5: wave([1,1],[app2,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>Var255(rev(v2),v3)::rev(v2)=qrev(v2,rev(rev(Var229(v3))))in pnat list)
+||||||==>v3:pnat list=>``app({Var255(rev(v2),\v3/)::rev(v2)},v0::nil)''<out> =qrev(v2,rev(rev(``v0::{Var229(\v3/)}''<in>)))in pnat list
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[tailrev1,equ(right)])
+
+Backtracking to [1,1,1,1,1,2] (choice point)
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,1],[app2,equ(right)])
+
+Backtracking to [1,1,1,1,2] (choice point)
+|||||SELECTED METHOD at depth 5: wave([1,1],[assconsapp,equ(right)])
+||||||lemma2([1,1,1,1,1,2])
+||||||v0:pnat
+||||||v2:pnat list
+||||||v1:ih(v3:pnat list=>app(rev(v2),Var264(rev(v2),v3))=qrev(v2,rev(rev(Var229(v3))))in pnat list)
+||||||==>v3:pnat list=>app(rev(v2),``v0::{Var264(rev(v2),\v3/)}''<in>)=qrev(v2,rev(rev(``v0::{Var229(\v3/)}''<in>)))in pnat list
+[v0:pnat,v2:pnat list,v1:ih(v3:pnat list=>app(rev(v2),v3)=qrev(v2,rev(rev(v3)))in pnat list)]==>v3:pnat list=>app(rev(v2),v0::v3)=qrev(v2,rev(rev(v0::v3)))in pnat list
+||||||TERMINATING METHOD at depth 6: fertilize(strong(v1))
+|lemma2([1])
+|v2:pnat list
+|==>v3:pnat list=>app(rev(nil),v3)=qrev(nil,rev(rev(v3)))in pnat list
+|SELECTED METHOD at depth 1: eval_def([2,1],qrev1)
+||lemma2([1,1])
+||v2:pnat list
+||==>v3:pnat list=>app(rev(nil),v3)=rev(rev(v3))in pnat list
+||SELECTED METHOD at depth 2: eval_def([1,1,1],rev1)
+|||lemma2([1,1,1])
+|||v2:pnat list
+|||==>v3:pnat list=>app(nil,v3)=rev(rev(v3))in pnat list
+|||SELECTED METHOD at depth 3: eval_def([1,1],app1)
+||||lemma2([1,1,1,1])
+||||v2:pnat list
+||||==>v3:pnat list=>v3=rev(rev(v3))in pnat list
+||||SELECTED METHOD at depth 4: induction([v0::v3],[v3:pnat list])
+|||||lemma2([2,1,1,1,1])
+|||||v0:pnat
+|||||v3:pnat list
+|||||v1:ih(v3=rev(rev(v3))in pnat list)
+|||||v2:pnat list
+|||||==>``v0::{v3}''<out> =rev(rev(``v0::{v3}''<out>))in pnat list
+|||||SELECTED METHOD at depth 5: wave([1,2,1],[rev2,equ(left)])
+||||||lemma2([1,2,1,1,1,1])
+||||||v0:pnat
+||||||v3:pnat list
+||||||v1:ih(v3=rev(rev(v3))in pnat list)
+||||||v2:pnat list
+||||||==>``v0::{v3}''<out> =rev(``app({rev(v3)},v0::nil)''<out>)in pnat list
+||||||SELECTED METHOD at depth 6: wave([2,1],[tailrev1,equ(left)])
+|||||||lemma2([1,1,2,1,1,1,1])
+|||||||v0:pnat
+|||||||v3:pnat list
+|||||||v1:ih(v3=rev(rev(v3))in pnat list)
+|||||||v2:pnat list
+|||||||==>``v0::{v3}''<out> =``v0::{rev(rev(v3))}''<out>in pnat list
+|||||||SELECTED METHOD at depth 7: fertilize(weak(v1))
+Depth bound set to 10
+|||||||lemma2([1,1,2,1,1,1,1])
+|||||||v0:pnat
+|||||||v3:pnat list
+|||||||v1:ih(v3=rev(rev(v3))in pnat list)
+|||||||v2:pnat list
+|||||||==>``v0::{v3}''<out> =``v0::{rev(rev(v3))}''<out>in pnat list
+|||||||SELECTED METHOD at depth 7: fertilize(weak(v1))
+||||||||lemma2([1,1,1,2,1,1,1,1])
+||||||||v0:pnat
+||||||||v3:pnat list
+||||||||v1:ih(v3=rev(rev(v3))in pnat list)
+||||||||v2:pnat list
+||||||||==>v0::v3=v0::v3 in pnat list
+||||||||TERMINATING METHOD at depth 8: elementary(...)
+|||||lemma2([1,1,1,1,1])
+|||||v3:pnat list
+|||||v2:pnat list
+|||||==>nil=rev(rev(nil))in pnat list
+|||||SELECTED METHOD at depth 5: eval_def([1,2,1],rev1)
+||||||lemma2([1,1,1,1,1,1])
+||||||v3:pnat list
+||||||v2:pnat list
+||||||==>nil=rev(nil)in pnat list
+||||||SELECTED METHOD at depth 6: eval_def([2,1],rev1)
+|||||||lemma2([1,1,1,1,1,1,1])
+|||||||v3:pnat list
+|||||||v2:pnat list
+|||||||==>nil=nil in pnat list
+|||||||TERMINATING METHOD at depth 7: elementary(...)
+------------------------------------------------------------
+lemma2:
+
+[v2:pnat list,v3:pnat list]
+
+|- app(rev(v2),v3)=qrev(v2,rev(rev(v3)))in pnat list
+
+WARNING: generalization requires verifying.
+
+------------------------------------------------------------
+lemma1:
+
+[l:pnat list,v2:pnat list]
+
+|- rev(qrev(l,v2))=qrev(v2,l)in pnat list
+
+WARNING: generalization requires verifying.
+
+Planning complete for revqrevnil2
+
+------------------------------------------------------------
+revqrevnil2:
+
+[l:pnat list]
+
+|- rev(qrev(l,nil))=l in pnat list
+
+generalize(lemma1)
+
+
+
+

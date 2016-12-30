@@ -1,0 +1,1 @@
+problem([]==>jump(0, s(0))=0::mapcar(jump(0, s(0)), s) in int list,_,_,_).

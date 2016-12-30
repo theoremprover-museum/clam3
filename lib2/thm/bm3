@@ -1,0 +1,1 @@
+problem([]==>p: ({bool}=>{bool})=>r:u(1)=>x:{bool}=> (tr(p of x)=>r)=> (x:{bool}#tr(p of x))=>r,_,_,_).

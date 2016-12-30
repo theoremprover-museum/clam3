@@ -1,0 +1,1 @@
+problem([]==>l1:int list=>intersect(l1,nil)=nil in int list,_,_,_).

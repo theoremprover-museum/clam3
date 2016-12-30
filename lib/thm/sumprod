@@ -1,0 +1,7 @@
+
+
+% problem([]==>x:pnat list=> s:pnat => p:pnat => 
+% sp(x,s,p) = (plus(sum(x),s) & times(prod(x),p)) in (pnat # pnat),_,_,_). 
+
+problem([]==>x:pnat list=> 
+sp(x,0,s(0)) = (sum(x) & prod(x)) in (pnat # pnat),_,_,_). 

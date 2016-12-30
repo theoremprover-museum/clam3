@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>appnd(zeroes(length(x)),zeroes(length(y)))=zeroes(plus(length(x),length(y)))in{word},_,_,_).

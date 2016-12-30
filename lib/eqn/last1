@@ -1,0 +1,1 @@
+problem([]==>last(nil)=nil in int list,_,_,_).

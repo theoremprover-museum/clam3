@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>leq(x,double(x)),_,_,_).

@@ -1,0 +1,27 @@
+problem([]==>pnat=>pnat=>u(1),
+intro(new[x])then wfftacs,lambda(x,_7578),
+[problem([x:pnat]==>pnat=>u(1),
+ elim(x),p_ind(x,_7606,[v0,v1,_7612]),
+ [problem([x:pnat]==>pnat=>u(1),
+  intro(new[y])then wfftacs,lambda(y,_7648),
+  [problem([x:pnat,y:pnat]==>u(1),
+   intro(explicit({true}))then wfftacs,{true},
+   [
+   ]) ext _7648
+  ]) ext _7606,
+  problem([x:pnat,v0:pnat,v1:pnat=>u(1)]==>pnat=>u(1),
+  intro(new[y])then wfftacs,lambda(y,_7734),
+  [problem([x:pnat,v0:pnat,v1:pnat=>u(1),y:pnat]==>u(1),
+   elim(y),p_ind(y,_7779,[v2,v3,_7785]),
+   [problem([x:pnat,v0:pnat,v1:pnat=>u(1),y:pnat]==>u(1),
+    intro(void),void,
+    [
+    ]) ext _7779,
+    problem([x:pnat,v0:pnat,v1:pnat=>u(1),y:pnat,v2:pnat,v3:u(1)]==>u(1),
+    intro(explicit(v1 of v2))then wfftacs,v1 of v2,
+    [
+    ]) ext _7785
+   ]) ext _7734
+  ]) ext _7612
+ ]) ext _7578
+]).

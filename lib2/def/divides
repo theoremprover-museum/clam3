@@ -1,0 +1,1 @@
+divides(x,y)<==>z:{posint}#y=times(x,z)in{posint}.

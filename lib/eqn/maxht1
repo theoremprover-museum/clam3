@@ -1,0 +1,1 @@
+problem([]==>n:int=>maxht(leaf(n))=0 in pnat,_,_,_).

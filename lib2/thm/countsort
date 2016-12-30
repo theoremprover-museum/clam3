@@ -1,0 +1,182 @@
+problem([]==>a:int=>l:int list=>count(a,sort(l))=count(a,l)in pnat,
+induction(v0::v1,l:int list),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(l,list_ind(l,_230,[v0,v1,v2,_238])))),
+[problem([l:int list]==>a:int=>count(a,sort(nil))=count(a,nil)in pnat,
+ sym_eval([base([2,1],count1),base([2,1,1],sort1),base([1,1],count1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _376,[count1 of v0],[v1]),[term_of(count1)],[count1])),[term_of(sort1)],[sort1])),[count1 of v0],[v1]),[term_of(count1)],[count1])),
+ [problem([l:int list]==>a:int=>0=0 in pnat,
+  identity,lambda(a,axiom),
+  [
+  ]) ext _376
+ ]) ext _230,
+ problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat]==>a:int=>count(a,sort(v0::v1))=count(a,v0::v1)in pnat,
+ wave([2,1,1],[sort2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _571,[v4 of v1],[v5]),[sort2 of v0],[v4]),[term_of(sort2)],[sort2])),
+ [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat]==>a:int=>count(a,insert(v0,sort(v1)))=count(a,v0::v1)in pnat,
+  casesplit([a=v0 in int=>void,a=v0 in int]),lambda(a,lambda(v4,decide(v4,[v5,lambda(v3,_732)of v5],[v6,lambda(v3,_742)of v6]))of su(su(su(v5,[v4 of v0],[v5]),[v3 of a],[v4]),[term_of(deceqint)],[v3])),
+  [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void]==>count(a,insert(v0,sort(v1)))=count(a,v0::v1)in pnat,
+   wave([2,1],[count3,left]),su(su(su(su(su(_899,[v6 of v3],[v4]),[v5 of v1],[v6]),[v4 of v0],[v5]),[count3 of a],[v4]),[term_of(count3)],[count3]),
+   [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void]==>count(a,insert(v0,sort(v1)))=count(a,v1)in pnat,
+    weak_fertilize(right,[weak_fertilize(right,[],v2)]),su(_1039,[v2 of a],[v4]),
+    [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void]==>count(a,insert(v0,sort(v1)))=count(a,sort(v1))in pnat,
+     generalise(sort(v1),v4:int list),lambda(v4,su(v5,[v4 of sort(v1)],[v5]))of _1156,
+     [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void]==>v4:int list=>count(a,insert(v0,v4))=count(a,v4)in pnat,
+      induction(v5::v6,v4:int list),lambda(v4,list_ind(v4,_1288,[v5,v6,v7,_1296])),
+      [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list]==>count(a,insert(v0,nil))=count(a,nil)in pnat,
+       sym_eval([base([2,1],count1),base([2,1,1],insert1),step([1,1],count3),base([1,1],count1)]),su(su(su(su(su(su(su(su(su(su(su(_1477,[count1 of a],[v5]),[term_of(count1)],[count1]),[v7 of v3],[v5]),[v6 of nil],[v7]),[v5 of v0],[v6]),[count3 of a],[v5]),[term_of(count3)],[count3]),[insert1 of v0],[v5]),[term_of(insert1)],[insert1]),[count1 of a],[v5]),[term_of(count1)],[count1]),
+       [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list]==>0=0 in pnat,
+        identity,axiom,
+        [
+        ]) ext _1477
+       ]) ext _1288,
+       problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat]==>count(a,insert(v0,v5::v6))=count(a,v5::v6)in pnat,
+       casesplit([a=v5 in int=>void,a=v5 in int]),lambda(v9,decide(v9,[v10,lambda(v8,_1818)of v10],[v11,lambda(v8,_1828)of v11]))of su(su(su(v10,[v9 of v5],[v10]),[v8 of a],[v9]),[term_of(deceqint)],[v8]),
+       [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void]==>count(a,insert(v0,v5::v6))=count(a,v5::v6)in pnat,
+        wave([2,1],[count3,left]),su(su(su(su(su(_2039,[v11 of v8],[v9]),[v10 of v6],[v11]),[v9 of v5],[v10]),[count3 of a],[v9]),[term_of(count3)],[count3]),
+        [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void]==>count(a,insert(v0,v5::v6))=count(a,v6)in pnat,
+         casesplit([v0<v5,v0<v5=>void]),lambda(v10,decide(v10,[v11,lambda(v9,_2257)of v11],[v12,lambda(v9,_2267)of v12]))of su(su(su(v11,[v10 of v5],[v11]),[v9 of v0],[v10]),[term_of(decless)],[v9]),
+         [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5]==>count(a,insert(v0,v5::v6))=count(a,v6)in pnat,
+          wave([2,1,1],[insert2,left]),su(su(su(su(su(_2485,[v12 of v9],[v10]),[v11 of v6],[v12]),[v10 of v5],[v11]),[insert2 of v0],[v10]),[term_of(insert2)],[insert2]),
+          [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5]==>count(a,v0::v5::v6)=count(a,v6)in pnat,
+           sym_eval([step([1,1],count3),step([1,1],count3)]),su(su(su(su(su(su(su(su(su(su(_2734,[v12 of v8],[v10]),[v11 of v6],[v12]),[v10 of v5],[v11]),[count3 of a],[v10]),[term_of(count3)],[count3]),[v12 of v3],[v10]),[v11 of (v5::v6)],[v12]),[v10 of v0],[v11]),[count3 of a],[v10]),[term_of(count3)],[count3]),
+           [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5]==>count(a,v6)=count(a,v6)in pnat,
+            identity,axiom,
+            [
+            ]) ext _2734
+           ]) ext _2485
+          ]) ext _2257,
+          problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5=>void]==>count(a,insert(v0,v5::v6))=count(a,v6)in pnat,
+          wave([2,1,1],[insert3,left]),su(su(su(su(su(_3145,[v12 of v9],[v10]),[v11 of v6],[v12]),[v10 of v5],[v11]),[insert3 of v0],[v10]),[term_of(insert3)],[insert3]),
+          [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5=>void]==>count(a,v5::insert(v0,v6))=count(a,v6)in pnat,
+           wave([1,1],[count3,left]),su(su(su(su(su(_3368,[v12 of v8],[v10]),[v11 of insert(v0,v6)],[v12]),[v10 of v5],[v11]),[count3 of a],[v10]),[term_of(count3)],[count3]),
+           [problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int=>void,v9:v0<v5=>void]==>count(a,insert(v0,v6))=count(a,v6)in pnat,
+            tautology(hyp(v7)),v7,
+            [
+            ]) ext _3368
+           ]) ext _3145
+          ]) ext _2267
+         ]) ext _2039
+        ]) ext _1818,
+        problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:a=v5 in int]==>count(a,insert(v0,v5::v6))=count(a,v5::v6)in pnat,
+        sym_eval([equal(v8,right)]),_3575,
+        [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat]==>count(a,insert(v0,a::v6))=count(a,a::v6)in pnat,
+         wave([2,1],[count2,left]),su(su(su(su(su(_3885,[v10 of axiom],[v8]),[v9 of v6],[v10]),[v8 of a],[v9]),[count2 of a],[v8]),[term_of(count2)],[count2]),
+         [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat]==>count(a,insert(v0,a::v6))=s(count(a,v6))in pnat,
+          casesplit([v0<a,v0<a=>void]),lambda(v9,decide(v9,[v10,lambda(v8,_4091)of v10],[v11,lambda(v8,_4101)of v11]))of su(su(su(v10,[v9 of a],[v10]),[v8 of v0],[v9]),[term_of(decless)],[v8]),
+          [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a]==>count(a,insert(v0,a::v6))=s(count(a,v6))in pnat,
+           wave([2,1,1],[insert2,left]),su(su(su(su(su(_4307,[v11 of v8],[v9]),[v10 of v6],[v11]),[v9 of a],[v10]),[insert2 of v0],[v9]),[term_of(insert2)],[insert2]),
+           [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a]==>count(a,v0::a::v6)=s(count(a,v6))in pnat,
+            sym_eval([step([1,1],count3),step([1,1],count2)]),su(su(su(su(su(su(su(su(su(su(_4544,[v11 of axiom],[v9]),[v10 of v6],[v11]),[v9 of a],[v10]),[count2 of a],[v9]),[term_of(count2)],[count2]),[v11 of v3],[v9]),[v10 of (a::v6)],[v11]),[v9 of v0],[v10]),[count3 of a],[v9]),[term_of(count3)],[count3]),
+            [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a]==>s(count(a,v6))=s(count(a,v6))in pnat,
+             tautology(identity),axiom,
+             [
+             ]) ext _4544
+            ]) ext _4307
+           ]) ext _4091,
+           problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a=>void]==>count(a,insert(v0,a::v6))=s(count(a,v6))in pnat,
+           wave([2,1,1],[insert3,left]),su(su(su(su(su(_4935,[v11 of v8],[v9]),[v10 of v6],[v11]),[v9 of a],[v10]),[insert3 of v0],[v9]),[term_of(insert3)],[insert3]),
+           [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a=>void]==>count(a,a::insert(v0,v6))=s(count(a,v6))in pnat,
+            wave([1,1],[count2,left]),su(su(su(su(su(_5146,[v11 of axiom],[v9]),[v10 of insert(v0,v6)],[v11]),[v9 of a],[v10]),[count2 of a],[v9]),[term_of(count2)],[count2]),
+            [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a=>void]==>s(count(a,insert(v0,v6)))=s(count(a,v6))in pnat,
+             wave([],[funcs,impl]),su(su(su(su(v9,[v10 of _5358],[v9]),[v9 of count(a,v6)],[v10]),[funcs of count(a,insert(v0,v6))],[v9]),[term_of(funcs)],[funcs]),
+             [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:a=v0 in int=>void,v4:int list,v5:int,v6:int list,v7:count(a,insert(v0,v6))=count(a,v6)in pnat,v8:v0<a=>void]==>count(a,insert(v0,v6))=count(a,v6)in pnat,
+              tautology(hyp(v7)),v7,
+              [
+              ]) ext _5358
+             ]) ext _5146
+            ]) ext _4935
+           ]) ext _4101
+          ]) ext _3885
+         ]) ext _3575
+        ]) ext _1828
+       ]) ext _1296
+      ]) ext _1156
+     ]) ext _1039
+    ]) ext _899
+   ]) ext _732,
+   problem([l:int list,v0:int,v1:int list,v2:a:int=>count(a,sort(v1))=count(a,v1)in pnat,a:int,v3:a=v0 in int]==>count(a,insert(v0,sort(v1)))=count(a,v0::v1)in pnat,
+   sym_eval([equal(v3,right)]),_5543,
+   [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int]==>count(a,insert(a,sort(v1)))=count(a,a::v1)in pnat,
+    wave([2,1],[count2,left]),su(su(su(su(su(_5745,[v5 of axiom],[v3]),[v4 of v1],[v5]),[v3 of a],[v4]),[count2 of a],[v3]),[term_of(count2)],[count2]),
+    [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int]==>count(a,insert(a,sort(v1)))=s(count(a,v1))in pnat,
+     weak_fertilize(right,[weak_fertilize(right,[1],v2)]),su(_5875,[v2 of a],[v3]),
+     [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int]==>count(a,insert(a,sort(v1)))=s(count(a,sort(v1)))in pnat,
+      generalise(sort(v1),v3:int list),lambda(v3,su(v4,[v3 of sort(v1)],[v4]))of _5980,
+      [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int]==>v3:int list=>count(a,insert(a,v3))=s(count(a,v3))in pnat,
+       induction(v4::v5,v3:int list),lambda(v3,list_ind(v3,_6100,[v4,v5,v6,_6108])),
+       [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list]==>count(a,insert(a,nil))=s(count(a,nil))in pnat,
+        sym_eval([base([1,2,1],count1),base([2,1,1],insert1),step([1,1],count2),base([1,1,1],count1)]),su(su(su(su(su(su(su(su(su(su(su(_6281,[count1 of a],[v4]),[term_of(count1)],[count1]),[v6 of axiom],[v4]),[v5 of nil],[v6]),[v4 of a],[v5]),[count2 of a],[v4]),[term_of(count2)],[count2]),[insert1 of a],[v4]),[term_of(insert1)],[insert1]),[count1 of a],[v4]),[term_of(count1)],[count1]),
+        [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list]==>s(0)=s(0)in pnat,
+         identity,axiom,
+         [
+         ]) ext _6281
+        ]) ext _6100,
+        problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat]==>count(a,insert(a,v4::v5))=s(count(a,v4::v5))in pnat,
+        casesplit([a=v4 in int=>void,a=v4 in int]),lambda(v8,decide(v8,[v9,lambda(v7,_6602)of v9],[v10,lambda(v7,_6612)of v10]))of su(su(su(v9,[v8 of v4],[v9]),[v7 of a],[v8]),[term_of(deceqint)],[v7]),
+        [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void]==>count(a,insert(a,v4::v5))=s(count(a,v4::v5))in pnat,
+         wave([1,2,1],[count3,left]),su(su(su(su(su(_6815,[v10 of v7],[v8]),[v9 of v5],[v10]),[v8 of v4],[v9]),[count3 of a],[v8]),[term_of(count3)],[count3]),
+         [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void]==>count(a,insert(a,v4::v5))=s(count(a,v5))in pnat,
+          casesplit([a<v4,a<v4=>void]),lambda(v9,decide(v9,[v10,lambda(v8,_7023)of v10],[v11,lambda(v8,_7033)of v11]))of su(su(su(v10,[v9 of v4],[v10]),[v8 of a],[v9]),[term_of(decless)],[v8]),
+          [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4]==>count(a,insert(a,v4::v5))=s(count(a,v5))in pnat,
+           wave([2,1,1],[insert2,left]),su(su(su(su(su(_7241,[v11 of v8],[v9]),[v10 of v5],[v11]),[v9 of v4],[v10]),[insert2 of a],[v9]),[term_of(insert2)],[insert2]),
+           [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4]==>count(a,a::v4::v5)=s(count(a,v5))in pnat,
+            sym_eval([step([1,1],count2),step([1,1,1],count3)]),su(su(su(su(su(su(su(su(su(su(_7482,[v11 of v7],[v9]),[v10 of v5],[v11]),[v9 of v4],[v10]),[count3 of a],[v9]),[term_of(count3)],[count3]),[v11 of axiom],[v9]),[v10 of (v4::v5)],[v11]),[v9 of a],[v10]),[count2 of a],[v9]),[term_of(count2)],[count2]),
+            [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4]==>s(count(a,v5))=s(count(a,v5))in pnat,
+             identity,axiom,
+             [
+             ]) ext _7482
+            ]) ext _7241
+           ]) ext _7023,
+           problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4=>void]==>count(a,insert(a,v4::v5))=s(count(a,v5))in pnat,
+           wave([2,1,1],[insert3,left]),su(su(su(su(su(_7875,[v11 of v8],[v9]),[v10 of v5],[v11]),[v9 of v4],[v10]),[insert3 of a],[v9]),[term_of(insert3)],[insert3]),
+           [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4=>void]==>count(a,v4::insert(a,v5))=s(count(a,v5))in pnat,
+            wave([1,1],[count3,left]),su(su(su(su(su(_8088,[v11 of v7],[v9]),[v10 of insert(a,v5)],[v11]),[v9 of v4],[v10]),[count3 of a],[v9]),[term_of(count3)],[count3]),
+            [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int=>void,v8:a<v4=>void]==>count(a,insert(a,v5))=s(count(a,v5))in pnat,
+             tautology(hyp(v6)),v6,
+             [
+             ]) ext _8088
+            ]) ext _7875
+           ]) ext _7033
+          ]) ext _6815
+         ]) ext _6602,
+         problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a=v4 in int]==>count(a,insert(a,v4::v5))=s(count(a,v4::v5))in pnat,
+         sym_eval([equal(v7,right)]),_8285,
+         [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat]==>count(a,insert(a,a::v5))=s(count(a,a::v5))in pnat,
+          wave([1,2,1],[count2,left]),su(su(su(su(su(_8577,[v9 of axiom],[v7]),[v8 of v5],[v9]),[v7 of a],[v8]),[count2 of a],[v7]),[term_of(count2)],[count2]),
+          [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat]==>count(a,insert(a,a::v5))=s(s(count(a,v5)))in pnat,
+           wave([2,1],[ssid,right]),su(su(_8755,[ssid of count(a,v5)],[v7]),[term_of(ssid)],[ssid]),
+           [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat]==>count(a,insert(a,a::v5))=s(s(count(a,v5)))in pnat,
+            casesplit([a<a,a<a=>void]),lambda(v8,decide(v8,[v9,lambda(v7,_8933)of v9],[v10,lambda(v7,_8943)of v10]))of su(su(su(v9,[v8 of a],[v9]),[v7 of a],[v8]),[term_of(decless)],[v7]),
+            [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a]==>count(a,insert(a,a::v5))=s(s(count(a,v5)))in pnat,
+             wave([2,1,1],[insert2,left]),su(su(su(su(su(_9139,[v10 of v7],[v8]),[v9 of v5],[v10]),[v8 of a],[v9]),[insert2 of a],[v8]),[term_of(insert2)],[insert2]),
+             [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a]==>count(a,a::a::v5)=s(s(count(a,v5)))in pnat,
+              sym_eval([step([1,1],count2),step([1,1,1],count2)]),su(su(su(su(su(su(su(su(su(su(_9368,[v10 of axiom],[v8]),[v9 of v5],[v10]),[v8 of a],[v9]),[count2 of a],[v8]),[term_of(count2)],[count2]),[v10 of axiom],[v8]),[v9 of (a::v5)],[v10]),[v8 of a],[v9]),[count2 of a],[v8]),[term_of(count2)],[count2]),
+              [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a]==>s(s(count(a,v5)))=s(s(count(a,v5)))in pnat,
+               tautology(identity),axiom,
+               [
+               ]) ext _9368
+              ]) ext _9139
+             ]) ext _8933,
+             problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a=>void]==>count(a,insert(a,a::v5))=s(s(count(a,v5)))in pnat,
+             wave([2,1,1],[insert3,left]),su(su(su(su(su(_9741,[v10 of v7],[v8]),[v9 of v5],[v10]),[v8 of a],[v9]),[insert3 of a],[v8]),[term_of(insert3)],[insert3]),
+             [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a=>void]==>count(a,a::insert(a,v5))=s(s(count(a,v5)))in pnat,
+              wave([1,1],[count2,left]),su(su(su(su(su(_9942,[v10 of axiom],[v8]),[v9 of insert(a,v5)],[v10]),[v8 of a],[v9]),[count2 of a],[v8]),[term_of(count2)],[count2]),
+              [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a=>void]==>s(count(a,insert(a,v5)))=s(s(count(a,v5)))in pnat,
+               wave([],[funcs,impl]),su(su(su(su(v8,[v9 of _10144],[v8]),[v8 of s(count(a,v5))],[v9]),[funcs of count(a,insert(a,v5))],[v8]),[term_of(funcs)],[funcs]),
+               [problem([l:int list,v0:int,v1:int list,v2:a_:int=>count(a_,sort(v1))=count(a_,v1)in pnat,a:int,v3:int list,v4:int,v5:int list,v6:count(a,insert(a,v5))=s(count(a,v5))in pnat,v7:a<a=>void]==>count(a,insert(a,v5))=s(count(a,v5))in pnat,
+                tautology(hyp(v6)),v6,
+                [
+                ]) ext _10144
+               ]) ext _9942
+              ]) ext _9741
+             ]) ext _8943
+            ]) ext _8755
+           ]) ext _8577
+          ]) ext _8285
+         ]) ext _6612
+        ]) ext _6108
+       ]) ext _5980
+      ]) ext _5875
+     ]) ext _5745
+    ]) ext _5543
+   ]) ext _742
+  ]) ext _571
+ ]) ext _238
+]).

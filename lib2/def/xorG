@@ -1,0 +1,1 @@
+xorG(x,y,z)<==>iff(z,xor(x,y)).

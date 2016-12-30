@@ -1,0 +1,1 @@
+adderPL(n)<==>p_ind(n,lambda(x,lambda(y,lambda(ci,ci::nil))),[k,r,lambda(x,lambda(y,lambda(ci,addPL(hd(x),hd(y),r of tl(x)of tl(y)of ci))))]).

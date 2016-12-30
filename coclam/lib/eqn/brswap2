@@ -1,0 +1,1 @@
+problem([]==>a:int=>l:bintree(int)=>r:bintree(int)=>brswap(node(a, l, r))=node(a, brswap(r), brswap(l))in bintree(int),_,_,_).

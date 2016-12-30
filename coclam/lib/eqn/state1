@@ -1,0 +1,1 @@
+problem([]==>a:action=>l:T=>state(act(a, l))=l in lts(Lang, T),_,_,_).

@@ -1,0 +1,4 @@
+problem([]==>pnat=>{word}=>{word}=>{bool}=>{word},
+repeat intro then simplify then repeat intro,lambda(v0,lambda(v1,lambda(v2,lambda(v3,v1)))),
+[
+]).

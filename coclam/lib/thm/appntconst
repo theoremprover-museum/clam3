@@ -1,0 +1,1 @@
+problem([]==>a:bintree(int)=>appn(infinity, lam(l, node(a, l, l)), nil)=tconst(a)in bintree(int), _, _,_).

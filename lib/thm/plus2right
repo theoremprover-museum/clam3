@@ -1,0 +1,26 @@
+problem([]==>x:pnat=>y:pnat=>plus(x,s(y))=s(plus(x,y))in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_319,[v0,v1,_325])),
+[problem([x:pnat]==>y:pnat=>plus(0,s(y))=s(plus(0,y))in pnat,
+ base([1,1],plus1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _383),[term_of(plus1)],[plus1]),
+ [problem([x:pnat]==>y:pnat=>s(y)=s(plus(0,y))in pnat,
+  base([1,2,1],plus1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _459),[term_of(plus1)],[plus1]),
+  [problem([x:pnat]==>y:pnat=>s(y)=s(y)in pnat,
+   identity,lambda(y,axiom),
+   [
+   ]) ext _459
+  ]) ext _383
+ ]) ext _319,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>plus(v0,s(y))=s(plus(v0,y))in pnat]==>y:pnat=>plus(s(v0),s(y))=s(plus(s(v0),y))in pnat,
+ wave([1,1],plus2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _609),[term_of(plus2)],[plus2]),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>plus(v0,s(y))=s(plus(v0,y))in pnat]==>y:pnat=>s(plus(v0,s(y)))=s(plus(s(v0),y))in pnat,
+  wave([1,2,1],plus2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _724),[term_of(plus2)],[plus2]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>plus(v0,s(y))=s(plus(v0,y))in pnat]==>y:pnat=>s(plus(v0,s(y)))=s(s(plus(v0,y)))in pnat,
+   weak_fertilize([1],[left,v1]),lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _835),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>plus(v0,s(y))=s(plus(v0,y))in pnat]==>y:pnat=>s(s(plus(v0,y)))=s(s(plus(v0,y)))in pnat,
+    identity,lambda(y,axiom),
+    [
+    ]) ext _835
+   ]) ext _724
+  ]) ext _609
+ ]) ext _325
+]).

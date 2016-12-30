@@ -1,0 +1,1 @@
+problem([]==>t:tree(int)=>brsearch(t, nil) in int list,_,_,_).

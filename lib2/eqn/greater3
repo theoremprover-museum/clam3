@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>greater(s(x),s(y))=greater(x,y)in u(1),_,_,_).

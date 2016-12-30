@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>b:{bool}=>ci:{bool}=>sm:{bool}=>co:{bool}=>tr(faImp(a,b,ci,sm,co))=>faSpec(a,b,ci,sm,co),_,_,_).

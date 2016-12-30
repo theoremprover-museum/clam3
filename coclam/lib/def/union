@@ -1,0 +1,1 @@
+union(l1,l2)<==>term_of(union)of l1 of l2.

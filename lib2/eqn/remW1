@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>remW(nil,y)=nil in{word},_,_,_).

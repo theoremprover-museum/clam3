@@ -1,0 +1,29 @@
+problem([]==>a:int list=>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(a,b),c,f)=lit(a,lit(b,c,f),f)in int list,
+induction(v0::v1,a:int list),lambda(a,list_ind(a,_351,[v0,v1,v2,_359])),
+[problem([a:int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(nil,b),c,f)=lit(nil,lit(b,c,f),f)in int list,
+ base([2,1],lit1),su(lambda(v0,lambda(v1,lambda(v2,lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of _458))),[term_of(lit1)],[lit1]),
+ [problem([a:int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(nil,b),c,f)=lit(b,c,f)in int list,
+  base([1,1,1],app1),su(lambda(v0,lambda(v1,lambda(v2,lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of _596))),[term_of(app1)],[app1]),
+  [problem([a:int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(b,c,f)=lit(b,c,f)in int list,
+   identity,lambda(b,lambda(c,lambda(f,axiom))),
+   [
+   ]) ext _596
+  ]) ext _458
+ ]) ext _351,
+ problem([a:int list,v0:int,v1:int list,v2:b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v1,b),c,f)=lit(v1,lit(b,c,f),f)in int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v0::v1,b),c,f)=lit(v0::v1,lit(b,c,f),f)in int list,
+ wave([2,1],lit2),su(lambda(v3,lambda(v4,lambda(v5,lambda(v6,su(su(su(v9,[v8 of v5],[v9]),[v7 of v4],[v8]),[v6 of v3],[v7]))of _891))),[term_of(lit2)],[lit2]),
+ [problem([a:int list,v0:int,v1:int list,v2:b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v1,b),c,f)=lit(v1,lit(b,c,f),f)in int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v0::v1,b),c,f)=f of v0 of lit(v1,lit(b,c,f),f)in int list,
+  wave([1,1,1],app2),su(lambda(v3,lambda(v4,lambda(v5,lambda(v6,su(su(su(v9,[v8 of v5],[v9]),[v7 of v4],[v8]),[v6 of v3],[v7]))of _1114))),[term_of(app2)],[app2]),
+  [problem([a:int list,v0:int,v1:int list,v2:b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v1,b),c,f)=lit(v1,lit(b,c,f),f)in int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(v0::app(v1,b),c,f)=f of v0 of lit(v1,lit(b,c,f),f)in int list,
+   wave([1,1],lit2),su(lambda(v3,lambda(v4,lambda(v5,lambda(v6,su(su(su(v9,[v8 of v5],[v9]),[v7 of v4],[v8]),[v6 of v3],[v7]))of _1335))),[term_of(lit2)],[lit2]),
+   [problem([a:int list,v0:int,v1:int list,v2:b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v1,b),c,f)=lit(v1,lit(b,c,f),f)in int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>f of v0 of lit(app(v1,b),c,f)=f of v0 of lit(v1,lit(b,c,f),f)in int list,
+    weak_fertilize([2],[left,v2]),lambda(v3,lambda(v4,lambda(v5,lambda(v6,su(su(su(v9,[v8 of v5],[v9]),[v7 of v4],[v8]),[v6 of v3],[v7]))of _1557))),
+    [problem([a:int list,v0:int,v1:int list,v2:b:int list=>c:int list=>f:(int=>int list=>int list)=>lit(app(v1,b),c,f)=lit(v1,lit(b,c,f),f)in int list]==>b:int list=>c:int list=>f:(int=>int list=>int list)=>f of v0 of lit(v1,lit(b,c,f),f)=f of v0 of lit(v1,lit(b,c,f),f)in int list,
+     identity,lambda(b,lambda(c,lambda(f,axiom))),
+     [
+     ]) ext _1557
+    ]) ext _1335
+   ]) ext _1114
+  ]) ext _891
+ ]) ext _359
+]).

@@ -1,0 +1,1 @@
+problem([]==>coin:int=>sum:int=>coinlist:int list=>greater(sum, coin)=>change(sum, coin::coinlist)=change(minus(sum, coin), coinlist)in int,_,_,_).

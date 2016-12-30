@@ -1,0 +1,1 @@
+problem([]==>t:bintree(int)=>t = brswap(brswap(t))in bintree(int),_,_,_).

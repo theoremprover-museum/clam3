@@ -1,0 +1,5 @@
+problem([]==>x:pnat=>y:pnat=>rem(x,y)=minus(x,times(div(x,y),y)) in pnat,_,_,_).
+
+%problem([]==>x:pnat=>y:pnat=>z:pnat=>rem(plus(x,y),z)=minus(plus(x,y),times(z,div(plus(x,y),z))) in pnat,_,_,_).
+
+%problem([]==>x:pnat=>y:pnat=>rem(plus(x,y),y)=rem(x,y)in pnat,_,_,_).

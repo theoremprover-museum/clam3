@@ -1,0 +1,36 @@
+problem([]==>a:int list=>b:int list=>subset(a,b)=>intersect(a,b)=a in int list,
+induction(v0::v1,a:int list),lambda(a,list_ind(a,_194,[v0,v1,v2,_202])),
+[problem([a:int list]==>b:int list=>subset(nil,b)=>intersect(nil,b)=nil in int list,
+ sym_eval([base([1],subset1),base([1,1,2],intersect1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _310,[intersect1 of v0],[v1]),[term_of(intersect1)],[intersect1])),[subset1 of v0],[v1]),[term_of(subset1)],[subset1])),
+ [problem([a:int list]==>b:int list=>{true}=>nil=nil in int list,
+  tautology(dequantify_once then intro then[identity,wfftacs]),lambda(b,lambda(v0,axiom)),
+  [
+  ]) ext _310
+ ]) ext _194,
+ problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list]==>b:int list=>subset(v0::v1,b)=>intersect(v0::v1,b)=v0::v1 in int list,
+ casesplit([member(v0,b)=>void,member(v0,b)]),lambda(b,lambda(v4,decide(v4,[v5,lambda(v3,_543)of v5],[v6,lambda(v3,_553)of v6]))of su(su(su(v5,[v4 of b],[v5]),[v3 of v0],[v4]),[term_of(decmember)],[v3])),
+ [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)=>void]==>subset(v0::v1,b)=>intersect(v0::v1,b)=v0::v1 in int list,
+  wave([1,1,2],[intersect4,left]),su(su(su(su(su(_722,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[intersect4 of v0],[v4]),[term_of(intersect4)],[intersect4]),
+  [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)=>void]==>subset(v0::v1,b)=>intersect(v1,b)=v0::v1 in int list,
+   wave([1],[subset2,left]),su(su(su(su(su(_888,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[subset2 of v0],[v4]),[term_of(subset2)],[subset2]),
+   [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)=>void]==>void=>intersect(v1,b)=v0::v1 in int list,
+    tautology(intro then[elim(v4),wfftacs]),lambda(v4,any(v4)),
+    [
+    ]) ext _888
+   ]) ext _722
+  ]) ext _543,
+  problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)]==>subset(v0::v1,b)=>intersect(v0::v1,b)=v0::v1 in int list,
+  wave([1],[subset3,left]),su(su(su(su(su(_1167,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[subset3 of v0],[v4]),[term_of(subset3)],[subset3]),
+  [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)]==>subset(v1,b)=>intersect(v0::v1,b)=v0::v1 in int list,
+   wave([1,1,2],[intersect3,left]),su(su(su(su(su(_1334,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[intersect3 of v0],[v4]),[term_of(intersect3)],[intersect3]),
+   [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)]==>subset(v1,b)=>v0::intersect(v1,b)=v0::v1 in int list,
+    wave([2],[funccons1,impl]),su(lambda(v4,su(su(su(lambda(v5,su(su(v8,[v7 of v6],[v8]),[v4 of v5],[v6])),[v6 of v1],[v7]),[v5 of intersect(v1,b)],[v6]),[funccons1 of v0],[v5]))of _1486,[term_of(funccons1)],[funccons1]),
+    [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>intersect(v1,b)=v1 in int list,b:int list,v3:member(v0,b)]==>subset(v1,b)=>intersect(v1,b)=v1 in int list,
+     strong_fertilize(v2),su(v4,[v2 of b],[v4]),
+     [
+     ]) ext _1486
+    ]) ext _1334
+   ]) ext _1167
+  ]) ext _553
+ ]) ext _202
+]).

@@ -1,0 +1,2 @@
+problem([]==>h:int=>x:(int list)=>y:(int list)=>(member(h,y)=>void)=>
+subset(h::x,y)=void in u(1),_,_,_).

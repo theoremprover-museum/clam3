@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>b:pnat=>l:pnat list=>a=b in pnat=>member(a,insert(b,l))={true}in u(1),_,_,_).

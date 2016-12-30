@@ -1,0 +1,57 @@
+problem([]==>n:pnat=>double(n)=times(n,s(s(0)))in pnat,
+induction(s(v0),n:pnat),lambda(n,p_ind(n,_306,[v0,v1,_312])),
+[problem([n:pnat]==>double(0)=times(0,s(s(0)))in pnat,
+ base([2,1],times1),su(su(_359,[times1 of s(s(0))],[v0]),[term_of(times1)],[times1]),
+ [problem([n:pnat]==>double(0)=0 in pnat,
+  base([1,1],double1),su(_413,[term_of(double1)],[double1]),
+  [problem([n:pnat]==>0=0 in pnat,
+   identity,axiom,
+   [
+   ]) ext _413
+  ]) ext _359
+ ]) ext _306,
+ problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>double(s(v0))=times(s(v0),s(s(0)))in pnat,
+ wave([2,1],[times2,left]),su(su(su(_528,[v2 of s(s(0))],[v3]),[times2 of v0],[v2]),[term_of(times2)],[times2]),
+ [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>double(s(v0))=plus(times(v0,s(s(0))),s(s(0)))in pnat,
+  wave([1,1],[double2,left]),su(su(_638,[double2 of v0],[v2]),[term_of(double2)],[double2]),
+  [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(double(v0)))=plus(times(v0,s(s(0))),s(s(0)))in pnat,
+   weak_fertilize([1,1],[left,v1]),_662,
+   [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(times(v0,s(s(0)))))=plus(times(v0,s(s(0))),s(s(0)))in pnat,
+    induction(s(v2),v0:pnat),p_ind(v0,_818,[v2,v3,_824]),
+    [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(times(0,s(s(0)))))=plus(times(0,s(s(0))),s(s(0)))in pnat,
+     base([1,2,1],times1),su(su(_914,[times1 of s(s(0))],[v2]),[term_of(times1)],[times1]),
+     [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(times(0,s(s(0)))))=plus(0,s(s(0)))in pnat,
+      base([1,1,1,1],times1),su(su(_1017,[times1 of s(s(0))],[v2]),[term_of(times1)],[times1]),
+      [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(0))=plus(0,s(s(0)))in pnat,
+       base([2,1],plus1),su(su(_1109,[plus1 of s(s(0))],[v2]),[term_of(plus1)],[plus1]),
+       [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat]==>s(s(0))=s(s(0))in pnat,
+        identity,axiom,
+        [
+        ]) ext _1109
+       ]) ext _1017
+      ]) ext _914
+     ]) ext _818,
+     problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>s(s(times(s(v2),s(s(0)))))=plus(times(s(v2),s(s(0))),s(s(0)))in pnat,
+     wave([1,2,1],[times2,left]),su(su(su(_1327,[v4 of s(s(0))],[v5]),[times2 of v2],[v4]),[term_of(times2)],[times2]),
+     [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>s(s(times(s(v2),s(s(0)))))=plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))in pnat,
+      wave([1,1,1,1],[times2,left]),su(su(su(_1502,[v4 of s(s(0))],[v5]),[times2 of v2],[v4]),[term_of(times2)],[times2]),
+      [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>s(s(plus(times(v2,s(s(0))),s(s(0)))))=plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))in pnat,
+       wave([1,1,1],[plus2,right]),su(su(su(_1680,[v4 of s(s(0))],[v5]),[plus2 of times(v2,s(s(0)))],[v4]),[term_of(plus2)],[plus2]),
+       [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>s(plus(s(times(v2,s(s(0)))),s(s(0))))=plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))in pnat,
+        wave([1,1],[plus2,right]),su(su(su(_1863,[v4 of s(s(0))],[v5]),[plus2 of s(times(v2,s(s(0))))],[v4]),[term_of(plus2)],[plus2]),
+        [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>plus(s(s(times(v2,s(s(0))))),s(s(0)))=plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))in pnat,
+         weak_fertilize([1],[left,v3]),_1907,
+         [problem([n:pnat,v0:pnat,v1:double(v0)=times(v0,s(s(0)))in pnat,v2:pnat,v3:s(s(times(v2,s(s(0)))))=plus(times(v2,s(s(0))),s(s(0)))in pnat]==>plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))=plus(plus(times(v2,s(s(0))),s(s(0))),s(s(0)))in pnat,
+          identity,axiom,
+          [
+          ]) ext _1907
+         ]) ext _1863
+        ]) ext _1680
+       ]) ext _1502
+      ]) ext _1327
+     ]) ext _824
+    ]) ext _662
+   ]) ext _638
+  ]) ext _528
+ ]) ext _312
+]).

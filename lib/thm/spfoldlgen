@@ -1,0 +1,5 @@
+
+
+problem([]==>l:pnat list=> a:pnat => b:pnat =>
+        sp(l,a,b) = (plus(a,foldl(lam(x,lam(y,plus(x,y))),0,l)) & 
+                        times(b,foldl(lam(x,lam(y,times(x,y))),s(0),l))) in (pnat # pnat),_,_,_). 

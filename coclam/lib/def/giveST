@@ -1,0 +1,1 @@
+giveST(inp, f)<==>f of inp.

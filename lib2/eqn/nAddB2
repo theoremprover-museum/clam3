@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>h1:{bool}=>h2:{bool}=>x:{word}=>y:{word}=>nAddB(h1::x)of (h2::y)of ci=faSum(h1,h2,ci)::nAddB(x)of y of faCarry(h1,h2,ci)in{word},_,_,_).

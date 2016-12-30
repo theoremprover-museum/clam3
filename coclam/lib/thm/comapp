@@ -1,0 +1,1 @@
+problem([]==>x:int list=>y:int list=>length(app(x,y))=length(app(y,x))in pnat,_,_,_).

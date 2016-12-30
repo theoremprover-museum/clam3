@@ -1,0 +1,3 @@
+problem([]==>x:reg=>del(x) of 0=nil in {word},_,_,_).
+
+%problem([]==>x:reg=>del(x)=lambda(t,x of s(t)) in reg,_,_,_).

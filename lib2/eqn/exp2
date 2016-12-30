@@ -1,0 +1,4 @@
+problem([]==>n:pnat=>i:pnat=>exp(n,s(i))=times(n,exp(n,i))in pnat,
+repeat intro then simplify then repeat intro then repeat wfftacs,lambda(n,lambda(i,axiom)),
+[
+]).

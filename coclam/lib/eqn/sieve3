@@ -1,0 +1,2 @@
+problem([]==>p:pnat=>h:pnat=>t:pnat=>(divides(p, h)=>void)=>sieve(p,
+h::t)=h::sive(p, t) in pnat list,_,_,_).  

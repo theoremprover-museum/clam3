@@ -1,0 +1,1 @@
+problem([]==>t:bool list=>n:pnat=>myeven(n)=>parity(true, t)=numparity(n, t)in bool list, _, _, _).

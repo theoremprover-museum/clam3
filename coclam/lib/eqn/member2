@@ -1,0 +1,1 @@
+problem([]==>el:pnat=>h:int=>l:pnat list=>(el=h in pnat)=>member(el,h::l)={true}in u(1),_,_,_).

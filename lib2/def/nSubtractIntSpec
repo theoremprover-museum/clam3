@@ -1,0 +1,1 @@
+nSubtractIntSpec(n,x,y,ci)<==>subtractInt(intFromWord(n,x),subtractInt(intFromWord(n,y),intFromNat(bitval(ci)))).

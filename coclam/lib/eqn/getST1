@@ -1,0 +1,1 @@
+problem([]==>k:(ack#list(ack)=>list(req))=>h:ack=>t:list(ack)=>getST(k, h::t)=k of (h)in list(req),_,_,_).

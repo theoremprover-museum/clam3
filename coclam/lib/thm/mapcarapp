@@ -1,0 +1,35 @@
+problem([]==>f:(int=>int)=>l1:int list=>l2:int list=>mapcar(app(l1,l2),f)=app(mapcar(l1,f),mapcar(l2,f))in int list,
+induction(v0::v1,l1:int list),lambda(v0,lambda(v1,lambda(v2,lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v0],[v5]),[v3 of v1],[v4]))of lambda(l1,list_ind(l1,_386,[v0,v1,v2,_394]))))),
+[problem([l1:int list]==>f:(int=>int)=>l2:int list=>mapcar(app(nil,l2),f)=app(mapcar(nil,f),mapcar(l2,f))in int list,
+ base([1,1,1],app1),su(lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _477)),[term_of(app1)],[app1]),
+ [problem([l1:int list]==>f:(int=>int)=>l2:int list=>mapcar(l2,f)=app(mapcar(nil,f),mapcar(l2,f))in int list,
+  base([1,2,1],mapcar1),su(lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _587)),[term_of(mapcar1)],[mapcar1]),
+  [problem([l1:int list]==>f:(int=>int)=>l2:int list=>mapcar(l2,f)=app(nil,mapcar(l2,f))in int list,
+   base([2,1],app1),su(lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _692)),[term_of(app1)],[app1]),
+   [problem([l1:int list]==>f:(int=>int)=>l2:int list=>mapcar(l2,f)=mapcar(l2,f)in int list,
+    tautology((intro then wfftacs)then(intro then wfftacs)then(intro then wfftacs)then identity),lambda(f,lambda(l2,axiom)),
+    [
+    ]) ext _692
+   ]) ext _587
+  ]) ext _477
+ ]) ext _386,
+ problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>mapcar(app(v0::v1,l2),f)=app(mapcar(v0::v1,f),mapcar(l2,f))in int list,
+ wave([1,1,1],app2),su(lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]))of _945)),[term_of(app2)],[app2]),
+ [problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>mapcar(v0::app(v1,l2),f)=app(mapcar(v0::v1,f),mapcar(l2,f))in int list,
+  wave([1,1],mapcar2),su(lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]))of _1119)),[term_of(mapcar2)],[mapcar2]),
+  [problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>f of v0::mapcar(app(v1,l2),f)=app(mapcar(v0::v1,f),mapcar(l2,f))in int list,
+   wave([1,2,1],mapcar2),su(lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]))of _1298)),[term_of(mapcar2)],[mapcar2]),
+   [problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>f of v0::mapcar(app(v1,l2),f)=app(f of v0::mapcar(v1,f),mapcar(l2,f))in int list,
+    wave([2,1],app2),su(lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]))of _1478)),[term_of(app2)],[app2]),
+    [problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>f of v0::mapcar(app(v1,l2),f)=f of v0::app(mapcar(v1,f),mapcar(l2,f))in int list,
+     weak_fertilize([2],[left,v2]),lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]))of _1656)),
+     [problem([l1:int list,v0:int,v1:int list,v2:f:(int=>int)=>l2:int list=>mapcar(app(v1,l2),f)=app(mapcar(v1,f),mapcar(l2,f))in int list]==>f:(int=>int)=>l2:int list=>f of v0::app(mapcar(v1,f),mapcar(l2,f))=f of v0::app(mapcar(v1,f),mapcar(l2,f))in int list,
+      tautology((intro then wfftacs)then(intro then wfftacs)then(intro then wfftacs)then identity),lambda(f,lambda(l2,axiom)),
+      [
+      ]) ext _1656
+     ]) ext _1478
+    ]) ext _1298
+   ]) ext _1119
+  ]) ext _945
+ ]) ext _394
+]).

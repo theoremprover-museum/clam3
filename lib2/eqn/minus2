@@ -1,0 +1,1 @@
+problem([]==>y:pnat=>minus(0,y)=0 in pnat,_,_,_).

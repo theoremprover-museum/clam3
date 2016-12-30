@@ -1,0 +1,3 @@
+% This equation is wrong. It was added to try the ALU nonparameterized-little endian
+
+problem([]==>ci:{bool}=>y:{word}=>cadder(y,nil,{false})={false}::nil in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>z:{bool}=>faCarry({false},{false},z)={false} in {bool},_,_,_).

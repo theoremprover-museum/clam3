@@ -1,0 +1,3 @@
+problem([]==>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>andNL(a::x)of (b::y)= (a and b)::andNL(x)of y in{word},_,_,_).
+
+%problem([]==>a:{bool}=>x:{word}=>y:{word}=>andNL(a::x)of y= (a and hd(y))::andNL(x)of tl(y) in{word},_,_,_).

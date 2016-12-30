@@ -1,0 +1,1 @@
+problem([]==>h:{bool}=>x:{word}=>appnd(multOne(x,h),{false}::nil)=multOne(appnd(x,{false}::nil),h)in{word},_,_,_).

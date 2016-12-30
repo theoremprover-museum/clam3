@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>sim(plus(x,s(y)),s(plus(x,y)))in pnat,
+_,_,_).

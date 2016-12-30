@@ -1,0 +1,1 @@
+addone(a,b,ci)<==>term_of(addonet) of a of b of ci.

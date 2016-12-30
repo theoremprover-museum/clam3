@@ -1,0 +1,15 @@
+
+critic(induction(casesplit),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, _, _),
+        construct_context(H, G, Context)
+       ],
+       [not wave_fronts(_, [_|_], G),
+        expression_at(G, Pos, E),
+        casesplit_set_implicit(E, Context, Cases)
+       ],
+       [construct_case_goals(H, G, [[],Cases], Pos, SubGs),
+        extend_goaltree(Plan, Addr, casesplit(Cases), [], SubGs, N)
+       ]
+      ).

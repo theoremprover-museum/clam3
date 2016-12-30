@@ -1,0 +1,24 @@
+%******************************************
+%*
+%*      The WAVE methods
+%*
+%******************************************
+
+        % Hack for creational rippling
+        %
+method(cwave(Pos,[Rule,Dir]),
+       H==>G,
+       [matrix(_, Mat, G),
+        Pos = [2],
+        exp_at(Mat, Pos, L),
+        wave_rule_match(Rule,long(Dir),C=>L:=>R,SubstL),
+        trivial(H==>C)
+       ],
+       [replace_in_matrix(Pos,R,G,NG),
+        sink_expansions(NG,NewG)],
+       [H==>NewG],
+       SubstL
+      ).
+
+
+

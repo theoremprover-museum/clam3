@@ -1,0 +1,1 @@
+counter_one(a,b,c)<==>term_of(counter)of a of b of c.

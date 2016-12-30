@@ -1,0 +1,15 @@
+
+method(normal(imply_intro(NewVar)),
+          H==>G,
+          [matrix(Binds, Cond => Body, G),
+           not wave_occ(Binds, Cond, _, _),
+           not sinks(_, [_|_], G),
+           not wave_fronts(_, [_|_], G),
+           member(Body, [_ = _ in _, _ => _])
+          ],
+          [append(Binds, H, Context),
+           hfree([NewVar], Context)],
+          [[NewVar:Cond|Context]==>Body],
+          []
+         ).
+

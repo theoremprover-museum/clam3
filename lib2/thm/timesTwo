@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>times(word2nat(x),s(s(0)))=word2nat(appnd(x,{false}::nil))in pnat,_,_,_).

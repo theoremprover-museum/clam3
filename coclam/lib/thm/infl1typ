@@ -1,0 +1,1 @@
+problem([]==>t:(int=>int)=>h:(int=>int)=>a:int=>infl1(a, h, t)in int list,_,_,_).

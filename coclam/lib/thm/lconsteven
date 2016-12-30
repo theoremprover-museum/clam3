@@ -1,0 +1,1 @@
+problem([]==>lconst(true)=mapcar(jump(0, s(s(0))), myeven)in list(bool),_,_,_).

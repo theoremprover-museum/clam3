@@ -1,0 +1,1 @@
+problem([]==>m:int=>lconst(m)=everyother(lconst(m))in int list,_,_,_).

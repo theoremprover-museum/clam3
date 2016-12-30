@@ -1,0 +1,4 @@
+problem([]==>x:int=>y:int=>x<y\x<y=>void,
+because,atom(incomplete),
+[
+]).

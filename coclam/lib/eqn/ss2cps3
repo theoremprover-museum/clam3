@@ -1,0 +1,2 @@
+problem([]==>l:list(req)=>f:st(ack, req)=>v:char=>nextST(f)=yes(put(v)) in maybe(req)=>ss2cps(f)=output(v, ss2cps(skipST(f) of did::l)))in cps,_,_,_).
+

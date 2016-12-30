@@ -1,0 +1,1 @@
+faSpec(a,b,ci,sm,co)<==>plus(bitval(a),plus(bitval(b),bitval(ci)))=plus(times(s(s(0)),bitval(co)),bitval(sm))in pnat.

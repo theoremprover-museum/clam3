@@ -1,0 +1,3 @@
+problem([]==>v:pnat => w: pnat => x:pnat list=> y:pnat => z:pnat list => 
+greater(v,w) => qsplit(v,w,x,y::z) = x::qsplit(s(s(0)),w,y::nil,z) 
+in pnat list,_,_,_).

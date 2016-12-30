@@ -1,0 +1,64 @@
+%******************************************
+%*
+%*      The WAVE methods
+%*
+%******************************************
+
+
+        % WAVE (LONGITUDINAL) METHOD: 
+        % Find a subexpression to which a 
+        % (conditional) wave-rule applies,
+        % where we require the condition 
+        % of the rule to hold already.
+method(wave(Pos,[Rule,Dir]),
+       H==>G,
+       [% write('attempting wave'), nl,
+        \+ subset_goal(G, _, _, _, _),
+        wave_terms_at(G,Pos,L),
+        wave_rule_match(Rule,long(Dir),C=>L:=>R,SubstL),
+        ground(R),
+        trivial(H==>C)
+       ],
+       [replace(Pos,R,G,NG)],
+        %%sink_expansions(NG,NewG)],
+       [H==>NG],
+       SubstL
+      ).
+
+        % WAVE (TRANSVERSE) METHOD: 
+        % Find a subexpression to which a 
+        % (conditional) wave-rule applies,
+        % where we require the condition 
+        % of the rule to hold already. In
+        % addition the rewritten wave-front 
+        % must be positioned over a sink.
+method(wave(Pos,[Rule,Dir]),
+       H==>G,
+       [% write('attempting wave'), nl,
+       \+ subset_goal(G, _, _, _, _),
+        wave_terms_at(G,Pos,L),
+        wave_rule_match(Rule,trans(Dir),C=>L:=>R,SubstL),
+        ground(R),
+        trivial(H==>C),
+        sinkable(R)   
+       ],
+       [replace(Pos,R,G,NG)],
+       %% sink_expansions(NG,NewG)],
+       [H==>NG],
+       SubstL
+      ).
+
+
+method(wave(sinkexp, [NewG, b]),
+	H==>G,
+	[% write('attempting wave'), nl,
+       \+ subset_goal(G, _, _, _, _),
+        wave_terms_at(G,Pos,L),
+	sink_expansions(G,NewG),
+	G \== NewG],
+	[sink_expansions(G,NewG)],
+	[H==>NewG],
+	[]
+	).
+
+

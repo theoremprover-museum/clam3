@@ -1,0 +1,1 @@
+{pairord}<==>lambda(x,lambda(y,fst(y)&snd(y)=s(fst(x))&s(snd(x))in pnat#pnat)).

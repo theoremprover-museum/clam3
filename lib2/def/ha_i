@@ -1,0 +1,1 @@
+ha_i(a,b,s,c)<==>(s=xor(a,b) in int)#(c=and(a,b) in int).

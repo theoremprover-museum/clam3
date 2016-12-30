@@ -1,0 +1,1 @@
+problem([]==>l:(pnat list) list => rev_flatten(l) = qrev_flatten(l,nil) in pnat list,_,_,_).

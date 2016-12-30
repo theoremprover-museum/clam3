@@ -1,0 +1,4 @@
+problem([]==>m:int=>member(m,nil)=void in u(1),
+repeat intro then simplify,lambda(m,axiom),
+[
+]).

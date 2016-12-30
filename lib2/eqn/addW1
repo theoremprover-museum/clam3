@@ -1,0 +1,1 @@
+problem([]==>a:{word}=>b:{word}=>ci:{bool}=>addW(0)of a of b of ci=ci::nil in{word},_,_,_).

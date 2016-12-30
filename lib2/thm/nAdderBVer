@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>plus(word2nat(x),plus(word2nat(y),bitval(ci)))=word2nat(nAdderB(x,y,ci))in{word},_,_,_).

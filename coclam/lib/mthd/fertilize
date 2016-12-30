@@ -1,0 +1,20 @@
+method(fertilize(strong(Var)),
+       H==>G,
+       [% write('attempting fertlize'), nl,
+        wave_fronts(G1, _, G),
+        induction_hyp_match(Var, H, G1, SubstL)
+       ],
+       [],
+       [],
+       SubstL
+      ).
+
+method(fertilize(weak(Var)),
+       H==>G,
+       [% write('attempting fertlize'), nl,
+        partial_induction_hyp_match(Var, H, G, NG, SubstL)
+       ],
+       [strip_meta_annotations(NG, NewG)],
+       [H==>NewG],
+       SubstL
+      ).

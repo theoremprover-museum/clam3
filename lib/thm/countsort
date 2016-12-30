@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>l:pnat list=>count(a,sort(l))=count(a,l)in pnat,_,_,_).

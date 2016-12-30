@@ -1,0 +1,1 @@
+problem([]==>jump(0, s(0))=merge(jump(0, s(s(0))), jump(s(0), s(s(0))))in int list,_,_,_).

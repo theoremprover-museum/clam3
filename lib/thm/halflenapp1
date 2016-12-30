@@ -1,0 +1,2 @@
+problem([]==>a:pnat list=> b:pnat list => half(length(app(a,b))) = half(length(app(b,a))) in pnat,_,_,_).
+

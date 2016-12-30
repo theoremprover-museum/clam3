@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>pred(s(x))=x in pnat,
+repeat intro then simplify,lambda(x,axiom),
+[
+]).

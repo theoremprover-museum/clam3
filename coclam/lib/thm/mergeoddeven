@@ -1,0 +1,1 @@
+problem([]==>l:int list=>merge(oddlist(l), evenlist(l))=l in int list,_,_,_).

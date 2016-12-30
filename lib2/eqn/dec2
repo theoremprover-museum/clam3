@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>dec(x)=cadd(x,ones(length(x)),{false})in{word},_,_,_).

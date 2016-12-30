@@ -1,0 +1,1 @@
+problem([]==>faCarryImp({false},{true},{true})={true} in {bool},_,_,_).

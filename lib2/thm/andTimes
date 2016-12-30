@@ -1,0 +1,1 @@
+problem([]==>x:{bool}=>y:{bool}=>times(bitval(x),bitval(y))=bitval(x and y)in pnat,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>l:int list=>map2(explode(l), f) = explode(mapcar(l, f))in int list list,_,_,_).

@@ -1,0 +1,4 @@
+cadd(x,y,z)<==>term_of(cadd) of x of y of z.
+
+
+%cadd(x)<==>list_ind(x,lambda(y,lambda(ci,ci::nil)),[h,t,v,lambda(y,lambda(ci,add(h,hd(y),v of tl(y)of ci)))]).

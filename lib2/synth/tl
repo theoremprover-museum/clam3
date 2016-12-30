@@ -1,0 +1,4 @@
+problem([]==>{bool}list=>{bool}list,
+intro(explicit(lambda(l,list_ind(l,nil,[~,t,~,t]))))then simplify then repeat intro then simplify then repeat intro then simplify,lambda(l,list_ind(l,nil,[~,t,~,t])),
+[
+]).

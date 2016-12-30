@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>expW(x,inc(y))=mult(x,expW(x,y))in{word},_,_,_).

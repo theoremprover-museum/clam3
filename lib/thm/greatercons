@@ -1,0 +1,2 @@
+problem([]==>h:pnat=>t:pnat list=>greater(length(h::t),length(t)),_,_,_).
+

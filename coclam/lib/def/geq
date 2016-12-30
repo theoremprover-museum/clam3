@@ -1,0 +1,1 @@
+geq(x,y)<==>y<*x\x=y in pnat.

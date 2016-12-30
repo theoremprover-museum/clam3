@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>orG(y,{false},{true})=y in{bool},_,_,_).

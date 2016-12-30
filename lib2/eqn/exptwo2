@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>exptwo(s(n))=times(s(s(0)),exptwo(n))in pnat,_,_,_).

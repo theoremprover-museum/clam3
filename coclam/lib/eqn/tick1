@@ -1,0 +1,1 @@
+problem([]==>tick=s(0)::tock in int list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>f:((int#int list)=>int list)=>h:int=>t:int list=>e:int list=>foldright(f, h::t, e)=((f of h) of foldright(f, t, e)) in int list,_,_,_).

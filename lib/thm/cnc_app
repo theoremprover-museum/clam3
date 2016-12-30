@@ -1,0 +1,3 @@
+problem([]==>x:pnat list=>y:pnat list=>z:pnat list=>
+(y=z in pnat list) => (app(x,y) = app(x,z)in pnat list),_,_,_).
+

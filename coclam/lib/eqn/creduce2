@@ -1,0 +1,1 @@
+problem([]==>x:(pnat => pnat) => y: pnat => z:pnat list => ap(ap(reduce,x),y::z) = ap(ap(x,y),ap(ap(reduce,x),z)) in pnat list,_,_,_).

@@ -1,0 +1,2 @@
+problem([]==>h:pnat list => t:(pnat list) list => a:pnat list => qrev_flatten(h::t,a) = qrev_flatten(t,app(h,a)) in pnat list,_,_,_).
+

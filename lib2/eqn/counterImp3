@@ -1,0 +1,3 @@
+problem([]==>t:pnat=>reset:{bool}=>counterImp(s(t),reset)=delay(s(t),initial(reset,inc(counterImp(t,reset)))) in{word},_,_,_).
+
+%problem([]==>reset:flip=>initVal:reg=>counterImp(lambda(t,{false}),initVal)=lambda(t,delay(initial(lambda(t,{false}),increm(counterImp(lambda(t,{false}),initVal)))))in{word},_,_,_).

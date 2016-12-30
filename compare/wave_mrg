@@ -1,0 +1,208 @@
+%******************************************
+%*
+%*      The WAVE critics
+%*
+%******************************************
+
+	% 1: JOINING WAVE FRONTS
+	%
+	%
+critic(wave(join-wave-fronts),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, _, _)
+       ],
+       [matrix(Vars, Mat, G),
+        join_wave_fronts(Mat, JoinPosL, NewMat),
+        wave_occ_at(NewMat, Pos, L),
+        wave_rule_match(_, _, _=>L:=>_, _),
+        member(JoinPos, JoinPosL), append(_, Pos, JoinPos)
+       ],
+       [matrix(Vars, NewMat, NewG),
+	record_newgoal(Plan, Addr, H==>NewG)
+       ]
+      ).
+
+
+	% 2: SPLITTING WAVE FRONTS
+        %
+        %
+critic(wave(split-wave-fronts),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, _, _)
+       ],
+       [matrix(Vars, Mat, G),
+        wave_fronts(_, WFs, Mat), member(_-VPs/_, WFs), member([_,_|_], VPs),
+        split_wave_fronts(Mat, SplitPosL, NewMat),
+        wave_occ_at(NewMat, Pos, L),
+        wave_rule_match(_, _, _=>L:=>_, _),
+        member(SplitPos, SplitPosL), append(_, Pos, SplitPos)
+       ],
+       [matrix(Vars, NewMat, NewG),
+        record_newgoal(Plan, Addr, H==>NewG)
+       ]
+      ).
+
+
+	% 3: META RIPPLE (position)
+        %
+critic(wave(meta-ripple-position),
+       Plan,
+       [current_node(Plan, Addr),
+	node(Plan, Addr, H==>G, _, _, _, Preconds, _)
+       ],
+       [member([wave_occ_at(_, Pos, WaveTerm),
+                false,
+                false|_], Preconds),
+        meta_ripple_pos(WaveTerm, NewWaveTerm)
+       ],
+       [replace_in_matrix(Pos, NewWaveTerm, G, NewG),
+	record_newgoal(Plan, Addr, H==>NewG)
+       ]
+      ).
+
+	% 4: META RIPPLE (direction)
+        %
+        %
+critic(wave(meta-ripple-direction),
+       Plan,
+       [current_node(Plan, Addr),
+	node(Plan, Addr, H==>G, _, _, _, Preconds, _)
+       ],
+       [member([wave_occ_at(_, _, _),
+                false,
+                false|
+                    _], Preconds),
+        meta_ripple_dir(G, Pos, NewWaveTerm)
+       ],
+       [replace_in_matrix(Pos, NewWaveTerm, G, NewG),
+	record_newgoal(Plan, Addr, H==>NewG)
+       ]
+      ).
+
+        % 5: WAVE CRITIC: casesplit
+        %
+        %
+critic(wave(casesplit),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _)
+       ],
+       [member([wave_occ_at(_, Pos, _),
+                wave_rule_match(Rn, _, C => LHS :=> _, _),
+                false|_],Preconds),
+        casesplit_set(LHS, Cases)
+       ],
+       [construct_case_goals(H, G, Cases, Pos, SubGs),
+        extend_goaltree(Plan, Addr, casesplit(Cases), [], SubGs, N)
+       ]
+      ).
+
+        % 7: WAVE CRITIC: lemma calculation
+        %
+        %
+critic(wave(lemma-calculation),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _),
+        construct_context(H, G, Context)
+       ],
+       [not contains_meta_variables(G),
+        member([wave_occ_at(_, _, _),
+                false,
+                false|
+                    _], Preconds),
+        partially_blocked(G)
+       ],
+       [construct_lemma_lhs(H==>G, LHS, Typ),
+        construct_lemma_rhs(H==>G, RHS, Typ),
+        construct_generalized_lemma(LHS, RHS, Typ, Context, Name:Lemma),
+        validate_calculation(Plan, Name:Lemma)
+       ]
+      ).
+
+
+
+        % 6: WAVE CRITIC: sink speculation
+        %
+        %
+critic(wave(generalize),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _),
+        construct_context(H, G, Context)
+       ],
+       [member([wave_occ_at(_, Pos, _),
+                wave_rule_match(Rn, trans(Dir), _, _),
+                trivial(_),
+                false], Preconds),
+        not contains_meta_variables(G)
+       ],
+       [construct_generalisation(Context, G, Name:Lemma),
+        print_conjecture(Lemma, Name),
+        add_theorem(Name, Lemma),
+        idplan(Name),
+        extract_subst_list(Name, SubstL),
+        apply_subst_list(SubstL, Lemma, NewLemma),
+        print_conjecture(NewLemma, Name),
+        writef('WARNING: generalization requires verifying.\n\n'),
+        nearest_mthd_occ(Plan, Addr, induction(_,_), NAddr),
+        close_branch(Plan, NAddr, generalize(Name))
+       ]
+      ).
+
+
+        % 8: WAVE CRITIC: induction revision
+        %
+        %
+critic(wave(induction-revision),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _),
+        construct_context(H, G, Context)
+       ],
+       [member([wave_occ_at(_, _, WaveTerm),
+                false,
+                false|
+                _],Preconds),
+	partial_wave_rule_match(WaveTerm, NewWaveTerm)
+       ],
+       [refine_induction(H, NewWaveTerm, NewSch, VarTyp),
+	nearest_mthd_occ(Plan, Addr, induction(_,_), NewAddr),
+        new_current_node(Plan, NewAddr),
+        delete_branch(Plan, NewAddr),
+        apply_method(Plan, induction([NewSch],[VarTyp]), induction, 2, _, _)
+       ]
+      ).
+
+        % 9: WAVE CRITIC: lemma speculation
+        %
+        %
+critic(wave(lemma-speculation),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _),
+        construct_context(H, G, Context)
+       ],
+       [member([wave_occ_at(_, WaveTermPos, WaveTerm),
+                false,
+                false|
+                    _], Preconds),
+	not partial_wave_rule_match(WaveTerm, _),
+        not nested_wave_terms(WaveTerm),
+        not contains_meta_variables(WaveTerm)
+       ],
+       [construct_lemma_lhs(Context, NContext, G, WaveTermPos, LHS, Typ),
+        construct_lemma_rhs(LHS, RHS, Typ),
+        construct_generalized_lemma(LHS, RHS, Typ, NContext, Name:Lemma),
+        validate_speculation(Plan, Name:Lemma)
+       ]
+      ).
+
+
+
+
+
+
+

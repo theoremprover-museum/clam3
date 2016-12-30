@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>divW(plusW(x,y),y)=inc(divW(x,y))in{word},_,_,_).

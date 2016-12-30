@@ -1,0 +1,42 @@
+problem([]==>x:pnat=>times(x,s(0))=x in pnat,
+autotactic(idtac),_125,
+[problem([]==>x:pnat=>times(x,s(0))=x in pnat,
+ dequantify,lambda(x,_181),
+ [problem([x:pnat]==>times(x,s(0))=x in pnat,
+  induction(s(v0),x:pnat),p_ind(x,_221,[v0,v1,_227]),
+  [problem([x:pnat]==>times(0,s(0))=0 in pnat,
+   base([1,1],times1),su(_266,[term_of(times1)],[times1]),
+   [problem([x:pnat]==>0=0 in pnat,
+    identity,axiom,
+    [
+    ]) ext _266
+   ]) ext _221,
+   problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>times(s(v0),s(0))=s(v0)in pnat,
+   wave([1,1],times2),su(_364,[term_of(times2)],[times2]),
+   [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>plus(times(v0,s(0)),s(0))=s(v0)in pnat,
+    fertilize_left([1],v1),_381,
+    [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>plus(v0,s(0))=s(v0)in pnat,
+     induction(s(v0),v0:pnat),p_ind(v0,_497,[v2,v3,_503]),
+     [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>plus(0,s(0))=s(0)in pnat,
+      base([1,1],plus1),su(_565,[term_of(plus1)],[plus1]),
+      [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>s(0)=s(0)in pnat,
+       identity,axiom,
+       [
+       ]) ext _565
+      ]) ext _497,
+      problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:plus(v2,s(0))=s(v2)in pnat]==>plus(s(v2),s(0))=s(s(v2))in pnat,
+      wave([1,1],plus2),su(_713,[term_of(plus2)],[plus2]),
+      [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:plus(v2,s(0))=s(v2)in pnat]==>s(plus(v2,s(0)))=s(s(v2))in pnat,
+       fertilize_right([1],v3),_730,
+       [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:plus(v2,s(0))=s(v2)in pnat]==>s(plus(v2,s(0)))=s(plus(v2,s(0)))in pnat,
+        identity,axiom,
+        [
+        ]) ext _730
+       ]) ext _713
+      ]) ext _503
+     ]) ext _381
+    ]) ext _364
+   ]) ext _227
+  ]) ext _181
+ ]) ext _125
+]).

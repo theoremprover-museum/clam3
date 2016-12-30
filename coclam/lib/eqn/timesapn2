@@ -1,0 +1,3 @@
+problem([]==>n:pnat=>a:pnat=>b:pnat=>appn(n, times(a), s(b))=plus(appn(n, plus(a), 0), appn(n, times(a), b))in pnat,_,_,_).
+
+

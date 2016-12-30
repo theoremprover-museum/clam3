@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=> times(x,y) = mult(x,y,0)in pnat,_,_,_).

@@ -1,0 +1,19 @@
+method(bisimulation_proof(Schemes),
+       H==>G,
+       [ subset_goal(G, Conds, Set, F, Type),
+         definitionF(F, LittleF),
+	 c_suggestions(H, Set, Type, LittleF, Schemes)
+       ],
+       [findall(Subgoals,
+		(member(Scheme, Schemes),
+		 subgoal1(Set, Conds, Type, H, F, Scheme, Subgoal1),
+	 	 subgoal2(Set, Conds, Type, H, F, Scheme, Subgoal2),
+		 subgoal3(Set, Conds, Type, H, Scheme, Subgoal3),
+		 append(Subgoal1, Subgoal2, Subgoalsa),
+		 append(Subgoalsa, Subgoal3, Subgoals)),
+	         Subgoalslists),
+	 flatten(Subgoalslists, [All|Seqs])
+	],
+       [All|Seqs],
+	[]
+          ).

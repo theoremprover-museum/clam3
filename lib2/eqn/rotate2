@@ -1,0 +1,2 @@
+problem([]==>x:int=> l:int list=> (l = nil in (int list)=> void) =>rotate(s(x),l)=rotate(x,app(tl(l),(hd(l)::nil))) in int list,_,_,_).
+

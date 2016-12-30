@@ -1,0 +1,3 @@
+problem([]==>m:int=>lconst(m)in int list,_,_,_).
+
+

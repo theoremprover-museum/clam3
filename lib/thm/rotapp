@@ -1,0 +1,2 @@
+problem([]==>l:pnat list=>m:pnat list=>h:pnat=>
+           rotate(l,app(m,h::nil)) = h::rotate(l,m) in pnat list,_,_,_).

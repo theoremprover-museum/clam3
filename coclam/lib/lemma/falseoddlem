@@ -1,0 +1,1 @@
+problem([]==>v0:pnat=>myeven(n)=>related(void,myodd(n))in bool,_,_,_).

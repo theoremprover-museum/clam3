@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>sI(0)of s0 of s1 of s2 of x=nil in{word},_,_,_).

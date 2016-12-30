@@ -1,0 +1,1 @@
+problem([]==>b:{bool}=>y:{word}=>incaux(b,y)=cincbit(b,hd(y))::incbit(b,hd(y))::tl(y)in{word},_,_,_).

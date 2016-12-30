@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>b:pnat=>sim(tswap(a, b),brswap(tswap3(b, a)))in bintree(pnat),_,_,_).

@@ -1,0 +1,1 @@
+ordered(l)<==>list_ind(l,{true},[h1,t1,v0,list_ind(t1,{true},[h2,~,~,(h1=h2 in int\h1<h2)#v0])]).

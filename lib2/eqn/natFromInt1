@@ -1,0 +1,1 @@
+problem([]==>x:int=>x<0=>natFromInt(x+1)=s(natFromInt(x))in pnat,_,_,_).

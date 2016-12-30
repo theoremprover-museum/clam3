@@ -1,0 +1,13 @@
+problem([]==>u(1),
+intro(explicit({p:{posint}\less(s(0),p)#t:{posint}=>divides(t,p)=>t=s(0)in{posint}\t=p in{posint}})),{p:{posint}\less(s(0),p)#t:{posint}=>divides(t,p)=>t=s(0)in{posint}\t=p in{posint}},
+[problem([]==>{p:{posint}\less(s(0),p)#t:{posint}=>divides(t,p)=>t=s(0)in{posint}\t=p in{posint}}in u(1),
+ repeat wfftac,axiom,
+ [problem([p:{posint},v0:{posint},v1:divides(v0,p)]==>greater(s(0),0),
+  simplify,_1248,
+  [problem([p:{posint},v0:{posint},v1:divides(v0,p)]==>int,
+   intro(0),0,
+   [
+   ]) ext _1248
+  ]) ext _1244
+ ])
+]).

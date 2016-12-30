@@ -1,0 +1,2 @@
+problem([]==>x:pnat => y:pnat list => 
+            split(x,y) = qsplit(s(0),x,nil,y) in pnat list,_,_,_).

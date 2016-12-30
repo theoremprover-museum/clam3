@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>v:{word}=>val(s(n),v)=plus(times(exp(s(s(0)),s(n)),bitval(v of s(n))),val(n,v))in pnat,_,_,_).

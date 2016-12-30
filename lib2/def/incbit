@@ -1,0 +1,1 @@
+incbit(x,ci)<==>xor(x,ci).

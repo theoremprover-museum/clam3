@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>l:int list=>mapcar(l, f)=foldright(lam(x, lam(t, f(x)::t)), l, nil) in int list,_,_,_).

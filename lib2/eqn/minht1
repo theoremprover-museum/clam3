@@ -1,0 +1,1 @@
+problem([]==>n:int=>minht(leaf(n))=0 in pnat,_,_,_).

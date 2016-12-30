@@ -1,0 +1,1 @@
+problem([]==>h:int=>t:int list=>lapp(nil, h::t)=h::lapp(nil, t)in int list,_,_,_).

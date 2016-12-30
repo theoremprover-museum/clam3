@@ -1,0 +1,1 @@
+problem([]==> x:pnat=>greater(s(x),x),_,_,_).

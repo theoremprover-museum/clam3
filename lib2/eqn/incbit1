@@ -1,0 +1,1 @@
+problem([]==>x:{bool}=>ci:{bool}=>incbit(x,ci)=xor(x,ci)in{bool},_,_,_).

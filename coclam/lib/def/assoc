@@ -1,0 +1,1 @@
+assoc(x,l)<==>term_of(assoc)of x of l.

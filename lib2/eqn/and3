@@ -1,0 +1,1 @@
+problem([]==>and({true},{true})={true} in {bool},_,_,_).

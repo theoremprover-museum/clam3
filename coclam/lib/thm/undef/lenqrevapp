@@ -1,0 +1,2 @@
+problem([]==>x:pnat list =>y:pnat list => length(qrev(x, y)) = plus(length(x),length(y)) in pnat, _,_,_).
+

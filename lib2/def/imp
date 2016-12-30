@@ -1,0 +1,1 @@
+imp(x,y)<==> ((not x)or y).

@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>lswap(a, b)=a::lswap(b, a)in int list,_,_,_).

@@ -1,0 +1,6 @@
+
+
+problem([]==>l:pnat list=> 
+        (tsum(l,0) & tprod(l,s(0))) = 
+        (foldl(lam(x,lam(y,plus(x,y))),0,l) & 
+                        foldl(lam(x,lam(y,times(x,y))),s(0),l)) in (pnat # pnat),_,_,_). 

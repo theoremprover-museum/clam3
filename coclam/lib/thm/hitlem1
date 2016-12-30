@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>f:(int=>int)=>v1:int list=>appn(n, mapcar(f), mapcar(v1, f))=mapcar(f, appn(n, mapcar(f), v1))in int list,_,_,_).

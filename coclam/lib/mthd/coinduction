@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%	
+
+
+
+method(coinduction(F, WS, rule_of_thumb),
+       H==>G,
+       [ inT(G, T),
+	 gfp(T, F, WS)
+       ],
+       [ form_set(H, G, F, [All|Seqs])
+	],
+       [All|Seqs],
+	[]
+      ).
+
+method(coinduction(F, WS, R),
+	H==>G,
+	[inT(G, T),
+	 gfp(T, F, WS),
+	 ground(R)],
+	[matrix(Vs, Ter, G),
+	 sort_conds(Ter, Conds, Type, Term),
+	 form_set_or_bisim(R, F, NewGoal),
+	 sort_conds(NT, Conds, set(Type), NewGoal),
+	 matrix([], NT, FinalGoal),
+	 [H==>FinalGoal] = [All|Seqs]
+	],
+	[All|Seqs],
+	[]
+	).

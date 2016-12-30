@@ -1,0 +1,1 @@
+myminus(x,y)<==>p_ind(y,x,[~,prev,pred(prev)]).

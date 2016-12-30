@@ -1,0 +1,95 @@
+
+method(induction(Scheme,VarTypL),
+       H==>G,
+       [ matrix(_,Matrix,G),
+         findset( Var:T,
+                  universal_var(H==>G,Var:T),
+                  Vars_Types
+                ),
+
+	 % Collect all single variable induction suggestions based upon 
+         % wave-rule applicability. Note that repeated suggestions are
+         % eliminated.
+
+         findset( [Var:T]-Scheme,
+	          ( member(Var:T,Vars_Types),
+                    wave_occ(Matrix,Var,WavePos,F,_,Sch,_),
+		    copy(Sch, MSch ),
+                    scheme(Scheme,[Var:T],H==>G,_,_),
+                    member( Sch, Scheme)
+	 % Currently too strong, e.g. prevents a two step induction
+         % from being applied when a one step is applicable.
+         %
+         %           \+ ( exp_at(MSch,_,V), var(V),
+         %                 MSch=Sch,
+         %                 \+ atom(V)
+         %               )
+                  ),
+	         Candidates1
+	        ),
+
+         % Note that I eliminate candidates which occur in ``natural''
+         % sink positions. Do  not fully understand the significance 
+         % of this unnatural constraint (hack) as yet. One consequence 
+         % of this constraint is that recursion analysis fails for the 
+         % rotlen example.
+
+         findset([Var:T]-Sch,
+                 (rmember([Var:T]-Sch,Candidates1),
+		  replace_all(Var, MetaVar, Matrix, NewMatrix),
+		  not (exp_at(NewMatrix, _, LHS),
+		       not metavar(LHS),
+                       wave_rule(Rn,
+                                 genw(right,[_-[_|_]-_-[]]),
+                                 _=>LHS:=>_),
+		       func_defeqn(_, Rn:_))),
+		 Candidates2),
+
+         % Find an induction that will introduce wave-fronts
+	 % eliminable at all wave-occurences of the variable
+	 % induced over. Prefer inductions where all occurences 
+         % of the variable are wave occurences. Give mild 
+         % preferencea to inductions that wave-fronts ``beside'' 
+         % others, and avoid putting wave-fronts nested inside 
+         % existing (blocked) wave-fronts.
+
+         findall( Score-(VarTL-Scheme),
+	          ( member( VarTL-Scheme, Candidates2),
+		    findall(Var,member(Var:_,VarTL),VarL),
+		    once(
+	              ( ( Side = Matrix, SC1 = 1000 ;
+                          transitive_pred( Matrix, Sides, _, _ ),
+	                  member( Side, Sides ),
+                          SC1 = 500 ;
+                          SC1 = 0
+                        ),
+			all_wave_occs_good( Side, Scheme, VarL ),
+	          	( all_occs_wave_occs( Side, VarL ),
+	        	  SC2 is 100 ;
+	                  SC2 is 0
+	                ),
+	                ( unblocky_occs( Side, VarL ),
+	                  SC3 is 25 ;
+	                  SC3 is 0
+	                ),
+	                ( all_occs_outwave( Side, VarL ),
+	                  SC4 is 50 ;
+			  SC4 is 0
+	                ),
+	                Score is SC1 + SC2 + SC3 + SC4 
+	              )
+	            )
+	          ),
+	          Scor_VT_Ss
+	        ),
+         in_order( VarTypL-Scheme, Scor_VT_Ss ) 
+       ],
+       [scheme(Scheme,VarTypL,H==>G,BaseSeqs,StepSeqs),
+        append(BaseSeqs,StepSeqs,[All|Seqs])
+       ],
+       [All|Seqs],
+       []
+      ).
+	
+
+

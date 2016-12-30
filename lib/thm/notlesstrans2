@@ -1,0 +1,72 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>(less(x,z)#leq(y,x))=>less(y,z),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_318,[v0,v1,_324])),
+[problem([x:pnat]==>y:pnat=>z:pnat=>(less(0,z)#leq(y,0))=>less(y,z),
+ base([2,1],leq2),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _394,[leq2 of v0],[v2]),[term_of(leq2)],[leq2]))),
+ [problem([x:pnat]==>y:pnat=>z:pnat=>(less(0,z)#y=0 in pnat)=>less(y,z),
+  base([1,1],less1),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _504,[less1 of v1],[v2]),[term_of(less1)],[less1]))),
+  [problem([x:pnat]==>y:pnat=>z:pnat=>((z=0 in pnat=>void)#y=0 in pnat)=>less(y,z),
+   induction(s(v0),y:pnat),lambda(y,p_ind(y,_610,[v0,v1,_616])),
+   [problem([x:pnat,y:pnat]==>z:pnat=>((z=0 in pnat=>void)#0=0 in pnat)=>less(0,z),
+    base([2],less1),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _689,[less1 of v0],[v1]),[term_of(less1)],[less1])),
+    [problem([x:pnat,y:pnat]==>z:pnat=>((z=0 in pnat=>void)#0=0 in pnat)=>z=0 in pnat=>void,
+     tautology((intro then wfftacs)then intro then[intro then[elim(v0)then elim(v2)then[intro,intro],wfftacs],wfftacs]),lambda(z,lambda(v0,lambda(v1,spread(v0,[v2,v3,su(v5,[v2 of axiom],[v5])])))),
+     [
+     ]) ext _689
+    ]) ext _610,
+    problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>((z=0 in pnat=>void)#v0=0 in pnat)=>less(v0,z)]==>z:pnat=>((z=0 in pnat=>void)#s(v0)=0 in pnat)=>less(s(v0),z),
+    tautology((intro then wfftacs)then intro then[elim(v2)then clam_arith,wfftacs]),lambda(z,lambda(v2,spread(v2,[v3,v4,atom(incomplete)]))),
+    [
+    ]) ext _616
+   ]) ext _504
+  ]) ext _394
+ ]) ext _318,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z)]==>y:pnat=>z:pnat=>(less(s(v0),z)#leq(y,s(v0)))=>less(y,z),
+ induction(s(v2),y:pnat),lambda(y,p_ind(y,_1074,[v2,v3,_1080])),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat]==>z:pnat=>(less(s(v0),z)#leq(0,s(v0)))=>less(0,z),
+  base([2,1],leq1),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1187,[leq1 of s(v0)],[v3]),[term_of(leq1)],[leq1])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat]==>z:pnat=>(less(s(v0),z)#{true})=>less(0,z),
+   base([2],less1),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1315,[less1 of v2],[v3]),[term_of(less1)],[less1])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat]==>z:pnat=>(less(s(v0),z)#{true})=>z=0 in pnat=>void,
+    induction(s(v2),z:pnat),lambda(z,p_ind(z,_1442,[v2,v3,_1448])),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,z:pnat]==>(less(s(v0),0)#{true})=>0=0 in pnat=>void,
+     base([1,1],less2),su(su(_1547,[less2 of s(v0)],[v2]),[term_of(less2)],[less2]),
+     [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,z:pnat]==>(void#{true})=>0=0 in pnat=>void,
+      tautology(intro then[intro then[elim(v2)then intro,wfftacs],wfftacs]),lambda(v2,lambda(v3,spread(v2,[v4,v5,v4]))),
+      [
+      ]) ext _1547
+     ]) ext _1442,
+     problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,z:pnat,v2:pnat,v3:(less(s(v0),v2)#{true})=>v2=0 in pnat=>void]==>(less(s(v0),s(v2))#true)=>s(v2)=0 in pnat=>void,
+     tautology(intro then[intro then[clam_arith,wfftacs],wfftacs]),lambda(v4,lambda(v5,atom(incomplete))),
+     [
+     ]) ext _1448
+    ]) ext _1315
+   ]) ext _1187
+  ]) ext _1074,
+  problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z)]==>z:pnat=>(less(s(v0),z)#leq(s(v2),s(v0)))=>less(s(v2),z),
+  wave([2,1],[leq3,left]),lambda(v4,su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _1976,[v5 of v0],[v6]),[leq3 of v2],[v5]),[term_of(leq3)],[leq3])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z)]==>z:pnat=>(less(s(v0),z)#leq(v2,v0))=>less(s(v2),z),
+   induction(s(v4),z:pnat),lambda(z,p_ind(z,_2144,[v4,v5,_2150])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat]==>(less(s(v0),0)#leq(v2,v0))=>less(s(v2),0),
+    base([2],less2),su(su(_2281,[less2 of s(v2)],[v4]),[term_of(less2)],[less2]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat]==>(less(s(v0),0)#leq(v2,v0))=>void,
+     base([1,1],less2),su(su(_2425,[less2 of s(v0)],[v4]),[term_of(less2)],[less2]),
+     [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat]==>(void#leq(v2,v0))=>void,
+      tautology(intro then[elim(v4)then intro,wfftacs]),lambda(v4,spread(v4,[v5,v6,v5])),
+      [
+      ]) ext _2425
+     ]) ext _2281
+    ]) ext _2144,
+    problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat,v4:pnat,v5:(less(s(v0),v4)#leq(v2,v0))=>less(s(v2),v4)]==>(less(s(v0),s(v4))#leq(v2,v0))=>less(s(v2),s(v4)),
+    wave([2],[less3,left]),su(su(su(_2748,[v6 of v4],[v7]),[less3 of v2],[v6]),[term_of(less3)],[less3]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat,v4:pnat,v5:(less(s(v0),v4)#leq(v2,v0))=>less(s(v2),v4)]==>(less(s(v0),s(v4))#leq(v2,v0))=>less(v2,v4),
+     wave([1,1],[less3,left]),su(su(su(_2939,[v6 of v4],[v7]),[less3 of v0],[v6]),[term_of(less3)],[less3]),
+     [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(less(v0,z)#leq(y,v0))=>less(y,z),y:pnat,v2:pnat,v3:z:pnat=>(less(s(v0),z)#leq(v2,s(v0)))=>less(v2,z),z:pnat,v4:pnat,v5:(less(s(v0),v4)#leq(v2,v0))=>less(s(v2),v4)]==>(less(v0,v4)#leq(v2,v0))=>less(v2,v4),
+      strong_fertilize(v1),su(su(v7,[v6 of v4],[v7]),[v1 of v2],[v6]),
+      [
+      ]) ext _2939
+     ]) ext _2748
+    ]) ext _2150
+   ]) ext _1976
+  ]) ext _1080
+ ]) ext _324
+]).

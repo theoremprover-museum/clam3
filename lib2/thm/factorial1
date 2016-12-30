@@ -1,0 +1,3 @@
+problem([]==> n:pnat => greater(n,s(s(s(s(s(s(0)))))))=> 
+                        greater(fac(n),
+                                times(s(s(s(s(s(s(0)))))),times(n,n))),_,_,_).

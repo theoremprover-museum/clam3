@@ -1,0 +1,28 @@
+% GEN_THM hint method. 
+%
+%	Generalises a theorem into another more general already
+%  loaded. Thm is the name of the theorem to be generalised. The
+%  hint method first verifies the theorem is in memory. Then it verifies
+%  it is in fact more general than the theorem being proved. It does so
+%  by replacing a universally quantified variable from Thm by a
+%  metavariable and then tries to apply sym_eval method to it and obtain
+%  the theorem being proved as a result. If it fails, it will backtrack 
+%  get the next universally quantified variable and try again until all
+%  such variables have been tried.
+
+
+
+	hint( gen_thm(Context,Thm),
+              H==>G,
+              [ hint_context(gen_thm, Context, H==>G, [Thm]),
+                theorem(Thm,Goal),
+                matrix(V,M,Goal),
+                select(Var:_,V,V1),
+	        replace_all(Var,_,M,M1),
+                matrix(V1,M1,Goal1),
+                applcble(method,[]==>Goal1,sym_eval(_),_,[H==>G])
+              ],
+              [],
+              [H==>Goal],
+              gen_thm(Context, Thm)
+            ).

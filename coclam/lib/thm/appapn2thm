@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>v3:int list=>v4:int list=>h:int list=>appn(n, app(v4), app(h, v3))=app(v4, appn(n, app(v4), v3))in int,_,_,_).

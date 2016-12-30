@@ -1,0 +1,1 @@
+problem([]==>p: ({bool}=>{bool})=>some(p)= (p of{true}or p of{false})in{bool},_,_,_).

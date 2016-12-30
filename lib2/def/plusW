@@ -1,0 +1,1 @@
+plusW(x,y)<==>p_ind(word2nat(x),y,[k,r,inc(r)]).

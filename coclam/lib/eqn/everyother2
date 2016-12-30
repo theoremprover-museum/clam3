@@ -1,0 +1,1 @@
+problem([]==>a:int=>everyother(a::nil)=nil in int list,_,_,_).

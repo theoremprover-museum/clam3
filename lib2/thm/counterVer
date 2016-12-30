@@ -1,0 +1,5 @@
+problem([]==>t:pnat=>reset:{bool}=>counter(t,reset)=word2nat(counterImp(t,reset)) in pnat,_,_,_).
+
+% problem([]==>t:pnat=>reset:{bool}=>counter(t,reset)=rem(word2nat(counterImp(t,reset)),exp(s(s(0)),length(nat2word(t)))) in pnat,_,_,_).
+
+% problem([]==>n:pnat=>reset:reg=>initVal:reg=>counter(n,reset)=word2nat(counterImp(reset,initVal))in pnat,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>nAluImpGood(0,s0,s1,s2,x,y,ci)= ((not s2)and ci)::nil in{word},_,_,_).

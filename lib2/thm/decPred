@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>word2nat(dec(x))=pred(word2nat(x))in pnat,_,_,_).

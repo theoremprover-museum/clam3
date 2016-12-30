@@ -1,0 +1,1 @@
+incword(x,ci)<==>term_of(incword)of x of ci.

@@ -1,0 +1,1 @@
+problem([]==>t:bool list=>parity(true, t)=numparity(0, t)in bool list, _, _, _).

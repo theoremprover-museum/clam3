@@ -1,0 +1,5 @@
+%shiftSpec(n,s0,s1,si,x)<==>bool_eq(s1,{false},bool_eq(s0,{false},numVal(n) of x,numVal(n) of app(si::nil,rev(tl(rev(x))))),bool_eq(s0,{false},numVal(n) of app(tl(x),(si::nil)),0)).
+
+shiftSpec(n,s0,s1,si,x)<==>bool_eq(s1,{false},bool_eq(s0,{false},une(n,nil,x),une(n,(si::nil),rev(tl(rev(x))))),bool_eq(s0,{false},une(n,tl(x),(si::nil)),wordVal(n)of 0)).
+
+

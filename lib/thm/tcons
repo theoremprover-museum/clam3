@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>l:pnat list=>x:pnat list#x=app(l,a::nil)in pnat list,_,_,_).

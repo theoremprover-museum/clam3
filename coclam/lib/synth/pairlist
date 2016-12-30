@@ -1,0 +1,21 @@
+problem([]==>x:int list=>y:int list=>(int list)list,
+intro then wfftacs then intro then wfftacs,lambda(x,lambda(y,_306)),
+[problem([x:int list,y:int list]==>(int list)list,
+ elim(x,new[hx,tx,recx]),list_ind(x,_351,[hx,tx,recx,_359]),
+ [problem([x:int list,y:int list]==>(int list)list,
+  intro(explicit(nil))then wfftacs,nil,
+  [
+  ]) ext _351,
+  problem([x:int list,y:int list,hx:int,tx:int list,recx:(int list)list]==>(int list)list,
+  elim(y,new[hy,ty,recy]),list_ind(y,_464,[hy,ty,recy,_472]),
+  [problem([x:int list,y:int list,hx:int,tx:int list,recx:(int list)list]==>(int list)list,
+   intro(explicit(nil))then wfftacs,nil,
+   [
+   ]) ext _464,
+   problem([x:int list,y:int list,hx:int,tx:int list,recx:(int list)list,hy:int,ty:int list,recy:(int list)list]==>(int list)list,
+   intro(explicit((hx::hy::nil)::recy))then wfftacs,(hx::hy::nil)::recy,
+   [
+   ]) ext _472
+  ]) ext _359
+ ]) ext _306
+]).

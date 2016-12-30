@@ -1,0 +1,1 @@
+addInt(x,y)<==>ind(x,[xn,tn,tn-1],y,[xp,tp,tp+1]).

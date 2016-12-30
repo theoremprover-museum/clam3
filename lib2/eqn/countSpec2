@@ -1,0 +1,12 @@
+problem([]==>t:pnat=>reset:flip=>countSpec(reset)of s(t)=bool_eq(reset of t,{true},0,s(countSpec(reset)of t)) in pnat,_,_,_).
+
+
+
+
+problem([]==>t:pnat=>n:pnat=>reset:flip=>countSpec(n,reset)of s(t)=bool_eq(reset of t,{true},0,rem(s(countSpec(n,reset)of t),exp(s(s(0)),n)))in pnat,_,_,_).
+
+
+
+
+
+

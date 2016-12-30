@@ -1,0 +1,62 @@
+problem([]==>x:int=>a:(int list)=>b:(int list)=>(member(x,a)#member(x,b))=>member(x,intersect(a,b)),
+dequantify,lambda(x,lambda(a,lambda(b,_312))),
+[problem([x:int,a:(int list),b:(int list)]==>(member(x,a)#member(x,b))=>member(x,intersect(a,b)),
+ induction(v0::v1,a:(int list)),list_ind(a,_376,[v0,v1,v2,_384]),
+ [problem([x:int,a:(int list),b:(int list)]==>(member(x,nil)#member(x,b))=>member(x,intersect(nil,b)),
+  sym_eval([base([1,1],member1),base([2,2],intersect1),base([2],member1)]),su(su(su(su(su(su(_484,[member1 of x],[v0]),[term_of(member1)],[member1]),[intersect1 of b],[v0]),[term_of(intersect1)],[intersect1]),[member1 of x],[v0]),[term_of(member1)],[member1]),
+  [problem([x:int,a:(int list),b:(int list)]==>(void#member(x,b))=>void,
+   tautology(intro then[elim(v0)then hyp(v1),wfftacs]),lambda(v0,spread(v0,[v1,v2,v1])),
+   [
+   ]) ext _484
+  ]) ext _376,
+  problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b))]==>(member(x,v0::v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+  casesplit([x=v0 in int=>void,x=v0 in int]),lambda(v4,decide(v4,[v5,lambda(v3,_726)of v5],[v6,lambda(v3,_736)of v6]))of su(su(su(v5,[v4 of v0],[v5]),[v3 of x],[v4]),[term_of(deceqint)],[v3]),
+  [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void]==>(member(x,v0::v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+   wave([1,1],[member3,left]),su(su(su(su(su(_902,[v6 of v3],[v4]),[v5 of v1],[v6]),[v4 of v0],[v5]),[member3 of x],[v4]),[term_of(member3)],[member3]),
+   [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void]==>(member(x,v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+    casesplit([member(v0,b)=>void,member(v0,b)]),lambda(v5,decide(v5,[v6,lambda(v4,_1075)of v6],[v7,lambda(v4,_1085)of v7]))of su(su(su(v6,[v5 of b],[v6]),[v4 of v0],[v5]),[term_of(decmember)],[v4]),
+    [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void,v4:member(v0,b)=>void]==>(member(x,v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+     wave([2,2],[intersect4,left]),su(su(su(su(su(_1259,[v7 of v4],[v5]),[v6 of b],[v7]),[v5 of v1],[v6]),[intersect4 of v0],[v5]),[term_of(intersect4)],[intersect4]),
+     [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void,v4:member(v0,b)=>void]==>(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),
+      tautology(hyp(v2)),v2,
+      [
+      ]) ext _1259
+     ]) ext _1075,
+     problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void,v4:member(v0,b)]==>(member(x,v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+     wave([2,2],[intersect3,left]),su(su(su(su(su(_1548,[v7 of v4],[v5]),[v6 of b],[v7]),[v5 of v1],[v6]),[intersect3 of v0],[v5]),[term_of(intersect3)],[intersect3]),
+     [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void,v4:member(v0,b)]==>(member(x,v1)#member(x,b))=>member(x,v0::intersect(v1,b)),
+      wave([2],[member3,left]),su(su(su(su(su(_1721,[v7 of v3],[v5]),[v6 of intersect(v1,b)],[v7]),[v5 of v0],[v6]),[member3 of x],[v5]),[term_of(member3)],[member3]),
+      [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int=>void,v4:member(v0,b)]==>(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),
+       tautology(hyp(v2)),v2,
+       [
+       ]) ext _1721
+      ]) ext _1548
+     ]) ext _1085
+    ]) ext _902
+   ]) ext _726,
+   problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(x,v1)#member(x,b))=>member(x,intersect(v1,b)),v3:x=v0 in int]==>(member(x,v0::v1)#member(x,b))=>member(x,intersect(v0::v1,b)),
+   sym_eval([equal(v3,left)]),_1880,
+   [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b))]==>(member(v0,v0::v1)#member(v0,b))=>member(v0,intersect(v0::v1,b)),
+    wave([1,1],[member2,left]),su(su(su(su(su(_2100,[v5 of axiom],[v3]),[v4 of v1],[v5]),[v3 of v0],[v4]),[member2 of v0],[v3]),[term_of(member2)],[member2]),
+    [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b))]==>({true}#member(v0,b))=>member(v0,intersect(v0::v1,b)),
+     casesplit([member(v0,b)=>void,member(v0,b)]),lambda(v4,decide(v4,[v5,lambda(v3,_2258)of v5],[v6,lambda(v3,_2268)of v6]))of su(su(su(v5,[v4 of b],[v5]),[v3 of v0],[v4]),[term_of(decmember)],[v3]),
+     [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b)),v3:member(v0,b)=>void]==>({true}#member(v0,b))=>member(v0,intersect(v0::v1,b)),
+      tautology(intro then[elim(v3)then[elim(v4)then hyp(v6),elim(v5)],wfftacs]),lambda(v4,su(any(v5),[v3 of spread(v4,[v5,v6,v6])],[v5])),
+      [
+      ]) ext _2258,
+      problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b)),v3:member(v0,b)]==>({true}#member(v0,b))=>member(v0,intersect(v0::v1,b)),
+      wave([2,2],[intersect3,left]),su(su(su(su(su(_2574,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[intersect3 of v0],[v4]),[term_of(intersect3)],[intersect3]),
+      [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b)),v3:member(v0,b)]==>({true}#member(v0,b))=>member(v0,v0::intersect(v1,b)),
+       wave([2],[member2,left]),su(su(su(su(su(_2732,[v6 of axiom],[v4]),[v5 of intersect(v1,b)],[v6]),[v4 of v0],[v5]),[member2 of v0],[v4]),[term_of(member2)],[member2]),
+       [problem([x:int,a:(int list),b:(int list),v0:int,v1:(int list),v2:(member(v0,v1)#member(v0,b))=>member(v0,intersect(v1,b)),v3:member(v0,b)]==>({true}#member(v0,b))=>{true},
+        tautology(intro then[istrue,wfftacs]),lambda(v4,0),
+        [
+        ]) ext _2732
+       ]) ext _2574
+      ]) ext _2268
+     ]) ext _2100
+    ]) ext _1880
+   ]) ext _736
+  ]) ext _384
+ ]) ext _312
+]).

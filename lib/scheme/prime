@@ -1,0 +1,77 @@
+problem([]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x))=>z:pnat=>phi of z,
+universe(3),_218,
+[problem([]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x))=>z:pnat=>phi of z,
+ autotactic(repeat (compute([[unfold]]in _391)or intro)),_304,
+ [problem([]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x))=>z:pnat=>phi of z,
+  intro,lambda(phi,lambda(v0,lambda(v1,lambda(v2,lambda(z,_494))))),
+  [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat]==>phi of z,
+   elim(z,cv),cv_ind(z,[v5,v3,_593]),
+   [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4]==>phi of v5,
+    decide(v5=0 in pnat),pnat_eq(v5,0,su(_727,[axiom],[v4]),su(_735,[lambda(~,axiom)],[v4])),
+    [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat]==>phi of v5,
+     subst(at(3),over(v6,phi of v6),v5=0 in pnat),v0,
+     [
+     ]) ext _727,
+     problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void]==>phi of v5,
+     decide(v5=s(0)in pnat),pnat_eq(v5,s(0),su(_1042,[axiom],[v6]),su(_1050,[lambda(~,axiom)],[v6])),
+     [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat]==>phi of v5,
+      subst(at(3),over(v7,phi of v7),v5=s(0)in pnat),v1,
+      [
+      ]) ext _1042,
+      problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void]==>phi of v5,
+      seq(q:{x:pnat\prime(x)}#divides(q,v5),new[v7]),lambda(v7,_1404)of _1401,
+      [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void]==>q:{x:pnat\prime(x)}#divides(q,v5),
+       lemma(primelem),su(_1572,[term_of(primelem)],[v7]),
+       [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x)]==>q:{x:pnat\prime(x)}#divides(q,v5),
+        elim(v7,on(v5)),su(_1779,[v7 of v5],[v8]),
+        [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x),v8:s(0)<*v5=>y:pnat#divides(y,v5)]==>q:{x:pnat\prime(x)}#divides(q,v5),
+         elim(v8),su(_2006,[v8 of _2013],[v9]),
+         [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x),v8:s(0)<*v5=>y:pnat#divides(y,v5)]==>s(0)<*v5,
+          because,atom(incomplete),
+          [
+          ]) ext _2013,
+          problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x),v8:s(0)<*v5=>y:pnat#divides(y,v5),v9:y:pnat#divides(y,v5)]==>q:{x:pnat\prime(x)}#divides(q,v5),
+          elim(v9),spread(v9,[y,v10,_2455]),
+          [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x),v8:s(0)<*v5=>y:pnat#divides(y,v5),v9:y:pnat#divides(y,v5),y:pnat,v10:divides(y,v5),v11:v9=y&v10 in (y:pnat#divides(y,v5))]==>q:{x:pnat\prime(x)}#divides(q,v5),
+           intro(y),y&v10,
+           [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:x:pnat=>s(0)<*x=>y:pnat#divides(y,x),v8:s(0)<*v5=>y:pnat#divides(y,v5),v9:y:pnat#divides(y,v5),y:pnat,v10:divides(y,v5),v11:v9=y&v10 in (y:pnat#divides(y,v5))]==>prime(y),
+            because,atom(incomplete),
+            [
+            ]) ext _2730
+           ]) ext _2455
+          ]) ext _2006
+         ]) ext _1779
+        ]) ext _1572
+       ]) ext _1401,
+       problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5)]==>phi of v5,
+       elim(v7)then thin([v9]),spread(v7,[q,v8,_3163]),
+       [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:divides(q,v5)]==>phi of v5,
+        compute(hyp(v8),[[unfold]]),_3173,
+        [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat]==>phi of v5,
+         elim(v8)then thin([v10,v11]),spread(v8,[x,v9,_3594]),
+         [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat,x:pnat,v9:v5=times(q,x)in pnat]==>phi of v5,
+          subst(at(3),over(v10,phi of v10),v5=times(q,x)in pnat),_3604,
+          [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat,x:pnat,v9:v5=times(q,x)in pnat]==>phi of times(q,x),
+           elim(v2,on(q),new[v10])then[idtac,try elim_on(v10,[x])],su(su(_4101,[v10 of x],[v11]),[v2 of q],[v10]),
+           [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat,x:pnat,v9:v5=times(q,x)in pnat,v10:x:pnat=>phi of x=>phi of times(q,x),v11:phi of x=>phi of times(q,x)]==>phi of times(q,x),
+            elim(v11),su(v12,[v11 of _4397],[v12]),
+            [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat,x:pnat,v9:v5=times(q,x)in pnat,v10:x:pnat=>phi of x=>phi of times(q,x),v11:phi of x=>phi of times(q,x)]==>phi of x,
+             elim(v3,on(x)),su(v12,[v3 of x],[v12]),
+             [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:p:{x:pnat\prime(x)}=>x:pnat=>phi of x=>phi of times(p,x),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:q:{x:pnat\prime(x)}#divides(q,v5),q:{x:pnat\prime(x)},v8:x:pnat#v5=times(q,x)in pnat,x:pnat,v9:v5=times(q,x)in pnat,v10:x:pnat=>phi of x=>phi of times(q,x),v11:phi of x=>phi of times(q,x)]==>x<*v5,
+              because,atom(incomplete),
+              [
+              ]) ext _4686
+             ]) ext _4397
+            ]) ext _4101
+           ]) ext _3604
+          ]) ext _3594
+         ]) ext _3173
+        ]) ext _3163
+       ]) ext _1404
+      ]) ext _1050
+     ]) ext _735
+    ]) ext _593
+   ]) ext _494
+  ]) ext _304
+ ]) ext _218
+]).

@@ -1,0 +1,13 @@
+method(gfp_membership(Schemes, NumList),
+       H==>G,
+       [ subset_goal(G, Conds, Set, F, Type),
+         definitionF(F, LittleF, WS),
+	 c_suggestions(Set, LittleF, Lists),
+	 memlists(Lists, Schemes, NumList)],
+	[ subset_goal(G, Conds, Set, F, Type),
+	  subgoals(Set, Schemes, F, H, Type, [All|Seqs]),
+	  make_ground([All|Seqs])
+	],
+       [All|Seqs],
+	[]
+          ).

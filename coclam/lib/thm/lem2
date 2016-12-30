@@ -1,0 +1,59 @@
+problem([]==>x:pnat=>leq(x,s(x)),
+intro,lambda(x,_386),
+[problem([x:pnat]==>leq(x,s(x)),
+ elim(x),p_ind(x,_414,[v0,v1,_420]),
+ [problem([x:pnat]==>leq(0,s(0)),
+  compute([[unfold]]),_430,
+  [problem([x:pnat]==>0<*s(0)\0=s(0)in pnat,
+   intro(left),inl(_488),
+   [problem([x:pnat]==>0<*s(0),
+    intro,axiom,
+    [
+    ]) ext _488,
+    problem([x:pnat]==>0=s(0)in pnat in u(1),
+    repeat intro,axiom,
+    [
+    ])
+   ]) ext _430
+  ]) ext _414,
+  problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>leq(s(v0),s(s(v0))),
+  compute([[unfold]]),_550,
+  [problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(v0)<*s(s(v0))\s(v0)=s(s(v0))in pnat,
+   intro(left),inl(_650),
+   [problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(v0)<*s(s(v0)),
+    arith,axiom,
+    [problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(v0)in pnat,
+     intro,axiom,
+     [problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>v0 in pnat,
+      intro,axiom,
+      [
+      ])
+     ]),
+     problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(s(v0))in pnat,
+     repeat intro,axiom,
+     [
+     ])
+    ]) ext _650,
+    problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(v0)=s(s(v0))in pnat in u(1),
+    intro,axiom,
+    [problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>pnat in u(1),
+     intro,axiom,
+     [
+     ]),
+     problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(v0)in pnat,
+     repeat intro,axiom,
+     [
+     ]),
+     problem([x:pnat,v0:pnat,v1:leq(v0,s(v0))]==>s(s(v0))in pnat,
+     repeat intro,axiom,
+     [
+     ])
+    ])
+   ]) ext _550
+  ]) ext _420
+ ]) ext _386,
+ problem([]==>pnat in u(1),
+ intro,axiom,
+ [
+ ])
+]).

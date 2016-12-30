@@ -1,0 +1,2 @@
+problem([]==>a:pnat list=> even(length(app(a,a))),_,_,_).
+

@@ -1,0 +1,1 @@
+problem([]==>value:bool=>t:bool list=>parity(value, true::t)=flipbv(value)::parity(flipbv(value), t) in bool list, _, _, _).

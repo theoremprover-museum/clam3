@@ -1,0 +1,1 @@
+problem([]==>n:int=>test(n+1)=test(n) in int,_,_,_).

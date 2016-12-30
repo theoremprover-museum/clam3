@@ -1,0 +1,1 @@
+problem([]==>bitval({false})=0 in pnat,_,_,_).

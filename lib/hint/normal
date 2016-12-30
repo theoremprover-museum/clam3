@@ -1,0 +1,18 @@
+% NORMAL hint method.
+%
+% This hint method is a weaker version of normal(exist_elim(_))
+% submethod. The normal hint method allows existential elimination
+% on the induction hipothesis.
+
+hint(normal(exist_elim_IH(HName)),
+          H==>G,
+          [hyp(HName:V:T#H1,H)],
+          [hfree([NewV,NewHName],H),
+           replace_all(V,NewV,H1,NewH1),
+           select(_:[_,HName:V:T#H1],H,HThin)
+          ],
+          [[NewV:T,
+            NewHName:NewH1
+            |HThin]==>G],
+          normal(exist_elim)
+         ).        

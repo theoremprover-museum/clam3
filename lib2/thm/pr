@@ -1,0 +1,334 @@
+assp: [] complete autotactic(idtac) 
+==> x:pnat=>
+    y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat
+by induction(s(v0),x:pnat)
+
+| ?- dplan.
+DEPTH: 0
+==>x:pnat=>y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat
+SELECTED METHOD at depth 0: induction([s(v0)],[x:pnat])
+|DEPTH: 1
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(0,plus(y,z))=plus(plus(0,y),z)in pnat
+|TERMINATING METHOD at depth 1: base_case([...])
+|DEPTH: 1
+|v0:pnat
+|ih:[RAW,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(plus(v0,y),z)in pnat]
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(``s({v0})''<out>,plus(\y/,\z/))=plus(plus(``s({v0})''<out>,\y/),\z/)in pnat
+|TERMINATING METHOD at depth 1: step_case([...])
+induction([s(v0)],[x:pnat]) then 
+  [base_case([...]),
+   step_case([...])
+  ]
+
+| ?- apply_plan.
+applying tactic at depth 0: induction([s(v0)],[x:pnat])
+applying tactic at depth 1: base_case([...])
+applying tactic at depth 1: step_case([...])
+
+slct(assp).
+
+yes
+| ?- trace_plan(_,30).
+[The plantracer switched from level 22 to level 30]
+
+yes
+| ?- dplan.
+DEPTH: 0
+==>x:pnat=>y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat
+  Trying method elementary/1
+  Trying method base_case/1
+  Trying submethod elementary/1
+  Trying submethod sym_eval/1
+  Trying submethod equal/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod eval_def/2
+  Trying submethod existential/2
+  Trying submethod existential/2
+  Trying method step_case/1
+  Trying submethod ripple/1
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod casesplit/1
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying method generalise/2
+  Trying method induction/2
+SELECTED METHOD at depth 0: induction([s(v0)],[x:pnat])
+|DEPTH: 1
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(0,plus(y,z))=plus(plus(0,y),z)in pnat
+  Trying method elementary/1
+  Trying method base_case/1
+  Trying submethod elementary/1
+  Trying submethod sym_eval/1
+  Trying submethod equal/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod eval_def/2
+  Trying submethod sym_eval/1
+  Trying submethod equal/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod eval_def/2
+  Trying submethod sym_eval/1
+  Trying submethod equal/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod eval_def/2
+  Trying submethod existential/2
+  Trying submethod existential/2
+  Trying method base_case/1
+  Trying submethod elementary/1
+  Trying method base_case/1
+  Trying submethod sym_eval/1
+|TERMINATING METHOD at depth 1: base_case([...])
+|DEPTH: 1
+|v0:pnat
+|ih:[RAW,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(plus(v0,y),z)in pnat]
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(``s({v0})''<out>,plus(\y/,\z/))=plus(plus(``s({v0})''<out>,\y/),\z/)in pnat
+  Trying method elementary/1
+  Trying method base_case/1
+  Trying submethod elementary/1
+  Trying submethod sym_eval/1
+  Trying submethod equal/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod reduction/2
+  Trying submethod eval_def/2
+  Trying submethod existential/2
+  Trying submethod existential/2
+  Trying method step_case/1
+  Trying submethod ripple/1
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod wave/3
+  Trying submethod casesplit/1
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod unblock/3
+  Trying submethod fertilize/2
+  Trying submethod fertilization_strong/1
+|TERMINATING METHOD at depth 1: step_case([...])
+induction([s(v0)],[x:pnat]) then 
+  [base_case([...]),
+   step_case([...])
+  ]
+slct(assp).
+
+yes
+| ?- trace_plan(_,40).
+[The plantracer switched from level 30 to level 40]
+
+yes
+| ?- dplan.
+DEPTH: 0
+==>x:pnat=>y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat
+  Trying method elementary/1
+    Trying preconds...Preconds of method elementary/1 failed
+  Trying method base_case/1
+    Trying preconds...  Trying submethod elementary/1
+    Trying preconds...Preconds of submethod elementary/1 failed
+  Trying submethod sym_eval/1
+    Trying preconds...  Trying submethod equal/2
+    Trying preconds...Preconds of submethod equal/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod eval_def/2
+    Trying preconds...Preconds of submethod eval_def/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+Preconds of submethod sym_eval/1 failed
+Preconds of method base_case/1 failed
+  Trying method step_case/1
+    Trying preconds...  Trying submethod ripple/1
+    Trying preconds...  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod casesplit/1
+    Trying preconds...Preconds of submethod casesplit/1 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+Preconds of submethod ripple/1 failed
+Preconds of method step_case/1 failed
+  Trying method generalise/2
+    Trying preconds...Preconds of method generalise/2 failed
+  Trying method induction/2
+    Trying preconds...Preconds succeeded...Postconds succeeded
+SELECTED METHOD at depth 0: induction([s(v0)],[x:pnat])
+|DEPTH: 1
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(0,plus(y,z))=plus(plus(0,y),z)in pnat
+  Trying method elementary/1
+    Trying preconds...Preconds of method elementary/1 failed
+  Trying method base_case/1
+    Trying preconds...  Trying submethod elementary/1
+    Trying preconds...Preconds of submethod elementary/1 failed
+  Trying submethod sym_eval/1
+    Trying preconds...  Trying submethod equal/2
+    Trying preconds...Preconds of submethod equal/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod eval_def/2
+    Trying preconds...Preconds succeeded...Postconds succeeded
+Preconds succeeded...  Trying submethod sym_eval/1
+    Trying preconds...  Trying submethod equal/2
+    Trying preconds...Preconds of submethod equal/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod eval_def/2
+    Trying preconds...Preconds succeeded...Postconds succeeded
+Preconds succeeded...  Trying submethod sym_eval/1
+    Trying preconds...  Trying submethod equal/2
+    Trying preconds...Preconds of submethod equal/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod eval_def/2
+    Trying preconds...Preconds of submethod eval_def/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+Preconds of submethod sym_eval/1 failed
+Postconds succeeded
+Postconds succeeded
+Preconds succeeded...  Trying method base_case/1
+    Trying preconds...  Trying submethod elementary/1
+    Trying preconds...Preconds succeeded...Postconds succeeded
+Preconds succeeded...  Trying method base_case/1
+    Trying preconds...  Trying submethod sym_eval/1
+    Trying preconds...Preconds of submethod sym_eval/1 failed
+Preconds of method base_case/1 failed
+Postconds succeeded
+Postconds succeeded
+|TERMINATING METHOD at depth 1: base_case([...])
+|DEPTH: 1
+|v0:pnat
+|ih:[RAW,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(plus(v0,y),z)in pnat]
+|x:pnat
+|==>y:pnat=>z:pnat=>plus(``s({v0})''<out>,plus(\y/,\z/))=plus(plus(``s({v0})''<out>,\y/),\z/)in pnat
+  Trying method elementary/1
+    Trying preconds...Preconds of method elementary/1 failed
+  Trying method base_case/1
+    Trying preconds...  Trying submethod elementary/1
+    Trying preconds...Preconds of submethod elementary/1 failed
+  Trying submethod sym_eval/1
+    Trying preconds...  Trying submethod equal/2
+    Trying preconds...Preconds of submethod equal/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod reduction/2
+    Trying preconds...Preconds of submethod reduction/2 failed
+  Trying submethod eval_def/2
+    Trying preconds...Preconds of submethod eval_def/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+  Trying submethod existential/2
+    Trying preconds...Preconds of submethod existential/2 failed
+Preconds of submethod sym_eval/1 failed
+Preconds of method base_case/1 failed
+  Trying method step_case/1
+    Trying preconds...  Trying submethod ripple/1
+    Trying preconds...  Trying submethod wave/3
+    Trying preconds...Preconds succeeded...Postconds succeeded
+  Trying submethod wave/3
+    Trying preconds...Preconds succeeded...Postconds succeeded
+  Trying submethod wave/3
+    Trying preconds...Preconds succeeded...Postconds succeeded
+  Trying submethod wave/3
+    Trying preconds...Preconds succeeded...Postconds succeeded
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod wave/3
+    Trying preconds...Preconds of submethod wave/3 failed
+  Trying submethod casesplit/1
+    Trying preconds...Preconds of submethod casesplit/1 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+  Trying submethod unblock/3
+    Trying preconds...Preconds of submethod unblock/3 failed
+Preconds succeeded...Postconds succeeded
+  Trying submethod fertilize/2
+    Trying preconds...  Trying submethod fertilization_strong/1
+    Trying preconds...Preconds succeeded...Postconds succeeded
+Preconds succeeded...Postconds succeeded
+Preconds succeeded...Postconds succeeded
+|TERMINATING METHOD at depth 1: step_case([...])
+induction([s(v0)],[x:pnat]) then 
+  [base_case([...]),
+   step_case([...])
+  ]

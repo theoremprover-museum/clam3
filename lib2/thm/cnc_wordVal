@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>w1:pnat=>w2:pnat=>w1=w2 in pnat=>wordVal(n)of w1=wordVal(n)of w2 in{word},_,_,_).

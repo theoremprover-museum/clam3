@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:pnat=>appn(n, ltimes(0), b)=0 in pnat,_,_,_).

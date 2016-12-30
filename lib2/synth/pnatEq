@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>x=y in pnat\x=y in pnat=>void,
+repeat intro then because,lambda(x,lambda(y,atom(incomplete))),
+[
+]).

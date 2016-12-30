@@ -1,0 +1,1 @@
+subtractW(n,a,b,ci)<==>addW(n)of a of (notW(n)of b)of ci.

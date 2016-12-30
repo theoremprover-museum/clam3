@@ -1,0 +1,1 @@
+orW(n)<==>p_ind(n,lambda(a,lambda(b,nil)),[~,t,lambda(a,lambda(b,(hd(a)or hd(b))::t of tl(a)of tl(b)))]).

@@ -1,0 +1,1 @@
+sI(n)<==>p_ind(n,lambda(s0,lambda(s1,lambda(s2,lambda(x,nil)))),[k,w,lambda(s0,lambda(s1,lambda(s2,lambda(x,{true}::w of s0 of s1 of s2 of tl(x)))))]).

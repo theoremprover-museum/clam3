@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>facW(inc(x))=mult(inc(x),facW(x))in{word},_,_,_).

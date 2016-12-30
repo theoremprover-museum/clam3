@@ -1,0 +1,3 @@
+wordVal(n)<==>p_ind(n,lambda(m,nil),[k,w,lambda(m,boolV(m)::w of half(m))]).
+
+%wordVal(n)<==>p_ind(n,lambda(v,boolV(v)::nil),[k,w,lambda(v,boolV(v)::w of half(v))]).

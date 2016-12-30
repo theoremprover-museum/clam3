@@ -1,0 +1,1 @@
+problem([]==>f:((int#int list)=>int list)=>e:int list=>foldright(f, nil, e)=e in int list,_,_,_).

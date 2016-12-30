@@ -1,0 +1,1 @@
+subset(l1,l2)<==>list_ind(l1,{true},[h,t,r,member(h,l1)#r]).

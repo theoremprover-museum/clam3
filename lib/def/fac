@@ -1,0 +1,1 @@
+fac(x)<==>term_of(fac) of x.

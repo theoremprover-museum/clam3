@@ -1,0 +1,4 @@
+{word}<==>{bool} list.
+
+% For words as functions
+% {word} <==> pnat=>{bool}.

@@ -1,0 +1,4 @@
+problem([]==>y:pnat=>qfib(0,y) = s(y) in pnat,
+simplify then identity,axiom,
+[
+]).

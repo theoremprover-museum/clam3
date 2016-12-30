@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>and({false},y)={false} in {bool},_,_,_).

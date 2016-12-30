@@ -1,0 +1,147 @@
+        % Weak fertilization consists of using the induction hypothesis
+        % to rewrite all the wave terms inside a wave front once that
+        % wave front is the only one present, and it has bubbled all the
+        % way up to the top of one side of the formula. This method
+        % applies a fertilization to just one wave term of the top wave
+        % front. It gets called iteratively to do the operation on all
+        % wave terms in the wave front.  A special case is when the wave
+        % front hasnt been rippled to the top of one side of the
+        % formula, but has been rippled right out of one side. In that
+        % case we can do fertilization on the whole side of that formula
+        % (the case where S below is empty). 
+        % 
+        % For a function symbol ~ for which transitivity holds, we can
+        % perform the following transformations on sequents:
+        % 
+        % 1. L~R |- X~S(R) into L~R |- X~S(L) if R occurs positive in S, or
+        % 2. L~R |- S(L)~X into L~R |- S(R)~X if L occurs positive in S, or
+        % 3. L~R |- X~S(L) into L~R |- X~S(R) if L occurs negative in S, or
+        % 4. L~R |- S(R)~X into L~R |- S(L)~X if R occurs negative in S.
+        %
+        % where the wave fronts must be: ``S({R})'' etc.
+        % These can be reprased as:
+        % 
+        % 1. substitute R by L in rhs when R occurs positive, or
+        % 2. substitute L by R in lhs when L occurs positive, or
+        % 3. substitute L by R in rhs when L occurs negative, or
+        % 4. substitute R by L in lhs when R occurs negative
+        % 
+        % If ~ is also symmetrical, we can drop the requirements on polarity.
+        % The method below implements 1-2 in one method. It knows about
+        % a set of function symbols which are transitive. It then always
+        % does a fertilization replacing R by L, but it can assign L and
+        % R to either lhs and rhs or vice versa, so we get the symmetry
+        % we want.
+        % 
+        % REMARKS:
+        % 1. The set of transitify function symbols this method knows
+        % about might of course have to be extended in the future
+        % (similary, it knows about one symmetrical function symbol
+        % (equality)).
+        % 
+        % 2. The case where S below is empty can possibly loop (for
+        %    instance y:t=>f(g(y))=>f(y) |- z:t=>f(``g({2}''))=>f(z)
+        %    gives    y:t=>f(g(y))=>f(y) |- z:t=>f(``g({2}''))=>f(g(z))
+        %    (according to 1. above), which in turn gives:
+        %             y:t=>f(g(y))=>f(y) |- z:t=>f(``g({2}''))=>f(g(g(z)))
+        %    (again according to 1.) above, etc.
+        %    The problem with this is of course that there is no
+        %    "reducing measure" to stop the iteration of fertilization
+        %    (as there is in the wave front case, namely the reducing
+        %     number of wave fronts).
+        %    When there is no wave front (S empty), then we want to do
+        %    only one fertilization step, and not iterate. This is
+        %    achieved by always deleting the wave fronts in L after one
+        %    fertilization. This will then stop the next iteration
+        %    (since L having wave fronts is a condition for
+        %    fertilization when R has none). The immediate deletion of
+        %    wave front from L will not affect the iteration when R has
+        %    wave fronts, since the presence of wave fronts in L is then
+        %    immaterial.
+        %
+        % 3. The below doesn't implement cases 3.-4. above (negative
+        %    fertilization), but it can't be very difficult. It would
+        %    look very much like the below. I wonder if it can
+        %    reasonably be done with one piece of code (once method).
+        % 
+        % 4. Notice that "in" is used instead of "=" to represent (_=_ in _),
+        %    since it makes the code below more uniform (in particular,
+        %    it allows the exp_at(_,[0],_) expression).
+        %
+        % 5. See the file schemes.pl and Blue Book note 539 for a sermon
+        %    about "theory free" theorem provers, and how the weak
+        %    fertilization method is one of the few places where CLaM
+        %    violates this requirement. 
+        %
+        % 6. The main idea of and motivation for weak fertilization is
+        %    also described in Blue Book note 538.
+submethod(weak_fertilize(Dir,Connective,Pos,Hyp),
+       H==>G,
+       [
+        matrix(Vars,M,G),
+	transitive_pred( M, [LR,RL], [LRN,RLN], NewG_M ),
+        exp_at(M,[0],Connective),
+                                        % Do fertilization right-to-left
+                                        % or left-to-right: 
+        ((Dir=right,GL=LR,GR=RL, GLNew=LRN, GRNew = RLN) v 
+          (Dir=left,GL=RL,GR=LR, GLNew=RLN, GRNew = LRN )
+        ), 
+        ((
+          (wave_fronts(GR1,[[]-PosL/[Typ,out]],GR), % We must have 1 wave-front in GR,
+           select(Pos,PosL,OtherPosL),              % which is on the top ([]-...) and
+           NewWFspec = [[]-PosL/[Typ,in]]	    % out-bound. Note change in wave
+          ) 					    % direction.
+         v 
+          (wave_fronts(GR1,[[]-PosL/[Typ,in]],GR),  % or if we have 1 wave-front in GR 
+	   PosL = [_,_|_],			    % which is on top and in-bound
+           select(Pos,PosL,OtherPosL),		    % then we must have mutiple holes.
+           NewWFspec = [[]-PosL/[Typ,in]]
+          )
+         v 
+	  (wave_fronts(GR1,[],GR),                 % or we have no wave front in GR, 
+           wave_fronts(_,[_-_/[_,out]|_],GL),      % but we require out-bound 
+           PosL=[],Pos=[],OtherPosL=[[]]),         % wave-fronts in GL,
+           NewWFspec = [Pos-OtherPosL/_])
+         v 
+          (wave_fronts(GR1tmp,[WFPos-[WHPos]/[Typ,_]],GR), % or all wave fronts 
+           sinks(GR1,[WFPos],GR1tmp),                      % are sunk in GR.
+           sinks(GL1,_,GL),
+	   append(WHPos,WFPos,RSinkPos),
+	   exp_at(GR1,RSinkPos,Sink),
+	   exp_at(GL1,LSinkPos,Sink),
+	   NewWFspec = [LSinkPos-[WHPos]/[Typ,out]],
+	   Pos=[])
+        ),
+        exp_at(GR1,Pos,GR1Sub),
+                                        % check for positive occurrence
+                                        % or symmetrical function symbol:
+        (Connective = (in) orelse polarity(_,_,GR1,Pos,+)),
+	( member( _:[ihmarker(notraw(_),[])|IHyps], H ),
+	  nv_member(Hyp:IndHyp,IHyps);
+          member( Hyp:IndHyp, H ),
+	  IndHyp \= [_|_]
+	),
+        matrix(_,IndHyp_M,IndHyp),      % find hyp to use for fertilization
+        exp_at(IndHyp_M,[0],Connective),
+        replace_all(GL,GRNewSub,M,GSub1),
+        replace_all(GR,GR1Sub,GSub1,GSub),
+        instantiate(IndHyp,GSub,Instan),
+        ground_sinks(Instan,GL,GR,GSub),
+        wave_fronts(GRNewSub,_,GRNewSub)% and check it doesnt introduce
+                                        % more wave-fronts.
+       ],
+       [replace(Pos,GRNewSub,GR1,GRNew1),% apply the fertilization
+        wave_fronts(GRNew1,NewWFspec,GRNew),
+        wave_fronts(GLNew,_,GL),        % squash the wave-fronts in L
+					% (see remark 2. above).
+        sinks(NNewG_M,_,NewG_M),        % squash all sinks
+        matrix(Vars,NNewG_M,NewG)
+       ],
+       [H==>NewG],
+       weak_fertilize(Dir,Connective,Pos,Hyp)
+      ).
+
+
+
+
+

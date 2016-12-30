@@ -1,0 +1,3 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>less(x,y) => less(x,plus(y,z)) in u(1),_,_,_).
+
+

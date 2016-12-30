@@ -1,0 +1,1 @@
+problem([]==>a:u(1) =>b:u(1) =>c:u(1) => (a=b in u(1)\a=c in u(1))=>a= (b\c)in u(1),_,_,_).

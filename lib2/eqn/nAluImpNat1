@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>nAluImpNat(n,s0,s1,s2,x,y,ci)=numVal(s(n))of nAluImpGood(n,s0,s1,s2,x,y,ci)in pnat,_,_,_).

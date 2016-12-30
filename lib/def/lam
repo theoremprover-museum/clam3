@@ -1,0 +1,1 @@
+lam(x,y) <==> lambda(x,y).

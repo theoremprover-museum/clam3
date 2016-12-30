@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>less(word2nat(x),word2nat(y))=>remW(x,y)=y in{word},_,_,_).

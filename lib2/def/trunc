@@ -1,0 +1,1 @@
+trunc(n)<==>p_ind(n,lambda(a,nil),[k,w,lambda(a,hd(a)::w of tl(a))]).

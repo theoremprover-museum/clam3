@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>x:reg=>incfun(x)of t=inc(x of t)in{word},_,_,_).

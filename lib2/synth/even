@@ -1,0 +1,27 @@
+problem([]==>x:pnat=>u(1),
+autotactic(idtac),_7414,
+[problem([]==>x:pnat=>u(1),
+ dequantify,lambda(x,_7452),
+ [problem([x:pnat]==>u(1),
+  universe(2),_7461,
+  [problem([x:pnat]==>u(1),
+   apply(apply(lemma(twos,new[v2]))then elim(v2,on(lambda(x,u(1))),new[v3])then[try wfftacs,beta_reduce(hyp(v3))then elim(v3,new[v4])then[idtac,elim(v4,new[v5])then[idtac,elim(v5,new[v6])then[intro(new[v1])then[intro(new[v0])then[idtac,try wfftacs],try wfftacs],elim(v6,on(x),new[v7])then[try wfftacs,hyp(v7)]]]]])then thin([v2,v3,v4,v5]),su(su(su(su(su(su(v7,[v6 of x],[v7]),[v5 of lambda(v1,lambda(v0,_7687))],[v6]),[v4 of _7694],[v5]),[v3 of _7701],[v4]),[v2 of lambda(x,u(1))],[v3]),[term_of(twos)],[v2]),
+   [problem([x:pnat]==>u(1),
+    intro(explicit({true})),{true},
+    [problem([x:pnat]==>{true}in u(1),
+     simplify then repeat intro,axiom,
+     [
+     ])
+    ]) ext _7701,
+    problem([x:pnat]==>u(1),
+    intro(void),void,
+    [
+    ]) ext _7694,
+    problem([x:pnat,v1:pnat,v0:u(1)]==>u(1),
+    hyp(v0),v0,
+    [
+    ]) ext _7687
+   ]) ext _7461
+  ]) ext _7452
+ ]) ext _7414
+]).

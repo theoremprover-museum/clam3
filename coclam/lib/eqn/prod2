@@ -1,0 +1,4 @@
+problem([]==>h:{posint}=>t:{posint} list=>prod(h::t)=times(h,prod(t))in {posint},
+repeat intro then simplify then wfftacs,lambda(h,lambda(t,axiom)),
+[
+]).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>leq(s(x),s(y))=leq(x,y)in u(1),_,_,_).

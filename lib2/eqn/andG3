@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>andG({true},y,{false})= (not y)in{bool},_,_,_).

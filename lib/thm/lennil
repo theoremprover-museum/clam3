@@ -1,0 +1,1 @@
+problem([]==>x:pnat list=>(length(x) = 0 in pnat) = (x = nil in pnat list) in u(1),_,_,_).

@@ -1,0 +1,4 @@
+problem([]==>n:pnat=>exp(n,0)=s(0)in pnat,
+repeat intro then simplify then repeat intro,lambda(n,axiom),
+[
+]).

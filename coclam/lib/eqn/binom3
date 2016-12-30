@@ -1,0 +1,1 @@
+problem([]==>px:pnat=>py:pnat=>binom(s(px),s(py))=plus(binom(px,s(py)),binom(px,py))in pnat,_,_,_).

@@ -1,0 +1,1 @@
+w2nNL(x)<==>list_ind(x,0,[h,t,r,plus(times(bitval(h),exp(s(s(0)),length(t))),r)]).

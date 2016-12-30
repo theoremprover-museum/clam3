@@ -1,0 +1,177 @@
+problem([]==>t:u(1)=>phi: (t list=>t list=>u(2))=>x:t list=>y:t list=> (y:t list=>phi of nil of y)=> (x:t list=>phi of x of nil)=> (x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y))=>phi of x of y,
+universe(3),_7177,
+[problem([]==>t:u(1)=>phi: (t list=>t list=>u(2))=>x:t list=>y:t list=> (y:t list=>phi of nil of y)=> (x:t list=>phi of x of nil)=> (x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y))=>phi of x of y,
+ autotactic(wfftacs),_7326,
+ [problem([]==>t:u(1)=>phi: (t list=>t list=>u(2))=>x:t list=>y:t list=> (y:t list=>phi of nil of y)=> (x:t list=>phi of x of nil)=> (x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y))=>phi of x of y,
+  repeat intro,lambda(t,lambda(phi,lambda(x,lambda(y,lambda(v0,lambda(v1,lambda(v2,_7636))))))),
+  [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y)]==>phi of x of y,
+   seq(a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),new[v3]),lambda(v3,_7826)of _7823,
+   [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y)]==>a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),
+    intro then wfftacs,lambda(a,_8003),
+    [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t))]==>phi of fst(a)of snd(a),
+     elim(a,wo),wo_ind(a,[v5,v3,_8184]),
+     [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4)]==>phi of fst(v5)of snd(v5),
+      elim(v5)then wfftacs,spread(v5,[v4,v6,_8424]),
+      [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list)]==>phi of fst(v4&v6)of snd(v4&v6),
+       simplify,_8434,
+       [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list)]==>phi of v4 of v6,
+        autotactic(idtac),_8701,
+        [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list)]==>phi of v4 of v6,
+         lemma(declist),su(_9212,[term_of(declist)],[v8]),
+         [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v8:t:u(1)=>x:t list=>x=nil in t list\h:t#tl:t list#x=h::tl in t list]==>phi of v4 of v6,
+          elim_on(v8,[t,v4])then elim_on(v8,[t,v6]),su(su(su(su(_9565,[v9 of v6],[v11]),[v8 of t],[v9]),[v9 of v4],[v10]),[v8 of t],[v9]),
+          [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v8:t:u(1)=>x:t list=>x=nil in t list\h:t#tl:t list#x=h::tl in t list,v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list]==>phi of v4 of v6,
+           thin([v8])then elim(v10)then thin([v9]),decide(v10,[v8,_10014],[v9,_10018]),
+           [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v8:v4=nil in t list,v12:v10=inl(v8)in (v4=nil in t list\h:t#tl:t list#v4=h::tl in t list)]==>phi of v4 of v6,
+            rewrite(v8),_10028,
+            [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v8:v4=nil in t list,v12:v10=inl(v8)in (v4=nil in t list\h:t#tl:t list#v4=h::tl in t list)]==>phi of nil of v6,
+             strong_fertilize(v0),su(v9,[v0 of v6],[v9]),
+             [
+             ]) ext _10028
+            ]) ext _10014,
+            problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list]==>phi of v4 of v6,
+            thin([v12])then elim(v11),decide(v11,[v8,_11191],[v9,_11195]),
+            [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v8:v6=nil in t list,v12:v11=inl(v8)in (v6=nil in t list\h:t#tl:t list#v6=h::tl in t list)]==>phi of v4 of v6,
+             thin([v12])then rewrite(v7),_11205,
+             [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v8:v6=nil in t list]==>phi of v4 of v6,
+              rewrite(v8)then strong_fertilize(v1),su(v9,[v1 of v4],[v9]),
+              [
+              ]) ext _11205
+             ]) ext _11191,
+             problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v13:v11=inr(v9)in (v6=nil in t list\h:t#tl:t list#v6=h::tl in t list)]==>phi of v4 of v6,
+             thin([v13]),_11985,
+             [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list]==>phi of v4 of v6,
+              elim(v10),decide(v10,[v8,_12776],[v12,_12780]),
+              [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v8:v4=nil in t list,v13:v10=inl(v8)in (v4=nil in t list\h:t#tl:t list#v4=h::tl in t list)]==>phi of v4 of v6,
+               rewrite(v8)then strong_fertilize(v0),su(v12,[v0 of v6],[v12]),
+               [
+               ]) ext _12776,
+               problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,v14:v10=inr(v12)in (v4=nil in t list\h:t#tl:t list#v4=h::tl in t list)]==>phi of v4 of v6,
+               elim(v9)then elim(v12),spread(v9,[h,v8,spread(v12,[v15,v16,_13702])]),
+               [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,v14:v10=inr(v12)in (v4=nil in t list\h:t#tl:t list#v4=h::tl in t list),h:t,v8:tl:t list#v6=h::tl in t list,v13:v9=h&v8 in (h:t#tl:t list#v6=h::tl in t list),v15:t,v16:tl:t list#v4=v15::tl in t list,v17:v12=v15&v16 in (h:t#tl:t list#v4=h::tl in t list)]==>phi of v4 of v6,
+                thin([v14,v17])then elim(v8)then elim(v16),spread(v8,[tl,v14,spread(v16,[v18,v19,_14320])]),
+                [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,h:t,v8:tl:t list#v6=h::tl in t list,v13:v9=h&v8 in (h:t#tl:t list#v6=h::tl in t list),v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list)]==>phi of v4 of v6,
+                 rewrite(v19)then rewrite(v14)then thin([v13]),_14330,
+                 [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list)]==>phi of (v15::v18)of (h::tl),
+                  elim_on(v2,[v18,v15,tl,h]),su(su(su(su(_15543,[v22 of h],[v23]),[v21 of tl],[v22]),[v13 of v15],[v21]),[v2 of v18],[v13]),
+                  [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>phi of (v15::v18)of (h::tl),
+                   elim(v23)then[idtac,intro],su(v13,[v23 of _181080],[v13]),
+                   [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),v10:v4=nil in t list\h:t#tl:t list#v4=h::tl in t list,v11:v6=nil in t list\h:t#tl:t list#v6=h::tl in t list,v9:h:t#tl:t list#v6=h::tl in t list,v12:h:t#tl:t list#v4=h::tl in t list,h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>phi of v18 of tl,
+                    thin([v10,v11,v9,v12])then elim(v3,on(v18&tl)),su(_181700,[v3 of (v18&tl)],[v9]),
+                    [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>v18&tl in{v4: (t list#t list)\lpairord(t)of v4 of v5},
+                     rewrite(v7)then intro then wfftacs,axiom,
+                     [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>lpairord(t)of (v18&tl)of (v4&v6),
+                      rewrite(v14)then rewrite(v19),_182202,
+                      [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>lpairord(t)of (v18&tl)of ((v15::v18)&h::tl),
+                       simplify,_182670,
+                       [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==>h1:t#h2:t# (v15::v18)&h::tl= (h1::v18)&h2::tl in (t list#t list),
+                        intro(v15)then try intro(h)then wfftacs,v15&h&_183636,
+                        [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl)]==> (v15::v18)&h::tl= (v15::v18)&h::tl in (t list#t list),
+                         repeat intro,axiom,
+                         [
+                         ]) ext _183636
+                        ]) ext _182670
+                       ]) ext _182202
+                      ]) ext _182198
+                     ]),
+                     problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),a:acc(t list#t list,lpairord(t)),v5:t list#t list,v3:v4:{v4: (t list#t list)\lpairord(t)of v4 of v5}=>phi of fst(v4)of snd(v4),v4:t list,v6:t list,v7:v5=v4&v6 in (t list#t list),h:t,v8:tl:t list#v6=h::tl in t list,v15:t,v16:tl:t list#v4=v15::tl in t list,tl:t list,v14:v6=h::tl in t list,v17:v8=tl&v14 in (tl:t list#v6=h::tl in t list),v18:t list,v19:v4=v15::v18 in t list,v20:v16=v18&v19 in (tl:t list#v4=v15::tl in t list),v23:phi of v18 of tl=>phi of (v15::v18)of (h::tl),v9:phi of fst(v18&tl)of snd(v18&tl)]==>phi of v18 of tl,
+                     compute(hyp(v9),[[simplify]])then intro,v9,
+                     [
+                     ]) ext _181700
+                    ]) ext _181080
+                   ]) ext _15543
+                  ]) ext _14330
+                 ]) ext _14320
+                ]) ext _13702
+               ]) ext _12780
+              ]) ext _11985
+             ]) ext _11195
+            ]) ext _10018
+           ]) ext _9565
+          ]) ext _9212
+         ]) ext _8701
+        ]) ext _8434
+       ]) ext _8424
+      ]) ext _8184
+     ]) ext _8003
+    ]) ext _7823,
+    problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>phi of x of y,
+    autotactic(idtac),_184611,
+    [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>phi of x of y,
+     elim(v3,on(x&y)),su(_184978,[v3 of (x&y)],[v4]),
+     [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>x&y in acc(t list#t list,lpairord(t)),
+      seq(y:t list=>x&y in acc(t list#t list,lpairord(t)),new[v4]),lambda(v4,_185220)of _185217,
+      [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>y:t list=>x&y in acc(t list#t list,lpairord(t)),
+       elim(x),list_ind(x,_185427,[v4,v5,v6,_185435]),
+       [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>y:t list=>nil&y in acc(t list#t list,lpairord(t)),
+        intro then[idtac,wfftac],lambda(v4,_185648),
+        [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t list]==>nil&v4 in acc(t list#t list,lpairord(t)),
+         intro(acc)then[wfftacs,idtac,wfftacs],axiom,
+         [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t list,v6:t list#t list,v5:lpairord(t)of v6 of (nil&v4)]==>v6 in acc(t list#t list,lpairord(t)),
+          compute(hyp(v5),[[simplify]]),_185869,
+          [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t list,v6:t list#t list,v5:h1:t#h2:t#nil&v4= (h1::spread(v6,[a,~,a]))&h2::spread(v6,[~,b,b])in (t list#t list)]==>v6 in acc(t list#t list,lpairord(t)),
+           because,atom(incomplete),
+           [
+           ]) ext _185869
+          ]) ext _185865
+         ]) ext _185648,
+         problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a)]==>t in u(3),
+         because,atom(incomplete),
+         [
+         ]) ext _186372
+        ]) ext _185427,
+        problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t))]==>y:t list=> (v4::v5)&y in acc(t list#t list,lpairord(t)),
+        intro,lambda(v7,_186801),
+        [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list]==> (v4::v5)&v7 in acc(t list#t list,lpairord(t)),
+         elim(v7),list_ind(v7,_187053,[v8,v9,v10,_187061]),
+         [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list]==> (v4::v5)&nil in acc(t list#t list,lpairord(t)),
+          because,atom(incomplete),
+          [
+          ]) ext _187053,
+          problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t))]==> (v4::v5)&v8::v9 in acc(t list#t list,lpairord(t)),
+          elim(v6,on(v9)),su(_187606,[v6 of v9],[v11]),
+          [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t))]==>v9 in t list,
+           because,atom(incomplete),
+           [
+           ]),
+           problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t)),v11:v5&v9 in acc(t list#t list,lpairord(t))]==> (v4::v5)&v8::v9 in acc(t list#t list,lpairord(t)),
+           intro(acc),axiom,
+           [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t)),v11:v5&v9 in acc(t list#t list,lpairord(t))]==> (v4::v5)&v8::v9 in (t list#t list),
+            because,atom(incomplete),
+            [
+            ]),
+            problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t)),v11:v5&v9 in acc(t list#t list,lpairord(t)),v13:t list#t list,v12:lpairord(t)of v13 of ((v4::v5)&v8::v9)]==>v13 in acc(t list#t list,lpairord(t)),
+            elim(v13),spread(v13,[v14,v15,_188844]),
+            [problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t)),v11:v5&v9 in acc(t list#t list,lpairord(t)),v13:t list#t list,v12:lpairord(t)of v13 of ((v4::v5)&v8::v9),v14:t list,v15:t list,v16:v13=v14&v15 in (t list#t list)]==>v14&v15 in acc(t list#t list,lpairord(t)),
+             because,atom(incomplete),
+             [
+             ]) ext _188844
+            ]),
+            problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t)),v7:t list,v8:t,v9:t list,v10: (v4::v5)&v9 in acc(t list#t list,lpairord(t)),v11:v5&v9 in acc(t list#t list,lpairord(t))]==>acc(t list#t list,lpairord(t))in u(3),
+            because,atom(incomplete),
+            [
+            ])
+           ]) ext _187606
+          ]) ext _187061
+         ]) ext _186801,
+         problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:t,v5:t list,v6:y:t list=>v5&y in acc(t list#t list,lpairord(t))]==>t list in u(3),
+         because,atom(incomplete),
+         [
+         ])
+        ]) ext _185435
+       ]) ext _185217,
+       problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:y:t list=>x&y in acc(t list#t list,lpairord(t))]==>x&y in acc(t list#t list,lpairord(t)),
+       elim(v4,on(y))then intro or wfftacs,su(v5,[v4 of y],[v5]),
+       [
+       ]) ext _185220
+      ]),
+      problem([t:u(1),phi:t list=>t list=>u(2),x:t list,y:t list,v0:y:t list=>phi of nil of y,v1:x:t list=>phi of x of nil,v2:x:t list=>xe:t=>y:t list=>ye:t=>phi of x of y=>phi of (xe::x)of (ye::y),v3:a:acc(t list#t list,lpairord(t))=>phi of fst(a)of snd(a),v4:phi of fst(x&y)of snd(x&y)]==>phi of x of y,
+      compute(hyp(v4),[[simplify]])then intro,v4,
+      [
+      ]) ext _184978
+     ]) ext _184611
+    ]) ext _7826
+   ]) ext _7636
+  ]) ext _7326
+ ]) ext _7177
+]).

@@ -1,0 +1,1 @@
+xorNL(x)<==>list_ind(x,lambda(y,nil),[h,t,r,lambda(y,xor(h,hd(y))::r of tl(y))]).

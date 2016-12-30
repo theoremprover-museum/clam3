@@ -1,0 +1,1 @@
+problem([]==>x:int=>t:int list=>l:(int list) list=>enumerate((x::t)::l) = x::merge(enumerate(l), t)in int list,_,_,_).

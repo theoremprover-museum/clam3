@@ -1,0 +1,3 @@
+problem([]==>f:(int=>int)=>g:(int=>int)=>x:int=>
+	f of (g of x)=f of g of x in int,
+_,_,_).

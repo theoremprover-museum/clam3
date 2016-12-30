@@ -1,0 +1,1 @@
+problem([]==>imp({false},{true})={true} in {bool},_,_,_).

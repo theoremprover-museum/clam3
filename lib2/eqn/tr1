@@ -1,0 +1,1 @@
+problem([]==>tr({true})= ({true}={true}in{bool})in{bool},_,_,_).

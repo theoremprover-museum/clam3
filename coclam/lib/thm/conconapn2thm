@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>f:int=>v1:int list=>h:int=>h1:int=>h2:int=>appn(n, h2::(::(f)), h1::h::v1)=h2::f::appn(n, h2::(::(f)), v1)in int list,_,_,_).

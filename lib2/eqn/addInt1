@@ -1,0 +1,1 @@
+problem([]==>y:int=>addInt(0,y)=y in int,_,_,_).

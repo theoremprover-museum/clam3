@@ -1,0 +1,3 @@
+problem([]==>t:pnat=>reset:{bool}=>counter(s(t),reset)=bool_eq(reset,{true},0,s(counter(t,reset))) in pnat,_,_,_).
+
+% problem([]==>t:pnat=>reset:{bool}=>counter(s(t),reset)=bool_eq(reset,{true},0,rem(s(counter(t,reset)),exp(s(s(0)),length(nat2word(t))))) in pnat,_,_,_).

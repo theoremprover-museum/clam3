@@ -1,0 +1,1 @@
+problem([]==>y:pnat=>leq(0,y)={true} in u(1),_,_,_).

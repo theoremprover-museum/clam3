@@ -1,0 +1,1 @@
+add(xh,yh,z)<==>faCarry(xh,yh,hd(z))::faSum(xh,yh,hd(z))::tl(z).

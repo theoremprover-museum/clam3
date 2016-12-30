@@ -1,0 +1,2 @@
+problem([]==>m:pnat=>member(m,nil)=void in u(1),_,_,_).
+

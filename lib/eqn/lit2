@@ -1,0 +1,1 @@
+problem([]==>h:int=>t:int list=>y:int list=>f:(int=>int list=>int list)=>lit(h::t,y,f)=f of h of lit(t,y,f)in int list,_,_,_).

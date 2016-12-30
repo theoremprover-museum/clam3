@@ -1,0 +1,31 @@
+
+        % FERTILIZE METHOD: 
+        % 
+        % Fertilization
+        % 
+        % 
+method(fertilize(strong(Var)),
+       H==>G,
+       [induction_hyp_match(Var, H, G, SubstL)
+       ],
+       [],
+       [],
+       SubstL
+      ).
+
+
+method(fertilize(weak(Var)),
+       H==>G,
+       [partial_induction_hyp_match(Var, H, G, NG, SubstL)
+       ],
+       [strip_meta_annotations(NG, NewG)],
+       [H==>NewG],
+       SubstL
+      ).
+	
+
+
+
+
+
+

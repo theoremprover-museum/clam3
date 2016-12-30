@@ -1,0 +1,1 @@
+del(a,b) <==> term_of(del) of a of b.

@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>x:{word}=>y:{word}=>appendW(s(n))of x of y=hd(x)::appendW(n)of tl(x)of y in{word},_,_,_).

@@ -1,0 +1,3 @@
+problem([]==>counter(0,{false})=0 in pnat,_,_,_).
+
+%problem([]==>n:pnat=>reset: (pnat=>{bool})=>counter(n,reset)=lambda(t,bool_eq(reset of pred(t),{true},0,rem(s(counter(n,reset)),exp(s(s(0)),n))))in pnat,_,_,_).

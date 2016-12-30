@@ -1,0 +1,1 @@
+problem([]==>l:int list=>v0:int=>rev(app(rev(l),v0::nil))=v0::rev(rev(l))in int list,_,_,_).

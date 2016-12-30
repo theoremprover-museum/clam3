@@ -1,0 +1,3 @@
+problem([]==>v4:int=>f:(int=>int)=>g:(int=>int)=>
+	related(f(g(v4)),o(f,g) of v4) in int,
+_,_,_).

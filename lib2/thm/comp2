@@ -1,0 +1,21 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(y,plus(x,z))in pnat,
+ind_strat_I(induction(s(v0),x:pnat)then[try sym_eval([base([1,1],plus1),base([2,2,1],plus1)]),ripple_out([wave([1,1],[plus2,left]),wave([2,2,1],[plus2,left])])then try weak_fertilize(left,[weak_fertilize(left,in,[1],v1)])]),lambda(x,p_ind(x,lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _334,[plus1 of v1],[v2]),[term_of(plus1)],[plus1]))),[plus1 of plus(v0,v1)],[v2]),[term_of(plus1)],[plus1]))),[v0,v1,lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _503,[v4 of v3],[v5]),[v1 of v2],[v4]))),[v4 of v3],[v5]),[plus2 of v0],[v4]),[term_of(plus2)],[plus2]))),[v4 of plus(v2,v3)],[v5]),[plus2 of v0],[v4]),[term_of(plus2)],[plus2])))])),
+[problem([x:pnat]==>y:pnat=>z:pnat=>plus(y,z)=plus(y,z)in pnat,
+ tautology(dequantify_once then dequantify_once then identity),lambda(y,lambda(z,axiom)),
+ [
+ ]) ext _334,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(y,plus(v0,z))in pnat]==>y:pnat=>z:pnat=>s(plus(y,plus(v0,z)))=plus(y,s(plus(v0,z)))in pnat,
+ generalise(plus(v0,z),v2:pnat),lambda(v2,lambda(v3,lambda(v4,su(su(su(v7,[v6 of v4],[v7]),[v5 of v3],[v6]),[v2 of plus(v0,v4)],[v5]))))of _745,
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(y,plus(v0,z))in pnat]==>v2:pnat=>y:pnat=>z:pnat=>s(plus(y,v2))=plus(y,s(v2))in pnat,
+  ind_strat_I(induction(s(v3),y:pnat)then[try sym_eval([base([2,1],plus1),base([1,1,1],plus1)]),ripple_out([wave([2,1],[plus2,left]),wave([1,1,1],[plus2,left])])then try weak_fertilize(right,[weak_fertilize(right,in,[1],v4)])]),lambda(v3,lambda(v2,lambda(v4,lambda(v5,su(su(su(v8,[v7 of v4],[v8]),[v6 of v3],[v7]),[v5 of v2],[v6]))of lambda(y,p_ind(y,lambda(v3,lambda(v2,su(su(lambda(v4,su(su(v6,[v5 of v2],[v6]),[v4 of v3],[v5]))of lambda(v3,lambda(v2,su(su(lambda(v4,su(su(v6,[v5 of v2],[v6]),[v4 of v3],[v5]))of _1084,[plus1 of v3],[v4]),[term_of(plus1)],[plus1]))),[plus1 of s(v3)],[v4]),[term_of(plus1)],[plus1]))),[v3,v4,lambda(v5,lambda(v6,su(su(su(lambda(v2,su(su(v8,[v7 of v6],[v8]),[v2 of v5],[v7]))of lambda(v5,lambda(v6,su(su(su(lambda(v2,su(su(v8,[v7 of v6],[v8]),[v2 of v5],[v7]))of lambda(v5,lambda(v6,su(su(lambda(v2,su(su(v8,[v7 of v6],[v8]),[v2 of v5],[v7]))of _1252,[v2 of x],[v7]),[v4 of v5],[v2]))),[v2 of v5],[v7]),[plus2 of v3],[v2]),[term_of(plus2)],[plus2]))),[v2 of s(v5)],[v7]),[plus2 of v3],[v2]),[term_of(plus2)],[plus2])))]))))),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(y,plus(v0,z))in pnat,y:pnat]==>v2:pnat=>z:pnat=>s(v2)=s(v2)in pnat,
+   tautology(dequantify_once then dequantify_once then identity),lambda(v2,lambda(z,axiom)),
+   [
+   ]) ext _1084,
+   problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(y,plus(v0,z))in pnat,y:pnat,v3:pnat,v4:v2:pnat=>z:pnat=>s(plus(v3,v2))=plus(v3,s(v2))in pnat]==>v2:pnat=>z:pnat=>s(s(plus(v3,v2)))=s(s(plus(v3,v2)))in pnat,
+   tautology(dequantify_once then dequantify_once then identity),lambda(v2,lambda(z,axiom)),
+   [
+   ]) ext _1252
+  ]) ext _745
+ ]) ext _503
+]).

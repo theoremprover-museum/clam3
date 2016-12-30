@@ -1,0 +1,1 @@
+problem([]==>f: (int=>int)=>g: (int=>int)=>l:int list=>sim(mapcar(mapcar(l,g),f),mapcar(l,o(f, g)))in int list,_,_,_).

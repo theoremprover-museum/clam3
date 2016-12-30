@@ -1,0 +1,1 @@
+andNL(x)<==>list_ind(x,lambda(y,nil),[h,t,r,lambda(y,(h and hd(y))::r of tl(y))]).

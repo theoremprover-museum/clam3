@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>x:{word}=>moveSpec(s(n),x)=numVal(s(s(n)))of app(x,{false}::nil)in pnat,_,_,_).

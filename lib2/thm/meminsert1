@@ -1,0 +1,59 @@
+problem([]==>a:int=>b:int=>l:int list=>a=b in int=>member(a,insert(b,l))={true}in u(1),
+intro(new[v0])then[dequantify([b:int,l:int list],[v1,v2]),wfftacs],lambda(v0,lambda(v1,lambda(v2,_215))),
+[problem([v0:int,v1:int,v2:int list]==>v0=v1 in int=>member(v0,insert(v1,v2))={true}in u(1),
+ intro,lambda(v3,_273),
+ [problem([v0:int,v1:int,v2:int list,v3:v0=v1 in int]==>member(v0,insert(v1,v2))={true}in u(1),
+  sym_eval([equal(v3,right)]),_282,
+  [problem([v0:int,v1:int,v2:int list]==>member(v0,insert(v0,v2))={true}in u(1),
+   induction(v3::v4,v2:int list),list_ind(v2,_397,[v3,v4,v5,_405]),
+   [problem([v0:int,v1:int,v2:int list]==>member(v0,insert(v0,nil))={true}in u(1),
+    sym_eval([base([2,1,1],insert1),step([1,1],member2)]),su(su(su(su(su(su(su(_500,[v5 of axiom],[v3]),[v4 of nil],[v5]),[v3 of v0],[v4]),[member2 of v0],[v3]),[term_of(member2)],[member2]),[insert1 of v0],[v3]),[term_of(insert1)],[insert1]),
+    [problem([v0:int,v1:int,v2:int list]==>{true}={true}in u(1),
+     tautology(identity),axiom,
+     [
+     ]) ext _500
+    ]) ext _397,
+    problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1)]==>member(v0,insert(v0,v3::v4))={true}in u(1),
+    casesplit([v0<v3,v0<v3=>void]),lambda(v7,decide(v7,[v8,lambda(v6,_710)of v8],[v9,lambda(v6,_720)of v9]))of su(su(su(v8,[v7 of v3],[v8]),[v6 of v0],[v7]),[term_of(decless)],[v6]),
+    [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3]==>member(v0,insert(v0,v3::v4))={true}in u(1),
+     wave([2,1,1],[insert2,left]),su(su(su(su(su(_873,[v9 of v6],[v7]),[v8 of v4],[v9]),[v7 of v3],[v8]),[insert2 of v0],[v7]),[term_of(insert2)],[insert2]),
+     [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3]==>member(v0,v0::v3::v4)={true}in u(1),
+      sym_eval([step([1,1],member2)]),su(su(su(su(su(_1028,[v9 of axiom],[v7]),[v8 of (v3::v4)],[v9]),[v7 of v0],[v8]),[member2 of v0],[v7]),[term_of(member2)],[member2]),
+      [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3]==>{true}={true}in u(1),
+       tautology(identity),axiom,
+       [
+       ]) ext _1028
+      ]) ext _873
+     ]) ext _710,
+     problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3=>void]==>member(v0,insert(v0,v3::v4))={true}in u(1),
+     wave([2,1,1],[insert3,left]),su(su(su(su(su(_1276,[v9 of v6],[v7]),[v8 of v4],[v9]),[v7 of v3],[v8]),[insert3 of v0],[v7]),[term_of(insert3)],[insert3]),
+     [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3=>void]==>member(v0,v3::insert(v0,v4))={true}in u(1),
+      casesplit([v0=v3 in int=>void,v0=v3 in int]),lambda(v8,decide(v8,[v9,lambda(v7,_1446)of v9],[v10,lambda(v7,_1456)of v10]))of su(su(su(v9,[v8 of v3],[v9]),[v7 of v0],[v8]),[term_of(deceqint)],[v7]),
+      [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3=>void,v7:v0=v3 in int=>void]==>member(v0,v3::insert(v0,v4))={true}in u(1),
+       wave([1,1],[member3,left]),su(su(su(su(su(_1624,[v10 of v7],[v8]),[v9 of insert(v0,v4)],[v10]),[v8 of v3],[v9]),[member3 of v0],[v8]),[term_of(member3)],[member3]),
+       [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3=>void,v7:v0=v3 in int=>void]==>member(v0,insert(v0,v4))={true}in u(1),
+        tautology(hyp(v5)),v5,
+        [
+        ]) ext _1624
+       ]) ext _1446,
+       problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v3=>void,v7:v0=v3 in int]==>member(v0,v3::insert(v0,v4))={true}in u(1),
+       sym_eval([equal(v7,right)]),_1780,
+       [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v0=>void]==>member(v0,v0::insert(v0,v4))={true}in u(1),
+        wave([1,1],[member2,left]),su(su(su(su(su(_2004,[v9 of axiom],[v7]),[v8 of insert(v0,v4)],[v9]),[v7 of v0],[v8]),[member2 of v0],[v7]),[term_of(member2)],[member2]),
+        [problem([v0:int,v1:int,v2:int list,v3:int,v4:int list,v5:member(v0,insert(v0,v4))={true}in u(1),v6:v0<v0=>void]==>{true}={true}in u(1),
+         tautology(identity),axiom,
+         [
+         ]) ext _2004
+        ]) ext _1780
+       ]) ext _1456
+      ]) ext _1276
+     ]) ext _720
+    ]) ext _405
+   ]) ext _282
+  ]) ext _273,
+  problem([v0:int,v1:int,v2:int list]==>v0=v1 in int in u(1),
+  because,atom(incomplete),
+  [
+  ])
+ ]) ext _215
+]).

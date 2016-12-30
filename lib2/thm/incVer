@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>x:{word}=>plus(word2nat(x),bitval(ci))=word2nat(incword(x,ci))in pnat,_,_,_).

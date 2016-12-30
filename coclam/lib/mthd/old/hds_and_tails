@@ -1,0 +1,16 @@
+method(hds_and_tails(UnAnn),
+       H==>G,
+       [ wibble,
+ 	 wave_fronts(UnAnn, _, G),
+	 matrix(Vs, Matrix, UnAnn),
+	 (exp_at(G, _, tl);exp_at(G, _, hd)),
+	 wibble,
+	 sinks(NoSinks, _, Matrix),
+	 mark_sinks(Vs, NoSinks, Sinks),
+	 matrix(Vs, NoSinks, NewG)
+       ],
+       [ [All|Seqs] = [H==>NewG] 
+	],
+       [All|Seqs],
+	[]
+      ).

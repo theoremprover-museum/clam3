@@ -1,0 +1,3 @@
+problem([]==>x:{word}=>delay(0,x)=nil in{word},_,_,_).
+
+

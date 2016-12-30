@@ -1,0 +1,1 @@
+problem([]==>h:int=>t:int list=>l:int list=>qrev(h::t,l)=qrev(t,h::l)in int list,_,_,_).

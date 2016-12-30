@@ -1,0 +1,33 @@
+Script started on Mon Jan 23 10:54:36 1995
+tay% /home/dream3/air/bin/lpro
+/home/dream3/air/bin/lpro: Command not found.
+tay% /home/dream3/air/bin/lprog
+% loading file /home/dream3/air/bin/lprog
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% lprog loaded in module user, 0.516 sec 167,816 bytes
+
+
+?- use bundy2.
+bundy2
+ yes
+?- (F (app (rev t) (cons h nil)) l) = (app (app U V) W).
+
+F = Var5 \ Var6 \ (app (app (Var3 Var5 Var6) (Var4 Var5 Var6)) (Var2 Var5 Var6))
+U = Var3 (app (rev t) (cons h nil)) l
+V = Var4 (app (rev t) (cons h nil)) l
+W = Var2 (app (rev t) (cons h nil)) l ;
+
+F = Var7 \ Var8 \ (app Var7 (Var2 Var7 Var8))
+U = rev t
+V = cons h nil
+W = Var2 (app (rev t) (cons h nil)) l ;
+
+F = F
+U = U
+V = V
+W = W
+
+ The remaining flexible - flexible pairs:
+<Var9 (app (rev t) (cons h nil)) l , F (app (rev t) (cons h nil)) l> ;
+
+ no

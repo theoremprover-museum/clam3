@@ -1,0 +1,1 @@
+problem([]==>a:{word}=>b:{word}=>xorW(0)of a of b=nil in{word},_,_,_).

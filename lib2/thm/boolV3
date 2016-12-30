@@ -1,0 +1,1 @@
+problem([]==>n:pnat=> (not not boolV(n))=boolV(n)in{bool},_,_,_).

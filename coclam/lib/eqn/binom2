@@ -1,0 +1,1 @@
+problem([]==>py:pnat=>binom(0,s(py))=0 in pnat,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>a:int=>x:int=>lts(a, lam(x, a of x), haskell) in int, _, _, _).

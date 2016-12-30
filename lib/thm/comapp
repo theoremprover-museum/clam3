@@ -1,0 +1,28 @@
+problem([]==>x:int list=>y:int list=>length(app(x,y))=length(app(y,x))in pnat,
+ind_strat_I(induction(v0::v1,x:int list)then[try base_rewrites([base([1,1,1],app1)]),ripple_out([wave([1,1,1],[app2,left]),wave([1,1],[length2,left])])then try weak_fertilize(left,[weak_fertilize(left,in,[1],v2)])]),lambda(x,list_ind(x,lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _279,[app1 of v0],[v1]),[term_of(app1)],[app1])),[v0,v1,v2,lambda(v3,su(su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of lambda(v3,su(lambda(v4,su(v5,[v4 of v3],[v5]))of _392,[v2 of v3],[v4])),[v4 of app(v1,v3)],[v5]),[length2 of v0],[v4]),[term_of(length2)],[length2])),[v5 of v3],[v6]),[v4 of v1],[v5]),[app2 of v0],[v4]),[term_of(app2)],[app2]))])),
+[problem([x:int list]==>y:int list=>length(y)=length(app(y,nil))in pnat,
+ ind_strat_I(induction(v0::v1,y:int list)then[try base_rewrites([base([1,1],length1),base([1,2,1],app1),base([2,1],length1)]),ripple_out([wave([1,1],[length2,left]),wave([1,2,1],[app2,left]),wave([2,1],[length2,left])])then try weak_fertilize(right,[weak_fertilize(right,in,[1],v2)])]),lambda(y,list_ind(y,su(su(su(su(_638,[term_of(length1)],[length1]),[app1 of nil],[v0]),[term_of(app1)],[app1]),[term_of(length1)],[length1]),[v0,v1,v2,su(su(su(su(su(su(su(su(su(su(_711,[v3 of app(v1,nil)],[v4]),[length2 of v0],[v3]),[term_of(length2)],[length2]),[v4 of nil],[v5]),[v3 of v1],[v4]),[app2 of v0],[v3]),[term_of(app2)],[app2]),[v3 of v1],[v4]),[length2 of v0],[v3]),[term_of(length2)],[length2])])),
+ [problem([x:int list,y:int list]==>0=0 in pnat,
+  tautology(identity),axiom,
+  [
+  ]) ext _638,
+  problem([x:int list,y:int list,v0:int,v1:int list,v2:length(v1)=length(app(v1,nil))in pnat]==>s(length(v1))=s(length(v1))in pnat,
+  tautology(identity),axiom,
+  [
+  ]) ext _711
+ ]) ext _279,
+ problem([x:int list,v0:int,v1:int list,v2:y:int list=>length(app(v1,y))=length(app(y,v1))in pnat]==>y:int list=>s(length(app(y,v1)))=length(app(y,v0::v1))in pnat,
+ ind_strat_I(induction(v3::v4,y:int list)then[try base_rewrites([base([1,2,1],app1),base([1,1,1,1],app1)]),ripple_out([wave([1,2,1],[app2,left]),wave([2,1],[length2,left]),wave([1,1,1,1],[app2,left]),wave([1,1,1],[length2,left])])then try weak_fertilize(right,[weak_fertilize(right,in,[1],v5)])]),lambda(y,list_ind(y,su(su(su(su(_1129,[app1 of v1],[v3]),[term_of(app1)],[app1]),[app1 of (v0::v1)],[v3]),[term_of(app1)],[app1]),[v3,v4,v5,su(su(su(su(su(su(su(su(su(su(su(su(su(su(_1222,[v6 of app(v4,v1)],[v7]),[length2 of v3],[v6]),[term_of(length2)],[length2]),[v7 of v1],[v8]),[v6 of v4],[v7]),[app2 of v3],[v6]),[term_of(app2)],[app2]),[v6 of app(v4,v0::v1)],[v7]),[length2 of v3],[v6]),[term_of(length2)],[length2]),[v7 of (v0::v1)],[v8]),[v6 of v4],[v7]),[app2 of v3],[v6]),[term_of(app2)],[app2])])),
+ [problem([x:int list,v0:int,v1:int list,v2:y:int list=>length(app(v1,y))=length(app(y,v1))in pnat,y:int list]==>s(length(v1))=length(v0::v1)in pnat,
+  sym_eval([step([2,1],length2)]),su(su(su(_1434,[v3 of v1],[v4]),[length2 of v0],[v3]),[term_of(length2)],[length2]),
+  [problem([x:int list,v0:int,v1:int list,v2:y:int list=>length(app(v1,y))=length(app(y,v1))in pnat,y:int list]==>s(length(v1))=s(length(v1))in pnat,
+   tautology(identity),axiom,
+   [
+   ]) ext _1434
+  ]) ext _1129,
+  problem([x:int list,v0:int,v1:int list,v2:y:int list=>length(app(v1,y))=length(app(y,v1))in pnat,y:int list,v3:int,v4:int list,v5:s(length(app(v4,v1)))=length(app(v4,v0::v1))in pnat]==>s(s(length(app(v4,v1))))=s(s(length(app(v4,v1))))in pnat,
+  tautology(identity),axiom,
+  [
+  ]) ext _1222
+ ]) ext _392
+]).

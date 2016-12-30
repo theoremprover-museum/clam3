@@ -1,0 +1,5 @@
+problem([]==>t:pnat=>rs:flip=>x:reg=>restart(rs,x)of t=bool_eq(rs of t,{true},nil,x of t)in{word},_,_,_).
+
+%problem([]==>t:pnat=>rs:flip=>x:reg=>restart(rs,x)of t=bool_eq(rs of t,{true},zeroes(length(x of t)),x of t)in{word},_,_,_).
+
+%problem([]==>t:pnat=>n:pnat=>rs:flip=>x:reg=>restart(n,rs,x)of t=bool_eq(rs of t,{true},zeroes(n),x of t)in{word},_,_,_).

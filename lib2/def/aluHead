@@ -1,0 +1,1 @@
+aluHead(s0,s1,s2,a,b,ci)<==>hd(oneAluImp(s0,s1,s2,a,b,ci)).

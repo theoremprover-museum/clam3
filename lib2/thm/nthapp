@@ -1,0 +1,42 @@
+problem([]==>i:pnat=>j:pnat=>l:int list=>nth(plus(i,j),l)=nth(j,nth(i,l))in int list,
+induction(s(v0),i:pnat),lambda(i,p_ind(i,_325,[v0,v1,_331])),
+[problem([i:pnat]==>j:pnat=>l:int list=>nth(plus(0,j),l)=nth(j,nth(0,l))in int list,
+ base([2,2,1],nth1),su(lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _406)),[term_of(nth1)],[nth1]),
+ [problem([i:pnat]==>j:pnat=>l:int list=>nth(plus(0,j),l)=nth(j,l)in int list,
+  base([1,1,1],plus1),su(lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _508)),[term_of(plus1)],[plus1]),
+  [problem([i:pnat]==>j:pnat=>l:int list=>nth(j,l)=nth(j,l)in int list,
+   identity,lambda(j,lambda(l,axiom)),
+   [
+   ]) ext _508
+  ]) ext _406
+ ]) ext _325,
+ problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list]==>j:pnat=>l:int list=>nth(plus(s(v0),j),l)=nth(j,nth(s(v0),l))in int list,
+ wave([1,1,1],plus2),su(lambda(v2,lambda(v3,lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _713)),[term_of(plus2)],[plus2]),
+ [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list]==>j:pnat=>l:int list=>nth(s(plus(v0,j)),l)=nth(j,nth(s(v0),l))in int list,
+  induction(v2::v3,l:int list),lambda(v2,lambda(v3,lambda(v4,su(su(v6,[v5 of v2],[v6]),[v4 of v3],[v5]))of lambda(l,list_ind(l,_895,[v2,v3,v4,_903])))),
+  [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list]==>j:pnat=>nth(s(plus(v0,j)),nil)=nth(j,nth(s(v0),nil))in int list,
+   base([1,1],nth2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _1020),[term_of(nth2)],[nth2]),
+   [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list]==>j:pnat=>nil=nth(j,nth(s(v0),nil))in int list,
+    base([2,2,1],nth2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _1150),[term_of(nth2)],[nth2]),
+    [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list]==>j:pnat=>nil=nth(j,nil)in int list,
+     base([2,1],nth2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _1273),[term_of(nth2)],[nth2]),
+     [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list]==>j:pnat=>nil=nil in int list,
+      identity,lambda(j,axiom),
+      [
+      ]) ext _1273
+     ]) ext _1150
+    ]) ext _1020
+   ]) ext _895,
+   problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list,v2:int,v3:int list,v4:j:pnat=>nth(s(plus(v0,j)),v3)=nth(j,nth(s(v0),v3))in int list]==>j:pnat=>nth(s(plus(v0,j)),v2::v3)=nth(j,nth(s(v0),v2::v3))in int list,
+   wave([1,1],nth3),su(lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of _1548),[term_of(nth3)],[nth3]),
+   [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list,v2:int,v3:int list,v4:j:pnat=>nth(s(plus(v0,j)),v3)=nth(j,nth(s(v0),v3))in int list]==>j:pnat=>nth(plus(v0,j),v3)=nth(j,nth(s(v0),v2::v3))in int list,
+    wave([2,2,1],nth3),su(lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of _1734),[term_of(nth3)],[nth3]),
+    [problem([i:pnat,v0:pnat,v1:j:pnat=>l:int list=>nth(plus(v0,j),l)=nth(j,nth(v0,l))in int list,l:int list,v2:int,v3:int list,v4:j:pnat=>nth(s(plus(v0,j)),v3)=nth(j,nth(s(v0),v3))in int list]==>j:pnat=>nth(plus(v0,j),v3)=nth(j,nth(v0,v3))in int list,
+     strong_fertilize(v1),lambda(j,su(su(v6,[v5 of v3],[v6]),[v1 of j],[v5])),
+     [
+     ]) ext _1734
+    ]) ext _1548
+   ]) ext _903
+  ]) ext _713
+ ]) ext _331
+]).

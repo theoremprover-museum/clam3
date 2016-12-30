@@ -1,0 +1,3 @@
+problem([]==>f:(pnat => pnat)=>t:pnat list=>n:pnat=>a:pnat=>b:pnat list =>
+ap(ap(map,f),app(b,t)) = ap(ap(reduce,app),ap(ap(map,ap(map,f)),qsplit(a,n,b,t))) in pnat list,_,_,_).
+

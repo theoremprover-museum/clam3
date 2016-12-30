@@ -1,0 +1,4 @@
+problem([]==>fac(0)=s(0)in pnat,
+repeat intro then simplify then repeat intro,axiom,
+[
+]).

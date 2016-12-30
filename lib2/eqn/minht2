@@ -1,0 +1,1 @@
+problem([]==>l:int tree=>r:int tree=>minht(node(l,r))=s(min(minht(l),minht(r)))in pnat,_,_,_).

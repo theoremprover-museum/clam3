@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>myeven(s(s(x)))=myeven(x)in u(1),_,_,_).

@@ -1,0 +1,27 @@
+/*
+ *
+ * I know that normaliZe is a USA-ism, but the work normalise is already
+ * a reserved term in Oyster, so...
+ */
+
+hint( normalize( NormTacs ),
+        OH==>OG,
+        [  (select( _:[ihmarker(_,_),CH],OH, R) orelse (CH=OH,R=[])),
+%          exp_at( OG, _, T=>_ ),
+%          exp_at( T, _, _=_ in _ ),
+          iterate( ([CH|R]==>OG) - [], 
+                   (Goal-Tacs):=>((H==>G)-STacs),
+   	           ( applicable_submethod( Goal, normal(A), _, [ H==>G ] ),
+                     STacs = [normal(A)|Tacs]
+                   ),
+                   true,
+		   SubGoal-NormTacs
+                 ),
+          NormTacs \= []
+        ],
+        [],
+        [ SubGoal ],
+	normalize( NormTacs )
+      ).
+
+% iterator(method,normalize,submethods,[normal(_)]).

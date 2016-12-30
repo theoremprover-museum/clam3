@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>nAluImpGood(s(n),s0,s1,s2,x,y,ci)=aluHead(s0,s1,s2,hd(x),hd(y),ci)::nAluImpGood(n,s0,s1,s2,tl(x),tl(y),aluCarry(s0,s1,s2,hd(x),hd(y),ci))in{word},_,_,_).

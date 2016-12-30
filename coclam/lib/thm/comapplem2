@@ -1,0 +1,1 @@
+problem([]==>l:int list=>h:int=>length(::(h)of l)=s(length(l))in int,_,_,_).

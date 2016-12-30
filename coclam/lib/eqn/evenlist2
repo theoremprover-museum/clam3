@@ -1,0 +1,1 @@
+problem([]==>h:int=>evenlist(h::nil)=nil in int list,_,_,_).

@@ -1,0 +1,5 @@
+del(x)<==>lambda(t,x of pred(t)).
+
+% | ?- eval(del(lambda(t,({true}::{false}::{true}::nil))) of s(s(0)),X).
+%
+% X = inl(unit)::inr(unit)::inl(unit)::nil 

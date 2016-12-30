@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>nAdderImp(s(n))of a of b of ci=faSum(hd(a),hd(b),ci)::nAdderImp(n)of tl(a)of tl(b)of faCarry(hd(a),hd(b),ci) in{word},_,_,_).

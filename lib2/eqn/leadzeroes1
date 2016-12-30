@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>leadzeroes(0,x)=x in{word},_,_,_).

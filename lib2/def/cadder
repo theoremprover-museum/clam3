@@ -1,0 +1,1 @@
+cadder(x,y,ci)<==>pless(length(x),length(y),cadd(leadzeroes(minus(length(y),length(x)),x))of y of ci,cadd(x)of leadzeroes(minus(length(x),length(y)),y)of ci).

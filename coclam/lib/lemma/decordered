@@ -1,0 +1,23 @@
+problem([]==>v0:int=>v1:int list=>((v1=nil in int list=>void)#(v0=hd(v1)in int=>void)#v0<hd(v1)=>void)\((v1=nil in int list=>void)#v0<hd(v1))\((v1=nil in int list=>void)#v0=hd(v1)in int)\v1=nil in int list,
+dequantify,lambda(v0,lambda(v1,_287)),
+[problem([v0:int,v1:int list]==>((v1=nil in int list=>void)#(v0=hd(v1)in int=>void)#v0<hd(v1)=>void)\((v1=nil in int list=>void)#v0<hd(v1))\((v1=nil in int list=>void)#v0=hd(v1)in int)\v1=nil in int list,
+ induction(hl::tl,v1:int list),list_ind(v1,_420,[hl,tl,v2,_428]),
+ [problem([v0:int,v1:int list]==>((nil=nil in int list=>void)#(v0=hd(nil)in int=>void)#v0<hd(nil)=>void)\((nil=nil in int list=>void)#v0<hd(nil))\((nil=nil in int list=>void)#v0=hd(nil)in int)\nil=nil in int list,
+  repeat intro(right)then wfftacs,inr(inr(inr(_561))),
+  [problem([v0:int,v1:int list]==>nil=nil in int list,
+   identity,axiom,
+   [
+   ]) ext _561
+  ]) ext _420,
+  problem([v0:int,v1:int list,hl:int,tl:int list,v2:((tl=nil in int list=>void)#(v0=hd(tl)in int=>void)#v0<hd(tl)=>void)\((tl=nil in int list=>void)#v0<hd(tl))\((tl=nil in int list=>void)#v0=hd(tl)in int)\tl=nil in int list]==>((hl::tl=nil in int list=>void)#(v0=hd(hl::tl)in int=>void)#v0<hd(hl::tl)=>void)\((hl::tl=nil in int list=>void)#v0<hd(hl::tl))\((hl::tl=nil in int list=>void)#v0=hd(hl::tl)in int)\hl::tl=nil in int list,
+  thin([v2])then lemma(deceqint)then lemma(declessint)then seq(hl::tl=nil in int list=>void)then[because,idtac],su(su(lambda(v4,_902)of atom(incomplete),[term_of(declessint)],[v3]),[term_of(deceqint)],[v2]),
+  [problem([v0:int,v1:int list,hl:int,tl:int list,v2:x:int=>y:int=>(x=y in int=>void)\x=y in int,v3:x:int=>y:int=>x<y\x<y=>void,v4:hl::tl=nil in int list=>void]==>((hl::tl=nil in int list=>void)#(v0=hd(hl::tl)in int=>void)#v0<hd(hl::tl)=>void)\((hl::tl=nil in int list=>void)#v0<hd(hl::tl))\((hl::tl=nil in int list=>void)#v0=hd(hl::tl)in int)\hl::tl=nil in int list,
+   elim_on(v2,[v0,hd(hl::tl)])then elim_on(v3,[v0,hd(hl::tl)])then thin([v2,v3]),su(su(su(su(_1204,[v5 of hd(hl::tl)],[v7]),[v3 of v0],[v5]),[v5 of hd(hl::tl)],[v6]),[v2 of v0],[v5]),
+   [problem([v0:int,v1:int list,hl:int,tl:int list,v4:hl::tl=nil in int list=>void,v6:(v0=hd(hl::tl)in int=>void)\v0=hd(hl::tl)in int,v7:v0<hd(hl::tl)\v0<hd(hl::tl)=>void]==>((hl::tl=nil in int list=>void)#(v0=hd(hl::tl)in int=>void)#v0<hd(hl::tl)=>void)\((hl::tl=nil in int list=>void)#v0<hd(hl::tl))\((hl::tl=nil in int list=>void)#v0=hd(hl::tl)in int)\hl::tl=nil in int list,
+    tautology,decide(v6,[v2,decide(v7,[v3,inr(inl(v4&v3))],[v8,inl(v4&v2&v8)])],[v3,decide(v7,[v2,inr(inl(v4&v2))],[v5,inr(inr(inl(v4&v3)))])]),
+    [
+    ]) ext _1204
+   ]) ext _902
+  ]) ext _428
+ ]) ext _287
+]).

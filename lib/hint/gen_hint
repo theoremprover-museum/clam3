@@ -1,0 +1,27 @@
+% GEN_HINT METHOD:
+%
+% Generalisation Hint Method. 
+%
+% Positions is a list of subexpression's positions to generalise.
+% Var: Variable to be used. 
+% Hint_name: Name of context in which the method should be used.
+	
+hint(gen_hint(HintName, Positions, Var:pnat ),
+       H==>G,
+       [hint_context( gen_hint, HintName, H==>G, [ Positions ] ),
+ 	matrix(Vs,M,G),
+
+        % the last 2 conjucts will always succeed, and are not really
+        % needed for applicability test, so they could go in the
+        % postconds, but we have them here to get the second arg of the
+        % method instantiated even without running the postconds...
+
+        append(Vs,H,VsH),
+        free([Var],VsH)
+       ], 
+       [replace_list(Positions , Var, M, NewM),
+        matrix(Vs,NewM,NewG)
+       ],
+       [H==>Var:pnat=>NewG],
+       gen_hint(Positions,Var:pnat,_)
+      ).

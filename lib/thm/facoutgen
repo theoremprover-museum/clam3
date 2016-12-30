@@ -1,0 +1,2 @@
+problem([]==>i:pnat => j:pnat=> out(i,j,j) = times(fac(j),i) in pnat,_,_,_).
+

@@ -1,0 +1,1 @@
+problem([]==>l:{word}=>app(nil,l)=l in{word},_,_,_).

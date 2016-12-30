@@ -1,0 +1,14 @@
+problem([]==>x:int=>y:int=>(x=y in int=>void)\x=y in int,
+dequantify,lambda(x,lambda(y,_195)),
+[problem([x:int,y:int]==>(x=y in int=>void)\x=y in int,
+ decide(x=y in int),int_eq(x,y,su(_251,[axiom],[v0]),su(_259,[lambda(~,axiom)],[v0])),
+ [problem([x:int,y:int,v0:x=y in int]==>(x=y in int=>void)\x=y in int,
+  tautology(intro(right)then[hyp(v0),wfftacs]),inr(v0),
+  [
+  ]) ext _251,
+  problem([x:int,y:int,v0:x=y in int=>void]==>(x=y in int=>void)\x=y in int,
+  tautology(intro(left)then[hyp(v0),wfftacs]),inl(v0),
+  [
+  ]) ext _259
+ ]) ext _195
+]).

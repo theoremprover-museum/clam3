@@ -1,0 +1,1 @@
+problem([]==>infl1(0, flip, idnat)=infl1(s(0), idnat, flip) in int list,_,_,_).

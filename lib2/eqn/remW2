@@ -1,0 +1,1 @@
+problem([]==>remW({true}::nil,{true}::nil)=nil in{word},_,_,_).

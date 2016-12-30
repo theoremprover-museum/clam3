@@ -1,0 +1,4 @@
+problem([]==>h:int=>l:int list=>rev(h::l)=app(rev(l),h::nil)in int list,
+repeat intro then simplify then wfftacs,lambda(h,lambda(l,axiom)),
+[
+]).

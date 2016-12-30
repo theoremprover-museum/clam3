@@ -1,0 +1,1 @@
+problem([]==>h:{bool}=>l:{word}=>length(h::l)=s(length(l))in pnat,_,_,_).

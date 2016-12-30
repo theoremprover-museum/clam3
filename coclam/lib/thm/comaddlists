@@ -1,0 +1,1 @@
+problem([]==>m:int list=>n:int list=>addlists(m, n)=addlists(n, m) in int list,_,_,_).

@@ -1,0 +1,32 @@
+	% GENERALISE METHOD:
+	% Replace a common subterm in both halfs of an
+	% - equality, or
+	% - implication, or
+	% - inequality
+	% by a new variable.
+	% Disallow generalising over object-level variables, and over 
+        % terms containing meta-level variables (too dangerous), and 
+        % over constant object-level terms, and over terms containing 
+        % wave-fronts.
+method(generalise(Exp,Var:Type),
+       H==>G,
+       [matrix(Vs,M1,G),
+        sinks(M,_,M1),      % Strip out sinks
+        member(M,[(L=R in _),(L=>R),geq(L,R),leq(L,R),greater(L,R),less(L,R)]),
+        exp_at(L,_,Exp),
+        not atomic(Exp),        % disallow generalising object-level variables
+        % not constant(Exp,_),    % Exp must not be a constant term.
+        not oyster_type(Type, _, Exp),
+        object_level_term(Exp), % Exp must not contain meta-vars or wave fronts
+        exp_at(R,_,Exp),
+        type_of(Exp,Type),
+        append(Vs,H,VsH),
+        hfree([Var],VsH),
+        replace_all(Exp,Var,G, NewG1),
+        \+ disprove([Var:Type]==>NewG1)
+       ], 
+       [strip_meta_annotations(NewG1,NewG)
+       ],
+       [H==>Var:Type=>NewG],
+       []
+      ).

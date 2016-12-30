@@ -1,0 +1,1 @@
+maxht(t)<==>atom('function max_ht not implemented (yet)').

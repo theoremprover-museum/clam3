@@ -1,0 +1,86 @@
+problem([]==>phi:({posint}=>u(2))=>phi of s(0)=>(p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x))=>z:{posint}=>phi of z,
+universe(3),_216,
+[problem([]==>phi:({posint}=>u(2))=>phi of s(0)=>(p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x))=>z:{posint}=>phi of z,
+ intro then try wfftacs,lambda(phi,_369),
+ [problem([phi:{posint}=>u(2)]==>phi of s(0)=>(p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x))=>z:{posint}=>phi of z,
+  intro then try wfftacs,lambda(v0,_452),
+  [problem([phi:{posint}=>u(2),v0:phi of s(0)]==>(p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x))=>z:{posint}=>phi of z,
+   intro then try wfftacs,lambda(v1,_537),
+   [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x)]==>z:{posint}=>phi of z,
+    intro then try wfftacs,lambda(z,_624),
+    [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint}]==>phi of z,
+     seq(a:acc({posint},{acc_ord})=>phi of a,new[v2]),lambda(v2,_731)of _728,
+     [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint}]==>a:acc({posint},{acc_ord})=>phi of a,
+      intro then try wfftacs,lambda(a,_830),
+      [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord})]==>phi of a,
+       elim(a,wo),wo_ind(a,[v4,v2,_931]),
+       [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3]==>phi of v4,
+        decide(v4=s(0)in pnat),pnat_eq(v4,s(0),su(_1080,[axiom],[v3]),su(_1088,[lambda(~,axiom)],[v3])),
+        [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat]==>phi of v4,
+         rewrite(v3),_1106,
+         [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat]==>phi of s(0),
+          intro,v0,
+          [
+          ]) ext _1106
+         ]) ext _1080,
+         problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void]==>phi of v4,
+         seq(p:{prime}#x:{posint}#v4=times(p,x)in{posint},new[v5]),lambda(v5,_1570)of _1567,
+         [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void]==>p:{prime}#x:{posint}#v4=times(p,x)in{posint},
+          lemma(fstprime),su(_1743,[term_of(fstprime)],[v5]),
+          [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:v:{posint}=>(v=s(0)in pnat=>void)=>p:{prime}#x:{posint}#v=times(p,x)in{posint}]==>p:{prime}#x:{posint}#v4=times(p,x)in{posint},
+           do_elim_on(v5,[v4],[v5,v6])then (append([],[v6],[v6])',' thin([])),su(_2002,[v5 of v4],[v6]),
+           [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:v:{posint}=>(v=s(0)in pnat=>void)=>p:{prime}#x:{posint}#v=times(p,x)in{posint},v6:(v4=s(0)in pnat=>void)=>p:{prime}#x:{posint}#v4=times(p,x)in{posint}]==>p:{prime}#x:{posint}#v4=times(p,x)in{posint},
+            thinelim(v6)then try intro,su(v7,[v6 of v3],[v7]),
+            [
+            ]) ext _2002
+           ]) ext _1743
+          ]) ext _1567,
+          problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint}]==>phi of v4,
+          elim(v5),spread(v5,[p,v6,_2485]),
+          [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},v7:v5=p&v6 in (p:{prime}#x:{posint}#v4=times(p,x)in{posint})]==>phi of v4,
+           elim(v6)then thin([v10,v11]),spread(v6,[x,v8,_2754]),
+           [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},v7:v5=p&v6 in (p:{prime}#x:{posint}#v4=times(p,x)in{posint}),x:{posint},v8:v4=times(p,x)in{posint},v9:v6=x&v8 in (x:{posint}#v4=times(p,x)in{posint})]==>phi of v4,
+            thin([v7,v9]),_2764,
+            [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},x:{posint},v8:v4=times(p,x)in{posint}]==>phi of v4,
+             subst(over(v7,phi of v7),v4=times(p,x)in{posint})then[univ_elim(v8),idtac,wfftacs],_3075,
+             [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},x:{posint},v8:v4=times(p,x)in{posint}]==>phi of times(p,x),
+              do_elim_on(v1,[p,x],[v1,v7,v9])then (append([v7],[v9],[v7,v9])',' thin([v7])),su(su(_3604,[v7 of x],[v9]),[v1 of p],[v7]),
+              [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},x:{posint},v8:v4=times(p,x)in{posint},v9:phi of x=>phi of times(p,x)]==>phi of times(p,x),
+               elim(v9)then try intro,su(v7,[v9 of _3887],[v7]),
+               [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},x:{posint},v8:v4=times(p,x)in{posint},v9:phi of x=>phi of times(p,x)]==>phi of x,
+                do_elim_on(v2,[x],[v2,v7])then (append([],[v7],[v7])',' thin([])),su(_4165,[v2 of x],[v7]),
+                [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},a:acc({posint},{acc_ord}),v4:{posint},v2:v3:{v3:{posint}\{acc_ord}of v3 of v4}=>phi of v3,v3:v4=s(0)in pnat=>void,v5:p:{prime}#x:{posint}#v4=times(p,x)in{posint},p:{prime},v6:x:{posint}#v4=times(p,x)in{posint},x:{posint},v8:v4=times(p,x)in{posint},v9:phi of x=>phi of times(p,x),v7:phi of x]==>phi of x,
+                 intro,v7,
+                 [
+                 ]) ext _4165
+                ]) ext _3887
+               ]) ext _3604
+              ]) ext _3075
+             ]) ext _2764
+            ]) ext _2754
+           ]) ext _2485
+          ]) ext _1570
+         ]) ext _1088
+        ]) ext _931
+       ]) ext _830
+      ]) ext _728,
+      problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},v2:a:acc({posint},{acc_ord})=>phi of a]==>phi of z,
+      seq(z in acc({posint},{acc_ord}),new[v3]),lambda(v3,_4552)of _4549,
+      [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},v2:a:acc({posint},{acc_ord})=>phi of a]==>z in acc({posint},{acc_ord}),
+       because,atom(incomplete),
+       [
+       ]) ext _4549,
+       problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},v2:a:acc({posint},{acc_ord})=>phi of a,v3:z in acc({posint},{acc_ord})]==>phi of z,
+       do_elim_on(v2,[z],[v2,v4])then (append([],[v4],[v4])',' thin([])),su(_4802,[v2 of z],[v4]),
+       [problem([phi:{posint}=>u(2),v0:phi of s(0),v1:p:{prime}=>x:{posint}=>phi of x=>phi of times(p,x),z:{posint},v2:a:acc({posint},{acc_ord})=>phi of a,v3:z in acc({posint},{acc_ord}),v4:phi of z]==>phi of z,
+        intro,v4,
+        [
+        ]) ext _4802
+       ]) ext _4552
+      ]) ext _731
+     ]) ext _624
+    ]) ext _537
+   ]) ext _452
+  ]) ext _369
+ ]) ext _216
+]).

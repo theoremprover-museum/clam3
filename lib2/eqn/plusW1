@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>plusW(nil,y)=y in{word},_,_,_).

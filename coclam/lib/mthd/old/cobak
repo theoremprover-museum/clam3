@@ -1,0 +1,13 @@
+method(cobak(NG),
+	H==>G,
+	[matrix(VsB, related(B, Bdash) in Type, G), wibble,
+	 strip_meta_annotations(related(B, Bdash), related(B2, B2a)),
+	 B2 =.. [Tmp | [One]],
+	 B2a =.. [Tmp| [Onea]],
+	 inv(_, Tmp, _)],
+	[matrix(VsB, One = Onea in Type, NG),
+        [H==>NG] = [All|Seqs]
+	],
+	[All|Seqs],
+	[]
+	).

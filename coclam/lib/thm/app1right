@@ -1,0 +1,20 @@
+problem([]==>x:int list=>app(x,nil)=x in int list,
+induction(v0::v1,x:int list),lambda(x,list_ind(x,_307,[v0,v1,v2,_315])),
+[problem([x:int list]==>app(nil,nil)=nil in int list,
+ base([1,1],app1),su(lambda(v0,v0)of _361,[term_of(app1)],[app1]),
+ [problem([x:int list]==>nil=nil in int list,
+  tautology((intro then wfftacs)then intro),axiom,
+  [
+  ]) ext _361
+ ]) ext _307,
+ problem([x:int list,v0:int,v1:int list,v2:app(v1,nil)=v1 in int list]==>app(v0::v1,nil)=v0::v1 in int list,
+ wave([1,1],app2),su(lambda(v3,v3)of _485,[term_of(app2)],[app2]),
+ [problem([x:int list,v0:int,v1:int list,v2:app(v1,nil)=v1 in int list]==>v0::app(v1,nil)=v0::v1 in int list,
+  weak_fertilize([2],[left,v2]),lambda(v3,v3)of _571,
+  [problem([x:int list,v0:int,v1:int list,v2:app(v1,nil)=v1 in int list]==>v0::v1=v0::v1 in int list,
+   tautology((intro then wfftacs)then intro),axiom,
+   [
+   ]) ext _571
+  ]) ext _485
+ ]) ext _315
+]).

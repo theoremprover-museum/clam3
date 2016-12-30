@@ -1,0 +1,1 @@
+problem([]==>value:bool=>t:bool list=>parity(value, void::t)=value::parity(value, t) in bool list, _, _, _).

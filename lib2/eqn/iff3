@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>imp(1,0)=0 in {bool},_,_,_).

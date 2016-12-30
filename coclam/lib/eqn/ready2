@@ -1,0 +1,1 @@
+problem([]==>k:st(In, Out)=>ready(getST(k))=r in rwd(Out),_,_,_).

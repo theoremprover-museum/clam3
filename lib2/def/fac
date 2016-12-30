@@ -1,0 +1,1 @@
+fac(n)<==>p_ind(n,s(0),[n,r,times(s(n),r)]).

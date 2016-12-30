@@ -1,0 +1,1 @@
+problem([]==>h:int=>t:int list=>l2:int list=>member(h,l2)=>union(h::t,l2)=union(t,l2)in int list,_,_,_).

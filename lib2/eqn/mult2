@@ -1,0 +1,5 @@
+problem([]==>h:{bool}=>x:{word}=>y:{word}=>mult(x,h::y)=cadd(appnd(multOne(x,h),zeroes(length(y))),mult(x,y),{false})in{word},_,_,_).
+
+
+
+problem([]==>h:{bool}=>x:{word}=>y:{word}=>mult(x,h::y)=cadd(appnd(multOne(x,h),zeroes(length(y))))of mult(x,y)of{false}in{word},_,_,_).

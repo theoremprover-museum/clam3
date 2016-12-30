@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>even(n)=>double(half(n))=n in pnat,_,_,_).

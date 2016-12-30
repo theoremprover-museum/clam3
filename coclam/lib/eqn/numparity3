@@ -1,0 +1,1 @@
+problem([]==>value:pnat=>t:bool list=>numparity(value, true::t)=myodd(value)::numparity(s(value), t) in bool list, _, _, _).

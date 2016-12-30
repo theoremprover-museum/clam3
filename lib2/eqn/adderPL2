@@ -1,0 +1,5 @@
+problem([]==>n:pnat=>ci:{bool}=>x:{word}=>y:{word}=>adderPL(s(n)) of x of y of ci=addPL(hd(x),hd(y),adderPL(n)of tl(x) of tl(y) of ci)in{word},_,_,_).
+
+%problem([]==>n:pnat=>ci:{bool}=>x:{word}=>y:{word}=>adderPL(s(n)) of x of y of ci=faCarry(hd(x),hd(y),hd(adderPL(n)of tl(x) of tl(y) of ci))::faSum(hd(x),hd(y),hd(adderPL(n)of tl(x) of tl(y) of ci))::adderPL(n)of tl(x) of tl(y) of ci in{word},_,_,_).
+
+%problem([]==>n:pnat=>ci:{bool}=>h1:{bool}=>h2:{bool}=>x:{word}=>y:{word}=>adderPL(s(n))of (h1::x)of (h2::y)of ci=addPL(h1,h2,adderPL(n)of x of y of ci)in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat list=>z:pnat list=>member(x,z)=>member(x,app(y,z)),_,_,_).

@@ -1,0 +1,1 @@
+double(n)<==>p_ind(n,0,[p,r,s(s(r))]).

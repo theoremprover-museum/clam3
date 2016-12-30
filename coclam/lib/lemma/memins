@@ -1,0 +1,1 @@
+problem([]==>x:int=>y:int list=>member(x,insert(x,y)),_,_,_).

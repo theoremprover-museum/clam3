@@ -1,0 +1,1 @@
+exptwo(j)<==>p_ind(j,s(0),[~,v1,times(s(s(0)),v1)]).

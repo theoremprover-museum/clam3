@@ -1,0 +1,3 @@
+problem([]==>t:pnat=>counter(s(t),{false})=rem(s(counter(t,{false})),s(s(0))^length(nat2word(t))) in pnat,_,_,_).
+
+% problem([]==>t:pnat=>counter(s(t),{false})=rem(s(counter(t,{false})),s(s(0))^length(nat2word(t))) in pnat,_,_,_).

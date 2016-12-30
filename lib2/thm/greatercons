@@ -1,0 +1,35 @@
+problem([]==>h:int=>t:int list=>greater(length(h::t),length(t)),
+sym_eval([step([1],length2)]),lambda(v0,lambda(v1,su(su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _325,[v2 of v1],[v3]),[length2 of v0],[v2]),[term_of(length2)],[length2]))),
+[problem([]==>h:int=>t:int list=>greater(s(length(t)),length(t)),
+ induction(v0::v1,t:int list),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(t,list_ind(t,_457,[v0,v1,v2,_465])))),
+ [problem([t:int list]==>h:int=>greater(s(length(nil)),length(nil)),
+  base([2],length1),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of _516,[term_of(length1)],[length1])),
+  [problem([t:int list]==>h:int=>greater(s(length(nil)),0),
+   base([1,1],length1),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of _586,[term_of(length1)],[length1])),
+   [problem([t:int list]==>h:int=>greater(s(0),0),
+    base([],greater2),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _654,[greater2 of s(0)],[v1]),[term_of(greater2)],[greater2])),
+    [problem([t:int list]==>h:int=>s(0)=0 in pnat=>void,
+     tautology((intro then wfftacs)then intro then[clam_arith,wfftacs]),lambda(h,lambda(v0,atom(incomplete))),
+     [
+     ]) ext _654
+    ]) ext _586
+   ]) ext _516
+  ]) ext _457,
+  problem([t:int list,v0:int,v1:int list,v2:h:int=>greater(s(length(v1)),length(v1))]==>h:int=>greater(s(length(v0::v1)),length(v0::v1)),
+  wave([2],[length2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _843,[v4 of v1],[v5]),[length2 of v0],[v4]),[term_of(length2)],[length2])),
+  [problem([t:int list,v0:int,v1:int list,v2:h:int=>greater(s(length(v1)),length(v1))]==>h:int=>greater(s(length(v0::v1)),s(length(v1))),
+   wave([1,1],[length2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _978,[v4 of v1],[v5]),[length2 of v0],[v4]),[term_of(length2)],[length2])),
+   [problem([t:int list,v0:int,v1:int list,v2:h:int=>greater(s(length(v1)),length(v1))]==>h:int=>greater(s(s(length(v1))),s(length(v1))),
+    wave([1],[ssid,right]),lambda(v3,su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1106,[ssid of length(v1)],[v4]),[term_of(ssid)],[ssid])),
+    [problem([t:int list,v0:int,v1:int list,v2:h:int=>greater(s(length(v1)),length(v1))]==>h:int=>greater(s(s(length(v1))),s(length(v1))),
+     wave([],[greater3,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1231,[v4 of length(v1)],[v5]),[greater3 of s(length(v1))],[v4]),[term_of(greater3)],[greater3])),
+     [problem([t:int list,v0:int,v1:int list,v2:h:int=>greater(s(length(v1)),length(v1))]==>h:int=>greater(s(length(v1)),length(v1)),
+      tautology(intro),v2,
+      [
+      ]) ext _1231
+     ]) ext _1106
+    ]) ext _978
+   ]) ext _843
+  ]) ext _465
+ ]) ext _325
+]).

@@ -1,0 +1,1 @@
+problem([]==>mapcar(jump(0, s(0)), times(s(s(s(0))))) = iterates(plus(s(s(s(0)))), 0)in int list,_,_,_).

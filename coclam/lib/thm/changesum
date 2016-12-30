@@ -1,0 +1,1 @@
+problem([]==>n:int=>sum:int=>l:int list=>greater(sum, sumlist(n, l))=>change(sum, l)=minus(sumlist(n, l), sum)in int,_,_,_).

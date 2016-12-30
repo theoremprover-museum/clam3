@@ -1,0 +1,1 @@
+problem([]==>h:{bool}=>t:{word}=>neg(h::t)= (not h)::neg(t)in{word},_,_,_).

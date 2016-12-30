@@ -1,0 +1,1 @@
+wordFromInt(n,x)<==>ind(x,[~,~,trunc(n) of twoCompW(n,wordVal(n)of natFromInt(x))],wordVal(n)of natFromInt(0),[~,~,wordVal(n)of natFromInt(x)]).

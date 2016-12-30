@@ -1,0 +1,29 @@
+problem([]==>x:pnat=>y:pnat=>y=0 in pnat=>times(x,y)=0 in pnat,
+dequantify,lambda(x,lambda(y,_317)),
+[problem([x:pnat,y:pnat]==>y=0 in pnat=>times(x,y)=0 in pnat,
+ normalize([normal(imply_intro),normal(subst(y=0 in pnat))]),lambda(v0,_379),
+ [problem([x:pnat,y:pnat]==>times(x,0)=0 in pnat,
+  induction(s(v0),x:pnat),p_ind(x,_422,[v0,v1,_428]),
+  [problem([x:pnat,y:pnat]==>times(0,0)=0 in pnat,
+   base([1,1],times1),su(su(_474,[times1 of 0],[v0]),[term_of(times1)],[times1]),
+   [problem([x:pnat,y:pnat]==>0=0 in pnat,
+    identity,axiom,
+    [
+    ]) ext _474
+   ]) ext _422,
+   problem([x:pnat,y:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>times(s(v0),0)=0 in pnat,
+   wave([1,1],[times2,left]),su(su(su(_592,[v2 of 0],[v3]),[times2 of v0],[v2]),[term_of(times2)],[times2]),
+   [problem([x:pnat,y:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>plus(times(v0,0),0)=0 in pnat,
+    weak_fertilize(left,[weak_fertilize(left,[1],v1)]),_623,
+    [problem([x:pnat,y:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>plus(0,0)=0 in pnat,
+     base([1,1],plus1),su(su(_743,[plus1 of 0],[v2]),[term_of(plus1)],[plus1]),
+     [problem([x:pnat,y:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>0=0 in pnat,
+      identity,axiom,
+      [
+      ]) ext _743
+     ]) ext _623
+    ]) ext _592
+   ]) ext _428
+  ]) ext _379
+ ]) ext _317
+]).

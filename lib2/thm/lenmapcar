@@ -1,0 +1,32 @@
+problem([]==>f:(int=>int)=>l:int list=>length(mapcar(l,f))=length(l)in pnat,
+induction(v0::v1,l:int list),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(l,list_ind(l,_354,[v0,v1,v2,_362])))),
+[problem([l:int list]==>f:(int=>int)=>length(mapcar(nil,f))=length(nil)in pnat,
+ base([2,1],length1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _422),[term_of(length1)],[length1]),
+ [problem([l:int list]==>f:(int=>int)=>length(mapcar(nil,f))=0 in pnat,
+  base([1,1,1],mapcar1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _501),[term_of(mapcar1)],[mapcar1]),
+  [problem([l:int list]==>f:(int=>int)=>length(nil)=0 in pnat,
+   base([1,1],length1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _575),[term_of(length1)],[length1]),
+   [problem([l:int list]==>f:(int=>int)=>0=0 in pnat,
+    tautology((intro then wfftacs)then(intro then wfftacs)then identity),lambda(f,axiom),
+    [
+    ]) ext _575
+   ]) ext _501
+  ]) ext _422
+ ]) ext _354,
+ problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>length(mapcar(v1,f))=length(v1)in pnat]==>f:(int=>int)=>length(mapcar(v0::v1,f))=length(v0::v1)in pnat,
+ wave([2,1],length2),su(lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _751),[term_of(length2)],[length2]),
+ [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>length(mapcar(v1,f))=length(v1)in pnat]==>f:(int=>int)=>length(mapcar(v0::v1,f))=s(length(v1))in pnat,
+  wave([1,1,1],mapcar2),su(lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _876),[term_of(mapcar2)],[mapcar2]),
+  [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>length(mapcar(v1,f))=length(v1)in pnat]==>f:(int=>int)=>length(f of v0::mapcar(v1,f))=s(length(v1))in pnat,
+   wave([1,1],length2),su(lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _1002),[term_of(length2)],[length2]),
+   [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>length(mapcar(v1,f))=length(v1)in pnat]==>f:(int=>int)=>s(length(mapcar(v1,f)))=s(length(v1))in pnat,
+    weak_fertilize([1],[left,v2]),lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _1122),
+    [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>length(mapcar(v1,f))=length(v1)in pnat]==>f:(int=>int)=>s(length(v1))=s(length(v1))in pnat,
+     tautology((intro then wfftacs)then(intro then wfftacs)then identity),lambda(f,axiom),
+     [
+     ]) ext _1122
+    ]) ext _1002
+   ]) ext _876
+  ]) ext _751
+ ]) ext _362
+]).

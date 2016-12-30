@@ -1,0 +1,382 @@
+% loading file /home/dream3/air/clam/clam.v3.2/make/clam-cutting-edge.v3.2.qui
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% clam-cutting-edge.v3.2.qui loaded in module user, 0.683 sec 657,768 bytes
+
+CLaM Proof Planner Version 3.2 (3/7/95 14:48)
+
+% compiling file /home/dream3/air/clam/clam.v3.2/lib/needs.pl
+% needs.pl compiled in module user, 0.600 sec 348 bytes
+Quintus Prolog Release 3.1.4 (Sun-4, SunOS 4.1)
+Copyright (C) 1993, Quintus Corporation.  All rights reserved.
+2100 Geng Road, Palo Alto, California U.S.A. (415) 813-3800
+CLaM Proof Planner Version 3.2 (libraries only) (23/6/94 09:51)
+CLaM Proof Planner Version 3.2 (3/7/95 14:48)
+
+| ?- [load].
+% compiling file /home/dream3/air/clam/clam.v3.2/planner/load.pl
+loading critic(wave/1) ......... done
+%  compiling file /home/dream3/air/clam/clam.v3.2/planner/planner.pl
+* Singleton variables, clause 1 of plan/0: Addr
+* Approximate line: 26, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Clauses for update_plan_record/2 are not together in the source file
+* Approximate line: 107, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of refine_node/3: Mthd, LowerBound, Level, UpperBound, N
+* Approximate line: 201, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 2 of refine_node/3: Mthd, UpperBound, N
+* Approximate line: 206, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 3 of refine_node/3: LowerBound, N
+* Approximate line: 212, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 4 of refine_node/3: LowerBound, N
+* Approximate line: 222, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of apply_critic/6: NumSGs, Arity
+* Approximate line: 336, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of eval_critic_preconds/4: PreL, Input
+* Approximate line: 396, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of gen_subgoal_addresses/3: Addr
+* Approximate line: 613, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+%  planner.pl compiled in module user, 1.617 sec 2,920 bytes
+%  compiling file /home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl
+* Singleton variables, clause 2 of skeleton_wave_args/2: NewArg
+* Approximate line: 143, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 3 of skeleton_wave_args/2: MVar
+* Approximate line: 146, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 3 of size/2: F
+* Approximate line: 229, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of construct_transverse_rhs/3: AbsWHPos
+* Approximate line: 299, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of validate_speculation/2: Lemma, Addr
+* Approximate line: 607, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 5 of skeleton_term_/3: F
+* Approximate line: 675, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of construct_context/3: Mat
+* Approximate line: 689, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+%  critics_pre.pl compiled in module user, 1.333 sec 92 bytes
+% load.pl compiled in module user, 3.100 sec 3,804 bytes
+
+yes
+| ?- plan(rotlenapp).
+loading def(app)...done
+loading eqn(app1)...done
+loading eqn(app2)...done
+adding wave-rules for app1:..done
+adding wave-rules for app2:..............................done
+ adding defeqn-record for app1...done 
+ adding defeqn-record for app2...done 
+loading synth(rotate)...done
+loading def(rotate)...done
+loading eqn(rotate1)...done
+loading eqn(rotate2)...done
+loading eqn(rotate3)...done
+adding wave-rules for rotate1:..done
+adding wave-rules for rotate2:..done
+adding wave-rules for rotate3:...........done
+ adding defeqn-record for rotate1...done 
+ adding defeqn-record for rotate2...done 
+ adding defeqn-record for rotate3...done 
+loading def(length)...done
+loading eqn(length1)...done
+loading eqn(length2)...done
+adding wave-rules for length1:done
+adding wave-rules for length2:.......done
+ adding defeqn-record for length1...done 
+ adding defeqn-record for length2...done 
+loading thm(rotlenapp)...done
+rotlenapp([])
+==>l:pnat list=>a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list
+SELECTED METHOD at depth 0: induction([v0::l],[l:pnat list])
+|rotlenapp([2])
+|v0:pnat
+|l:pnat list
+|v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+|==>a:pnat list=>rotate(length(``v0::{l}''<out>),app(``v0::{l}''<out>,\a/))=app(\a/,``v0::{l}''<out>)in pnat list
+|SELECTED METHOD at depth 1: wave([1,1,1],[length2,equ(left)])
+||rotlenapp([1,2])
+||v0:pnat
+||l:pnat list
+||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+||==>a:pnat list=>rotate(``s({length(l)})''<out>,app(``v0::{l}''<out>,\a/))=app(\a/,``v0::{l}''<out>)in pnat list
+||SELECTED METHOD at depth 2: wave([2,1,1],[app2,equ(left)])
+|||rotlenapp([1,1,2])
+|||v0:pnat
+|||l:pnat list
+|||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+|||==>a:pnat list=>rotate(``s({length(l)})''<out>,``v0::{app(l,\a/)}''<out>)=app(\a/,``v0::{l}''<out>)in pnat list
+|||SELECTED METHOD at depth 3: wave([1,1],[rotate3,equ(left)])
+||||rotlenapp([1,1,1,2])
+||||v0:pnat
+||||l:pnat list
+||||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+||||==>a:pnat list=>rotate(length(l),``app({app(l,\a/)},v0::nil)''<in>)=app(\a/,``v0::{l}''<out>)in pnat list
+
+>>>>> INVOKING lemma-speculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[a:pnat list,l:pnat list,v0:pnat]
+
+|- app(a,v0::l)=app(M1(a,l,v0),l)in pnat list
+
+saving thm(lemma1)...done
+adding wave-rules for lemma1:.done
+||||rotlenapp([1,1,1,2])
+||||v0:pnat
+||||l:pnat list
+||||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+||||==>a:pnat list=>rotate(length(l),``app({app(l,\a/)},v0::nil)''<in>)=app(\a/,``v0::{l}''<out>)in pnat list
+||||SELECTED METHOD at depth 4: wave([2,1],[lemma1,equ(left)])
+|||||rotlenapp([1,1,1,1,2])
+|||||v0:pnat
+|||||l:pnat list
+|||||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+|||||==>a:pnat list=>rotate(length(l),``app({app(l,\a/)},v0::nil)''<in>)=app(\"M1({a},l,v0)"<in>/,l)in pnat list
+
+>>>>> INVOKING lemma-speculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma2:
+
+[a:pnat list,l:pnat list,v0:pnat]
+
+|- app(app(l,a),v0::nil)=app(l,M2(a,l,v0))in pnat list
+
+saving thm(lemma2)...done
+adding wave-rules for lemma2:....done
+|||||rotlenapp([1,1,1,1,2])
+|||||v0:pnat
+|||||l:pnat list
+|||||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+|||||==>a:pnat list=>rotate(length(l),``app({app(l,\a/)},v0::nil)''<in>)=app(\"M1({a},l,v0)"<in>/,l)in pnat list
+|||||SELECTED METHOD at depth 5: wave([2,1,1],[lemma2,equ(left)])
+||||||rotlenapp([1,1,1,1,1,2])
+||||||v0:pnat
+||||||l:pnat list
+||||||v1:ih(a:pnat list=>rotate(length(l),app(l,a))=app(a,l)in pnat list)
+||||||==>a:pnat list=>rotate(length(l),app(l,\"M2({a},l,v0)"<in>/))=app(\"M1({a},l,v0)"<in>/,l)in pnat list
+||||||TERMINATING METHOD at depth 6: fertilize(strong(v1))
+Planning partially complete for rotlenapp
+
+saving thm(lemma2)...done
+lemma2([])
+==>a:pnat list=>l:pnat list=>v0:pnat=>app(app(l,a),v0::nil)=app(l,app(a,v0::nil))in pnat list
+SELECTED METHOD at depth 0: generalise(v0::nil,v1:pnat list)
+|lemma2([1])
+|==>v1:pnat list=>a:pnat list=>l:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list
+|SELECTED METHOD at depth 1: induction([v2::l],[l:pnat list])
+||lemma2([2,1])
+||v2:pnat
+||l:pnat list
+||v3:ih(v1:pnat list=>a:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list)
+||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(app(``v2::{l}''<out>,\a/),\v1/)=app(``v2::{l}''<out>,app(\a/,\v1/))in pnat list
+||SELECTED METHOD at depth 2: wave([1,1,1],[app2,equ(left)])
+|||lemma2([1,2,1])
+|||v2:pnat
+|||l:pnat list
+|||v3:ih(v1:pnat list=>a:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list)
+|||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(``v2::{app(l,\a/)}''<out>,\v1/)=app(``v2::{l}''<out>,app(\a/,\v1/))in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1],[app2,equ(left)])
+||||lemma2([1,1,2,1])
+||||v2:pnat
+||||l:pnat list
+||||v3:ih(v1:pnat list=>a:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list)
+||||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(``v2::{app(l,\a/)}''<out>,\v1/)=``v2::{app(l,app(\a/,\v1/))}''<out>in pnat list
+||||SELECTED METHOD at depth 4: wave([1,1],[app2,equ(left)])
+|||||lemma2([1,1,1,2,1])
+|||||v2:pnat
+|||||l:pnat list
+|||||v3:ih(v1:pnat list=>a:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list)
+|||||==>v1:pnat list=>a:pnat list=>v0:pnat=>``v2::{app(app(l,\a/),\v1/)}''<out> =``v2::{app(l,app(\a/,\v1/))}''<out>in pnat list
+|||||SELECTED METHOD at depth 5: fertilize(weak(v3))
+||||||lemma2([1,1,1,1,2,1])
+||||||v2:pnat
+||||||l:pnat list
+||||||v3:ih(v1:pnat list=>a:pnat list=>v0:pnat=>app(app(l,a),v1)=app(l,app(a,v1))in pnat list)
+||||||==>v2::app(app(l,a),v1)=v2::app(app(l,a),v1)in pnat list
+||||||TERMINATING METHOD at depth 6: elementary(...)
+||lemma2([1,1])
+||l:pnat list
+||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(app(nil,a),v1)=app(nil,app(a,v1))in pnat list
+||SELECTED METHOD at depth 2: eval_def([2,1],app1)
+|||lemma2([1,1,1])
+|||l:pnat list
+|||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(app(nil,a),v1)=app(a,v1)in pnat list
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],app1)
+||||lemma2([1,1,1,1])
+||||l:pnat list
+||||==>v1:pnat list=>a:pnat list=>v0:pnat=>app(a,v1)=app(a,v1)in pnat list
+||||TERMINATING METHOD at depth 4: elementary(...)
+adding wave-rules for lemma2:.......................done
+Planning partially complete for rotlenapp
+
+saving thm(lemma1)...done
+lemma1([])
+==>a:pnat list=>l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list
+SELECTED METHOD at depth 0: induction([v1::a],[a:pnat list])
+|lemma1([2])
+|v1:pnat
+|a:pnat list
+|v2:ih(l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list)
+|==>l:pnat list=>v0:pnat=>app(``v1::{a}''<out>,\v0/ ::\l/)=app(app(``v1::{a}''<out>,\v0/ ::nil),\l/)in pnat list
+|SELECTED METHOD at depth 1: wave([1,2,1],[app2,equ(left)])
+||lemma1([1,2])
+||v1:pnat
+||a:pnat list
+||v2:ih(l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list)
+||==>l:pnat list=>v0:pnat=>app(``v1::{a}''<out>,\v0/ ::\l/)=app(``v1::{app(a,\v0/ ::nil)}''<out>,\l/)in pnat list
+||SELECTED METHOD at depth 2: wave([1,1],[app2,equ(left)])
+|||lemma1([1,1,2])
+|||v1:pnat
+|||a:pnat list
+|||v2:ih(l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list)
+|||==>l:pnat list=>v0:pnat=>``v1::{app(a,\v0/ ::\l/)}''<out> =app(``v1::{app(a,\v0/ ::nil)}''<out>,\l/)in pnat list
+|||SELECTED METHOD at depth 3: wave([2,1],[app2,equ(left)])
+||||lemma1([1,1,1,2])
+||||v1:pnat
+||||a:pnat list
+||||v2:ih(l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list)
+||||==>l:pnat list=>v0:pnat=>``v1::{app(a,\v0/ ::\l/)}''<out> =``v1::{app(app(a,\v0/ ::nil),\l/)}''<out>in pnat list
+||||SELECTED METHOD at depth 4: fertilize(weak(v2))
+|||||lemma1([1,1,1,1,2])
+|||||v1:pnat
+|||||a:pnat list
+|||||v2:ih(l:pnat list=>v0:pnat=>app(a,v0::l)=app(app(a,v0::nil),l)in pnat list)
+|||||==>v1::app(a,v0::l)=v1::app(a,v0::l)in pnat list
+|||||TERMINATING METHOD at depth 5: elementary(...)
+|lemma1([1])
+|a:pnat list
+|==>l:pnat list=>v0:pnat=>app(nil,v0::l)=app(app(nil,v0::nil),l)in pnat list
+|SELECTED METHOD at depth 1: eval_def([1,1],app1)
+||lemma1([1,1])
+||a:pnat list
+||==>l:pnat list=>v0:pnat=>v0::l=app(app(nil,v0::nil),l)in pnat list
+||SELECTED METHOD at depth 2: eval_def([1,2,1],app1)
+|||lemma1([1,1,1])
+|||a:pnat list
+|||==>l:pnat list=>v0:pnat=>v0::l=app(v0::nil,l)in pnat list
+|||SELECTED METHOD at depth 3: eval_def([2,1],app2)
+||||lemma1([1,1,1,1])
+||||a:pnat list
+||||==>l:pnat list=>v0:pnat=>v0::l=v0::app(nil,l)in pnat list
+||||SELECTED METHOD at depth 4: eval_def([2,2,1],app1)
+|||||lemma1([1,1,1,1,1])
+|||||a:pnat list
+|||||==>l:pnat list=>v0:pnat=>v0::l=v0::l in pnat list
+|||||TERMINATING METHOD at depth 5: elementary(...)
+adding wave-rules for lemma1:.....done
+|rotlenapp([1])
+|l:pnat list
+|==>a:pnat list=>rotate(length(nil),app(nil,a))=app(a,nil)in pnat list
+|SELECTED METHOD at depth 1: eval_def([2,1,1],app1)
+||rotlenapp([1,1])
+||l:pnat list
+||==>a:pnat list=>rotate(length(nil),a)=app(a,nil)in pnat list
+||SELECTED METHOD at depth 2: eval_def([1,1,1],length1)
+|||rotlenapp([1,1,1])
+|||l:pnat list
+|||==>a:pnat list=>rotate(0,a)=app(a,nil)in pnat list
+|||SELECTED METHOD at depth 3: eval_def([1,1],rotate1)
+||||rotlenapp([1,1,1,1])
+||||l:pnat list
+||||==>a:pnat list=>a=app(a,nil)in pnat list
+||||SELECTED METHOD at depth 4: induction([v0::a],[a:pnat list])
+|||||rotlenapp([2,1,1,1,1])
+|||||v0:pnat
+|||||a:pnat list
+|||||v1:ih(a=app(a,nil)in pnat list)
+|||||l:pnat list
+|||||==>``v0::{a}''<out> =app(``v0::{a}''<out>,nil)in pnat list
+|||||SELECTED METHOD at depth 5: wave([2,1],[app2,equ(left)])
+||||||rotlenapp([1,2,1,1,1,1])
+||||||v0:pnat
+||||||a:pnat list
+||||||v1:ih(a=app(a,nil)in pnat list)
+||||||l:pnat list
+||||||==>``v0::{a}''<out> =``v0::{app(a,nil)}''<out>in pnat list
+||||||SELECTED METHOD at depth 6: fertilize(weak(v1))
+|||||||rotlenapp([1,1,2,1,1,1,1])
+|||||||v0:pnat
+|||||||a:pnat list
+|||||||v1:ih(a=app(a,nil)in pnat list)
+|||||||l:pnat list
+|||||||==>v0::a=v0::a in pnat list
+|||||||TERMINATING METHOD at depth 7: elementary(...)
+|||||rotlenapp([1,1,1,1,1])
+|||||a:pnat list
+|||||l:pnat list
+|||||==>nil=app(nil,nil)in pnat list
+|||||SELECTED METHOD at depth 5: eval_def([2,1],app1)
+||||||rotlenapp([1,1,1,1,1,1])
+||||||a:pnat list
+||||||l:pnat list
+||||||==>nil=nil in pnat list
+||||||TERMINATING METHOD at depth 6: elementary(...)
+Planning complete for rotlenapp
+
+------------------------------------------------------------
+rotlenapp:
+
+[l:pnat list,a:pnat list]
+
+|- rotate(length(l),app(l,a))=app(a,l)in pnat list
+
+induction([v0::l],[l:pnat list]) then 
+  [eval_def([2,1,1],app1) then 
+     eval_def([1,1,1],length1) then 
+       eval_def([1,1],rotate1) then 
+         induction([v0::a],[a:pnat list]) then 
+           [eval_def([2,1],app1) then 
+              elementary(...),
+            wave([2,1],[app2,equ(left)]) then 
+              fertilize(weak(v1)) then 
+                elementary(...)
+           ],
+   wave([1,1,1],[length2,equ(left)]) then 
+     wave([2,1,1],[app2,equ(left)]) then 
+       wave([1,1],[rotate3,equ(left)]) then 
+         wave([2,1],[lemma1,equ(left)]) then 
+           wave([2,1,1],[lemma2,equ(left)]) then 
+             fertilize(strong(v1))
+  ]
+
+------------------------------------------------------------
+lemma2:
+
+[a:pnat list,l:pnat list,v0:pnat]
+
+|- app(app(l,a),v0::nil)=app(l,app(a,v0::nil))in pnat list
+
+generalise(v0::nil,v1:pnat list) then 
+  induction([v2::l],[l:pnat list]) then 
+    [eval_def([2,1],app1) then 
+       eval_def([1,1,1],app1) then 
+         elementary(...),
+     wave([1,1,1],[app2,equ(left)]) then 
+       wave([2,1],[app2,equ(left)]) then 
+         wave([1,1],[app2,equ(left)]) then 
+           fertilize(weak(v3)) then 
+             elementary(...)
+    ]
+
+------------------------------------------------------------
+lemma1:
+
+[a:pnat list,l:pnat list,v0:pnat]
+
+|- app(a,v0::l)=app(app(a,v0::nil),l)in pnat list
+
+induction([v1::a],[a:pnat list]) then 
+  [eval_def([1,1],app1) then 
+     eval_def([1,2,1],app1) then 
+       eval_def([2,1],app2) then 
+         eval_def([2,2,1],app1) then 
+           elementary(...),
+   wave([1,2,1],[app2,equ(left)]) then 
+     wave([1,1],[app2,equ(left)]) then 
+       wave([2,1],[app2,equ(left)]) then 
+         fertilize(weak(v2)) then 
+           elementary(...)
+  ]
+
+
+yes
+| ?- 

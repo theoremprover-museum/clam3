@@ -1,0 +1,24 @@
+
+method(equal(HName,Dir),
+          H==>G,
+          [%  write('attempting equal'), nl,
+            ((hyp(HName:Term=Var in T,H), Dir=left)
+            v
+            (hyp(HName:Var=Term in T,H), Dir=right)
+           ),
+           (not freevarinterm(Term,_)  
+            orelse
+            (atomic(Var), not atomic(Term))
+            orelse
+            (atomic(Var), atomic(Term), Term @< Var)
+           ),
+           freevarinterm(G,Var)
+          ],
+          [replace_vars_in_goal(G, Var, Term, NewG),
+           del_hyp(HName:_,H,HThin)
+          ],
+          [HThin==>NewG],
+          []
+         ).
+
+            

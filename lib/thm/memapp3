@@ -1,0 +1,1 @@
+problem([]==>e:pnat=>l1:(pnat list)=>l2:(pnat list)=>(member(e,l1)\member(e,l2))=>member(e,app(l1,l2)),_,_,_).

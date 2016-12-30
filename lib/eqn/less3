@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>less(s(x),s(y))=less(x,y)in u(1),_,_,_).

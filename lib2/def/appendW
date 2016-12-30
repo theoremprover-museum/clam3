@@ -1,0 +1,1 @@
+appendW(n)<==>p_ind(n,lambda(x,lambda(y,y)),[k,w,lambda(x,lambda(y,hd(x)::w of tl(x)of y))]).

@@ -1,0 +1,1 @@
+problem([]==>a:action=>l:T=>action(act(a, l))=a in lts(Lang, T),_,_,_).

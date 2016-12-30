@@ -1,0 +1,1 @@
+multImp(n)<==>p_ind(n,lambda(x,lambda(y,zeroes(length(x)))),[k,v,lambda(x,lambda(y,addW(plus(length(x),k))of app(multOne(x,hd(y)),zeroes(k))of (v of x of tl(y))of{false}))]).

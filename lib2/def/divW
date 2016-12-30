@@ -1,0 +1,1 @@
+divW(x,y)<==>p_ind(word2nat(x),nil,[k,r,pnat_eq(s(k),word2nat(mult(y,inc(r))),inc(r),r)]).

@@ -1,0 +1,1 @@
+problem([]==>f:(int#int=>int)=>a:int=>h:int=>t:list(int)=>loop2(f, a, h::t)=f of (a, h)::loop2(f, f of (a, h), t)in int list,_,_,_).

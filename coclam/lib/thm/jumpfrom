@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>jump(n, s(0))=from(n)in pnat list,_,_,_).

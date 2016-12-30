@@ -1,0 +1,1 @@
+fa_s(a,b,s,ci,co)<==>a+b+ci=2*co+s in int.

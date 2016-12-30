@@ -1,0 +1,1 @@
+nAdderSpec(n,a,b,ci)<==>plus(numVal(n)of a,plus(numVal(n)of b,bitval(ci))).

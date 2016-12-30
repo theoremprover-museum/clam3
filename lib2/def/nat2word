@@ -1,0 +1,1 @@
+nat2word(n)<==>term_of(nat2word) of n.

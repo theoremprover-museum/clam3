@@ -1,0 +1,6 @@
+
+
+	./loadfile $(PLANUTIL) $(PLANENG) $(METAPREDS) $(LAMPRO) \
+		$(LIBNEEDS) $(METHODS) | \
+	cat makeclam.pre - makeclam.post > makeclamtmp
+	echo '[ makeclam ].' | ./clamlib.$(DIA)

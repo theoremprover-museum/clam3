@@ -1,0 +1,4 @@
+problem([]==>h:pnat=>t:pnat list=>l: pnat list => tsum(h::t,l)= tsum(t,plus(l,h)) in pnat,
+repeat intro then simplify then wfftacs,lambda(h,lambda(t,axiom)),
+[
+]).

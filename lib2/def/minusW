@@ -1,0 +1,1 @@
+minusW(x,y)<==>p_ind(word2nat(y),x,[~,r,tl(dec(r))]).

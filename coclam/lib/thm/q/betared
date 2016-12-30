@@ -1,0 +1,1 @@
+problem([]==>ap(ap(lam(x,lam(y,map(x,y))),nil),nil),_,_,_).

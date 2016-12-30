@@ -1,0 +1,6 @@
+problem([]==>t:pnat=>reset:flip=>countSpec(reset)of t=word2nat(countImp(reset)of t)in pnat,_,_,_).
+
+%problem([]==>t:pnat=>n:pnat=>reset:flip=>countSpec(n,reset)of t=rem(word2nat(countImp(reset)of t),exp(s(s(0)),n))in pnat,_,_,_).
+
+
+

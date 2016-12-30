@@ -1,0 +1,2 @@
+problem([]==>f:st(char, char)=>v:char=>ready(f)=w(v) in rwd(char)=>ls2cps(f)=output(v, ls2cps(skipST(f)))in cps,_,_,_).
+

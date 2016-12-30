@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>ci:{bool}=>oneAluSpec(s0,s1,s2,a,b,ci)=oneAluImp(s0,s1,s2,a,b,ci)in{word},_,_,_).

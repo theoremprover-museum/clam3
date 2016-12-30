@@ -1,0 +1,1 @@
+problem([]==>f:st(ack, req)=>f(bot)=nil=>nextST(f)=no in maybe(req),_,_,_).

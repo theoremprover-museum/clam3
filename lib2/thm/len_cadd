@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y)in pnat=>length(tl(cadd(x,y,ci)))=length(y)in pnat,_,_,_).

@@ -1,0 +1,46 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>(greater(x,y)#greater(y,z))=>greater(x,z),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_318,[v0,v1,_324])),
+[problem([x:pnat]==>y:pnat=>z:pnat=>(greater(0,y)#greater(y,z))=>greater(0,z),
+ base([2],greater1),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _392,[greater1 of v1],[v2]),[term_of(greater1)],[greater1]))),
+ [problem([x:pnat]==>y:pnat=>z:pnat=>(greater(0,y)#greater(y,z))=>void,
+  base([1,1],greater1),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _496,[greater1 of v0],[v2]),[term_of(greater1)],[greater1]))),
+  [problem([x:pnat]==>y:pnat=>z:pnat=>(void#greater(y,z))=>void,
+   tautology((intro then wfftacs)then(intro then wfftacs)then intro then[elim(v0)then intro,wfftacs]),lambda(y,lambda(z,lambda(v0,spread(v0,[v1,v2,v1])))),
+   [
+   ]) ext _496
+  ]) ext _392
+ ]) ext _318,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z)]==>y:pnat=>z:pnat=>(greater(s(v0),y)#greater(y,z))=>greater(s(v0),z),
+ induction(s(v2),y:pnat),lambda(y,p_ind(y,_717,[v2,v3,_723])),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat]==>z:pnat=>(greater(s(v0),0)#greater(0,z))=>greater(s(v0),z),
+  base([2,1],greater1),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _830,[greater1 of v2],[v3]),[term_of(greater1)],[greater1])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat]==>z:pnat=>(greater(s(v0),0)#void)=>greater(s(v0),z),
+   tautology((intro then wfftacs)then intro then[elim(v2)then elim(v4),wfftacs]),lambda(z,lambda(v2,spread(v2,[v3,v4,any(v4)]))),
+   [
+   ]) ext _830
+  ]) ext _717,
+  problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z)]==>z:pnat=>(greater(s(v0),s(v2))#greater(s(v2),z))=>greater(s(v0),z),
+  wave([1,1],[greater3,left]),lambda(v4,su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _1131,[v5 of v2],[v6]),[greater3 of v0],[v5]),[term_of(greater3)],[greater3])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z)]==>z:pnat=>(greater(v0,v2)#greater(s(v2),z))=>greater(s(v0),z),
+   induction(s(v4),z:pnat),lambda(z,p_ind(z,_1299,[v4,v5,_1305])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z),z:pnat]==>(greater(v0,v2)#greater(s(v2),0))=>greater(s(v0),0),
+    base([2],greater2),su(su(_1436,[greater2 of s(v0)],[v4]),[term_of(greater2)],[greater2]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z),z:pnat]==>(greater(v0,v2)#greater(s(v2),0))=>s(v0)=0 in pnat=>void,
+     tautology(intro then[intro then[clam_arith,wfftacs],wfftacs]),lambda(v4,lambda(v5,atom(incomplete))),
+     [
+     ]) ext _1436
+    ]) ext _1299,
+    problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z),z:pnat,v4:pnat,v5:(greater(v0,v2)#greater(s(v2),v4))=>greater(s(v0),v4)]==>(greater(v0,v2)#greater(s(v2),s(v4)))=>greater(s(v0),s(v4)),
+    wave([2],[greater3,left]),su(su(su(_1773,[v6 of v4],[v7]),[greater3 of v0],[v6]),[term_of(greater3)],[greater3]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z),z:pnat,v4:pnat,v5:(greater(v0,v2)#greater(s(v2),v4))=>greater(s(v0),v4)]==>(greater(v0,v2)#greater(s(v2),s(v4)))=>greater(v0,v4),
+     wave([2,1],[greater3,left]),su(su(su(_1964,[v6 of v4],[v7]),[greater3 of v2],[v6]),[term_of(greater3)],[greater3]),
+     [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>(greater(v0,y)#greater(y,z))=>greater(v0,z),y:pnat,v2:pnat,v3:z:pnat=>(greater(s(v0),v2)#greater(v2,z))=>greater(s(v0),z),z:pnat,v4:pnat,v5:(greater(v0,v2)#greater(s(v2),v4))=>greater(s(v0),v4)]==>(greater(v0,v2)#greater(v2,v4))=>greater(v0,v4),
+      strong_fertilize(v1),su(su(v7,[v6 of v4],[v7]),[v1 of v2],[v6]),
+      [
+      ]) ext _1964
+     ]) ext _1773
+    ]) ext _1305
+   ]) ext _1131
+  ]) ext _723
+ ]) ext _324
+]).

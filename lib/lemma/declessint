@@ -1,0 +1,124 @@
+problem([]==>x:int=>y:int=>x<y\x<y=>void,
+dequantify,lambda(x,lambda(y,_189)),
+[problem([x:int,y:int]==>x<y\x<y=>void,
+ elim(x),ind(x,[v0,v2,_236],_230,[v0,v2,_242]),
+ [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void]==>v0<y\v0<y=>void,
+  elim(y),ind(y,[v3,v5,_326],_320,[v3,v5,_332]),
+  [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void]==>v0<v3\v0<v3=>void,
+   elim(v5),decide(v5,[v6,_449],[v7,_453]),
+   [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void)]==>v0<v3\v0<v3=>void,
+    decide(v0=v3 in int),int_eq(v0,v3,su(_618,[axiom],[v7]),su(_626,[lambda(~,axiom)],[v7])),
+    [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void),v7:v0=v3 in int]==>v0<v3\v0<v3=>void,
+     rewrite(v7),_644,
+     [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void),v7:v0=v3 in int]==>v3<v3\v3<v3=>void,
+      intro(right)then wfftacs,inr(_964),
+      [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void),v7:v0=v3 in int]==>v3<v3=>void,
+       arith then wfftacs,lambda(x,axiom),
+       [
+       ]) ext _964
+      ]) ext _644
+     ]) ext _618,
+     problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void),v7:v0=v3 in int=>void]==>v0<v3\v0<v3=>void,
+     intro(left)then wfftacs,inl(_1294),
+     [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v6:v0<v3+1,v8:v5=inl(v6)in (v0<v3+1\v0<v3+1=>void),v7:v0=v3 in int=>void]==>v0<v3,
+      because,atom(incomplete),
+      [
+      ]) ext _1294
+     ]) ext _626
+    ]) ext _449,
+    problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v7:v0<v3+1=>void,v9:v5=inr(v7)in (v0<v3+1\v0<v3+1=>void)]==>v0<v3\v0<v3=>void,
+    intro(right)then wfftacs,inr(_1609),
+    [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void,v7:v0<v3+1=>void,v9:v5=inr(v7)in (v0<v3+1\v0<v3+1=>void)]==>v0<v3=>void,
+     because,atom(incomplete),
+     [
+     ]) ext _1609
+    ]) ext _453
+   ]) ext _326,
+   problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void]==>v0<0\v0<0=>void,
+   intro(left)then wfftacs,inl(_1835),
+   [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void]==>v0<0,
+    hyp(_1899),v1,
+    [
+    ]) ext _1835
+   ]) ext _320,
+   problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void]==>v0<v3\v0<v3=>void,
+   intro(left)then wfftacs,inl(_2013),
+   [problem([x:int,y:int,v0:int,v1:v0<0,v2:v0+1<y\v0+1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void]==>v0<v3,
+    arith then wfftacs,axiom,
+    [
+    ]) ext _2013
+   ]) ext _332
+  ]) ext _236,
+  problem([x:int,y:int]==>0<y\0<y=>void,
+  elim(y),ind(y,[v0,v2,_2161],_2155,[v0,v2,_2167]),
+  [problem([x:int,y:int,v0:int,v1:v0<0,v2:0<v0+1\0<v0+1=>void]==>0<v0\0<v0=>void,
+   intro(right)then wfftacs,inr(_2246),
+   [problem([x:int,y:int,v0:int,v1:v0<0,v2:0<v0+1\0<v0+1=>void]==>0<v0=>void,
+    apply(arith)then wfftacs,lambda(x,axiom),
+    [
+    ]) ext _2246
+   ]) ext _2161,
+   problem([x:int,y:int]==>0<0\0<0=>void,
+   intro(right)then wfftacs,inr(_2361),
+   [problem([x:int,y:int]==>0<0=>void,
+    arith then wfftacs,lambda(x,axiom),
+    [
+    ]) ext _2361
+   ]) ext _2155,
+   problem([x:int,y:int,v0:int,v1:0<v0,v2:0<v0-1\0<v0-1=>void]==>0<v0\0<v0=>void,
+   intro(left)then wfftacs,inl(_2474),
+   [problem([x:int,y:int,v0:int,v1:0<v0,v2:0<v0-1\0<v0-1=>void]==>0<v0,
+    hyp(_2538),v1,
+    [
+    ]) ext _2474
+   ]) ext _2167
+  ]) ext _230,
+  problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void]==>v0<y\v0<y=>void,
+  elim(y),ind(y,[v3,v5,_2621],_2615,[v3,v5,_2627]),
+  [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void]==>v0<v3\v0<v3=>void,
+   intro(right)then wfftacs,inr(_2742),
+   [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:v3<0,v5:v0<v3+1\v0<v3+1=>void]==>v0<v3=>void,
+    arith then wfftacs,lambda(x,axiom),
+    [
+    ]) ext _2742
+   ]) ext _2621,
+   problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void]==>v0<0\v0<0=>void,
+   intro(right)then wfftacs,inr(_2927),
+   [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void]==>v0<0=>void,
+    arith then wfftacs,lambda(x,axiom),
+    [
+    ]) ext _2927
+   ]) ext _2615,
+   problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void]==>v0<v3\v0<v3=>void,
+   elim(v5),decide(v5,[v6,_3114],[v7,_3118]),
+   [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v6:v0<v3-1,v8:v5=inl(v6)in (v0<v3-1\v0<v3-1=>void)]==>v0<v3\v0<v3=>void,
+    intro(left)then wfftacs,inl(_3275),
+    [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v6:v0<v3-1,v8:v5=inl(v6)in (v0<v3-1\v0<v3-1=>void)]==>v0<v3,
+     because,atom(incomplete),
+     [
+     ]) ext _3275
+    ]) ext _3114,
+    problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void)]==>v0<v3\v0<v3=>void,
+    decide(v0=v3-1 in int),int_eq(v0,v3-1,su(_3590,[axiom],[v6]),su(_3598,[lambda(~,axiom)],[v6])),
+    [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void),v6:v0=v3-1 in int]==>v0<v3\v0<v3=>void,
+     rewrite(v6),_3616,
+     [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void),v6:v0=v3-1 in int]==>v3-1<v3\v3-1<v3=>void,
+      intro(left)then wfftacs,inl(_3954),
+      [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void),v6:v0=v3-1 in int]==>v3-1<v3,
+       arith then wfftacs,axiom,
+       [
+       ]) ext _3954
+      ]) ext _3616
+     ]) ext _3590,
+     problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void),v6:v0=v3-1 in int=>void]==>v0<v3\v0<v3=>void,
+     intro(right)then wfftacs,inr(_4293),
+     [problem([x:int,y:int,v0:int,v1:0<v0,v2:v0-1<y\v0-1<y=>void,v3:int,v4:0<v3,v5:v0<v3-1\v0<v3-1=>void,v7:v0<v3-1=>void,v9:v5=inr(v7)in (v0<v3-1\v0<v3-1=>void),v6:v0=v3-1 in int=>void]==>v0<v3=>void,
+      because,atom(incomplete),
+      [
+      ]) ext _4293
+     ]) ext _3598
+    ]) ext _3118
+   ]) ext _2627
+  ]) ext _242
+ ]) ext _189
+]).

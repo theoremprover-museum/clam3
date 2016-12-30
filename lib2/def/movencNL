@@ -1,0 +1,1 @@
+movencNL(x)<==>cadd(x,zeroes(length(x)),{false}).

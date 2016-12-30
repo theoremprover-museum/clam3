@@ -1,0 +1,1 @@
+problem([]==>t:u(1)=>phi:(t tree=>u(2))=>(n:t=>phi of leaf(n))=>(l:t tree=>r:t tree=>phi of l=>phi of r=>phi of node(l,r))=>tr:t tree=>phi of tr,_,_,_).

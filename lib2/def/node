@@ -1,0 +1,1 @@
+node(l,r)<==>inr(l&r).

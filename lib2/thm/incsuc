@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>word2nat(inc(x))=s(word2nat(x))in pnat,_,_,_).

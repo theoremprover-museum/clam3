@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>move(s(n))of a=hd(a)::move(n)of tl(a)in{word},_,_,_).

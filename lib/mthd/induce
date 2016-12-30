@@ -1,0 +1,111 @@
+/*
+ * @(#)induction,v 1.1 1994/09/16 09:33:29 dream Exp
+ *
+ * induction,v
+ * Revision 1.1  1994/09/16  09:33:29  dream
+ * Initial revision
+ *
+ */
+
+method(induce(Scheme,VarTypL),
+       H==>G,
+       [ matrix(_,Matrix,G),
+         findset( Var:T,
+                  universal_var(H==>G,Var:T),
+                  Vars_Types
+                ),
+	 % Collect all the single variable inductions suggested by the 
+         % wave-rules known for the terms present in the goal. Note that 
+         % repeated forms of suggested inductions are ignored.
+	 
+         findset( WavePos-[Var:T]-Scheme,
+	          ( member(Var:T,Vars_Types),
+                    wave_occ(Matrix,Var,WavePos,F,_,Sch,_),
+		    copy(Sch, MSch ),
+                    scheme(Scheme,[Var:T],H==>G,_,_),
+                    member( Sch, Scheme),
+                    \+ ( exp_at(MSch,_,V), var(V),
+                         MSch=Sch,
+                         \+ atom(V)
+                       )
+                  ),
+	         Candidates1
+	        ),
+	 % Look ahead into the rippling process to check that there 
+	 % exists a wave-rule such that all the wave fronts on the
+	 % lhs of match either definite or potential waves in the goal.
+         % Where a multi-hole scheme is suggested a check is made to
+         % ensure that all the wave-hole matching is preformed correctly.
+
+	 findset( [Var:T]-Sch,
+                  (rmember(WavePos-[Var:T]-Sch,Candidates1),
+		   thereis {WaveRule}: 
+                            (wave_occ(Matrix,Var,WavePos,F,FPos,S,_),
+			     replace_wave_occ(Var,S,Matrix,F,FPos,NewF),
+                             wave_rule(WaveRule,_,_=>NewF:=>_),
+                             multi_hole_match(WaveRule, Matrix, Var, S)
+                            )),
+                   Candidates2),
+
+	 % Collect all the inductions on two variables suggested by the 
+         % wave-rules known for the terms present in the goal. Note that 
+         % repeated forms of suggested inductions are ignored.
+
+	 pairs(Vars_Types,VarTypPairs),
+         findset( [Var1:Typ1,Var2:Type2]-[Sch1,Sch2],
+		  (member([Var1:Typ1,Var2:Type2],VarTypPairs),
+		   wave_occ(Matrix,Var1,_,F,FPos,Sch1,R:_),
+		   wave_occ(Matrix,Var2,_,F,FPos,Sch2,R:_)),
+		 Candidates3),
+
+         append(Candidates3,Candidates2,Candidates4),
+		            
+         % Find an induction that will introduce wave-fronts
+	 % eliminable at all wave-occurences of the variable
+	 % induced over.
+	 % Prefer inductions where all occurences of the variable
+	 % are wave occurences.
+	 % Give mild preferencea to inductions that
+	 % wave-fronts ``beside'' others, and avoid putting
+	 % wave-fronts nested inside existing (stuck)
+         % wave-fronts.
+         findall( Score-(VarTL-Scheme),
+	          ( member( VarTL-Scheme, Candidates4 ),
+		    findall(Var,member(Var:_,VarTL),VarL),
+		    once(
+	              ( ( Side = Matrix, SC1 = 1000 ;
+                          transitive_pred( Matrix, Sides, _, _ ),
+	                  member( Side, Sides ),
+                          SC1 = 500 ;
+                          SC1 = 0
+                        ),
+			all_wave_occs_good( Side, Scheme, VarL ),
+	          	( all_occs_wave_occs( Side, VarL ),
+	        	  SC2 is 100 ;
+	                  SC2 is 0
+	                ),
+	                ( unblocky_occs( Side, VarL ),
+	                  SC3 is 25 ;
+	                  SC3 is 0
+	                ),
+	                ( all_occs_outwave( Side, VarL ),
+	                  SC4 is 50 ;
+			  SC4 is 0
+	                ),
+	                Score is SC1 + SC2 + SC3 + SC4 
+	              )
+	            )
+	          ),
+	          Scor_VT_Ss
+	        ),
+         in_order( VarTypL-Scheme, Scor_VT_Ss ) 
+       ],
+
+       [scheme(Scheme,VarTypL,H==>G,BaseSeqs,StepSeqs),
+        append(BaseSeqs,StepSeqs,[All|Seqs])
+       ],
+       [All|Seqs],
+       []
+      ).
+	
+

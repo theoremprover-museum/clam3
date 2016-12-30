@@ -1,0 +1,1 @@
+register(t,n,load)<==>p_ind(n,lambda(x,nil),[k,w,lambda(x,oneReg(t,load,hd(x))::w of tl(x))]).

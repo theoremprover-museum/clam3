@@ -1,0 +1,221 @@
+% loading file /home/dream3/air/clam/clam.v3.2/make/clam.v3.2.qui
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% clam.v3.2.qui loaded in module user, 1.800 sec 652,452 bytes
+
+CLaM Proof Planner Version 3.2 (27/1/95 16:36)
+
+% compiling file /home/dream3/air/clam/clam.v3.2/lib/needs.pl
+% needs.pl compiled in module user, 1.483 sec 2,564 bytes
+Quintus Prolog Release 3.1.4 (Sun-4, SunOS 4.1)
+Copyright (C) 1993, Quintus Corporation.  All rights reserved.
+2100 Geng Road, Palo Alto, California U.S.A. (415) 813-3800
+CLaM Proof Planner Version 3.2 (libraries only) (23/6/94 09:51)
+CLaM Proof Planner Version 3.2 (27/1/95 16:36)
+
+| ?- plan(facout).
+Invoking depth first planner ...
+loading def(plus)...done
+loading eqn(plus1)...done
+loading eqn(plus2)...done
+adding wave-rules for plus1:..done
+adding wave-rules for plus2:.................done
+ adding defeqn-record for plus1...done 
+ adding defeqn-record for plus2...done 
+loading def(times)...done
+loading eqn(times1)...done
+loading eqn(times2)...done
+adding wave-rules for times1:..done
+adding wave-rules for times2:......................done
+ adding defeqn-record for times1...done 
+ adding defeqn-record for times2...done 
+loading def(fac)...done
+loading eqn(fac1)...done
+loading eqn(fac2)...done
+adding wave-rules for fac1:..done
+adding wave-rules for fac2:...............done
+ adding defeqn-record for fac1...done 
+ adding defeqn-record for fac2...done 
+loading def(out)...done
+loading eqn(out1)...done
+loading eqn(out2)...done
+loading eqn(out3)...done
+adding wave-rules for out1:..done
+adding wave-rules for out2:done
+adding wave-rules for out3:...done
+ adding defeqn-record for out1...done 
+ adding defeqn-record for out2...done 
+ adding defeqn-record for out3...done 
+loading thm(assm)...done
+adding wave-rules for assm:........done
+loading thm(facout)...done
+facout([])
+==>j:pnat=>out(s(0),j,j)=fac(j)in pnat
+SELECTED METHOD at depth 0: induction([s(j)],[j:pnat])
+|facout([2])
+|j:pnat
+|v0:ih(out(s(0),j,j)=fac(j)in pnat)
+|==>out(s(0),``s({j})''<out>,``s({j})''<out>)=fac(``s({j})''<out>)in pnat
+|SELECTED METHOD at depth 1: wave([2,1],[fac2,equ(left)])
+||facout([1,2])
+||j:pnat
+||v0:ih(out(s(0),j,j)=fac(j)in pnat)
+||==>out(s(0),``s({j})''<out>,``s({j})''<out>)=``times({fac(j)},s(j))''<out>in pnat
+
+>>>>> INVOKING wave CRITIC : sink speculation <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[j:pnat,v1:pnat]
+
+|- out(M1(v1),j,j)=M2(fac(j),v1)in pnat
+
+saving thm(lemma1)...done
+Invoking iterative deepening planner ...
+Depth bound set to 5
+lemma1([])
+==>j:pnat=>v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat
+SELECTED METHOD at depth 0: induction([s(j)],[j:pnat])
+|lemma1([2])
+|j:pnat
+|v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+|==>v1:pnat=>out(M1(\v1/),``s({j})''<out>,``s({j})''<out>)=M2(fac(``s({j})''<out>),\v1/)in pnat
+|SELECTED METHOD at depth 1: wave([1,2,1],[fac2,equ(left)])
+||lemma1([1,2])
+||j:pnat
+||v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+||==>v1:pnat=>out(M1(\v1/),``s({j})''<out>,``s({j})''<out>)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+||SELECTED METHOD at depth 2: wave([2,1],[assm,equ(left)])
+|||lemma1([1,1,2])
+|||j:pnat
+|||v0:ih(v1:pnat=>out(M1(v1),j,j)=times(Var1(fac(j),v1),fac(j))in pnat)
+|||==>v1:pnat=>out(M1(\v1/),``s({j})''<out>,``s({j})''<out>)=``times({times(Var1(fac(j),\v1/),fac(j))},s(j))''<out>in pnat
+|||SELECTED METHOD at depth 3: wave([1,1],[out3,equ(left)])
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(M1(v1),j,j)=times(Var1(fac(j),v1),fac(j))in pnat)
+||||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=``times({times(Var1(fac(j),\v1/),fac(j))},s(j))''<out>in pnat
+||||SELECTED METHOD at depth 4: wave([1,1,1],[assm,equ(left)])
+
+Failed at depth 5, backtracking to [1,2]
+||lemma1([1,2])
+||j:pnat
+||v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+||==>v1:pnat=>out(M1(\v1/),``s({j})''<out>,``s({j})''<out>)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+||SELECTED METHOD at depth 2: wave([1,1],[out3,equ(left)])
+|||lemma1([1,1,2])
+|||j:pnat
+|||v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+|||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+|||SELECTED METHOD at depth 3: wave([1,1,1],[assm,equ(left)])
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(times(Var9(v1),Var10(v1)),j,j)=M2(fac(j),v1)in pnat)
+||||==>v1:pnat=>out(times(``times(s(j),{Var9(\v1/)})''<in>,Var10(\v1/)),j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+||||SELECTED METHOD at depth 4: wave([1,1,1,1],[assm,equ(left)])
+
+Failed at depth 5, backtracking to [1,1,1,2]
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(times(Var9(v1),Var10(v1)),j,j)=M2(fac(j),v1)in pnat)
+||||==>v1:pnat=>out(times(``times(s(j),{Var9(\v1/)})''<in>,Var10(\v1/)),j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+||||SELECTED METHOD at depth 4: wave([2,1],[assm,equ(left)])
+
+Failed at depth 5, backtracking to [1,1,1,2]
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(times(Var9(v1),Var10(v1)),j,j)=M2(fac(j),v1)in pnat)
+||||==>v1:pnat=>out(times(``times(s(j),{Var9(\v1/)})''<in>,Var10(\v1/)),j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+||||SELECTED METHOD at depth 4: wave([2,1],[assm,equ(right)])
+
+Failed at depth 5, backtracking to [1,1,2]
+|||lemma1([1,1,2])
+|||j:pnat
+|||v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+|||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+|||SELECTED METHOD at depth 3: wave([2,1],[assm,equ(left)])
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(M1(v1),j,j)=times(Var11(fac(j),v1),fac(j))in pnat)
+||||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=``times({times(Var11(fac(j),\v1/),fac(j))},s(j))''<out>in pnat
+||||SELECTED METHOD at depth 4: wave([1,1,1],[assm,equ(left)])
+
+Failed at depth 5, backtracking to [1,1,2]
+|||lemma1([1,1,2])
+|||j:pnat
+|||v0:ih(v1:pnat=>out(M1(v1),j,j)=M2(fac(j),v1)in pnat)
+|||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=M2(``times({fac(j)},s(j))''<out>,\v1/)in pnat
+|||SELECTED METHOD at depth 3: wave([2,1],[assm,equ(right)])
+||||lemma1([1,1,1,2])
+||||j:pnat
+||||v0:ih(v1:pnat=>out(M1(v1),j,j)=times(fac(j),Var15(fac(j),v1))in pnat)
+||||==>v1:pnat=>out(``times(s(j),{M1(\v1/)})''<in>,j,j)=times(fac(j),``times(s(j),{Var15(fac(j),\v1/)})''<in>)in pnat
+[j:pnat,v0:ih(v1:pnat=>out(v1,j,j)=times(fac(j),v1)in pnat)]==>v1:pnat=>out(times(s(j),v1),j,j)=times(fac(j),times(s(j),v1))in pnat
+||||TERMINATING METHOD at depth 4: fertilize(strong(v0))
+|lemma1([1])
+|j:pnat
+|==>v1:pnat=>out(v1,0,0)=times(fac(0),v1)in pnat
+|SELECTED METHOD at depth 1: eval_def([1,1],out1)
+||lemma1([1,1])
+||j:pnat
+||==>v1:pnat=>v1=times(fac(0),v1)in pnat
+||SELECTED METHOD at depth 2: eval_def([1,2,1],fac1)
+|||lemma1([1,1,1])
+|||j:pnat
+|||==>v1:pnat=>v1=times(s(0),v1)in pnat
+|||SELECTED METHOD at depth 3: eval_def([2,1],times2)
+||||lemma1([1,1,1,1])
+||||j:pnat
+||||==>v1:pnat=>v1=plus(times(0,v1),v1)in pnat
+||||SELECTED METHOD at depth 4: eval_def([1,2,1],times1)
+|||||lemma1([1,1,1,1,1])
+|||||j:pnat
+|||||==>v1:pnat=>v1=plus(0,v1)in pnat
+|||||SELECTED METHOD at depth 5: eval_def([2,1],plus1)
+||||||lemma1([1,1,1,1,1,1])
+||||||j:pnat
+||||||==>v1:pnat=>v1=v1 in pnat
+||||||TERMINATING METHOD at depth 6: elementary(...)
+Planning complete for lemma1
+------------------------------------------------------------
+lemma1:
+
+[j:pnat,v1:pnat]
+
+|- out(v1,j,j)=times(fac(j),v1)in pnat
+
+induction([s(j)],[j:pnat]) then 
+  [eval_def([1,1],out1) then 
+     eval_def([1,2,1],fac1) then 
+       eval_def([2,1],times2) then 
+         eval_def([1,2,1],times1) then 
+           eval_def([2,1],plus1) then 
+             elementary(...),
+   wave([1,2,1],[fac2,equ(left)]) then 
+     wave([1,1],[out3,equ(left)]) then 
+       wave([2,1],[assm,equ(right)]) then 
+         fertilize(strong(v0))
+  ]
+
+------------------------------------------------------------
+lemma1:
+
+[j:pnat,v1:pnat]
+
+|- out(v1,j,j)=times(fac(j),v1)in pnat
+
+WARNING: generalization requires verifying.
+
+Planning complete for facout
+------------------------------------------------------------
+facout:
+
+[j:pnat]
+
+|- out(s(0),j,j)=fac(j)in pnat
+
+generalize(lemma1)
+
+
+yes
+| ?- 

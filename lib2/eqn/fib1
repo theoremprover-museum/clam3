@@ -1,0 +1,4 @@
+problem([]==>fib(0)=s(0)in pnat,
+simplify then identity,axiom,
+[
+]).

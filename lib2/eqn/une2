@@ -1,0 +1,2 @@
+problem([]==>n:pnat=>x:{word}=>y:{word}=>une(n,x,y)=app(x,y) in{word},_,_,_).
+

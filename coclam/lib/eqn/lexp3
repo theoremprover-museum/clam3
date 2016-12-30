@@ -1,0 +1,1 @@
+problem([]==>i:pnat=>exp(s(0),s(i))=s(0)in pnat,_,_,_).

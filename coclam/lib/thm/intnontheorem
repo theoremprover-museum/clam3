@@ -1,0 +1,1 @@
+problem([]==>n:int=>m:int=>n=m in int,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>x:int=>h(f, x)=x::mapcar(h(f, x), f) in int list, _, _, _).

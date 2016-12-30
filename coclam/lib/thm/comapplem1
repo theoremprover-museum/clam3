@@ -1,0 +1,1 @@
+problem([]==>l1:int list=>l2:int list=>h:int=>app(::(h)of l1, l2)=h::app(l1, l2)in int list,_,_,_).

@@ -1,0 +1,3 @@
+problem([]==>x:pnat=>a:pnat list=>b:pnat list=>member(x,a)=>member(x,union(a,b)),_,_,_).
+
+

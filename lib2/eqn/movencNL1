@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>movencNL(x)=cadd(x,zeroes(length(x)),{false}) in{word},_,_,_).

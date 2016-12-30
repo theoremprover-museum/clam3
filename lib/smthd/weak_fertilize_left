@@ -1,0 +1,5 @@
+	% iterate weak_fertilize/4 forcing it in only one direction.
+	% This is a rare example an argument be passed >*into*< a
+	% (sub)method, instead of only out.
+iterator(submethod,weak_fertilize_left,submethods,
+                                       [weak_fertilize(left,_,_,_)]).

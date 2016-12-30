@@ -1,0 +1,1 @@
+problem([]==>v7:pnat=>plus(v7, s(0))=s(v7) in pnat,_,_,_).

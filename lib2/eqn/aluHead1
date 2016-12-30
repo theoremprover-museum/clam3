@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>ci:{bool}=>aluHead(s0,s1,s2,a,b,ci)=hd(oneAluImp(s0,s1,s2,a,b,ci))in{bool},_,_,_).

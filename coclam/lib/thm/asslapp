@@ -1,0 +1,1 @@
+problem([]==>x:int list=>y:int list=>z:int list=>lapp(lapp(x, y), z)=lapp(x, lapp(y, z))in int list,_,_,_).

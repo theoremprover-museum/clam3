@@ -1,0 +1,1 @@
+apply2(f,n1,n2)<==>f of n1 of n2.

@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>qrev(qrev(l,nil),nil) = rev(rev(l)) in pnat list,_,_,_). 

@@ -1,0 +1,1 @@
+problem([]==>value:pnat=>numparity(value, nil)=nil in bool list, _, _, _).

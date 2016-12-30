@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>xorG(y,{true},y)={false}in{bool},_,_,_).

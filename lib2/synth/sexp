@@ -1,0 +1,10 @@
+problem([]==>u(1),
+normalize_goal([[unroll,_897]]),_884,
+[problem([]==>u(1),
+ intro_hyps([]),_907,
+ [problem([]==>u(1),
+  intro(explicit(rec(sexp,unary\atom\pnat\sexp#sexp)))then prove_mem,rec(sexp,unary\atom\pnat\sexp#sexp),
+  [
+  ]) ext _907
+ ]) ext _884
+]).

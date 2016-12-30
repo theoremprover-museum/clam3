@@ -1,0 +1,18 @@
+method(transition(Ts),
+       H==>G,
+       [% write('attempting transition'), nl,
+        conj_trans_goal(G, Phi),
+	cons_in_conj(H, G, Phi),
+	check_transitions(H, G, Phi, TransList, Ts, OTs),
+	make_ground([Ts, TransList, H, G])],
+       [set_of(Goal, Tran^NewG^GG^(
+		member(Tran, Ts),
+		remove_phi(Phi, H, G, NewG),
+		replace_tran_subs(NewG, Tran, TransList, GG),
+	        tidy_lam(GG, Goal)), SS),
+	transition_equalities(OTs, H, G, Goals),
+	append(Goals, SS, [All|Seqs])	
+        ],
+       [All|Seqs],
+        []
+          ).

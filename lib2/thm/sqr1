@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat#leq(times(y,y),x)#less(x,times(s(y),s(y))),_,_,_).

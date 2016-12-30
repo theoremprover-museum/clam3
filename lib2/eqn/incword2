@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>ci:{bool}=>x:{word}=>incword(a::x,ci)=incaux(a,incword(x,ci))in{word},_,_,_).

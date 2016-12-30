@@ -1,0 +1,1 @@
+problem([]==>brswap(leaf(v0))=leaf(v0) in bintree(int),_,_,_).

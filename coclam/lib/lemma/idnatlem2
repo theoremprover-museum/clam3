@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:pnat=>related(n, appn(a, idnat, n))in pnat,_,_,_).

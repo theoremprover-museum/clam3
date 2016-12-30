@@ -1,0 +1,1 @@
+problem([]==>x:(pnat => pnat) => y:pnat => foldl(x,y,nil) = y in pnat,_,_,_).

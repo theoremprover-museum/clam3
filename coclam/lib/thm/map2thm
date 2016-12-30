@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>g:(int=>int)=>l:(int list) list=>map2(map2(l,g),f)=map2(l,o(f, g))in (int list) list,_,_,_).

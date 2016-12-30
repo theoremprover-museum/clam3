@@ -1,0 +1,1 @@
+timesW(x,y)<==>p_ind(word2nat(x),nil,[k,r,plusW(r,y)]).

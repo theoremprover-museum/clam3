@@ -1,0 +1,61 @@
+problem([]==>l:int list=>length(sort(l))=length(l)in pnat,
+induction(v0::v1,l:int list),lambda(l,list_ind(l,_318,[v0,v1,v2,_326])),
+[problem([l:int list]==>length(sort(nil))=length(nil)in pnat,
+ sym_eval([base([1,1,1],sort1),base([2,1],length1),base([1,1],length1)]),su(su(su(_400,[term_of(length1)],[length1]),[term_of(length1)],[length1]),[term_of(sort1)],[sort1]),
+ [problem([l:int list]==>0=0 in pnat,
+  identity,axiom,
+  [
+  ]) ext _400
+ ]) ext _318,
+ problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat]==>length(sort(v0::v1))=length(v0::v1)in pnat,
+ wave([1,1,1],[sort2,left]),su(su(su(_536,[v3 of v1],[v4]),[sort2 of v0],[v3]),[term_of(sort2)],[sort2]),
+ [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat]==>length(insert(v0,sort(v1)))=length(v0::v1)in pnat,
+  wave([2,1],[length2,left]),su(su(su(_646,[v3 of v1],[v4]),[length2 of v0],[v3]),[term_of(length2)],[length2]),
+  [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat]==>length(insert(v0,sort(v1)))=s(length(v1))in pnat,
+   weak_fertilize(right,[weak_fertilize(right,[1],v2)]),_677,
+   [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat]==>length(insert(v0,sort(v1)))=s(length(sort(v1)))in pnat,
+    generalise(sort(v1),v3:int list),lambda(v3,su(v4,[v3 of sort(v1)],[v4]))of _826,
+    [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat]==>v3:int list=>length(insert(v0,v3))=s(length(v3))in pnat,
+     induction(v4::v5,v3:int list),lambda(v3,list_ind(v3,_931,[v4,v5,v6,_939])),
+     [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list]==>length(insert(v0,nil))=s(length(nil))in pnat,
+      sym_eval([base([1,1,1],insert1),base([1,2,1],length1),step([1,1],length2),base([1,1,1],length1)]),su(su(su(su(su(su(su(_1081,[term_of(length1)],[length1]),[v4 of nil],[v5]),[length2 of v0],[v4]),[term_of(length2)],[length2]),[term_of(length1)],[length1]),[insert1 of v0],[v4]),[term_of(insert1)],[insert1]),
+      [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list]==>s(0)=s(0)in pnat,
+       identity,axiom,
+       [
+       ]) ext _1081
+      ]) ext _931,
+      problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat]==>length(insert(v0,v4::v5))=s(length(v4::v5))in pnat,
+      wave([1,2,1],[length2,left]),su(su(su(_1326,[v7 of v5],[v8]),[length2 of v4],[v7]),[term_of(length2)],[length2]),
+      [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat]==>length(insert(v0,v4::v5))=s(s(length(v5)))in pnat,
+       wave([2,1],[ssid,right]),su(su(_1473,[ssid of length(v5)],[v7]),[term_of(ssid)],[ssid]),
+       [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat]==>length(insert(v0,v4::v5))=s(s(length(v5)))in pnat,
+        casesplit([v0<v4,v0<v4=>void]),lambda(v8,decide(v8,[v9,lambda(v7,_1633)of v9],[v10,lambda(v7,_1643)of v10]))of su(su(su(v9,[v8 of v4],[v9]),[v7 of v0],[v8]),[term_of(lessdec)],[v7]),
+        [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4]==>length(insert(v0,v4::v5))=s(s(length(v5)))in pnat,
+         sym_eval([condstep([1,1,1],insert2),step([1,1],length2),step([1,1,1],length2)]),su(su(su(su(su(su(su(su(su(su(su(_1866,[v8 of v5],[v9]),[length2 of v4],[v8]),[term_of(length2)],[length2]),[v8 of (v4::v5)],[v9]),[length2 of v0],[v8]),[term_of(length2)],[length2]),[v10 of v7],[v8]),[v9 of v5],[v10]),[v8 of v4],[v9]),[insert2 of v0],[v8]),[term_of(insert2)],[insert2]),
+         [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4]==>s(s(length(v5)))=s(s(length(v5)))in pnat,
+          identity,axiom,
+          [
+          ]) ext _1866
+         ]) ext _1633,
+         problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4=>void]==>length(insert(v0,v4::v5))=s(s(length(v5)))in pnat,
+         condwave([1,1,1],[insert3,left]),su(su(su(su(su(_2209,[v10 of v7],[v8]),[v9 of v5],[v10]),[v8 of v4],[v9]),[insert3 of v0],[v8]),[term_of(insert3)],[insert3]),
+         [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4=>void]==>length(v4::insert(v0,v5))=s(s(length(v5)))in pnat,
+          wave([1,1],[length2,left]),su(su(su(_2385,[v8 of insert(v0,v5)],[v9]),[length2 of v4],[v8]),[term_of(length2)],[length2]),
+          [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4=>void]==>s(length(insert(v0,v5)))=s(s(length(v5)))in pnat,
+           weak_fertilize(right,[weak_fertilize(right,[1],v6)]),_2419,
+           [problem([l:int list,v0:int,v1:int list,v2:length(sort(v1))=length(v1)in pnat,v3:int list,v4:int,v5:int list,v6:length(insert(v0,v5))=s(length(v5))in pnat,v7:v0<v4=>void]==>s(length(insert(v0,v5)))=s(length(insert(v0,v5)))in pnat,
+            identity,axiom,
+            [
+            ]) ext _2419
+           ]) ext _2385
+          ]) ext _2209
+         ]) ext _1643
+        ]) ext _1473
+       ]) ext _1326
+      ]) ext _939
+     ]) ext _826
+    ]) ext _677
+   ]) ext _646
+  ]) ext _536
+ ]) ext _326
+]).

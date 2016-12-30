@@ -1,0 +1,20 @@
+
+dc:    Display current node.
+dt:    Display top node.
+dd(N): Down and display Nth node.
+dd:    Down and display 1st node.
+dn:    Display next goal node.
+ud:    Up and display node.
+cg(N): N is the current goaltree.
+cp:    Current preconditions.
+csp:   Current (successful) preconds.
+db:    Delete current goaltree branch.
+pc:    Plan from current node.
+pn:    Plan current node.
+sg(N): Select goaltree N.
+ap(N): Apply Nth successful precond.
+am(M): Apply method M.
+dp(N): Display plans for goaltree N.
+ss(N): Display snapshot of goaltree N.
+ig(N): Initialize goaltree N.
+

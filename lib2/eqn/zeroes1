@@ -1,0 +1,1 @@
+problem([]==>zeroes(0)=nil in{word},_,_,_).

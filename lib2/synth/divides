@@ -1,0 +1,91 @@
+problem([]==>{posint}=>{posint}=>u(1),
+intro(new[x])then wfftacs,lambda(x,_8398),
+[problem([x:{posint}]==>{posint}=>u(1),
+ intro(new[y])then wfftacs,lambda(y,_8437),
+ [problem([x:{posint},y:{posint}]==>u(1),
+  intro(explicit(z:{posint}#y=times(x,z)in{posint})),z:{posint}#y=times(x,z)in{posint},
+  [problem([x:{posint},y:{posint}]==> (z:{posint}#y=times(x,z)in{posint})in u(1),
+   intro,axiom,
+   [problem([x:{posint},y:{posint}]==>{posint}in u(1),
+    repeat wfftac,axiom,
+    [
+    ]),
+    problem([x:{posint},y:{posint},v0:{posint}]==>y=times(x,v0)in{posint}in u(1),
+    intro,axiom,
+    [problem([x:{posint},y:{posint},v0:{posint}]==>{posint}in u(1),
+     repeat wfftac,axiom,
+     [
+     ]),
+     problem([x:{posint},y:{posint},v0:{posint}]==>y in{posint},
+     repeat wfftac,axiom,
+     [
+     ]),
+     problem([x:{posint},y:{posint},v0:{posint}]==>times(x,v0)in{posint},
+     compute(hyp(x),[[unfold]])then elim(x),su(_8769,[x,assert(greater(x,0))],[v1,v2]),
+     [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat]==>greater(v1,0)in u(1),
+      repeat wfftac,axiom,
+      [
+      ]),
+      problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat]==>times(v1,v0)in{posint},
+      seq(z:pnat#v1=s(z)in pnat),lambda(v4,_8936)of _8933,
+      [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat]==>z:pnat#v1=s(z)in pnat,
+       lemma(arith3),su(_9021,[term_of(arith3)],[v4]),
+       [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:x:pnat=>0<*x=>y:pnat#x=s(y)in pnat]==>z:pnat#v1=s(z)in pnat,
+        elim(v4,on(v1))then wfftacs,su(_9151,[v4 of v1],[v5]),
+        [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:x:pnat=>0<*x=>y:pnat#x=s(y)in pnat,v5:0<*v1=>y:pnat#v1=s(y)in pnat]==>z:pnat#v1=s(z)in pnat,
+         elim(v5)then try intro,su(v6,[v5 of _9313],[v6]),
+         [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:x:pnat=>0<*x=>y:pnat#x=s(y)in pnat,v5:0<*v1=>y:pnat#v1=s(y)in pnat]==>0<*v1,
+          compute(hyp(v2),[[unfold]]),_9324,
+          [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:0<*x,v3:v1=x in pnat,v4:x:pnat=>0<*x=>y:pnat#x=s(y)in pnat,v5:0<*v1=>y:pnat#v1=s(y)in pnat]==>0<*v1,
+           rewrite(v3)then intro,v2,
+           [
+           ]) ext _9324
+          ]) ext _9313
+         ]) ext _9151
+        ]) ext _9021
+       ]) ext _8933,
+       problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat]==>times(v1,v0)in{posint},
+       elim(v4),spread(v4,[z,v5,_9685]),
+       [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>times(v1,v0)in{posint},
+        compute(_9830 in[[1]]),_9695,
+        [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>times(v1,v0)in{p:pnat\greater(p,0)},
+         intro,axiom,
+         [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>times(v1,v0)in pnat,
+          repeat wfftac,axiom,
+          [
+          ]),
+          problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>greater(times(v1,v0),0),
+          compute([[1]]),_10127,
+          [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>0<*times(v1,v0),
+           subst(over(q,0<*times(q,v0)),v1=s(z)in pnat),_10271,
+           [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>v1=s(z)in pnat,
+            intro,v5,
+            [
+            ]),
+            problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>0<*times(s(z),v0),
+            compute(_10701<*[[2]]),_10566,
+            [problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat)]==>0<*plus(p_ind(z,0,[~,v,plus(v,v0)]),v0),
+             because,atom(incomplete),
+             [
+             ]) ext _10566
+            ]) ext _10271,
+            problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat),q:pnat]==>0<*times(q,v0)in u(1),
+            repeat wfftac,axiom,
+            [
+            ])
+           ]) ext _10127
+          ]),
+          problem([x:{p:pnat\greater(p,0)},y:{posint},v0:{posint},v1:pnat,v2:greater(x,0),v3:v1=x in pnat,v4:z:pnat#v1=s(z)in pnat,z:pnat,v5:v1=s(z)in pnat,v6:v4=z&v5 in (z:pnat#v1=s(z)in pnat),p:pnat]==>greater(p,0)in u(1),
+          repeat wfftac,axiom,
+          [
+          ])
+         ]) ext _9695
+        ]) ext _9685
+       ]) ext _8936
+      ]) ext _8769
+     ])
+    ])
+   ])
+  ]) ext _8437
+ ]) ext _8398
+]).

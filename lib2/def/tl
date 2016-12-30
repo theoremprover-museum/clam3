@@ -1,0 +1,3 @@
+tl(l)<==>term_of(tl) of l.
+
+% tl(l)<==>list_ind(l,nil,[~,t,~,t]).

@@ -1,0 +1,8 @@
+problem([]==>t:pnat=>reset:flip=>countImp(reset)of s(t)=del(restart(reset,incfun(countImp(reset))))of s(t)in{word},_,_,_).
+
+%problem([]==>t:pnat=>n:pnat=>reset:flip=>countImp(n,reset)of s(t)=del(restart(n,reset,incfun(countImp(n,reset))))of s(t)in{word},_,_,_).
+
+
+%countImp3:
+
+%problem([]==>t:pnat=>reset:flip=>countImp(0,reset)of t=nil in{word},_,_,_).

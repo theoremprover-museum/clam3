@@ -1,0 +1,1 @@
+problem([]==>h1:int=>t1:int list=>h2:int=>t2:int list=>pairlist(h1::t1,h2::t2)=(h1::h2::nil)::pairlist(t1,t2)in int list,_,_,_).

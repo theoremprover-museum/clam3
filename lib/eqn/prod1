@@ -1,0 +1,4 @@
+problem([]==>prod(nil)=s(0)in pnat,
+simplify,axiom,
+[
+]).

@@ -1,0 +1,1 @@
+nBitW(n)<==>p_ind(n,lambda(a,{false}),[k,w,lambda(a,pnatEq(s(k),s(0),hd(a),w of tl(a)))]).

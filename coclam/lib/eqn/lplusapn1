@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:pnat=>appn(n, lplus(a), 0)=ltimes(n, a) in pnat,_,_,_). 

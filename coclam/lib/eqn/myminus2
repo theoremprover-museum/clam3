@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>myminus(x,0)=0 in pnat,_,_,_).

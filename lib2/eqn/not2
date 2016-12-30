@@ -1,0 +1,1 @@
+problem([]==>not({true})={false} in {bool},_,_,_).

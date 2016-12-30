@@ -1,0 +1,3 @@
+problem([]==>counterImp(0,{false})=nil in{word},_,_,_).
+
+%problem([]==>reset:flip=>initVal:reg=>counterImp(lambda(t,{true}),initVal)of 0=lambda(t,initVal of t)of 0 in{word},_,_,_).

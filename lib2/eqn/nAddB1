@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>nAddB(nil)of nil of ci=ci::nil in{word},_,_,_).

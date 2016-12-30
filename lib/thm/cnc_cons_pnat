@@ -1,0 +1,10 @@
+problem([]==>x:pnat=>y:pnat list=>z:pnat list=>y=z in pnat list=>x::y=x::z in pnat list,
+normalize([normal(imply_intro),normal(univ_intro),normal(univ_intro),normal(univ_intro)]),lambda(x,lambda(y,lambda(z,lambda(v0,_7546)))),
+[problem([x:pnat,y:pnat list,z:pnat list,v0:y=z in pnat list]==>x::y=x::z in pnat list,
+ sym_eval([equal(v0,left)]),_7555,
+ [problem([x:pnat,y:pnat list,z:pnat list,v0:y=z in pnat list]==>x::y=x::y in pnat list,
+  tautology(identity),axiom,
+  [
+  ]) ext _7555
+ ]) ext _7546
+]).

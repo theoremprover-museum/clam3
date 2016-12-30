@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>n:pnat=>a:{word}=>b:{word}=>nAdderSpec(n,a,b,ci)=numVal(s(n))of (nAdderImp(n)of a of b of ci)in pnat,_,_,_).

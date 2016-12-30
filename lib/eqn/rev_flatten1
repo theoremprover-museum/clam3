@@ -1,0 +1,2 @@
+problem([]==>rev_flatten(nil)=nil in pnat list,_,_,_).
+

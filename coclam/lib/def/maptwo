@@ -1,0 +1,1 @@
+map2(l,f)<==>list_ind(l,nil,[h,~,recval,mapcar(h, f)::recval]).

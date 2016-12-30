@@ -1,0 +1,4 @@
+problem([]==>h:pnat=>t:pnat list=>sum(h::t)=plus(sum(t),h)in pnat,
+repeat intro then simplify then wfftacs,lambda(h,lambda(t,axiom)),
+[
+]).

@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>mapcar(nil,f)=nil in int list,_,_,_).

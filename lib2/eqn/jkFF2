@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>j:{bool}=>k:{bool}=>jkFF(s(t),j,k)= (j and (not jkFF(t,j,k))or (not k)and jkFF(t,j,k))in{bool},_,_,_).

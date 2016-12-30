@@ -1,0 +1,1 @@
+problem([]==>a:{word}=>b:{word}=>bool_eq({false},{false},a,b)=a in{word},_,_,_).

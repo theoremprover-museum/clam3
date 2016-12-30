@@ -1,0 +1,1 @@
+problem([]==>v1:pnat=>related(true,myodd(s(appn(v1,s(s),0))))in bool,_,_,_).

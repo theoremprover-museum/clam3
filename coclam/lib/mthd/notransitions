@@ -1,0 +1,6 @@
+method(notransitions(Div),
+	H==>G,
+	[matrix_conds(_, _, div and div, _, G)]
+	[],
+	[]
+).

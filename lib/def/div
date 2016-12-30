@@ -1,0 +1,1 @@
+div(x,y)<==>z:pnat#y=times(x,z)in pnat.

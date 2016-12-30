@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>mapcar(l, double)=mapcar(l, lam(x, plus(x, x)))in pnat list,_,_,_).

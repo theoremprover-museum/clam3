@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>m:pnat=>even(n)=>(even(times(n,m))),_,_,_).

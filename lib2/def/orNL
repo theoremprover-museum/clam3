@@ -1,0 +1,1 @@
+orNL(x)<==>list_ind(x,lambda(y,nil),[h,t,r,lambda(y,(h or hd(y))::r of tl(y))]).

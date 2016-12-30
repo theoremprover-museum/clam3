@@ -1,0 +1,54 @@
+problem([]==>l1:int list=>l2:int list=>int list,
+dequantify_once,lambda(l1,_2170),
+[problem([l1:int list]==>l2:int list=>int list,
+ elim(l1),list_ind(l1,_2205,[v0,v1,v2,_2213]),
+ [problem([l1:int list]==>l2:int list=>int list,
+  apply(dequantify)then intro(nil)then wfftacs,lambda(l2,nil),
+  [
+  ]) ext _2205,
+  problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list]==>l2:int list=>int list,
+  pure(intro)then[idtac,wfftacs],lambda(l2,_2326),
+  [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list]==>int list,
+   elim(l2),list_ind(l2,_2387,[v3,v4,v5,_2395]),
+   [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list]==>int list,
+    intro(nil)then wfftacs,nil,
+    [
+    ]) ext _2387,
+    problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list]==>int list,
+    seq(member(v0,l2)\member(v0,l2)=>void,new[v6]),lambda(v6,_2557)of _2554,
+    [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list]==>member(v0,l2)\member(v0,l2)=>void,
+     lemma(memberdec),su(_2646,[term_of(memberdec)],[v6]),
+     [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:v0:int=>l2:int list=>member(v0,l2)\member(v0,l2)=>void]==>member(v0,l2)\member(v0,l2)=>void,
+      strong_fertilize(v6),su(su(v8,[v7 of l2],[v8]),[v6 of v0],[v7]),
+      [
+      ]) ext _2646
+     ]) ext _2554,
+     problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void]==>int list,
+     elim(v6),decide(v6,[v7,_2895],[v8,_2899]),
+     [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v7:member(v0,l2),v9:v6=inl(v7)in (member(v0,l2)\member(v0,l2)=>void)]==>int list,
+      intro(::),_3029::_3030,
+      [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v7:member(v0,l2),v9:v6=inl(v7)in (member(v0,l2)\member(v0,l2)=>void)]==>int,
+       hyp(v0),v0,
+       [
+       ]) ext _3029,
+       problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v7:member(v0,l2),v9:v6=inl(v7)in (member(v0,l2)\member(v0,l2)=>void)]==>int list,
+       elim(v2,on(l2))then wfftacs,su(_3290,[v2 of l2],[v8]),
+       [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v7:member(v0,l2),v9:v6=inl(v7)in (member(v0,l2)\member(v0,l2)=>void),v8:int list]==>int list,
+        hyp(v8),v8,
+        [
+        ]) ext _3290
+       ]) ext _3030
+      ]) ext _2895,
+      problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v8:member(v0,l2)=>void,v10:v6=inr(v8)in (member(v0,l2)\member(v0,l2)=>void)]==>int list,
+      elim(v2,on(l2))then wfftacs,su(_3571,[v2 of l2],[v7]),
+      [problem([l1:int list,v0:int,v1:int list,v2:l2:int list=>int list,l2:int list,v3:int,v4:int list,v5:int list,v6:member(v0,l2)\member(v0,l2)=>void,v8:member(v0,l2)=>void,v10:v6=inr(v8)in (member(v0,l2)\member(v0,l2)=>void),v7:int list]==>int list,
+       hyp(v7),v7,
+       [
+       ]) ext _3571
+      ]) ext _2899
+     ]) ext _2557
+    ]) ext _2395
+   ]) ext _2326
+  ]) ext _2213
+ ]) ext _2170
+]).

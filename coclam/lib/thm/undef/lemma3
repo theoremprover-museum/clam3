@@ -1,0 +1,1 @@
+problem([]==>v0:pnat=>v1:pnat list=>rev(app(app(v1,v0::nil),nil))=v0::rev(app(v1,nil))in pnat list,_,_,_).

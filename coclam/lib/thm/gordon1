@@ -1,0 +1,1 @@
+problem([]==>y:int list=>mapcar(y,lam(x,idnat(x)))=idlist(y)in int list,_,_,_).

@@ -1,0 +1,43 @@
+From air@cee.hw.ac.uk Fri Sep 13 15:07 BST 1996
+Received: from thoth.cee.hw.ac.uk (root@thoth.cee.hw.ac.uk [137.195.180.80]) by postbox.dai.ed.ac.uk (8.6.13/8.6.12) with SMTP id PAA16586 for <louised@dai.ed.ac.uk>; Fri, 13 Sep 1996 15:07:46 +0100
+Received: by thoth.cee.hw.ac.uk (Smail3.1.28.1 #97)
+	id m0v1YuH-000EePC; Fri, 13 Sep 96 15:07 BST
+Message-Id: <m0v1YuH-000EePC@thoth.cee.hw.ac.uk>
+From: air@cee.hw.ac.uk (Andrew Ireland)
+Subject: Re: Clam3: Waves Turning Inwards
+To: louised@dai.ed.ac.uk (Louise Dennis)
+Date: Fri, 13 Sep 1996 15:07:45 +0100 (BST)
+In-Reply-To: <1999.9608291453@katrine.dai.ed.ac.uk> from "Louise Dennis" at Aug 29, 96 03:53:54 pm
+X-Mailer: ELM [version 2.4 PL23]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Content-Length: 388
+Status: RO
+
+
+Louise
+
+	A very quick fix, try loading
+
+		~air/clam/clam.v3.2/meta-level/meta-ripple-dir.pl
+
+Let me know how it works out.
+
+Andrew
+
+
+-- 
+Andrew Ireland
+Dept of Computing & Electrical Engineering
+Heriot-Watt University
+Riccarton, Edinburgh
+Scotland, UK
+EH14 4AS
+
+Tel:   +44 (0)131 451 3409
+Fax:   +44 (0)131 451 3327
+Email: A.Ireland@hw.ac.uk
+-------------------------------------------
+
+

@@ -1,0 +1,1 @@
+zeroes(n)<==>p_ind(n,nil,[~,v,{false}::v]).

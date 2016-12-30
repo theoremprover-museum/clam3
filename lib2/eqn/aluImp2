@@ -1,0 +1,12 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>aluImp(s0,s1,s2,a::x,b::y,ci)=aluAux(s0,s1,s2,a,b,aluImp(s0,s1,s2,x,y,ci)) in{word},_,_,_).
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>aluImp(s0,s1,s2,a::x,ci)of (b::y)=aluAux(s0,s1,s2,a,b,aluImp(s0,s1,s2,x,ci)of y)in{word},_,_,_).
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>aluImp(s0,s1,s2,a::x,ci)of y=aluAux(s0,s1,s2,a,hd(y),aluImp(s0,s1,s2,x,ci)of tl(y))in{word},_,_,_).
+
+
+
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>y:{word}=>ci:{bool}=>aluImp(x) of s0 of s1 of s2 of y of ci = aluAux(s0,s1,s2,hd(x),hd(y),aluImp(tl(x)) of s0 of s1 of s2 of tl(y) of ci)in{word},_,_,_).

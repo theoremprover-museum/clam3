@@ -1,0 +1,1 @@
+problem([]==>a:pnat list=>b:pnat list=>subset(a,b)=> intersect(a,b)=a in pnat list,_,_,_).

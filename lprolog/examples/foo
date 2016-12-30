@@ -1,0 +1,76 @@
+module bundy.
+
+
+% Kinds
+kind         typ                type.
+kind         term               type.
+kind         real               type.
+
+% Object-level constants
+type         e                  real.
+
+% Object-level functions
+type         sin                real -> real.
+type         times              real -> real -> real.
+type         exp                real -> real -> real.
+
+% Meta-level variables
+type         X                  real.
+type         Y                  real.
+type         F                  real -> real.
+
+% Example:
+
+(F Y) = (times (sin X) (exp e X)). 
+
+
+/home/dream3/air/bin/lprog
+%  loading file /home/dream3/air/bin/lprog
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% lprog loaded in module user, 0.517 sec 167,816 bytes
+
+?- use bundy.
+bundy
+ yes
+?- (F Y) = (times (sin X) (exp e X)).
+
+F = Var6 \ (times (sin (Var3 Var6)) (exp e (Var5 Var6)))
+Y = Y
+X = Var3 Y
+
+ The remaining flexible - flexible pairs:
+<Var5 Y , Var3 Y> ;
+
+F = Var7 \ (times (sin (Var3 Var7)) (exp Var7 (Var5 Var7)))
+Y = e
+X = Var3 e
+
+ The remaining flexible - flexible pairs:
+<Var5 e , Var3 e> ;
+
+F = Var10 \ (times (sin (Var3 Var10)) Var10)
+Y = exp e Var9
+X = Var3 (exp e Var9)
+
+ The remaining flexible - flexible pairs:
+<Var9 , Var3 (exp e Var9)> ;
+
+F = Var13 \ (times Var13 (exp e (Var12 Var13)))
+Y = sin X
+X = X
+
+ The remaining flexible - flexible pairs:
+<Var12 (sin X) , X> ;
+
+F = W1 \ W1
+Y = times (sin X) (exp e X)
+X = X ;
+
+F = F
+Y = Y
+X = X
+
+ The remaining flexible - flexible pairs:
+<Var14 Var15 , F Y> ;
+
+ no

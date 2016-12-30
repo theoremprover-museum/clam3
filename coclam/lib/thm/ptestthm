@@ -1,0 +1,1 @@
+problem([]==>x:int#=>y:int=>u:int=>v:int#=>ptest(x, y)=>ptest(v, u)in int list,_,_,_).

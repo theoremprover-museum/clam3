@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>faCarryImp({true},y,{true})={true} in {bool},_,_,_).

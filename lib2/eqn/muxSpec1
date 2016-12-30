@@ -1,0 +1,3 @@
+problem([]==>x:{word}=>muxSpec(0) of x=hd(x) in{bool},_,_,_).
+
+%problem([]==>n:pnat=>x:{word}=>muxSpec(n,x)=nBitW(s(n))of x in{bool},_,_,_).

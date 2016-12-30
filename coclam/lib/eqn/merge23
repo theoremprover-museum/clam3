@@ -1,0 +1,1 @@
+problem([]==>a:int list=>b:int list=>h1:int=>h2:int=>merge2(h1::a, h2::b)=(h1,h2)::merge2(a, b)in int list,_,_,_).

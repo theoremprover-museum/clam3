@@ -1,0 +1,3 @@
+problem([]==>l:pnat list=> el:pnat list => ol:pnat list =>
+          app(app(el,filter(lam(x,even(x)),l)),
+              app(ol,filter(lam(x,odd(x)),l))) = partition(l,el,ol) in pnat list,_,_,_). 

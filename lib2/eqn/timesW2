@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>timesW(inc(x),y)=plusW(timesW(x,y),y)in{word},_,_,_).

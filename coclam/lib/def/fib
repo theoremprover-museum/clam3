@@ -1,0 +1,1 @@
+fib(x)<==>term_of(fib)of x.

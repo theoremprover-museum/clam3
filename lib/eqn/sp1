@@ -1,0 +1,4 @@
+problem([]==>s:pnat => p:pnat => sp(nil,s,p)= (s & p) in (pnat # pnat),
+simplify,axiom,
+[
+]).

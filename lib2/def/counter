@@ -1,0 +1,12 @@
+counter(t,reset)<==>p_ind(t,0,[p,r,bool_eq(reset,{true},0,s(r))]).
+
+% counter(t,reset)<==>p_ind(t,0,[p,r,bool_eq(reset,{true},0,rem(s(r),exp(s(s(0)),length(nat2word(t)))))]).
+
+%counter(n,reset)<==>lambda(t,p_ind(t,lambda(u,0),[p,r,bool_eq(reset of p,{true},lambda(u,0),rem(s(r of p),exp(s(s(0)),n)))])).
+
+% eval(counter(s(s(s(0))),lambda(0,{false})) of s(s(s(s(s(0))))),X).
+% 
+% X = s(s(s(s(s(0))))) 
+% eval(counter(s(s(s(0))),lambda(0,{true})) of s(s(s(s(s(0))))),X).
+%
+% X = 0 

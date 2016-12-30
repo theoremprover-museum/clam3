@@ -1,0 +1,4 @@
+problem([]==>orNL(nil)of nil=nil in{word},_,_,_).
+
+
+%problem([]==>orNL(nil)of y=nil in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>y<*x=>gcd(x,y)=gcd(minus(x,y),y)in pnat,_,_,_).

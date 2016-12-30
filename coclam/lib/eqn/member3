@@ -1,0 +1,2 @@
+problem([]==>el:pnat=>h:pnat=>l:pnat list=> (el=h in pnat=>void)=>member(el,h::l)=member(el,l)in u(1),_,_,_).
+

@@ -1,0 +1,2 @@
+problem([]==>x:pnat list=>y:pnat list=> rev(app(rev(x),y)) = app(rev(y),x) in pnat list,_,_,_).
+

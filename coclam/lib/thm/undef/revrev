@@ -1,0 +1,30 @@
+problem([]==>l:int list=>rev(rev(l))=l in int list,
+autotactic(idtac),_128,
+[problem([]==>l:int list=>rev(rev(l))=l in int list,
+ dequantify,lambda(l,_190),
+ [problem([l:int list]==>rev(rev(l))=l in int list,
+  ind_strat(_227::_228,l:int list),list_ind(l,su(su(_243,[term_of(rev1)],[rev1]),[term_of(rev1)],[rev1]),[v0,v1,v2,su(_267,[term_of(rev2)],[rev2])]),
+  [problem([l:int list]==>nil=nil in int list,
+   identity,axiom,
+   [
+   ]) ext _243,
+   problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list]==>rev(app(rev(v1),v0::nil))=v0::v1 in int list,
+   generalise(rev(v1)),lambda(v3,su(axiom,[v3 of rev(v1)],[v4]))of lambda(v3,_399),
+   [problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list]==>rev(app(v3,v0::nil))=v0::v1 in int list,
+    ind_strat(_479::_480,v3:int list),list_ind(v3,su(_491,[term_of(app1)],[app1]),[v4,v5,v6,su(su(_513,[term_of(rev2)],[rev2]),[term_of(app2)],[app2])]),
+    [problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list]==>rev(v0::nil)=v0::v1 in int list,
+     wave([1,1],rev2),su(_611,[term_of(rev2)],[rev2]),
+     [problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list]==>app(rev(nil),v0::nil)=v0::v1 in int list,
+      base([1,1,1],rev1),su(_705,[term_of(rev1)],[rev1]),
+      [problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list]==>app(nil,v0::nil)=v0::v1 in int list,
+       base([1,1],app1),su(_795,[term_of(app1)],[app1]),
+       [problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list]==>v0::nil=v0::v1 in int list,_,_,_) ext _795
+       ]) ext _705
+      ]) ext _611
+     ]) ext _491,
+     problem([l:int list,v0:int,v1:int list,v2:rev(rev(v1))=v1 in int list,v3:int list,v4:int,v5:int list,v6:rev(app(v5,v0::nil))=v0::v1 in int list]==>app(rev(app(v5,v0::nil)),v4::nil)=rev(app(v5,v0::nil))in int list,_,_,_) ext _513
+    ]) ext _399
+   ]) ext _267
+  ]) ext _190
+ ]) ext _128
+]).

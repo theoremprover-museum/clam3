@@ -1,0 +1,15 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y) in pnat=>word2nat(cadd(x,y,ci))=plus(word2nat(x),plus(word2nat(y),bitval(ci)))in pnat,_,_,_).
+
+
+
+%problem([]==>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y) in pnat=>word2nat(cadd(x) of y of ci)=plus(word2nat(x),plus(word2nat(y),bitval(ci)))in pnat,_,_,_).
+
+
+
+%problem([]==>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y) in pnat=>caddSpec(x,y,ci)=word2nat(cadd(x) of y of ci) in pnat,_,_,_).
+
+
+
+
+% This is used by the multiplier. Does have the constrain length(x)=length(y)
+%problem([]==>ci:{bool}=>x:{word}=>y:{word}=>word2nat(cadd(x)of y of ci)=plus(word2nat(x),plus(word2nat(y),bitval(ci)))in pnat,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>h0:{bool}=>h1:{bool}=>x0:{bool}=>x1:{bool}=>x2:{bool}=>x3:{bool}=>muxImp(h0,h1,x0,x1,x2,x3)= (x0 and (not h1)and (not h0)or x1 and (not h1)and h0 or x2 and h1 and (not h0)or x3 and h1 and h0)in{bool},_,_,_).

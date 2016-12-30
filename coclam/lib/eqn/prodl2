@@ -1,0 +1,4 @@
+problem([]==>h:pnat=>t:pnat list=>prodl(h::t)=times(h,prodl(t))in pnat,
+repeat intro then simplify then wfftacs,lambda(h,lambda(t,axiom)),
+[
+]).

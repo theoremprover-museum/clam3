@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>word2nat(plusW(x,y))=plus(word2nat(x),word2nat(y))in pnat,_,_,_).

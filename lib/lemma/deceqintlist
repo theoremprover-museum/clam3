@@ -1,0 +1,133 @@
+problem([]==>x:int list=>y:int list=>(x=y in int list=>void)\x=y in int list,
+dequantify_once,lambda(x,_186),
+[problem([x:int list]==>y:int list=>(x=y in int list=>void)\x=y in int list,
+ elim(x),list_ind(x,_241,[v0,v1,v2,_249]),
+ [problem([x:int list]==>y:int list=>(nil=y in int list=>void)\nil=y in int list,
+  dequantify,lambda(y,_303),
+  [problem([x:int list,y:int list]==>(nil=y in int list=>void)\nil=y in int list,
+   elim(y),list_ind(y,_357,[v0,v1,v2,_365]),
+   [problem([x:int list,y:int list]==>(nil=nil in int list=>void)\nil=nil in int list,
+    intro(right)then wfftacs then identity,inr(axiom),
+    [
+    ]) ext _357,
+    problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list]==>(nil=v0::v1 in int list=>void)\nil=v0::v1 in int list,
+    intro(left)then wfftacs then intro then wfftacs,inl(lambda(v3,_535)),
+    [problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list]==>void,
+     seq(list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int,new[v4]),lambda(v4,_663)of _660,
+     [problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list]==>list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int,
+      rewrite(v3)then identity,axiom,
+      [
+      ]) ext _660,
+      problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list,v4:list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int]==>void,
+      compute(hyp(v4),[[simplify]]),_792,
+      [problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list,v4:1=0 in int]==>void,
+       seq(1=0 in int=>void,new[v5]),lambda(v5,_1027)of _1024,
+       [problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list,v4:1=0 in int]==>1=0 in int=>void,
+        arith then wfftacs,lambda(x,axiom),
+        [
+        ]) ext _1024,
+        problem([x:int list,y:int list,v0:int,v1:int list,v2:(nil=v1 in int list=>void)\nil=v1 in int list,v3:nil=v0::v1 in int list,v4:1=0 in int,v5:1=0 in int=>void]==>void,
+        tautology(elim(v5)then[hyp(v4),hyp(v6)]),su(v6,[v5 of v4],[v6]),
+        [
+        ]) ext _1027
+       ]) ext _792
+      ]) ext _663
+     ]) ext _535
+    ]) ext _365
+   ]) ext _303
+  ]) ext _241,
+  problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list]==>y:int list=>(v0::v1=y in int list=>void)\v0::v1=y in int list,
+  dequantify,lambda(y,_1374),
+  [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list]==>(v0::v1=y in int list=>void)\v0::v1=y in int list,
+   elim(y),list_ind(y,_1481,[v3,v4,v5,_1489]),
+   [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list]==>(v0::v1=nil in int list=>void)\v0::v1=nil in int list,
+    intro(left)then wfftacs then intro then wfftacs,inl(lambda(v3,_1608)),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list]==>void,
+     seq(list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int,new[v4]),lambda(v4,_1744)of _1741,
+     [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list]==>list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int,
+      rewrite(v3)then identity,axiom,
+      [
+      ]) ext _1741,
+      problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list,v4:list_ind(v0::v1,0,[h,t,v,1])=list_ind(nil,0,[h,t,v,1])in int]==>void,
+      compute(hyp(v4),[[simplify]]),_1881,
+      [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list,v4:1=0 in int]==>void,
+       seq(1=0 in int=>void,new[v5]),lambda(v5,_2132)of _2129,
+       [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list,v4:1=0 in int]==>1=0 in int=>void,
+        arith then wfftacs,lambda(x,axiom),
+        [
+        ]) ext _2129,
+        problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:v0::v1=nil in int list,v4:1=0 in int,v5:1=0 in int=>void]==>void,
+        tautology(elim(v5)then[hyp(v4),hyp(v6)]),su(v6,[v5 of v4],[v6]),
+        [
+        ]) ext _2132
+       ]) ext _1881
+      ]) ext _1744
+     ]) ext _1608
+    ]) ext _1481,
+    problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+    decide(v0=v3 in int),int_eq(v0,v3,su(_2557,[axiom],[v6]),su(_2565,[lambda(~,axiom)],[v6])),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+     elim(v2,on(v4))then wfftacs,su(_2748,[v2 of v4],[v7]),
+     [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+      elim(v7),decide(v7,[v8,_2957],[v9,_2961]),
+      [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+       rewrite(v6),_2971,
+       [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>(v3::v1=v3::v4 in int list=>void)\v3::v1=v3::v4 in int list,
+        intro(left),inl(_3452),
+        [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>v3::v1=v3::v4 in int list=>void,
+         intro then wfftacs,lambda(v9,_3683),
+         [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list),v9:v3::v1=v3::v4 in int list]==>void,
+          seq(list_ind(v3::v1,nil,[~,t,~,t])=list_ind(v3::v4,nil,[~,t,~,t])in int list,new[v11]),lambda(v11,_3961)of _3958,
+          [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list),v9:v3::v1=v3::v4 in int list]==>list_ind(v3::v1,nil,[~,t,~,t])=list_ind(v3::v4,nil,[~,t,~,t])in int list,
+           rewrite(v9)then identity,axiom,
+           [
+           ]) ext _3958,
+           problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list),v9:v3::v1=v3::v4 in int list,v11:list_ind(v3::v1,nil,[~,t,~,t])=list_ind(v3::v4,nil,[~,t,~,t])in int list]==>void,
+           compute(hyp(v11),[[simplify]]),_4240,
+           [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list),v9:v3::v1=v3::v4 in int list,v11:v1=v4 in int list]==>void,
+            tautology(elim(v8)then[hyp(v11),hyp(v12)]),su(v12,[v8 of v11],[v12]),
+            [
+            ]) ext _4240
+           ]) ext _3961
+          ]) ext _3683
+         ]) ext _3452,
+         problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v8:v1=v4 in int list=>void,v10:v7=inl(v8)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>v3::v1=v3::v4 in int list in u(1),
+         because,atom(incomplete),
+         [
+         ])
+        ]) ext _2971
+       ]) ext _2957,
+       problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v9:v1=v4 in int list,v11:v7=inr(v9)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+       intro(right)then wfftacs,inr(_5248),
+       [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int,v7:(v1=v4 in int list=>void)\v1=v4 in int list,v9:v1=v4 in int list,v11:v7=inr(v9)in ((v1=v4 in int list=>void)\v1=v4 in int list)]==>v0::v1=v3::v4 in int list,
+        rewrite(v6)then rewrite(v9)then identity,axiom,
+        [
+        ]) ext _5248
+       ]) ext _2961
+      ]) ext _2748
+     ]) ext _2557,
+     problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void]==>(v0::v1=v3::v4 in int list=>void)\v0::v1=v3::v4 in int list,
+     intro(left)then wfftacs,inl(_5651),
+     [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void]==>v0::v1=v3::v4 in int list=>void,
+      intro then wfftacs,lambda(v7,_5807),
+      [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void,v7:v0::v1=v3::v4 in int list]==>void,
+       seq(list_ind(v0::v1,0,[h,t,v,h])=list_ind(v3::v4,0,[h,t,v,h])in int,new[v8]),lambda(v8,_6008)of _6005,
+       [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void,v7:v0::v1=v3::v4 in int list]==>list_ind(v0::v1,0,[h,t,v,h])=list_ind(v3::v4,0,[h,t,v,h])in int,
+        rewrite(v7)then identity,axiom,
+        [
+        ]) ext _6005,
+        problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void,v7:v0::v1=v3::v4 in int list,v8:list_ind(v0::v1,0,[h,t,v,h])=list_ind(v3::v4,0,[h,t,v,h])in int]==>void,
+        compute(hyp(v8),[[simplify]]),_6210,
+        [problem([x:int list,v0:int,v1:int list,v2:y:int list=>(v1=y in int list=>void)\v1=y in int list,y:int list,v3:int,v4:int list,v5:(v0::v1=v4 in int list=>void)\v0::v1=v4 in int list,v6:v0=v3 in int=>void,v7:v0::v1=v3::v4 in int list,v8:v0=v3 in int]==>void,
+         tautology(elim(v6)then[hyp(v8),hyp(v9)]),su(v9,[v6 of v8],[v9]),
+         [
+         ]) ext _6210
+        ]) ext _6008
+       ]) ext _5807
+      ]) ext _5651
+     ]) ext _2565
+    ]) ext _1489
+   ]) ext _1374
+  ]) ext _249
+ ]) ext _186
+]).

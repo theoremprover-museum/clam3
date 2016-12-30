@@ -1,0 +1,28 @@
+problem([]==>x:pnat=>y:pnat=>times(x,s(y))=plus(x,times(x,y))in pnat,
+ind_strat_I(induction(s(v0),x:pnat)then[try base_rewrites([base([1,1],times1),base([2,2,1],times1),base([2,1],plus1)]),ripple_out([wave([1,1],times2),wave([2,2,1],times2),wave([2,1],plus2)])then weak_fertilize([1],[left,v1])]),lambda(x,p_ind(x,su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _458),[term_of(plus1)],[plus1])),[term_of(times1)],[times1])),[term_of(times1)],[times1]),[v0,v1,su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _574)),[term_of(plus2)],[plus2])),[term_of(times2)],[times2])),[term_of(times2)],[times2])])),
+[problem([x:pnat]==>y:pnat=>0=0 in pnat,
+ tautology((intro then wfftacs)then identity),lambda(y,axiom),
+ [
+ ]) ext _458,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat]==>y:pnat=>plus(plus(v0,times(v0,y)),s(y))=s(plus(v0,plus(times(v0,y),y)))in pnat,
+ generalise(times(v0,y),v2:pnat),lambda(v2,lambda(v3,su(su(v5,[v4 of v3],[v5]),[v2 of times(v0,v3)],[v4])))of _744,
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat]==>v2:pnat=>y:pnat=>plus(plus(v0,v2),s(y))=s(plus(v0,plus(v2,y)))in pnat,
+  ind_strat_I(induction(s(v3),v0:pnat)then[try base_rewrites([base([1,2,1],plus1),base([1,1,1],plus1)]),ripple_out([wave([1,2,1],plus2),wave([1,1,1],plus2),wave([1,1],plus2)])then weak_fertilize([1],[left,v4])]),lambda(v2,p_ind(v0,su(lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of su(lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _989),[term_of(plus1)],[plus1])),[term_of(plus1)],[plus1]),[v3,v4,su(lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of su(lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of su(lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of lambda(v5,lambda(v6,su(v7,[v6 of v5],[v7]))of _1099)),[term_of(plus2)],[plus2])),[term_of(plus2)],[plus2])),[term_of(plus2)],[plus2])])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat,v2:pnat]==>y:pnat=>plus(v2,s(y))=s(plus(v2,y))in pnat,
+   ind_strat_I(induction(s(v3),v2:pnat)then[try base_rewrites([base([1,1],plus1),base([1,2,1],plus1)]),ripple_out([wave([1,1],plus2),wave([1,2,1],plus2)])then weak_fertilize([1],[left,v4])]),lambda(y,p_ind(v2,su(lambda(v3,v3)of su(lambda(v3,v3)of _1308,[term_of(plus1)],[plus1]),[term_of(plus1)],[plus1]),[v3,v4,su(lambda(v5,v5)of su(lambda(v5,v5)of (lambda(v5,v5)of _1352),[term_of(plus2)],[plus2]),[term_of(plus2)],[plus2])])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat,v2:pnat,y:pnat]==>s(y)=s(y)in pnat,
+    tautology((intro then wfftacs)then identity),axiom,
+    [
+    ]) ext _1308,
+    problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat,v2:pnat,y:pnat,v3:pnat,v4:plus(v3,s(y))=s(plus(v3,y))in pnat]==>s(s(plus(v3,y)))=s(s(plus(v3,y)))in pnat,
+    tautology((intro then wfftacs)then identity),axiom,
+    [
+    ]) ext _1352
+   ]) ext _989,
+   problem([x:pnat,v0:pnat,v1:y:pnat=>times(v0,s(y))=plus(v0,times(v0,y))in pnat,v2:pnat,v3:pnat,v4:y:pnat=>plus(plus(v3,v2),s(y))=s(plus(v3,plus(v2,y)))in pnat]==>y:pnat=>s(s(plus(v3,plus(v2,y))))=s(s(plus(v3,plus(v2,y))))in pnat,
+   tautology((intro then wfftacs)then(intro then wfftacs)then identity),lambda(y,axiom),
+   [
+   ]) ext _1099
+  ]) ext _744
+ ]) ext _574
+]).

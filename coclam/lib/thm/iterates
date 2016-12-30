@@ -1,0 +1,3 @@
+problem([]==>f:(int=>int)=>m:int=>iterates(f, m)in int list,_,_,_).
+
+

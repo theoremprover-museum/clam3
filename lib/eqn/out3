@@ -1,0 +1,1 @@
+problem([]==>r:pnat => i:pnat => j:pnat => out(r,s(j),s(i)) = out(times(s(j),r),j,i) in pnat,_,_,_).

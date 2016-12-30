@@ -1,0 +1,23 @@
+problem([]==>n:pnat=>even(double(n)),
+induction(s(v0),n:pnat),lambda(n,p_ind(n,_295,[v0,v1,_301])),
+[problem([n:pnat]==>even(double(0)),
+ base([1],double1),su(lambda(v0,v0)of _336,[term_of(double1)],[double1]),
+ [problem([n:pnat]==>even(0),
+  base([],even1),su(lambda(v0,v0)of _375,[term_of(even1)],[even1]),
+  [problem([n:pnat]==>{true},
+   tautology(istrue),0,
+   [
+   ]) ext _375
+  ]) ext _336
+ ]) ext _295,
+ problem([n:pnat,v0:pnat,v1:even(double(v0))]==>even(double(s(v0))),
+ wave([1],double2),su(lambda(v2,v2)of _454,[term_of(double2)],[double2]),
+ [problem([n:pnat,v0:pnat,v1:even(double(v0))]==>even(s(s(double(v0)))),
+  wave([],even3),su(lambda(v2,v1)of _513,[term_of(even3)],[even3]),
+  [problem([n:pnat,v0:pnat,v1:even(double(v0))]==>even(double(v0)),
+   tautology(intro),v1,
+   [
+   ]) ext _513
+  ]) ext _454
+ ]) ext _301
+]).

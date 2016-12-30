@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>u(1),_,_,_).

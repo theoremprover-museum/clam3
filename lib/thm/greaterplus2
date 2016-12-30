@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>(greater(x,y)=>greater(plus(x,z),y)),
+_,_,_).

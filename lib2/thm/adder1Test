@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>b:{bool}=>and(a,1)=or(1,0) in {bool},_,_,_).

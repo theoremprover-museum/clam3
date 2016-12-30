@@ -1,0 +1,34 @@
+problem([]==>pnat=>pnat=>pnat,
+intro then wfftacs,lambda(v0,_8760),
+[problem([v0:pnat]==>pnat=>pnat,
+ elim(v0),p_ind(v0,_8786,[v1,v2,_8792]),
+ [problem([v0:pnat]==>pnat=>pnat,
+  intro then wfftacs,lambda(v1,_8820),
+  [problem([v0:pnat,v1:pnat]==>pnat,
+   decide(v1=0 in pnat)then wfftacs,pnat_eq(v1,0,su(_8861,[axiom],[v2]),su(_8869,[lambda(~,axiom)],[v2])),
+   [problem([v0:pnat,v1:pnat,v2:v1=0 in pnat]==>pnat,
+    intro(explicit(s(0)))then wfftacs,s(0),
+    [
+    ]) ext _8861,
+    problem([v0:pnat,v1:pnat,v2:v1=0 in pnat=>void]==>pnat,
+    intro(0),0,
+    [
+    ]) ext _8869
+   ]) ext _8820
+  ]) ext _8786,
+  problem([v0:pnat,v1:pnat,v2:pnat=>pnat]==>pnat=>pnat,
+  pure(intro)then wfftacs,lambda(v3,_9004),
+  [problem([v0:pnat,v1:pnat,v2:pnat=>pnat,v3:pnat]==>pnat,
+   elim(v3),p_ind(v3,_9045,[v4,v5,_9051]),
+   [problem([v0:pnat,v1:pnat,v2:pnat=>pnat,v3:pnat]==>pnat,
+    intro(explicit(s(0)))then wfftacs,s(0),
+    [
+    ]) ext _9045,
+    problem([v0:pnat,v1:pnat,v2:pnat=>pnat,v3:pnat,v4:pnat,v5:pnat]==>pnat,
+    intro(explicit(plus(v2 of s(v4),v2 of v4)))then wfftacs,plus(v2 of s(v4),v2 of v4),
+    [
+    ]) ext _9051
+   ]) ext _9004
+  ]) ext _8792
+ ]) ext _8760
+]).

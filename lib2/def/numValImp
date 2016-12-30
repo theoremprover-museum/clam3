@@ -1,0 +1,1 @@
+numValImp(n)<==>p_ind(n,lambda(w,lambda(carry,bitval(carry))),[k,v,lambda(w,lambda(c,plus(bitval(hd(w)),times(s(s(0)),v of tl(w)))))]).

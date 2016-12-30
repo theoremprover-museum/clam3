@@ -1,0 +1,1 @@
+problem([]==>y:{bool}=>or(y,{true})={true} in {bool},_,_,_).

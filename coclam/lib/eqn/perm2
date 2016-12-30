@@ -1,0 +1,2 @@
+problem([]==>x:pnat=> y:pnat list => z: pnat list => 
+        perm(x::y,z) => (perm(y, del(x,z)) # member(x,z)) in u(1),_,_,_).

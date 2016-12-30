@@ -1,0 +1,19 @@
+problem([]==>n:int=>rev(n::nil)=n::nil in int list,
+autotactic(idtac),_266,
+[problem([]==>n:int=>rev(n::nil)=n::nil in int list,
+ dequantify,lambda(n,_332),
+ [problem([n:int]==>rev(n::nil)=n::nil in int list,
+  wave([1,1],rev2),su(_378,[term_of(rev2)],[rev2]),
+  [problem([n:int]==>app(rev(nil),n::nil)=n::nil in int list,
+   base([1,1,1],rev1),su(_434,[term_of(rev1)],[rev1]),
+   [problem([n:int]==>app(nil,n::nil)=n::nil in int list,
+    base([1,1],app1),su(_486,[term_of(app1)],[app1]),
+    [problem([n:int]==>n::nil=n::nil in int list,
+     identity,axiom,
+     [
+     ]) ext _486
+    ]) ext _434
+   ]) ext _378
+  ]) ext _332
+ ]) ext _266
+]).

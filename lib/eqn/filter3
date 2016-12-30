@@ -1,0 +1,2 @@
+problem([]==>h:pnat => t:pnat list => p:(pnat => pnat) => 
+            (ap(p,h) => void) => (filter(p,h::t) = filter(p,t) in pnat list),_,_,_).

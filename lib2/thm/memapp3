@@ -1,0 +1,39 @@
+problem([]==>e:int=>l1:(int list)=>l2:(int list)=>(member(e,l1)\member(e,l2))=>member(e,app(l1,l2)),
+dequantify,lambda(e,lambda(l1,lambda(l2,_194))),
+[problem([e:int,l1:(int list),l2:(int list)]==>(member(e,l1)\member(e,l2))=>member(e,app(l1,l2)),
+ induction(v0::v1,l1:(int list)),list_ind(l1,_258,[v0,v1,v2,_266]),
+ [problem([e:int,l1:(int list),l2:(int list)]==>(member(e,nil)\member(e,l2))=>member(e,app(nil,l2)),
+  sym_eval([base([2,2],app1),base([1,1],member1)]),su(su(su(su(_351,[member1 of e],[v0]),[term_of(member1)],[member1]),[app1 of l2],[v0]),[term_of(app1)],[app1]),
+  [problem([e:int,l1:(int list),l2:(int list)]==>(void\member(e,l2))=>member(e,l2),
+   tautology(intro then[elim(v0)then[elim(v1),hyp(v2)],wfftacs]),lambda(v0,decide(v0,[v1,any(v1)],[v2,v2])),
+   [
+   ]) ext _351
+  ]) ext _258,
+  problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2))]==>(member(e,v0::v1)\member(e,l2))=>member(e,app(v0::v1,l2)),
+  wave([2,2],[app2,left]),su(su(su(su(_578,[v4 of l2],[v5]),[v3 of v1],[v4]),[app2 of v0],[v3]),[term_of(app2)],[app2]),
+  [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2))]==>(member(e,v0::v1)\member(e,l2))=>member(e,v0::app(v1,l2)),
+   casesplit([e=v0 in int=>void,e=v0 in int]),lambda(v4,decide(v4,[v5,lambda(v3,_739)of v5],[v6,lambda(v3,_749)of v6]))of su(su(su(v5,[v4 of v0],[v5]),[v3 of e],[v4]),[term_of(deceqint)],[v3]),
+   [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2)),v3:e=v0 in int=>void]==>(member(e,v0::v1)\member(e,l2))=>member(e,v0::app(v1,l2)),
+    wave([2],[member3,left]),su(su(su(su(su(_913,[v6 of v3],[v4]),[v5 of app(v1,l2)],[v6]),[v4 of v0],[v5]),[member3 of e],[v4]),[term_of(member3)],[member3]),
+    [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2)),v3:e=v0 in int=>void]==>(member(e,v0::v1)\member(e,l2))=>member(e,app(v1,l2)),
+     wave([1,1],[member3,left]),su(su(su(su(su(_1083,[v6 of v3],[v4]),[v5 of v1],[v6]),[v4 of v0],[v5]),[member3 of e],[v4]),[term_of(member3)],[member3]),
+     [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2)),v3:e=v0 in int=>void]==>(member(e,v1)\member(e,l2))=>member(e,app(v1,l2)),
+      tautology(hyp(v2)),v2,
+      [
+      ]) ext _1083
+     ]) ext _913
+    ]) ext _739,
+    problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2)),v3:e=v0 in int]==>(member(e,v0::v1)\member(e,l2))=>member(e,v0::app(v1,l2)),
+    sym_eval([equal(v3,right)]),_1231,
+    [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2))]==>(member(e,e::v1)\member(e,l2))=>member(e,e::app(v1,l2)),
+     wave([2],[member2,left]),su(su(su(su(su(_1449,[v5 of axiom],[v3]),[v4 of app(v1,l2)],[v5]),[v3 of e],[v4]),[member2 of e],[v3]),[term_of(member2)],[member2]),
+     [problem([e:int,l1:(int list),l2:(int list),v0:int,v1:(int list),v2:(member(e,v1)\member(e,l2))=>member(e,app(v1,l2))]==>(member(e,e::v1)\member(e,l2))=>{true},
+      tautology(intro then[istrue,wfftacs]),lambda(v3,0),
+      [
+      ]) ext _1449
+     ]) ext _1231
+    ]) ext _749
+   ]) ext _578
+  ]) ext _266
+ ]) ext _194
+]).

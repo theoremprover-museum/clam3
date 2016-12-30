@@ -1,0 +1,130 @@
+From julianr@dai.ed.ac.uk Wed Sep  1 11:40:26 1999
+Date: Wed, 28 Apr 1999 11:58:25 +0100 (BST)
+From: julianr@dai.ed.ac.uk
+To: seafood-users@dai.ed.ac.uk
+Subject: Minutes of seafood user meeting
+
+Minutes of Seafood Users meeting, 22 April 1999
+
+
+(1) System status:
+
+       Clam                    -     Ian Green
+
+        clam 2.8.0 issued
+	clam 2.8.1 about to be issued, being held up by a CVS problem.
+	clam 2.8.1 features the following:
+
+		piecewise fertilisation added
+
+		manual up to date
+
+		all tactics present, except for Presburger arithmetic 
+			(not envisaged that they will be added any time soon).
+	 
+
+	McAllester corpus module now exists
+
+		patch files available to allow clam library mechanism to
+		load definitions from theory when necessary,
+		i.e. without a needs file. AB suggested there should be
+		a switch to enable this mechanism in 2.8.1
+
+	There was a consensus that clam.v2.8.1 should be maintained and
+	continue to live.
+
+	Some translations of DMAC corpus to CLAM format are weird.
+			
+
+       Clam/HOL                -     Richard Boulton
+
+			Summary by Richard, thanks.
+
+        Current version based on Clam 2.7.0 and HOL90.10.
+           Clam 2.7.0 does not have the changes made for the competition.
+        Automatic sending of definitions and induction schemes based
+           on the contants and types appearing in the goal.
+        HOL definitions (in particular ones involving conditional
+           expressions) are transformed into Clam-friendly forms.
+        Some support for mutual recursion at the meta-level.
+        New release very soon.
+
+        Future changes:
+        - Applying a single Clam method at a time, including using Clam
+          to choose the induction scheme and variable.
+        - Automated advice as to when calling Clam is not sensible,
+          e.g. when the goal contains existential quantifiers.
+        - Distributable executables and possibly a Web server.
+        - Adapting to the Prosper Plug-In Interface, lambdaClam (just to
+          get HOL talking to it; no tactics), Clam 3.2 (for co-induction
+          examples using Louise Dennis' work), and HOL98 (the new "lean
+          and mean" version of HOL).
+        - Maybe use HOL's theory database in an extended interaction
+          between the two systems.
+        - Less likely: a limited critics mechanism for Clam 2 (HOL version).
+
+       lambdaClam              -     Julian Richardson
+
+        lclam 1.4.4 issued, progress on persistent planner. Following features:
+		improved library mechanism	
+		improved methods (e.g. better use of sinks in induction)
+		socket interface
+		uptodate manual
+
+	lclam 1.4.5 will have persistent planner and
+		possible prototype XBarnacle interface
+		utility for loading some CLAM library files.
+
+	lclam 1.4.6 will have Jon Whittle's modifications for the
+		unification synthesis example
+			
+
+		Jeremy intends to use lclam for middle-out induction.
+		Need comparison of lclam with other systems - LEO or
+		TPS? 
+
+       LambdaClam/XBarnacle    -     Mike Jackson
+
+		Interface is to a version of lclam.v1.4.3 with a
+		prototype version of the persistent planner
+
+		Nice display of proof tree, formulae, wave terms
+		same system can act in both windowing and text-only mode
+
+		Different display of different levels of method
+		hierarchy not yet done
+
+(2) Task force summary:
+
+       Corpus task force
+
+       Implementation task force
+
+       Experimental systems task force
+
+
+	Corpus and Experimental task forces merged into single
+	"Empirical" task force headed by Andrew Ireland. Recent
+	activities of ETF:
+
+		"Best software practice" note issued by Gordon
+		DMac corpus distribution
+		Andrew has a student working on an HTML version of CLAM.
+		
+(3) User's feedback
+
+	Andrew Cook: problems with boolean types in lambdaclam.
+
+(4) AOB
+
+(5) Date of next meeting
+
+	2pm, Thursday 17th June 1999, F13 in AI South Bridge.
+
+Julian
+
+
+-- 
+Julian Richardson     http://www.dai.ed.ac.uk/staff/personal_pages/julianr/
+Mathematical Reasoning Group, Edinburgh University, Phone: +44 131 650 2721 
+

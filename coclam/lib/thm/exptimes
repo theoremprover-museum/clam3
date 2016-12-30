@@ -1,0 +1,41 @@
+problem([]==>x:pnat=>m:pnat=>n:pnat=>exp(x,times(n,m))=exp(exp(x,n),m)in pnat,
+ind_strat_I(induction(plus(v0,v1),m:pnat)then[try base_rewrites([base([2,1],exp1)]),try base_rewrites(_324),ripple_out([wave([2,1,1],[dist,left]),wave([2,1],[expplus,left]),wave([1,1],[expplus,left])])then weak_fertilize(right,[weak_fertilize(right,[1],v2),weak_fertilize(right,[2],v3)])]),lambda(v0,lambda(v1,lambda(v2,lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v0],[v5]),[v3 of v1],[v4]))of lambda(m,su(su(su(su(su(su(v0,[v8 of m],[v0]),[v7 of lambda(v0,lambda(v1,lambda(v2,lambda(v3,lambda(v4,lambda(v5,su(su(su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of lambda(v4,lambda(v5,su(su(su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of lambda(v4,lambda(v5,su(su(su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of lambda(v4,lambda(v5,su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of lambda(v4,lambda(v5,su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of _699,[v6 of v5],[v7]),[v3 of v4],[v6]))),[v6 of v5],[v7]),[v2 of v4],[v6]))),[v7 of times(v5,v1)],[v8]),[v6 of times(v5,v0)],[v7]),[expplus of v4],[v6]),[term_of(expplus)],[expplus]))),[v7 of v1],[v8]),[v6 of v0],[v7]),[expplus of exp(v4,v5)],[v6]),[term_of(expplus)],[expplus]))),[v7 of v1],[v8]),[v6 of v0],[v7]),[dist of v5],[v6]),[term_of(dist)],[dist])))))))],[v8]),[v6 of _849],[v7]),[v5 of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _873,[exp1 of exp(v0,v1)],[v2]),[term_of(exp1)],[exp1])))],[v6]),[v4 of lambda(m,x:pnat=>n:pnat=>exp(x,times(n,m))=exp(exp(x,n),m)in pnat)],[v5]),[term_of(plusind)],[v4]))))),
+[problem([m:pnat]==>x:pnat=>n:pnat=>exp(x,times(n,0))=s(0)in pnat,
+ ind_strat_I(induction(s(v0),n:pnat)then[try base_rewrites([base([2,1,1],times1),base([1,1],exp1)]),ripple_out([wave([2,1,1],[times2,left]),wave([1,1],[expplus,left])])then weak_fertilize(left,[weak_fertilize(left,[1],v1)])]),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(n,p_ind(n,lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _1174,[exp1 of v0],[v1]),[term_of(exp1)],[exp1])),[times1 of 0],[v1]),[term_of(times1)],[times1])),[v0,v1,lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1298,[v1 of v2],[v3])),[v4 of 0],[v5]),[v3 of times(v0,0)],[v4]),[expplus of v2],[v3]),[term_of(expplus)],[expplus])),[v3 of 0],[v4]),[times2 of v0],[v3]),[term_of(times2)],[times2]))])))),
+ [problem([m:pnat,n:pnat]==>x:pnat=>s(0)=s(0)in pnat,
+  identity,lambda(x,axiom),
+  [
+  ]) ext _1174,
+  problem([m:pnat,n:pnat,v0:pnat,v1:x:pnat=>exp(x,times(v0,0))=s(0)in pnat]==>x:pnat=>times(s(0),exp(x,0))=s(0)in pnat,
+  base([2,1,1],exp1),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1509,[exp1 of v2],[v3]),[term_of(exp1)],[exp1])),
+  [problem([m:pnat,n:pnat,v0:pnat,v1:x:pnat=>exp(x,times(v0,0))=s(0)in pnat]==>x:pnat=>times(s(0),s(0))=s(0)in pnat,
+   sym_eval([step([1,1],times2),base([1,1,1],times1),base([1,1],plus1)]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1715,[plus1 of s(0)],[v3]),[term_of(plus1)],[plus1])),[times1 of s(0)],[v3]),[term_of(times1)],[times1])),[v3 of s(0)],[v4]),[times2 of 0],[v3]),[term_of(times2)],[times2])),
+   [problem([m:pnat,n:pnat,v0:pnat,v1:x:pnat=>exp(x,times(v0,0))=s(0)in pnat]==>x:pnat=>s(0)=s(0)in pnat,
+    identity,lambda(x,axiom),
+    [
+    ]) ext _1715
+   ]) ext _1509
+  ]) ext _1298
+ ]) ext _873,
+ problem([m:pnat]==>x:pnat=>n:pnat=>exp(x,times(n,s(0)))=exp(exp(x,n),s(0))in pnat,
+ sym_eval([step([2,1],exp2),base([1,2,1],exp1),step([2,1],times2),base([1,2,1],times1),base([2,1],plus1)]),lambda(v0,lambda(v1,su(su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _2149,[plus1 of exp(v0,v1)],[v2]),[term_of(plus1)],[plus1]))),[times1 of exp(v0,v1)],[v2]),[term_of(times1)],[times1]))),[v2 of exp(v0,v1)],[v3]),[times2 of 0],[v2]),[term_of(times2)],[times2]))),[exp1 of exp(v0,v1)],[v2]),[term_of(exp1)],[exp1]))),[v2 of 0],[v3]),[exp2 of exp(v0,v1)],[v2]),[term_of(exp2)],[exp2]))),
+ [problem([m:pnat]==>x:pnat=>n:pnat=>exp(x,times(n,s(0)))=exp(x,n)in pnat,
+  ind_strat_I(induction(s(v0),n:pnat)then[try base_rewrites([base([2,1,1],times1),base([2,1],exp1),base([1,1],exp1)]),ripple_out([wave([2,1,1],[times2,left]),wave([1,1],[expplus,left]),wave([2,1],[exp2,left])])then weak_fertilize(right,[weak_fertilize(right,[1],v1)])]),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(n,p_ind(n,lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _2533,[exp1 of v0],[v1]),[term_of(exp1)],[exp1])),[exp1 of v0],[v1]),[term_of(exp1)],[exp1])),[times1 of s(0)],[v1]),[term_of(times1)],[times1])),[v0,v1,lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(lambda(v3,su(v4,[v3 of v2],[v4]))of _2704,[v1 of v2],[v3])),[v3 of v0],[v4]),[exp2 of v2],[v3]),[term_of(exp2)],[exp2])),[v4 of s(0)],[v5]),[v3 of times(v0,s(0))],[v4]),[expplus of v2],[v3]),[term_of(expplus)],[expplus])),[v3 of s(0)],[v4]),[times2 of v0],[v3]),[term_of(times2)],[times2]))])))),
+  [problem([m:pnat,n:pnat]==>x:pnat=>s(0)=s(0)in pnat,
+   identity,lambda(x,axiom),
+   [
+   ]) ext _2533,
+   problem([m:pnat,n:pnat,v0:pnat,v1:x:pnat=>exp(x,times(v0,s(0)))=exp(x,v0)in pnat]==>x:pnat=>times(exp(x,times(v0,s(0))),exp(x,s(0)))=times(exp(x,times(v0,s(0))),x)in pnat,
+   sym_eval([step([2,1,1],exp2),base([1,2,1,1],exp1),step([2,1,1],times2),base([1,2,1,1],times1),base([2,1,1],plus1)]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _3133,[plus1 of v2],[v3]),[term_of(plus1)],[plus1])),[times1 of v2],[v3]),[term_of(times1)],[times1])),[v3 of v2],[v4]),[times2 of 0],[v3]),[term_of(times2)],[times2])),[exp1 of v2],[v3]),[term_of(exp1)],[exp1])),[v3 of 0],[v4]),[exp2 of v2],[v3]),[term_of(exp2)],[exp2])),
+   [problem([m:pnat,n:pnat,v0:pnat,v1:x:pnat=>exp(x,times(v0,s(0)))=exp(x,v0)in pnat]==>x:pnat=>times(exp(x,times(v0,s(0))),x)=times(exp(x,times(v0,s(0))),x)in pnat,
+    identity,lambda(x,axiom),
+    [
+    ]) ext _3133
+   ]) ext _2704
+  ]) ext _2149
+ ]) ext _849,
+ problem([m:pnat,v0:pnat,v1:pnat,v2:x_:pnat=>n:pnat=>exp(x_,times(n,v0))=exp(exp(x_,n),v0)in pnat,v3:x:pnat=>n:pnat=>exp(x,times(n,v1))=exp(exp(x,n),v1)in pnat]==>x_:pnat=>n:pnat=>times(exp(x_,times(n,v0)),exp(x_,times(n,v1)))=times(exp(x_,times(n,v0)),exp(x_,times(n,v1)))in pnat,
+ identity,lambda(x_,lambda(n,axiom)),
+ [
+ ]) ext _699
+]).

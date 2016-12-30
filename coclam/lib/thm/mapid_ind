@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>mapcar(l, idnat)=l in int list,_,_,_).

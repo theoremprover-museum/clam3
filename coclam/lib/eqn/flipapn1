@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>b:bool=>myeven(n)=>appn(n, flipbv, b)=b in bool,_,_,_).

@@ -1,0 +1,1 @@
+exb(f)<==>or(f of {tt},f of {ff}).

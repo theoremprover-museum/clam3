@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>expW(x,nil)={true}::nil in{word},_,_,_).

@@ -1,0 +1,7 @@
+problem([]==>h:pnat=>t1:pnat list=>t2:pnat list=>t1=t2 in pnat list=>h::t1=h::t2 in pnat list,
+normalize([normal(univ_pnatro),normal(univ_pnatro),normal(univ_pnatro),normal(imply_pnatro)]),lambda(h,lambda(t1,lambda(t2,lambda(v0,_7823)))),
+[problem([h:pnat,t1:pnat list,t2:pnat list,v0:t1=t2 in pnat list]==>h::t1=h::t2 in pnat list,
+ step_case(tautology(_7889)or (sym_eval([equal(v0,left)])then try tautology(identity))),axiom,
+ [
+ ]) ext _7823
+]).

@@ -1,0 +1,15 @@
+problem([]==>el:int=>h:int=>l:int list=> (el=h in int=>void)=>member(el,h::l)=member(el,l)in u(1),
+repeat intro then simplify,lambda(el,lambda(h,lambda(l,lambda(v0,_10234)))),
+[problem([el:int,h:int,l:int list,v0:el=h in int=>void]==>int_eq(el,h,{true},list_ind(l,void,[v0,~,v2,int_eq(el,v0,{true},v2)]))=list_ind(l,void,[v0,~,v2,int_eq(el,v0,{true},v2)])in u(1),
+ reduce(false),axiom,
+ [problem([el:int,h:int,l:int list,v0:el=h in int=>void]==>{true}in u(1),
+  repeat wfftac,axiom,
+  [
+  ]),
+  problem([el:int,h:int,l:int list,v0:el=h in int=>void]==>list_ind(l,void,[v0,~,v2,int_eq(el,v0,{true},v2)])in u(1),
+  repeat wfftac,axiom,
+  [
+  ]),
+  problem([el:int,h:int,l:int list,v0:el=h in int=>void]==>el=h in int=>void,_,_,_)
+ ]) ext _10234
+]).

@@ -1,0 +1,12 @@
+counterImp(t,reset)<==>p_ind(t,nil,[p,r,delay(t,initial(reset,inc(r)))]).
+
+%counterImp(reset,initVal)<==>lambda(t,p_ind(t,initVal,[p,r,delay(initial(reset,increm(r)))])).
+
+% eval(counterImp(lambda(t,{true}),lambda(t,({false}::{false}::{false}::nil))) of 0 of 0,X).
+%
+% X = inr(unit)::inr(unit)::inr(unit)::nil
+%
+% eval(counterImp(lambda(t,{false}),lambda(t,({false}::{false}::{false}::nil))) of s(s(s(s(0)))) of 0,X).
+%
+% X = inl(unit)::inr(unit)::inr(unit)::nil 
+

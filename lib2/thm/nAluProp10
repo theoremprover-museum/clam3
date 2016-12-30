@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>ci:{bool}=>x:{word}=>y:{word}=>nSubtractIntSpec(n,x,y,ci)=intFromWord(s(n),nAluImpGood(n,{false},{true},{false},x,y,ci))in int,_,_,_).

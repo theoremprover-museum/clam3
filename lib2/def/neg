@@ -1,0 +1,1 @@
+neg(x)<==>list_ind(x,nil,[h,t,r,(not h)::r]).

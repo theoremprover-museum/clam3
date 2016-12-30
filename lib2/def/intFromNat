@@ -1,0 +1,1 @@
+intFromNat(n)<==>p_ind(n,0,[~,x,x+1]).

@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>v0:pnat=>x:pnat=>member(x,l)=>member(x,app(l,v0::nil)),_,_,_).

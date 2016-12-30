@@ -1,0 +1,2 @@
+problem([]==>a:int=>h:tree(int)=>t:list(tree(int))=>dpsearch(node(a, nil),
+h::t)=a::dpsearch(h, t) in int list,_,_,_).

@@ -1,0 +1,85 @@
+problem([]==>n:pnat=>m:pnat=>divides(n,m)\divides(n,m)=>void,
+autotactic(repeat (intro or compute([[unfold]]in _258))),_218,
+[problem([]==>n:pnat=>m:pnat=>divides(n,m)\divides(n,m)=>void,
+ pure(intro then[idtac,repeat intro]),lambda(n,_313),
+ [problem([n:pnat]==>m:pnat=>divides(n,m)\divides(n,m)=>void,
+  pure(decide(n=0 in pnat)),pnat_eq(n,0,su(_366,[axiom],[v0]),su(_374,[lambda(~,axiom)],[v0])),
+  [problem([n:pnat,v0:n=0 in pnat]==>m:pnat=>divides(n,m)\divides(n,m)=>void,
+   intro then[decide(m=0 in pnat),idtac],lambda(m,pnat_eq(m,0,su(_455,[axiom],[v1]),su(_463,[lambda(~,axiom)],[v1]))),
+   [problem([n:pnat,v0:n=0 in pnat,m:pnat,v1:m=0 in pnat]==>divides(n,m)\divides(n,m)=>void,
+    intro(left)then try compute([[unfold]]),inl(_544),
+    [problem([n:pnat,v0:n=0 in pnat,m:pnat,v1:m=0 in pnat]==>x:pnat#m=times(n,x)in pnat,
+     subst(at(1),over(v2,x:pnat#m=times(v2,x)in pnat),n=0 in pnat),_553,
+     [problem([n:pnat,v0:n=0 in pnat,m:pnat,v1:m=0 in pnat]==>x:pnat#m=times(0,x)in pnat,
+      intro(0)then try simplify,0&axiom,
+      [
+      ]) ext _553
+     ]) ext _544
+    ]) ext _455,
+    problem([n:pnat,v0:n=0 in pnat,m:pnat,v1:m=0 in pnat=>void]==>divides(n,m)\divides(n,m)=>void,
+    intro(right),inr(lambda(v2,_771)),
+    [problem([n:pnat,v0:n=0 in pnat,m:pnat,v1:m=0 in pnat=>void,v2:divides(n,m)]==>void,
+     because,atom(incomplete),
+     [
+     ]) ext _771
+    ]) ext _463
+   ]) ext _366,
+   problem([n:pnat,v0:n=0 in pnat=>void]==>m:pnat=>divides(n,m)\divides(n,m)=>void,
+   intro,lambda(m,_882),
+   [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat]==>divides(n,m)\divides(n,m)=>void,
+    elim(m,cv),cv_ind(m,[v3,v1,_942]),
+    [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void]==>divides(n,v3)\divides(n,v3)=>void,
+     decide(n<*s(v3)),pless(n,s(v3),su(_1047,[axiom],[v2]),su(_1055,[lambda(~,axiom)],[v2])),
+     [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)]==>divides(n,v3)\divides(n,v3)=>void,
+      elim(v1,on(minus(v3,n))),su(_1172,[v1 of minus(v3,n)],[v4]),
+      [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)]==>minus(v3,n)<*v3,
+       because,atom(incomplete),
+       [
+       ]) ext _1189,
+       problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void]==>divides(n,v3)\divides(n,v3)=>void,
+       elim(v4)then thin([v7,v8]),decide(v4,[v5,_1417],[v6,_1421]),
+       [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void,v5:divides(n,minus(v3,n))]==>divides(n,v3)\divides(n,v3)=>void,
+        compute(hyp(v5),[[unfold]])then elim(v5),spread(v5,[x,v6,_1576]),
+        [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void,v5:x:pnat#minus(v3,n)=times(n,x)in pnat,x:pnat,v6:minus(v3,n)=times(n,x)in pnat,v7:v5=x&v6 in (x:pnat#minus(v3,n)=times(n,x)in pnat)]==>divides(n,v3)\divides(n,v3)=>void,
+         intro(left)then try compute([[unfold]]),inl(_1790),
+         [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void,v5:x:pnat#minus(v3,n)=times(n,x)in pnat,x:pnat,v6:minus(v3,n)=times(n,x)in pnat,v7:v5=x&v6 in (x:pnat#minus(v3,n)=times(n,x)in pnat)]==>x:pnat#v3=times(n,x)in pnat,
+          intro(s(x)),s(x)&_1998,
+          [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void,v5:x:pnat#minus(v3,n)=times(n,x)in pnat,x:pnat,v6:minus(v3,n)=times(n,x)in pnat,v7:v5=x&v6 in (x:pnat#minus(v3,n)=times(n,x)in pnat)]==>v3=times(n,s(x))in pnat,
+           because,atom(incomplete),
+           [
+           ]) ext _1998
+          ]) ext _1790
+         ]) ext _1576
+        ]) ext _1417,
+        problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3),v4:divides(n,minus(v3,n))\divides(n,minus(v3,n))=>void,v6:divides(n,minus(v3,n))=>void]==>divides(n,v3)\divides(n,v3)=>void,
+        intro(right)then apply(because),inr(atom(incomplete)),
+        [
+        ]) ext _1421
+       ]) ext _1172
+      ]) ext _1047,
+      problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void]==>divides(n,v3)\divides(n,v3)=>void,
+      decide(v3=0 in pnat),pnat_eq(v3,0,su(_2461,[axiom],[v4]),su(_2469,[lambda(~,axiom)],[v4])),
+      [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void,v4:v3=0 in pnat]==>divides(n,v3)\divides(n,v3)=>void,
+       intro(left)then try compute([[unfold]]),inl(_2605),
+       [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void,v4:v3=0 in pnat]==>x:pnat#v3=times(n,x)in pnat,
+        intro(0),0&_2725,
+        [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void,v4:v3=0 in pnat]==>v3=times(n,0)in pnat,
+         subst(at(1),over(v5,v5=times(n,0)in pnat),v3=0 in pnat),_2734,
+         [problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void,v4:v3=0 in pnat]==>0=times(n,0)in pnat,
+          because,atom(incomplete),
+          [
+          ]) ext _2734
+         ]) ext _2725
+        ]) ext _2605
+       ]) ext _2461,
+       problem([n:pnat,v0:n=0 in pnat=>void,m:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>divides(n,v2)\divides(n,v2)=>void,v2:n<*s(v3)=>void,v4:v3=0 in pnat=>void]==>divides(n,v3)\divides(n,v3)=>void,
+       intro(right)then apply(because),inr(atom(incomplete)),
+       [
+       ]) ext _2469
+      ]) ext _1055
+     ]) ext _942
+    ]) ext _882
+   ]) ext _374
+  ]) ext _313
+ ]) ext _218
+]).

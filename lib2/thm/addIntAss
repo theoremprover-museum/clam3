@@ -1,0 +1,1 @@
+problem([]==>x:int=>y:int=>z:int=>addInt(x,addInt(y,z))=addInt(addInt(x,y),z)in int,_,_,_).

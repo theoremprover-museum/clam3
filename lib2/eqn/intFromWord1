@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>w:{word}=>nBitW(n) of w={true} in {bool}=>intFromWord(n,w)=intFromNat(numVal(n)of twoCompW(n,w)) in int,_,_,_).

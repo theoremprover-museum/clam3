@@ -1,0 +1,1 @@
+problem([]==>y:pnat=>max(0,y)=y in pnat,_,_,_).

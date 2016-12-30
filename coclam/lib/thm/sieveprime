@@ -1,0 +1,2 @@
+problem([]==>lconst({true}) = map(lam(s, prime(x)), primes(nat)) in bool
+list, _, _, _). 

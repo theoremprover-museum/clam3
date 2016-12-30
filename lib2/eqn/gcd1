@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>gcd(x,x)=x in pnat,_,_,_).

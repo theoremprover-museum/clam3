@@ -1,0 +1,10 @@
+problem([]==>x:pnat=>y:pnat=>x=y in pnat=>pred(x)=pred(y)in pnat,
+normalize([normal(imply_intro),normal(univ_intro),normal(univ_intro)]),lambda(x,lambda(y,lambda(v0,_7562))),
+[problem([x:pnat,y:pnat,v0:x=y in pnat]==>pred(x)=pred(y)in pnat,
+ sym_eval([equal(v0,left)]),_7571,
+ [problem([x:pnat,y:pnat,v0:x=y in pnat]==>pred(x)=pred(x)in pnat,
+  tautology(identity),axiom,
+  [
+  ]) ext _7571
+ ]) ext _7562
+]).

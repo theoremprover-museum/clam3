@@ -1,0 +1,24 @@
+problem([]==>pnat=>pnat=>pnat,
+intro then wfftacs,lambda(v0,_946),
+[problem([v0:pnat]==>pnat=>pnat,
+ intro then wfftacs,lambda(v1,_973),
+ [problem([v0:pnat,v1:pnat]==>pnat,
+  elim(v0),p_ind(v0,_1001,[v2,v3,_1007]),
+  [problem([v0:pnat,v1:pnat]==>pnat,
+   intro(0),0,
+   [
+   ]) ext _1001,
+   problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>pnat,
+   decide(s(v3)=v1 in pnat)then wfftacs,pnat_eq(s(v3),v1,su(_1088,[axiom],[v4]),su(_1096,[lambda(~,axiom)],[v4])),
+   [problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat,v4:s(v3)=v1 in pnat]==>pnat,
+    intro(0),0,
+    [
+    ]) ext _1088,
+    problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat,v4:s(v3)=v1 in pnat=>void]==>pnat,
+    intro(explicit(s(v3)))then wfftacs,s(v3),
+    [
+    ]) ext _1096
+   ]) ext _1007
+  ]) ext _973
+ ]) ext _946
+]).

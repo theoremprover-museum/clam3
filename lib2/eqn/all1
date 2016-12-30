@@ -1,0 +1,1 @@
+problem([]==>p: ({bool}=>{bool})=>all(p)= (p of{true}and p of{false})in{bool},_,_,_).

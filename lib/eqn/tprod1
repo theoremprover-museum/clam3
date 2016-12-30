@@ -1,0 +1,4 @@
+problem([]==>l: pnat list => tprod(nil,l)= l in pnat,
+simplify,axiom,
+[
+]).

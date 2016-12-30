@@ -1,0 +1,1 @@
+problem([]==>l:int list=>length(sort(l))=length(l)in pnat,_,_,_).

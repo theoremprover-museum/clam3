@@ -1,0 +1,1 @@
+nSubtractSpec(n,x,y,ci)<==>minus(numVal(n)of x,minus(numVal(n)of y,bitval(ci))).

@@ -1,0 +1,17 @@
+problem([]==>x:{bool}=>y:{bool}=>c:{bool}=>z:{word}=>add(x,y,c::z)=faCarry(x,y,c)::faSum(x,y,c)::z in{word},_,_,_).
+
+%problem([]==>x:{bool}=>y:{bool}=>z:{word}=>add(x,y,z)=faCarry(x,y,hd(z))::faSum(x,y,hd(z))::tl(z)in{word},_,_,_).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

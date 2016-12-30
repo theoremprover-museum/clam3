@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>subtractW(n,a,b,ci)=addW(n)of a of (notW(n)of b)of ci in{word},_,_,_).

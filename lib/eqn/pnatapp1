@@ -1,0 +1,4 @@
+problem([]==>l:pnat list=>pnatapp(nil,l)=l in pnat list,
+repeat intro then simplify then repeat intro,lambda(l,axiom),
+[
+]).

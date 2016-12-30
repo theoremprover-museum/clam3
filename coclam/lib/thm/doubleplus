@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>double(x) = plus(x,x) in pnat, _,_,_).
+

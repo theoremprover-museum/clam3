@@ -1,0 +1,24 @@
+problem([]==>x:{word}=>ci:{bool}=>{word},
+intro,lambda(x,_7294),
+[problem([x:{word}]==>ci:{bool}=>{word},
+ repeat wfftac,_7303,
+ [problem([x:{word}]==>ci:{bool}=>{word},
+  intro,lambda(ci,_7359),
+  [problem([x:{word},ci:{bool}]==>{word},
+   intro(explicit(list_ind(x,ci::nil,[h,t,r,incaux(h,r)]))),list_ind(x,ci::nil,[h,t,r,incaux(h,r)]),
+   [problem([x:{word},ci:{bool}]==>list_ind(x,ci::nil,[h,t,r,incaux(h,r)])in{word},
+    wfftacs then apply(because),atom(incomplete),
+    [
+    ])
+   ]) ext _7359,
+   problem([x:{word}]==>{bool}in u(1),
+   repeat wfftac,axiom,
+   [
+   ])
+  ]) ext _7303
+ ]) ext _7294,
+ problem([]==>{word}in u(1),
+ repeat wfftac,axiom,
+ [
+ ])
+]).

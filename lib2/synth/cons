@@ -1,0 +1,10 @@
+problem([]==>car:{sexp}=>cdr:{sexp}=>{sexp},
+normalize_goal([[unroll,_2215]]),_2186,
+[problem([]==>car:rec(sexp,unary\atom\pnat\sexp#sexp)=>cdr:rec(sexp,unary\atom\pnat\sexp#sexp)=>rec(sexp,unary\atom\pnat\sexp#sexp),
+ intro_hyps([]),lambda(car,lambda(cdr,_2294)),
+ [problem([car:rec(sexp,unary\atom\pnat\sexp#sexp),cdr:rec(sexp,unary\atom\pnat\sexp#sexp)]==>rec(sexp,unary\atom\pnat\sexp#sexp),
+  intro(explicit(inr(inr(inr(car&cdr)))))then prove_mem,inr(inr(inr(car&cdr))),
+  [
+  ]) ext _2294
+ ]) ext _2186
+]).

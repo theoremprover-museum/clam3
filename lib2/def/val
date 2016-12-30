@@ -1,0 +1,30 @@
+% Converts a vector of booleans into its natural number equivalent
+% Vectors are represented as functions
+
+val(i,v)<==>
+    p_ind(i,bitval(v of 0),
+            [j,t,plus(
+                   times(
+                      exp(s(s(0)),s(j)),
+                      bitval(v of s(j))
+                         ),
+                    t)]).
+
+% | ?- eval(val(s(s(s(0))),lambda(n,vec(n))),X).
+%
+% X = s(s(s(s(s(0)))))
+%
+% | ?- eval(val(s(s(0)),lambda(n,vec(n))),X).
+%
+% X = s(s(s(s(s(0))))) 
+% | ?- eval(val(s(0),lambda(n,vec(n))),X).
+%
+% X = s(0)
+% | ?- cdef(vec)=:X.
+
+
+% X = vec(n)<==>pnat_eq(n,0,{true},pnat_eq(n,s(0),{false},pnat_eq(n,s(s(0)),{tr% ue},{false})))
+
+%| ?- eval(val(0,lambda(n,vec(n))),X).
+%
+% X = s(0) 

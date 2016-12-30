@@ -1,0 +1,33 @@
+problem([]==>a:int list=>b:int list=>subset(a,b)=>union(a,b)=b in int list,
+induction(v0::v1,a:int list),lambda(a,list_ind(a,_194,[v0,v1,v2,_202])),
+[problem([a:int list]==>b:int list=>subset(nil,b)=>union(nil,b)=b in int list,
+ sym_eval([base([1,1,2],union1),base([1],subset1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _310,[subset1 of v0],[v1]),[term_of(subset1)],[subset1])),[union1 of v0],[v1]),[term_of(union1)],[union1])),
+ [problem([a:int list]==>b:int list=>{true}=>b=b in int list,
+  tautology(dequantify_once then intro then[identity,wfftacs]),lambda(b,lambda(v0,axiom)),
+  [
+  ]) ext _310
+ ]) ext _194,
+ problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list]==>b:int list=>subset(v0::v1,b)=>union(v0::v1,b)=b in int list,
+ casesplit([member(v0,b)=>void,member(v0,b)]),lambda(b,lambda(v4,decide(v4,[v5,lambda(v3,_540)of v5],[v6,lambda(v3,_550)of v6]))of su(su(su(v5,[v4 of b],[v5]),[v3 of v0],[v4]),[term_of(decmember)],[v3])),
+ [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)=>void]==>subset(v0::v1,b)=>union(v0::v1,b)=b in int list,
+  wave([1,1,2],[union4,left]),su(su(su(su(su(_716,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[union4 of v0],[v4]),[term_of(union4)],[union4]),
+  [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)=>void]==>subset(v0::v1,b)=>v0::union(v1,b)=b in int list,
+   wave([1],[subset2,left]),su(su(su(su(su(_882,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[subset2 of v0],[v4]),[term_of(subset2)],[subset2]),
+   [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)=>void]==>void=>v0::union(v1,b)=b in int list,
+    tautology(intro then[elim(v4),wfftacs]),lambda(v4,any(v4)),
+    [
+    ]) ext _882
+   ]) ext _716
+  ]) ext _540,
+  problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)]==>subset(v0::v1,b)=>union(v0::v1,b)=b in int list,
+  wave([1,1,2],[union3,left]),su(su(su(su(su(_1162,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[union3 of v0],[v4]),[term_of(union3)],[union3]),
+  [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)]==>subset(v0::v1,b)=>union(v1,b)=b in int list,
+   wave([1],[subset3,left]),su(su(su(su(su(_1322,[v6 of v3],[v4]),[v5 of b],[v6]),[v4 of v1],[v5]),[subset3 of v0],[v4]),[term_of(subset3)],[subset3]),
+   [problem([a:int list,v0:int,v1:int list,v2:b:int list=>subset(v1,b)=>union(v1,b)=b in int list,b:int list,v3:member(v0,b)]==>subset(v1,b)=>union(v1,b)=b in int list,
+    strong_fertilize(v2),su(v4,[v2 of b],[v4]),
+    [
+    ]) ext _1322
+   ]) ext _1162
+  ]) ext _550
+ ]) ext _202
+]).

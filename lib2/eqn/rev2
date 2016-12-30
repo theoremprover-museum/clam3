@@ -1,0 +1,4 @@
+problem([]==>h:{bool}=>l:{word}=>rev(h::l)=app(rev(l),h::nil)in {word},
+repeat intro then simplify then wfftacs,lambda(h,lambda(l,axiom)),
+[
+]).

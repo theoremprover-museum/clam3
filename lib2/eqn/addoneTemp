@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>b:{bool}=>ci:{bool}=>addone(a,b,ci)=(faSum(a,b,ci) & faCarry(a,b,ci)) in {bool}#{bool},_,_,_).

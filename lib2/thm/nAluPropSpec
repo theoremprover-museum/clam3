@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>s0:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>plus(numVal(n)of x,plus(numVal(n)of y,bitval(ci)))=numVal(s(n))of nAluSpec(n,s0,{false},{false},x,y,ci)in pnat,_,_,_).

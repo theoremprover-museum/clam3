@@ -1,0 +1,10 @@
+	% IDENTITY METHOD: too simple for words.	
+method(identity,
+       _ ==> G,
+       [matrix(_,MM,G),
+        annotations(_,_,X = X in _,MM)
+       ],
+       [],
+       [],
+       identity
+      ).

@@ -1,0 +1,1 @@
+problem([]==>sum:int=>change(sum, nil)=minus(0, sum)in int,_,_,_).

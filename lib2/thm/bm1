@@ -1,0 +1,1 @@
+problem([]==>p: ({bool}=>{bool})=> (x:{bool}#tr(p of x))=>tr(exb(lambda(x,p of x))),_,_,_).

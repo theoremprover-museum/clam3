@@ -1,0 +1,3 @@
+problem([]==>ci:{bool}=>n:pnat=>x:{word}=>y:{word}=>adderSpecPL(n,x,y,ci)=w2nPL(s(n))of (adderPL(n)of x of y of ci) in pnat,_,_,_).
+
+%problem([]==>n:pnat=>ci:{bool}=>x:{word}=>y:{word}=>plus(numVal(n)of x,plus(numVal(n)of y,bitval(ci)))=numVal(s(n))of (adderPL(n)of x of y of ci) in pnat,_,_,_).

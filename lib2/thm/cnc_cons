@@ -1,0 +1,10 @@
+problem([]==>x:int=>y:int list=>z:int list=>y=z in int list=>x::y=x::z in int list,
+normalize([normal(imply_intro),normal(univ_intro),normal(univ_intro),normal(univ_intro)]),lambda(x,lambda(y,lambda(z,lambda(v0,_7296)))),
+[problem([x:int,y:int list,z:int list,v0:y=z in int list]==>x::y=x::z in int list,
+ sym_eval([equal(v0,left)]),_7305,
+ [problem([x:int,y:int list,z:int list,v0:y=z in int list]==>x::y=x::y in int list,
+  tautology(identity),axiom,
+  [
+  ]) ext _7305
+ ]) ext _7296
+]).

@@ -1,0 +1,1 @@
+problem([]==>x:req=>f:st(ack, req)=>xs:list(ack)=>putST(x, f, xs)=x::f(xs) in list(req),_,_,_).

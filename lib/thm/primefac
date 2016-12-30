@@ -1,0 +1,55 @@
+problem([]==>x:pnat=>(x=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=x in pnat,
+autotactic(idtac),_266,
+[problem([]==>x:pnat=>(x=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=x in pnat,
+ dequantify,lambda(x,_376),
+ [problem([x:pnat]==>(x=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=x in pnat,
+  induction(times(v0,v1),x:pnat),su(su(su(su(su(su(su(v11,[v9 of x],[v11]),[v8 of lambda(v0,lambda(v1,lambda(v3,lambda(v4,_493))))],[v9]),[v7 of lambda(v2,_503)],[v8]),[v6 of _510],[v7]),[v5 of _517],[v6]),[v10 of lambda(x,(x=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=x in pnat)],[v5]),[term_of(primec)],[v10]),
+  [problem([x:pnat]==>(0=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=0 in pnat,
+   tautology(intro then[elim(v0)then[intro,elim(v1)],repeat intro]),lambda(v0,su(any(v1),[v0 of axiom],[v1])),
+   [
+   ]) ext _517,
+   problem([x:pnat]==>(s(0)=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=s(0)in pnat,
+   normalise([normal(imply_intro)]),lambda(v0,_736),
+   [problem([x:pnat,v0:s(0)=0 in pnat=>void]==>l:{p:pnat\prime(p)}list#prodl(l)=s(0)in pnat,
+    existential(l:{p:pnat\prime(p)}list,nil),nil&_819,
+    [problem([x:pnat,v0:s(0)=0 in pnat=>void]==>prodl(nil)=s(0)in pnat,
+     base([1,1],prodl1),su(_872,[term_of(prodl1)],[prodl1]),
+     [problem([x:pnat,v0:s(0)=0 in pnat=>void]==>s(0)=s(0)in pnat,
+      tautology(intro),axiom,
+      [
+      ]) ext _872
+     ]) ext _819
+    ]) ext _736
+   ]) ext _510,
+   problem([x:pnat,v2:{x:pnat\prime(x)}]==>(v2=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=v2 in pnat,
+   normalise([normal(imply_intro)]),lambda(v0,_1006),
+   [problem([x:pnat,v2:{x:pnat\prime(x)},v0:v2=0 in pnat=>void]==>l:{p:pnat\prime(p)}list#prodl(l)=v2 in pnat,
+    existential(l:{p:pnat\prime(p)}list,v2::nil),(v2::nil)&_1103,
+    [problem([x:pnat,v2:{x:pnat\prime(x)},v0:v2=0 in pnat=>void]==>prodl(v2::nil)=v2 in pnat,
+     wave([1,1],prodl2),su(_1173,[term_of(prodl2)],[prodl2]),
+     [problem([x:pnat,v2:{x:pnat\prime(x)},v0:v2=0 in pnat=>void]==>times(v2,prodl(nil))=v2 in pnat,
+      base([2,1,1],prodl1),su(_1250,[term_of(prodl1)],[prodl1]),
+      [problem([x:pnat,v2:{x:pnat\prime(x)},v0:v2=0 in pnat=>void]==>times(v2,s(0))=v2 in pnat,
+       apply_lemma(identrm),su(su(axiom,[v1 of v2],[v3]),[term_of(identrm)],[v1]),
+       [
+       ]) ext _1250
+      ]) ext _1173
+     ]) ext _1103
+    ]) ext _1006
+   ]) ext _503,
+   problem([x:pnat,v0:pnat,v1:pnat,v3:(v0=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=v0 in pnat,v4:(v1=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=v1 in pnat]==>(times(v0,v1)=0 in pnat=>void)=>l:{p:pnat\prime(p)}list#prodl(l)=times(v0,v1)in pnat,
+   normalise([normal(imply_intro),normal(imply_elim(v3,not0lm)),normal(exist_elim(v5)),normal(imply_elim(v4,not0rm)),normal(exist_elim(v5))]),lambda(v2,su(spread(v5,[v3,v6,su(spread(v5,[v4,v7,_1557]),[v4 of su(su(su(su(v9,[v8 of v2],[v9]),[v7 of v1],[v8]),[v5 of v0],[v7]),[term_of(not0rm)],[v5])],[v5])]),[v3 of su(su(su(su(v8,[v7 of v2],[v8]),[v6 of v1],[v7]),[v5 of v0],[v6]),[term_of(not0lm)],[v5])],[v5])),
+   [problem([x:pnat,v0:pnat,v1:pnat,v2:times(v0,v1)=0 in pnat=>void,v3:{p:pnat\prime(p)}list,v6:prodl(v3)=v0 in pnat,v4:{p:pnat\prime(p)}list,v7:prodl(v4)=v1 in pnat]==>l:{p:pnat\prime(p)}list#prodl(l)=times(v0,v1)in pnat,
+    existential(l:{p:pnat\prime(p)}list,pnatapp(v3,v4)),pnatapp(v3,v4)&_1816,
+    [problem([x:pnat,v0:pnat,v1:pnat,v2:times(v0,v1)=0 in pnat=>void,v3:{p:pnat\prime(p)}list,v6:prodl(v3)=v0 in pnat,v4:{p:pnat\prime(p)}list,v7:prodl(v4)=v1 in pnat]==>prodl(pnatapp(v3,v4))=times(v0,v1)in pnat,
+     wave([],prodlwave),su(su(su(su(su(su(v5,[v10 of _1970],[v5]),[v9 of v4],[v10]),[v8 of v3],[v9]),[v5 of v1],[v8]),[prodlwave of v0],[v5]),[term_of(prodlwave)],[prodlwave]),
+     [problem([x:pnat,v0:pnat,v1:pnat,v2:times(v0,v1)=0 in pnat=>void,v3:{p:pnat\prime(p)}list,v6:prodl(v3)=v0 in pnat,v4:{p:pnat\prime(p)}list,v7:prodl(v4)=v1 in pnat]==>prodl(v3)=v0 in pnat#prodl(v4)=v1 in pnat,
+      tautology(intro then[intro,intro]),axiom&axiom,
+      [
+      ]) ext _1970
+     ]) ext _1816
+    ]) ext _1557
+   ]) ext _493
+  ]) ext _376
+ ]) ext _266
+]).

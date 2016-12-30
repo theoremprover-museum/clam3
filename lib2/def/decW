@@ -1,0 +1,1 @@
+decW(n,a)<==>subtractW(n,a,wordVal(n)of 0,{false}).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat list=> greater(x,y) => ordered(x::y::z) = void in u(1),_,_,_).

@@ -1,0 +1,5 @@
+{prime}<==>
+{p:{posint}\(s(0) <* p) # t:{posint}=>divides(t,p)=>(t=s(0)in {posint})\(t=p in {posint})}.
+
+
+

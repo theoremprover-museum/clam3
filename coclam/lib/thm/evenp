@@ -1,0 +1,33 @@
+problem([]==>x:pnat=>y:pnat=>(even(x)#even(y))=>even(plus(x,y)),
+induction(s(s(v0)),x:pnat),lambda(x,su(su(su(su(su(su(v7,[v6 of x],[v7]),[v5 of lambda(v0,lambda(v1,_376))],[v6]),[v4 of _383],[v5]),[v3 of _390],[v4]),[v2 of lambda(x,y:pnat=>(even(x)#even(y))=>even(plus(x,y)))],[v3]),[term_of(twos)],[v2])),
+[problem([x:pnat]==>y:pnat=>(even(0)#even(y))=>even(plus(0,y)),
+ sym_eval([base([1,1],even1),base([1,2],plus1)]),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _526,[plus1 of v0],[v1]),[term_of(plus1)],[plus1])),[term_of(even1)],[even1])),
+ [problem([x:pnat]==>y:pnat=>({true}#even(y))=>even(y),
+  tautology(dequantify_once then intro then[elim(v0)then hyp(v2),wfftacs]),lambda(y,lambda(v0,spread(v0,[v1,v2,v2]))),
+  [
+  ]) ext _526
+ ]) ext _390,
+ problem([x:pnat]==>y:pnat=>(even(s(0))#even(y))=>even(plus(s(0),y)),
+ sym_eval([base([1,1],even2),step([1,2],plus2),base([1,1,2],plus1)]),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _773,[plus1 of v0],[v1]),[term_of(plus1)],[plus1])),[v1 of v0],[v2]),[plus2 of 0],[v1]),[term_of(plus2)],[plus2])),[term_of(even2)],[even2])),
+ [problem([x:pnat]==>y:pnat=>(void#even(y))=>even(s(y)),
+  tautology(dequantify_once then intro then[elim(v0)then elim(v1),wfftacs]),lambda(y,lambda(v0,spread(v0,[v1,v2,any(v1)]))),
+  [
+  ]) ext _773
+ ]) ext _383,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>(even(v0)#even(y))=>even(plus(v0,y))]==>y:pnat=>(even(s(s(v0)))#even(y))=>even(plus(s(s(v0)),y)),
+ wave([1,1],[even3,left]),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1001,[even3 of v0],[v3]),[term_of(even3)],[even3])),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>(even(v0)#even(y))=>even(plus(v0,y))]==>y:pnat=>(even(v0)#even(y))=>even(plus(s(s(v0)),y)),
+  wave([1,2],split(plus2,left)),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1130,[v3 of v2],[v4]),[plus2 of s(v0)],[v3]),[term_of(plus2)],[plus2])),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>(even(v0)#even(y))=>even(plus(v0,y))]==>y:pnat=>(even(v0)#even(y))=>even(s(plus(s(v0),y))),
+   wave([1,1,2],[plus2,left]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1271,[v3 of v2],[v4]),[plus2 of v0],[v3]),[term_of(plus2)],[plus2])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>(even(v0)#even(y))=>even(plus(v0,y))]==>y:pnat=>(even(v0)#even(y))=>even(s(s(plus(v0,y)))),
+    wave([2],join(even3,left)),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1401,[even3 of plus(v0,v2)],[v3]),[term_of(even3)],[even3])),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>(even(v0)#even(y))=>even(plus(v0,y))]==>y:pnat=>(even(v0)#even(y))=>even(plus(v0,y)),
+     tautology(hyp(v1)),v1,
+     [
+     ]) ext _1401
+    ]) ext _1271
+   ]) ext _1130
+  ]) ext _1001
+ ]) ext _376
+]).

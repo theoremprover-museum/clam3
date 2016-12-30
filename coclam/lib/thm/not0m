@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>((x=0 in pnat=>void)#y=0 in pnat=>void)=>times(x,y)=0 in pnat=>void,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>fac(word2nat(x))=word2nat(facW(x))in pnat,_,_,_).

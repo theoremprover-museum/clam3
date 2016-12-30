@@ -1,0 +1,1 @@
+problem([]==>l:{word}=>appnd(l,nil)=l in{word},_,_,_).

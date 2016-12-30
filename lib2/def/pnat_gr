@@ -1,0 +1,1 @@
+pnat_gr(x,y,a,b)<==>decide(term_of(pnat_gr) of x of y, [q,a],[q,b]).

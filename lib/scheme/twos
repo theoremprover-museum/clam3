@@ -1,0 +1,99 @@
+problem([]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(x:pnat=>phi of x=>phi of s(s(x)))=>z:pnat=>phi of z,
+universe(3),_135,
+[problem([]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(x:pnat=>phi of x=>phi of s(s(x)))=>z:pnat=>phi of z,
+ intro,lambda(phi,lambda(v0,lambda(v1,lambda(v2,lambda(z,_321))))),
+ [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat]==>phi of z,
+  seq(x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,new[v3]),lambda(v3,_462)of lambda(x,_465),
+  [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat]==>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,
+   autotactic(repeat (compute([[unfold]]in _601)or intro)),_474,
+   [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat]==>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,
+    elim(x),p_ind(x,_734,[v3,v4,_740]),
+    [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat]==>y:pnat#0=plus(y,y)in pnat\0=s(plus(y,y))in pnat,
+     intro(0),0&_870,
+     [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat]==>0=plus(0,0)in pnat\0=s(plus(0,0))in pnat,
+      intro(left)then simplify,inl(axiom),
+      [
+      ]) ext _870
+     ]) ext _734,
+     problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat]==>y:pnat#s(v3)=plus(y,y)in pnat\s(v3)=s(plus(y,y))in pnat,
+     elim(v4),spread(v4,[y,v5,_1172]),
+     [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,y:pnat,v5:v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat)]==>y_:pnat#s(v3)=plus(y_,y_)in pnat\s(v3)=s(plus(y_,y_))in pnat,
+      elim(v5),decide(v5,[v7,_1425],[v8,_1429]),
+      [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,y:pnat,v5:v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat),v7:v3=plus(y,y)in pnat,v9:v5=inl(v7)in (v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat)]==>y_:pnat#s(v3)=plus(y_,y_)in pnat\s(v3)=s(plus(y_,y_))in pnat,
+       intro(y)then try intro(right),y&inr(axiom),
+       [
+       ]) ext _1425,
+       problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,y:pnat,v5:v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat),v8:v3=s(plus(y,y))in pnat,v10:v5=inr(v8)in (v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat)]==>y_:pnat#s(v3)=plus(y_,y_)in pnat\s(v3)=s(plus(y_,y_))in pnat,
+       intro(s(y))then try intro(left),s(y)&inl(_2050),
+       [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,y:pnat,v5:v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat),v8:v3=s(plus(y,y))in pnat,v10:v5=inr(v8)in (v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat)]==>s(v3)=plus(s(y),s(y))in pnat,
+        fertilize_left([1],v8),_2059,
+        [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,x:pnat,v3:pnat,v4:y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,y:pnat,v5:v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat),v8:v3=s(plus(y,y))in pnat,v10:v5=inr(v8)in (v3=plus(y,y)in pnat\v3=s(plus(y,y))in pnat)]==>s(s(plus(y,y)))=plus(s(y),s(y))in pnat,
+         because,atom(incomplete),
+         [
+         ]) ext _2059
+        ]) ext _2050
+       ]) ext _1429
+      ]) ext _1172
+     ]) ext _740
+    ]) ext _474
+   ]) ext _465,
+   problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat]==>phi of z,
+   elim(v3,on(z)),su(_2756,[v3 of z],[v4]),
+   [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat]==>phi of z,
+    elim(v4),spread(v4,[y,v5,_2942]),
+    [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of z,
+     elim(v5),decide(v5,[v7,_3195],[v8,_3199]),
+     [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of z,
+      subst(at(3),over(v8,phi of v8),z=plus(y,y)in pnat),_3209,
+      [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of plus(y,y),
+       elim(y),p_ind(y,_3815,[v8,v10,_3821]),
+       [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of plus(0,0),
+        simplify,v0,
+        [
+        ]) ext _3815,
+        problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:pnat,v10:phi of plus(v8,v8)]==>phi of plus(s(v8),s(v8)),
+        elim(v2,on(plus(v8,v8))),su(_4444,[v2 of plus(v8,v8)],[v11]),
+        [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:pnat,v10:phi of plus(v8,v8)]==>plus(v8,v8)in pnat,
+         compute([[unfold]]in _4773),axiom,
+         [
+         ]) ext _4461,
+         problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:pnat,v10:phi of plus(v8,v8),v11:phi of plus(v8,v8)=>phi of s(s(plus(v8,v8)))]==>phi of plus(s(v8),s(v8)),
+         elim(v11),su(_5121,[v11 of v10],[v12]),
+         [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:z=plus(y,y)in pnat,v9:v5=inl(v7)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:pnat,v10:phi of plus(v8,v8),v11:phi of plus(v8,v8)=>phi of s(s(plus(v8,v8))),v12:phi of s(s(plus(v8,v8)))]==>phi of plus(s(v8),s(v8)),
+          intro(explicit(v12))then apply(because),v12,
+          [
+          ]) ext _5121
+         ]) ext _4444
+        ]) ext _3821
+       ]) ext _3209
+      ]) ext _3195,
+      problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of z,
+      subst(at(3),over(v7,phi of v7),z=s(plus(y,y))in pnat),_5503,
+      [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of s(plus(y,y)),
+       elim(y),p_ind(y,_6117,[v7,v9,_6123]),
+       [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat)]==>phi of s(plus(0,0)),
+        simplify,v1,
+        [
+        ]) ext _6117,
+        problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:pnat,v9:phi of s(plus(v7,v7))]==>phi of s(plus(s(v7),s(v7))),
+        elim(v2,on(s(plus(v7,v7)))),su(_6758,[v2 of s(plus(v7,v7))],[v11]),
+        [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:pnat,v9:phi of s(plus(v7,v7))]==>plus(v7,v7)in pnat,
+         compute([[unfold]]in _7093),axiom,
+         [
+         ]) ext _6777,
+         problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:pnat,v9:phi of s(plus(v7,v7)),v11:phi of s(plus(v7,v7))=>phi of s(s(s(plus(v7,v7))))]==>phi of s(plus(s(v7),s(v7))),
+         elim(v11),su(_7451,[v11 of v9],[v12]),
+         [problem([phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>phi of x=>phi of s(s(x)),z:pnat,v3:x:pnat=>y:pnat#x=plus(y,y)in pnat\x=s(plus(y,y))in pnat,v4:y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,y:pnat,v5:z=plus(y,y)in pnat\z=s(plus(y,y))in pnat,v6:v4=y&v5 in (y:pnat#z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v8:z=s(plus(y,y))in pnat,v10:v5=inr(v8)in (z=plus(y,y)in pnat\z=s(plus(y,y))in pnat),v7:pnat,v9:phi of s(plus(v7,v7)),v11:phi of s(plus(v7,v7))=>phi of s(s(s(plus(v7,v7)))),v12:phi of s(s(s(plus(v7,v7))))]==>phi of s(plus(s(v7),s(v7))),
+          intro(explicit(v12))then apply(because),v12,
+          [
+          ]) ext _7451
+         ]) ext _6758
+        ]) ext _6123
+       ]) ext _5503
+      ]) ext _3199
+     ]) ext _2942
+    ]) ext _2756
+   ]) ext _462
+  ]) ext _321
+ ]) ext _135
+]).

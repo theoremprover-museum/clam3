@@ -1,0 +1,1 @@
+pairlist(l1,l2)<==>term_of(pairlist)of l1 of l2.

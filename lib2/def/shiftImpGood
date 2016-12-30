@@ -1,0 +1,1 @@
+shiftImpGood(n,s0,s1,si,x)<==>shiftImp(n)of s0 of s1 of si of x.

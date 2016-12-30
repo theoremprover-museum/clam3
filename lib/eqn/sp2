@@ -1,0 +1,5 @@
+problem([]==>h:pnat => t: pnat list => s:pnat => p:pnat => 
+sp(h::t,s,p)= sp(t, plus(s, h), times(p, h)) in (pnat # pnat),
+simplify,axiom,
+[
+]).

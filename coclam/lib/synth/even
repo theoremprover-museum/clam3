@@ -1,0 +1,24 @@
+problem([]==>x:pnat=>u(1),
+autotactic(idtac),_121,
+[problem([]==>x:pnat=>u(1),
+ dequantify,lambda(x,_159),
+ [problem([x:pnat]==>u(1),
+  universe(2),_168,
+  [problem([x:pnat]==>u(1),
+   scheme(twos,x),su(su(su(su(su(su(v5,[v4 of x],[v5]),[v3 of lambda(v4,lambda(v5,_246))],[v4]),[v2 of _253],[v3]),[v1 of _260],[v2]),[v0 of lambda(x,u(1))],[v1]),[term_of(two_step)],[v0]),
+   [problem([x:pnat]==>u(1),
+    intro(int),int,
+    [
+    ]) ext _260,
+    problem([x:pnat]==>u(1),
+    intro(void),void,
+    [
+    ]) ext _253,
+    problem([x:pnat,v4:pnat,v5:u(1)]==>u(1),
+    hyp(v5),v5,
+    [
+    ]) ext _246
+   ]) ext _168
+  ]) ext _159
+ ]) ext _121
+]).

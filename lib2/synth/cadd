@@ -1,0 +1,14 @@
+problem([]==>x:{word}=>y:{word}=>ci:{bool}=>{word},
+intro,lambda(x,_7997),
+[problem([x:{word}]==>y:{word}=>ci:{bool}=>{word},
+ intro(explicit(list_ind(x,lambda(y,lambda(ci,ci::nil)),[h,t,v,lambda(y,lambda(ci,add(h,hd(y),v of tl(y)of ci)))]))),list_ind(x,lambda(y,lambda(ci,ci::nil)),[h,t,v,lambda(y,lambda(ci,add(h,hd(y),v of tl(y)of ci)))]),
+ [problem([x:{word}]==>list_ind(x,lambda(y,lambda(ci,ci::nil)),[h,t,v,lambda(y,lambda(ci,add(h,hd(y),v of tl(y)of ci)))])in (y:{word}=>ci:{bool}=>{word}),
+  because,atom(incomplete),
+  [
+  ])
+ ]) ext _7997,
+ problem([]==>{word}in u(1),
+ repeat wfftac,axiom,
+ [
+ ])
+]).

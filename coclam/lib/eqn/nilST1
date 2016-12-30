@@ -1,0 +1,1 @@
+problem([]==>l:list(req)=>nilST(l)=nil in list(req),_,_,_).

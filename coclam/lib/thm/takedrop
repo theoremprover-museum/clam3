@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>l:int list=>app(take(n, l), drop(n, l))=l in int list,_,_,_).

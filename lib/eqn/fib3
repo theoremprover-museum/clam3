@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>fib(s(s(x)))=plus(fib(s(x)),fib(x)) in pnat,_,_,_).

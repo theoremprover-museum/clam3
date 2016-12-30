@@ -1,0 +1,1 @@
+regA(t,ld,inp)<==>p_ind(t,init,[t1,r,bool_eq(ld of t1,{true},inp of t1,r)]).

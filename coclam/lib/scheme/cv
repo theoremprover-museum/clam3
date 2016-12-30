@@ -1,0 +1,70 @@
+problem([]==>phi:(pnat=>u(1))=>(x:pnat=>(y:pnat=>y<*x=>phi of y)=>phi of x)=>z:pnat=>phi of z,
+universe(2),_138,
+[problem([]==>phi:(pnat=>u(1))=>(x:pnat=>(y:pnat=>y<*x=>phi of y)=>phi of x)=>z:pnat=>phi of z,
+ intro,lambda(phi,lambda(v0,lambda(z,_266))),
+ [problem([phi:pnat=>u(1),v0:x:pnat=>(y:pnat=>y<*x=>phi of y)=>phi of x,z:pnat]==>phi of z,
+  seq(t:pnat=>t<*s(z)=>phi of t,new[v1]),lambda(v1,_359)of _356,
+  [problem([]==>t:pnat=>t<*s(z)=>phi of t,
+   elim(z),p_ind(z,lambda(t,lambda(v1,_401)),[v1,v2,lambda(t,lambda(v3,_413))]),
+   [problem([t:pnat,v1:t<*s(0)]==>phi of t,
+    elim(v0,on(0)),su(_451,[v0 of 0],[v2]),
+    [problem([v2:(y:pnat=>y<*0=>phi of y)=>phi of 0]==>phi of t,
+     elim(v2),su(_506,[v2 of lambda(y,lambda(v3,_519))],[v3]),
+     [problem([y:pnat,v3:y<*0]==>phi of y,
+      because,atom(incomplete),
+      [
+      ]) ext _519,
+      problem([v3:phi of 0]==>phi of t,
+      decide(t=0 in pnat),pnat_eq(t,0,su(_591,[axiom],[v4]),su(_599,[lambda(~,axiom)],[v4])),
+      [problem([v4:t=0 in pnat]==>phi of t,
+       rewrite(v4),v3,
+       [
+       ]) ext _591,
+       problem([v4:t=0 in pnat=>void]==>phi of t,
+       because,atom(incomplete),
+       [
+       ]) ext _599
+      ]) ext _506
+     ]) ext _451
+    ]) ext _401,
+    problem([v1:pnat,v2:t:pnat=>t<*s(v1)=>phi of t,t:pnat,v3:t<*s(s(v1))]==>phi of t,
+    decide(t<*s(v1)),pless(t,s(v1),su(_745,[axiom],[v4]),su(_753,[lambda(~,axiom)],[v4])),
+    [problem([v4:t<*s(v1)]==>phi of t,
+     elim(v2,on(t)),su(_795,[v2 of t],[v5]),
+     [problem([v5:t<*s(v1)=>phi of t]==>phi of t,
+      elim(v5),su(v6,[v5 of v4],[v6]),
+      [
+      ]) ext _795
+     ]) ext _745,
+     problem([v4:t<*s(v1)=>void]==>phi of t,
+     decide(t=s(v1)in pnat),pnat_eq(t,s(v1),su(_897,[axiom],[v5]),su(_905,[lambda(~,axiom)],[v5])),
+     [problem([v5:t=s(v1)in pnat]==>phi of t,
+      elim(v0,on(s(v1))),su(_952,[v0 of s(v1)],[v6]),
+      [problem([v6:(y:pnat=>y<*s(v1)=>phi of y)=>phi of s(v1)]==>phi of t,
+       elim(v6),su(_1013,[v6 of v2],[v7]),
+       [problem([v7:phi of s(v1)]==>phi of t,
+        rewrite(v5),v7,
+        [
+        ]) ext _1013
+       ]) ext _952
+      ]) ext _897,
+      problem([v5:t=s(v1)in pnat=>void]==>phi of t,
+      because,atom(incomplete),
+      [
+      ]) ext _905
+     ]) ext _753
+    ]) ext _413
+   ]) ext _356,
+   problem([v1:t:pnat=>t<*s(z)=>phi of t]==>phi of z,
+   elim(v1,on(z)),su(_1129,[v1 of z],[v2]),
+   [problem([v2:z<*s(z)=>phi of z]==>phi of z,
+    elim(v2),su(v3,[v2 of _1181],[v3]),
+    [problem([]==>z<*s(z),
+     because,atom(incomplete),
+     [
+     ]) ext _1181
+    ]) ext _1129
+   ]) ext _359
+  ]) ext _266
+ ]) ext _138
+]).

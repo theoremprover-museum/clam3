@@ -1,0 +1,1 @@
+pnatapp(l,m)<==>list_ind(l,m,[t,~,v,t::v]).

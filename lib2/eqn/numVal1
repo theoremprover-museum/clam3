@@ -1,0 +1,3 @@
+problem([]==>w:{word}=>numVal(0)of w=0 in pnat,_,_,_).
+
+%problem([]==>w:{word}=>numVal(0)of w=bitval(hd(w)) in pnat,_,_,_).

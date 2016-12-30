@@ -1,0 +1,18 @@
+
+
+meta-level/parser.pl:
+
+	post-processing for bone-loss
+
+meta-level/method_pre.pl:
+
+	generalized sinkable/1
+
+planner/library.pl
+
+	condition set extraction
+
+planner/planner_new.pl
+
+	refined backtracking
+

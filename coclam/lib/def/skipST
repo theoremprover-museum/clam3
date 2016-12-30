@@ -1,0 +1,1 @@
+skipST(f, xs)<==>tail(f, xs).

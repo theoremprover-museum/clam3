@@ -1,0 +1,1 @@
+problem([]==>j:{bool}=>k:{bool}=>jkFF(0,j,k)={false}in{bool},_,_,_).

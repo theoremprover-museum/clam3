@@ -1,0 +1,1 @@
+flattenmc(x,l)<==>term_of(flattenmc)of x of l.

@@ -1,0 +1,1 @@
+problem([]==>h:int=>oddlist(h::nil)=h::nil in int list,_,_, _).

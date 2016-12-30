@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>ci:{bool}=>subtractNL(nil,y,ci)=ci::nil in{word},_,_,_).

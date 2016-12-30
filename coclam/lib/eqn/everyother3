@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>l:int=>everyother(a::b::l)=a::everyother(l) in int list,_,_,_).

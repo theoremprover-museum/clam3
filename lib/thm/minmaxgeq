@@ -1,0 +1,125 @@
+problem([]==>a:pnat=>b:pnat=>c:pnat=>d:pnat=>(geq(a,c)#geq(b,d))=>geq(max(a,b),min(c,d)),
+induction(s(v0),a:pnat),lambda(a,p_ind(a,_218,[v0,v1,_224])),
+[problem([a:pnat]==>b:pnat=>c:pnat=>d:pnat=>(geq(0,c)#geq(b,d))=>geq(max(0,b),min(c,d)),
+ sym_eval([base([1,1],geq1),base([1,2],max1)]),lambda(v0,lambda(v1,lambda(v2,su(su(lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of lambda(v0,lambda(v1,lambda(v2,su(su(lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of _378,[max1 of v0],[v3]),[term_of(max1)],[max1])))),[geq1 of v1],[v3]),[term_of(geq1)],[geq1])))),
+ [problem([a:pnat]==>b:pnat=>c:pnat=>d:pnat=>(c=0 in pnat#geq(b,d))=>geq(b,min(c,d)),
+  induction(s(v0),b:pnat),lambda(b,p_ind(b,_511,[v0,v1,_517])),
+  [problem([a:pnat,b:pnat]==>c:pnat=>d:pnat=>(c=0 in pnat#geq(0,d))=>geq(0,min(c,d)),
+   sym_eval([base([2],geq1),base([2,1],geq1)]),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _651,[geq1 of v1],[v2]),[term_of(geq1)],[geq1]))),[geq1 of min(v0,v1)],[v2]),[term_of(geq1)],[geq1]))),
+   [problem([a:pnat,b:pnat]==>c:pnat=>d:pnat=>(c=0 in pnat#d=0 in pnat)=>min(c,d)=0 in pnat,
+    induction(s(v0),c:pnat),lambda(c,p_ind(c,_781,[v0,v1,_787])),
+    [problem([a:pnat,b:pnat,c:pnat]==>d:pnat=>(0=0 in pnat#d=0 in pnat)=>min(0,d)=0 in pnat,
+     sym_eval([base([1,1,2],min1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _876,[min1 of v0],[v1]),[term_of(min1)],[min1])),
+     [problem([a:pnat,b:pnat,c:pnat]==>d:pnat=>(0=0 in pnat#d=0 in pnat)=>0=0 in pnat,
+      tautology(dequantify_once then intro then[identity,wfftacs]),lambda(d,lambda(v0,axiom)),
+      [
+      ]) ext _876
+     ]) ext _781,
+     problem([a:pnat,b:pnat,c:pnat,v0:pnat,v1:d:pnat=>(v0=0 in pnat#d=0 in pnat)=>min(v0,d)=0 in pnat]==>d:pnat=>(s(v0)=0 in pnat#d=0 in pnat)=>min(s(v0),d)=0 in pnat,
+     tautology(dequantify_once then intro then[elim(v2)then clam_arith,wfftacs]),lambda(d,lambda(v2,spread(v2,[v3,v4,atom(incomplete)]))),
+     [
+     ]) ext _787
+    ]) ext _651
+   ]) ext _511,
+   problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d))]==>c:pnat=>d:pnat=>(c=0 in pnat#geq(s(v0),d))=>geq(s(v0),min(c,d)),
+   induction(s(v2),d:pnat),lambda(v2,lambda(v3,lambda(v4,su(su(v6,[v5 of v2],[v6]),[v4 of v3],[v5]))of lambda(d,p_ind(d,_1272,[v2,v3,_1278])))),
+   [problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat]==>c:pnat=>(c=0 in pnat#geq(s(v0),0))=>geq(s(v0),min(c,0)),
+    sym_eval([base([2,1],geq2),base([2,2],min2),base([2],geq2)]),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _1478,[geq2 of s(v0)],[v3]),[term_of(geq2)],[geq2])),[min2 of v2],[v3]),[term_of(min2)],[min2])),[geq2 of s(v0)],[v3]),[term_of(geq2)],[geq2])),
+    [problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat]==>c:pnat=>(c=0 in pnat#{true})=>{true},
+     tautology(dequantify_once then intro then[istrue,wfftacs]),lambda(c,lambda(v2,0)),
+     [
+     ]) ext _1478
+    ]) ext _1272,
+    problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat,v2:pnat,v3:c:pnat=>(c=0 in pnat#geq(s(v0),v2))=>geq(s(v0),min(c,v2))]==>c:pnat=>(c=0 in pnat#geq(s(v0),s(v2)))=>geq(s(v0),min(c,s(v2))),
+    wave([2,1],[geq3,left]),lambda(v4,su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _1822,[v5 of v2],[v6]),[geq3 of v0],[v5]),[term_of(geq3)],[geq3])),
+    [problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat,v2:pnat,v3:c:pnat=>(c=0 in pnat#geq(s(v0),v2))=>geq(s(v0),min(c,v2))]==>c:pnat=>(c=0 in pnat#geq(v0,v2))=>geq(s(v0),min(c,s(v2))),
+     induction(s(v4),c:pnat),lambda(c,p_ind(c,_2013,[v4,v5,_2019])),
+     [problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat,v2:pnat,v3:c:pnat=>(c=0 in pnat#geq(s(v0),v2))=>geq(s(v0),min(c,v2)),c:pnat]==>(0=0 in pnat#geq(v0,v2))=>geq(s(v0),min(0,s(v2))),
+      sym_eval([base([2,2],min1),base([2],geq2)]),su(su(su(su(_2194,[geq2 of s(v0)],[v4]),[term_of(geq2)],[geq2]),[min1 of s(v2)],[v4]),[term_of(min1)],[min1]),
+      [problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat,v2:pnat,v3:c:pnat=>(c=0 in pnat#geq(s(v0),v2))=>geq(s(v0),min(c,v2)),c:pnat]==>(0=0 in pnat#geq(v0,v2))=>{true},
+       tautology(intro then[istrue,wfftacs]),lambda(v4,0),
+       [
+       ]) ext _2194
+      ]) ext _2013,
+      problem([a:pnat,b:pnat,v0:pnat,v1:c:pnat=>d:pnat=>(c=0 in pnat#geq(v0,d))=>geq(v0,min(c,d)),d:pnat,v2:pnat,v3:c:pnat=>(c=0 in pnat#geq(s(v0),v2))=>geq(s(v0),min(c,v2)),c:pnat,v4:pnat,v5:(v4=0 in pnat#geq(v0,v2))=>geq(s(v0),min(v4,s(v2)))]==>(s(v4)=0 in pnat#geq(v0,v2))=>geq(s(v0),min(s(v4),s(v2))),
+      tautology(intro then[elim(v5)then[intro then[elim(v6)then clam_arith,elim(v6)then hyp(v8)],elim(v6)then clam_arith],wfftacs]),lambda(v6,su(spread(v6,[v8,v9,atom(incomplete)]),[v5 of (spread(v6,[v7,v8,atom(incomplete)])&spread(v6,[v7,v8,v8]))],[v7])),
+      [
+      ]) ext _2019
+     ]) ext _1822
+    ]) ext _1278
+   ]) ext _517
+  ]) ext _378
+ ]) ext _218,
+ problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d))]==>b:pnat=>c:pnat=>d:pnat=>(geq(s(v0),c)#geq(b,d))=>geq(max(s(v0),b),min(c,d)),
+ induction(s(v2),b:pnat),lambda(b,p_ind(b,_2767,[v2,v3,_2773])),
+ [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat]==>c:pnat=>d:pnat=>(geq(s(v0),c)#geq(0,d))=>geq(max(s(v0),0),min(c,d)),
+  sym_eval([base([2,1],geq1),base([1,2],max2)]),lambda(v2,lambda(v3,su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _2962,[max2 of s(v0)],[v4]),[term_of(max2)],[max2]))),[geq1 of v3],[v4]),[term_of(geq1)],[geq1]))),
+  [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat]==>c:pnat=>d:pnat=>(geq(s(v0),c)#d=0 in pnat)=>geq(s(v0),min(c,d)),
+   induction(s(v2),c:pnat),lambda(c,p_ind(c,_3138,[v2,v3,_3144])),
+   [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat]==>d:pnat=>(geq(s(v0),0)#d=0 in pnat)=>geq(s(v0),min(0,d)),
+    sym_eval([base([1,1],geq2),base([2,2],min1),base([2],geq2)]),lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of lambda(v2,su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _3350,[geq2 of s(v0)],[v3]),[term_of(geq2)],[geq2])),[min1 of v2],[v3]),[term_of(min1)],[min1])),[geq2 of s(v0)],[v3]),[term_of(geq2)],[geq2])),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat]==>d:pnat=>({true}#d=0 in pnat)=>{true},
+     tautology(dequantify_once then intro then[istrue,wfftacs]),lambda(d,lambda(v2,0)),
+     [
+     ]) ext _3350
+    ]) ext _3138,
+    problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat,v2:pnat,v3:d:pnat=>(geq(s(v0),v2)#d=0 in pnat)=>geq(s(v0),min(v2,d))]==>d:pnat=>(geq(s(v0),s(v2))#d=0 in pnat)=>geq(s(v0),min(s(v2),d)),
+    wave([1,1],[geq3,left]),lambda(v4,su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _3706,[v5 of v2],[v6]),[geq3 of v0],[v5]),[term_of(geq3)],[geq3])),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat,v2:pnat,v3:d:pnat=>(geq(s(v0),v2)#d=0 in pnat)=>geq(s(v0),min(v2,d))]==>d:pnat=>(geq(v0,v2)#d=0 in pnat)=>geq(s(v0),min(s(v2),d)),
+     induction(s(v4),d:pnat),lambda(d,p_ind(d,_3903,[v4,v5,_3909])),
+     [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat,v2:pnat,v3:d:pnat=>(geq(s(v0),v2)#d=0 in pnat)=>geq(s(v0),min(v2,d)),d:pnat]==>(geq(v0,v2)#0=0 in pnat)=>geq(s(v0),min(s(v2),0)),
+      sym_eval([base([2,2],min2),base([2],geq2)]),su(su(su(su(_4090,[geq2 of s(v0)],[v4]),[term_of(geq2)],[geq2]),[min2 of s(v2)],[v4]),[term_of(min2)],[min2]),
+      [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat,v2:pnat,v3:d:pnat=>(geq(s(v0),v2)#d=0 in pnat)=>geq(s(v0),min(v2,d)),d:pnat]==>(geq(v0,v2)#0=0 in pnat)=>{true},
+       tautology(intro then[istrue,wfftacs]),lambda(v4,0),
+       [
+       ]) ext _4090
+      ]) ext _3903,
+      problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,c:pnat,v2:pnat,v3:d:pnat=>(geq(s(v0),v2)#d=0 in pnat)=>geq(s(v0),min(v2,d)),d:pnat,v4:pnat,v5:(geq(v0,v2)#v4=0 in pnat)=>geq(s(v0),min(s(v2),v4))]==>(geq(v0,v2)#s(v4)=0 in pnat)=>geq(s(v0),min(s(v2),s(v4))),
+      tautology(intro then[elim(v5)then[intro then[elim(v6)then hyp(v7),elim(v6)then clam_arith],elim(v6)then clam_arith],wfftacs]),lambda(v6,su(spread(v6,[v8,v9,atom(incomplete)]),[v5 of (spread(v6,[v7,v8,v7])&spread(v6,[v7,v8,atom(incomplete)]))],[v7])),
+      [
+      ]) ext _3909
+     ]) ext _3706
+    ]) ext _3144
+   ]) ext _2962
+  ]) ext _2767,
+  problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d))]==>c:pnat=>d:pnat=>(geq(s(v0),c)#geq(s(v2),d))=>geq(max(s(v0),s(v2)),min(c,d)),
+  wave([1,2],[max3,left]),lambda(v4,lambda(v5,su(su(su(lambda(v6,su(su(v8,[v7 of v5],[v8]),[v6 of v4],[v7]))of _4743,[v6 of v2],[v7]),[max3 of v0],[v6]),[term_of(max3)],[max3]))),
+  [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d))]==>c:pnat=>d:pnat=>(geq(s(v0),c)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(c,d)),
+   induction(s(v4),c:pnat),lambda(c,p_ind(c,_4960,[v4,v5,_4966])),
+   [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat]==>d:pnat=>(geq(s(v0),0)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(0,d)),
+    sym_eval([base([1,1],geq2),base([2,2],min1),base([2],geq2)]),lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _5221,[geq2 of s(max(v0,v2))],[v5]),[term_of(geq2)],[geq2])),[min1 of v4],[v5]),[term_of(min1)],[min1])),[geq2 of s(v0)],[v5]),[term_of(geq2)],[geq2])),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat]==>d:pnat=>({true}#geq(s(v2),d))=>{true},
+     tautology(dequantify_once then intro then[istrue,wfftacs]),lambda(d,lambda(v4,0)),
+     [
+     ]) ext _5221
+    ]) ext _4960,
+    problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d))]==>d:pnat=>(geq(s(v0),s(v4))#geq(s(v2),d))=>geq(s(max(v0,v2)),min(s(v4),d)),
+    wave([1,1],[geq3,left]),lambda(v6,su(su(su(lambda(v7,su(v8,[v7 of v6],[v8]))of _5677,[v7 of v4],[v8]),[geq3 of v0],[v7]),[term_of(geq3)],[geq3])),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d))]==>d:pnat=>(geq(v0,v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(s(v4),d)),
+     induction(s(v6),d:pnat),lambda(d,p_ind(d,_5925,[v6,v7,_5931])),
+     [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat]==>(geq(v0,v4)#geq(s(v2),0))=>geq(s(max(v0,v2)),min(s(v4),0)),
+      sym_eval([base([2,1],geq2),base([2,2],min2),base([2],geq2)]),su(su(su(su(su(su(_6180,[geq2 of s(max(v0,v2))],[v6]),[term_of(geq2)],[geq2]),[min2 of s(v4)],[v6]),[term_of(min2)],[min2]),[geq2 of s(v2)],[v6]),[term_of(geq2)],[geq2]),
+      [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat]==>(geq(v0,v4)#{true})=>{true},
+       tautology(intro then[istrue,wfftacs]),lambda(v6,0),
+       [
+       ]) ext _6180
+      ]) ext _5925,
+      problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat,v6:pnat,v7:(geq(v0,v4)#geq(s(v2),v6))=>geq(s(max(v0,v2)),min(s(v4),v6))]==>(geq(v0,v4)#geq(s(v2),s(v6)))=>geq(s(max(v0,v2)),min(s(v4),s(v6))),
+      wave([2,1],[geq3,left]),su(su(su(_6688,[v8 of v6],[v9]),[geq3 of v2],[v8]),[term_of(geq3)],[geq3]),
+      [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat,v6:pnat,v7:(geq(v0,v4)#geq(s(v2),v6))=>geq(s(max(v0,v2)),min(s(v4),v6))]==>(geq(v0,v4)#geq(v2,v6))=>geq(s(max(v0,v2)),min(s(v4),s(v6))),
+       wave([2,2],[min3,left]),su(su(su(_6967,[v8 of v6],[v9]),[min3 of v4],[v8]),[term_of(min3)],[min3]),
+       [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat,v6:pnat,v7:(geq(v0,v4)#geq(s(v2),v6))=>geq(s(max(v0,v2)),min(s(v4),v6))]==>(geq(v0,v4)#geq(v2,v6))=>geq(s(max(v0,v2)),s(min(v4,v6))),
+        wave([2],[geq3,left]),su(su(su(_7242,[v8 of min(v4,v6)],[v9]),[geq3 of max(v0,v2)],[v8]),[term_of(geq3)],[geq3]),
+        [problem([a:pnat,v0:pnat,v1:b:pnat=>c:pnat=>d:pnat=>(geq(v0,c)#geq(b,d))=>geq(max(v0,b),min(c,d)),b:pnat,v2:pnat,v3:c:pnat=>d:pnat=>(geq(s(v0),c)#geq(v2,d))=>geq(max(s(v0),v2),min(c,d)),c:pnat,v4:pnat,v5:d:pnat=>(geq(s(v0),v4)#geq(s(v2),d))=>geq(s(max(v0,v2)),min(v4,d)),d:pnat,v6:pnat,v7:(geq(v0,v4)#geq(s(v2),v6))=>geq(s(max(v0,v2)),min(s(v4),v6))]==>(geq(v0,v4)#geq(v2,v6))=>geq(max(v0,v2),min(v4,v6)),
+         strong_fertilize(v1),su(su(su(v10,[v9 of v6],[v10]),[v8 of v4],[v9]),[v1 of v2],[v8]),
+         [
+         ]) ext _7242
+        ]) ext _6967
+       ]) ext _6688
+      ]) ext _5931
+     ]) ext _5677
+    ]) ext _4966
+   ]) ext _4743
+  ]) ext _2773
+ ]) ext _224
+]).

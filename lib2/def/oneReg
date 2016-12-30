@@ -1,0 +1,1 @@
+oneReg(t,load,x)<==>jkFF(t,x and load,load and (not x)).

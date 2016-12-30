@@ -1,0 +1,1 @@
+problem([]==>facW(nil)={true}::nil in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>tswap2(a, b)=node(b, tswap2(a, b), tswap2(b, a))in bintree(int),_,_,_).

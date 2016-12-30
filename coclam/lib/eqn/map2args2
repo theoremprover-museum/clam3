@@ -1,0 +1,1 @@
+problem([]==>f:(int#int=>int)=>h:int=>map2args(f, h::nil)=nil in int list,_,_,_).

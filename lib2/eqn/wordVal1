@@ -1,0 +1,3 @@
+problem([]==>m:pnat=>wordVal(0) of m = nil in{word},_,_,_).
+
+%problem([]==>v:pnat=>wordVal(0) of v= (boolV(v)::nil) in{word},_,_,_).

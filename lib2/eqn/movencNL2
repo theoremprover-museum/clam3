@@ -1,0 +1,1 @@
+problem([]==>movencNL(nil)=cadd(nil,zeroes(length(nil)),{false}in{word}),_,_,_).

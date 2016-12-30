@@ -1,0 +1,1 @@
+problem([]==>iterates(s, s(s(0)))=jump(s(s(0)), s(0))in pnat list,_,_,_).

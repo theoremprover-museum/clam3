@@ -1,0 +1,53 @@
+problem([]==>w:pnat=>v:pnat=>wl:pnat list=>vl:pnat list=> (prodl(wl)=w in pnat#prodl(vl)=v in pnat)=>prodl(pnatapp(wl,vl))=times(w,v)in pnat,
+autotactic(idtac),_127,
+[problem([]==>w:pnat=>v:pnat=>wl:pnat list=>vl:pnat list=> (prodl(wl)=w in pnat#prodl(vl)=v in pnat)=>prodl(pnatapp(wl,vl))=times(w,v)in pnat,
+ dequantify,lambda(w,lambda(v,lambda(wl,lambda(vl,_286)))),
+ [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list]==> (prodl(wl)=w in pnat#prodl(vl)=v in pnat)=>prodl(pnatapp(wl,vl))=times(w,v)in pnat,
+  intro then[elim(v0)then thin([v0,v3]),wfftacs],lambda(v0,spread(v0,[v1,v2,_388])),
+  [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(pnatapp(wl,vl))=times(w,v)in pnat,
+   fertilize_right([1],v1),_398,
+   [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(pnatapp(wl,vl))=times(prodl(wl),v)in pnat,
+    fertilize_right([2],v2),_480,
+    [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(pnatapp(wl,vl))=times(prodl(wl),prodl(vl))in pnat,
+     induction(v1::v0,wl:pnat list),list_ind(wl,_650,[v0,v3,v4,_658]),
+     [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(pnatapp(nil,vl))=times(prodl(nil),prodl(vl))in pnat,
+      base([1,2,1],prodl1),su(_751,[term_of(prodl1)],[prodl1]),
+      [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(pnatapp(nil,vl))=times(s(0),prodl(vl))in pnat,
+       base([1,1,1],pnatapp1),su(_851,[term_of(pnatapp1)],[pnatapp1]),
+       [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(vl)=times(s(0),prodl(vl))in pnat,
+        wave([2,1],times2),su(_949,[term_of(times2)],[times2]),
+        [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(vl)=plus(times(0,prodl(vl)),prodl(vl))in pnat,
+         base([1,2,1],times1),su(_1049,[term_of(times1)],[times1]),
+         [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(vl)=plus(0,prodl(vl))in pnat,
+          base([2,1],plus1),su(_1142,[term_of(plus1)],[plus1]),
+          [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat]==>prodl(vl)=prodl(vl)in pnat,
+           identity,axiom,
+           [
+           ]) ext _1142
+          ]) ext _1049
+         ]) ext _949
+        ]) ext _851
+       ]) ext _751
+      ]) ext _650,
+      problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat,v0:pnat,v3:pnat list,v4:prodl(pnatapp(v3,vl))=times(prodl(v3),prodl(vl))in pnat]==>prodl(pnatapp(v0::v3,vl))=times(prodl(v0::v3),prodl(vl))in pnat,
+      wave([1,2,1],prodl2),su(_1359,[term_of(prodl2)],[prodl2]),
+      [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat,v0:pnat,v3:pnat list,v4:prodl(pnatapp(v3,vl))=times(prodl(v3),prodl(vl))in pnat]==>prodl(pnatapp(v0::v3,vl))=times(times(v0,prodl(v3)),prodl(vl))in pnat,
+       wave([1,1,1],pnatapp2),su(_1503,[term_of(pnatapp2)],[pnatapp2]),
+       [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat,v0:pnat,v3:pnat list,v4:prodl(pnatapp(v3,vl))=times(prodl(v3),prodl(vl))in pnat]==>prodl(v0::pnatapp(v3,vl))=times(times(v0,prodl(v3)),prodl(vl))in pnat,
+        wave([1,1],prodl2),su(_1645,[term_of(prodl2)],[prodl2]),
+        [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat,v0:pnat,v3:pnat list,v4:prodl(pnatapp(v3,vl))=times(prodl(v3),prodl(vl))in pnat]==>times(v0,prodl(pnatapp(v3,vl)))=times(times(v0,prodl(v3)),prodl(vl))in pnat,
+         fertilize_left([2],v4),_1662,
+         [problem([w:pnat,v:pnat,wl:pnat list,vl:pnat list,v1:prodl(wl)=w in pnat,v2:prodl(vl)=v in pnat,v0:pnat,v3:pnat list,v4:prodl(pnatapp(v3,vl))=times(prodl(v3),prodl(vl))in pnat]==>times(v0,times(prodl(v3),prodl(vl)))=times(times(v0,prodl(v3)),prodl(vl))in pnat,
+          lemma(assm),su(su(su(su(axiom,[v7 of prodl(vl)],[v8]),[v6 of prodl(v3)],[v7]),[v5 of v0],[v6]),[term_of(assm)],[v5]),
+          [
+          ]) ext _1662
+         ]) ext _1645
+        ]) ext _1503
+       ]) ext _1359
+      ]) ext _658
+     ]) ext _480
+    ]) ext _398
+   ]) ext _388
+  ]) ext _286
+ ]) ext _127
+]).

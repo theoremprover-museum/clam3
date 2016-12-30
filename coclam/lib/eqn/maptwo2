@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>h:int list=>t:(int list) list=>map2(h::t,f)=mapcar(h, f)::map2(t,f)in (int list) list,_,_,_).

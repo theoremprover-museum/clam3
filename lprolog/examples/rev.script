@@ -1,0 +1,157 @@
+% loading file /home/ossian1/air/bin/lprog
+%  foreign file /usr/local/src/quintus3/generic/qplib3.1.2/library/sun4-4/libpl.so loaded
+% lprog loaded in module user, 0.634 sec 166,940 bytes
+
+?- use example.
+example
+ yes
+?- (app (rev v) (cons u nil)) = (F (rev v) u v).
+
+F = Var6 \ Var7 \ Var8 \ (app (rev v) (cons u nil)) ;
+
+F = Var9 \ Var10 \ Var11 \ (app (rev v) (cons Var10 nil)) ;
+
+F = Var14 \ Var15 \ Var16 \ (app (rev Var16) (cons u nil)) ;
+
+F = Var17 \ Var18 \ Var19 \ (app (rev Var19) (cons Var18 nil)) ;
+
+F = Var22 \ Var23 \ Var24 \ (app Var22 (cons u nil)) ;
+
+F = Var25 \ Var26 \ Var27 \ (app Var25 (cons Var26 nil)) ;
+
+F = Var41 \ Var42 \ Var43 \ (app (rev (Var38 Var41 Var42 Var43)) (cons (Var39 Var41 Var42 Var43) nil)) 
+|: 
+|: .
+ yes
+?- (app (rev V) (cons U nil)) = (F (rev v) u v).
+
+V = Var3 (rev v) u v
+U = Var4 (rev v) u v
+F = Var6 \ Var7 \ Var8 \ (app (rev (Var3 Var6 Var7 Var8)) (cons (Var4 Var6 Var7 Var8) nil)) ;
+
+V = v
+U = Var9 (rev v) u v
+F = Var11 \ Var12 \ Var13 \ (app Var11 (cons (Var9 Var11 Var12 Var13) nil)) ;
+
+V = Var19 (cons w nil) u v
+U = Var20 (cons w nil) u v
+F = Var27 \ Var28 \ Var29 \ (app (rev (Var24 Var27 Var28 Var29)) (cons (Var25 Var27 Var28 Var29) nil)) ;
+
+V = Var19 (cons w nil) u v
+U = Var20 (cons w nil) u v
+F = Var32 \ Var33 \ Var34 \ (app Var32 (cons (Var30 Var32 Var33 Var34) nil)) ;
+
+V = Var19 (cons w nil) u v
+U = w
+F = Var40 \ Var41 \ Var42 \ (app (rev (Var37 Var40 Var41 Var42)) (cons (Var38 Var40 Var41 Var42) nil)) ;
+
+V = Var19 (cons w nil) u v
+U = w
+F = Var45 \ Var46 \ Var47 \ (app Var45 (cons (Var43 Var45 Var46 Var47) nil)) ;
+
+V = Var54 (cons w nil) u v
+U = Var55 (cons w nil) u v
+F = Var61 \ Var62 \ Var63 \ (cons (Var57 Var61 Var62 Var63) (app (Var59 Var61 Var62 Var63) (Var60 Var61 Var62 Var63))) ;
+
+V = Var54 (cons w nil) u v
+U = w
+F = Var68 \ Var69 \ Var70 \ (cons (Var64 Var68 Var69 Var70) (app (Var66 Var68 Var69 Var70) (Var67 Var68 Var69 Var70))) ;
+
+V = Var76 w u v
+U = Var77 w u v
+F = Var84 \ Var85 \ Var86 \ (app (rev (Var81 Var84 Var85 Var86)) (cons (Var82 Var84 Var85 Var86) nil)) ;
+
+V = Var76 w u v
+U = Var77 w u v
+F = Var89 \ Var90 \ Var91 \ (app Var89 (cons (Var87 Var89 Var90 Var91) nil)) ;
+
+V = Var98 w u v
+U = Var99 w u v
+F = Var105 \ Var106 \ Var107 \ (cons (Var101 Var105 Var106 Var107) (app (Var103 Var105 Var106 Var107) (Var104 Var105 Var106 Var107))) ;
+
+V = Var114 (Var109 x) u v
+U = Var115 (Var109 x) u v
+F = Var122 \ Var123 \ Var124 \ (app (rev (Var119 Var122 Var123 Var124)) (cons (Var120 Var122 Var123 Var124) nil)) ;
+
+V = Var114 (Var109 x) u v
+U = Var115 (Var109 x) u v
+F = Var127 \ Var128 \ Var129 \ (app Var127 (cons (Var125 Var127 Var128 Var129) nil)) ;
+
+V = Var114 nil u v
+U = Var115 nil u v
+F = Var135 \ Var136 \ Var137 \ (app (rev (Var132 Var135 Var136 Var137)) (cons (Var133 Var135 Var136 Var137) nil)) ;
+
+V = Var114 nil u v
+U = Var115 nil u v
+F = Var140 \ Var141 \ Var142 \ (app Var140 (cons (Var138 Var140 Var141 Var142) nil)) ;
+
+V = Var114 (cons (Var143 x) nil) u v
+U = Var143 x
+F = Var150 \ Var151 \ Var152 \ (app (rev (Var147 Var150 Var151 Var152)) (cons (Var148 Var150 Var151 Var152) nil)) ;
+
+V = Var114 (cons (Var143 x) nil) u v
+U = Var143 x
+F = Var155 \ Var156 \ Var157 \ (app Var155 (cons (Var153 Var155 Var156 Var157) nil)) ;
+
+V = Var158 x
+U = Var159 (rev (Var158 x)) u v
+F = Var166 \ Var167 \ Var168 \ (app (rev (Var163 Var166 Var167 Var168)) (cons (Var164 Var166 Var167 Var168) nil)) ;
+
+V = Var158 x
+U = Var159 (rev (Var158 x)) u v
+F = Var171 \ Var172 \ Var173 \ (app Var171 (cons (Var169 Var171 Var172 Var173) nil)) ;
+
+V = Var176 x
+U = Var177 x
+F = Var184 \ Var185 \ Var186 \ (app (rev (Var181 Var184 Var185 Var186)) (cons (Var182 Var184 Var185 Var186) nil)) ;
+
+V = Var176 x
+U = Var177 x
+F = Var189 \ Var190 \ Var191 \ (app Var189 (cons (Var187 Var189 Var190 Var191) nil)) ;
+
+V = Var199 (Var193 x) u v
+U = Var200 (Var193 x) u v
+F = Var206 \ Var207 \ Var208 \ (cons (Var202 Var206 Var207 Var208) (app (Var204 Var206 Var207 Var208) (Var205 Var206 Var207 Var208))) ;
+
+V = Var199 nil u v
+U = Var200 nil u v
+F = Var213 \ Var214 \ Var215 \ (cons (Var209 Var213 Var214 Var215) (app (Var211 Var213 Var214 Var215) (Var212 Var213 Var214 Var215))) ;
+
+V = Var199 (cons (Var216 x) nil) u v
+U = Var216 x
+F = Var222 \ Var223 \ Var224 \ (cons (Var218 Var222 Var223 Var224) (app (Var220 Var222 Var223 Var224) (Var221 Var222 Var223 Var224))) ;
+
+V = Var225 x
+U = Var226 (rev (Var225 x)) u v
+F = Var232 \ Var233 \ Var234 \ (cons (Var228 Var232 Var233 Var234) (app (Var230 Var232 Var233 Var234) (Var231 Var232 Var233 Var234))) ;
+
+V = Var237 x
+U = Var238 x
+F = Var244 \ Var245 \ Var246 \ (cons (Var240 Var244 Var245 Var246) (app (Var242 Var244 Var245 Var246) (Var243 Var244 Var245 Var246))) ;
+
+V = Var251 x
+U = Var252 x
+F = W1 \ W2 \ W3 \ (rev (Var254 W1 W2 W3)) ;
+
+V = Var251 x
+U = Var252 x
+F = W1 \ W2 \ W3 \ W1 ;
+
+V = Var260 (rev x) u v
+U = Var261 (rev x) u v
+F = Var268 \ Var269 \ Var270 \ (app (rev (Var265 Var268 Var269 Var270)) (cons (Var266 Var268 Var269 Var270) nil)) ;
+
+V = Var260 (rev x) u v
+U = Var261 (rev x) u v
+F = Var273 \ Var274 \ Var275 \ (app Var273 (cons (Var271 Var273 Var274 Var275) nil)) ;
+
+V = x
+U = Var276 (rev x) u v
+F = Var283 \ Var284 \ Var285 \ (app (rev (Var280 Var283 Var284 Var285)) (cons (Var281 Var283 Var284 Var285) nil)) ;
+
+V = x
+U = Var276 (rev x) u v
+F = Var288 \ Var289 \ Var290 \ (app Var288 (cons (Var286 Var288 Var289 Var290) nil)) ;
+
+ no
+?- 

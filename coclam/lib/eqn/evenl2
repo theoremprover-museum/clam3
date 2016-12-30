@@ -1,0 +1,2 @@
+problem([]==>u:pnat=>evenl(u::nil)=void in u(1),_,_,_).
+

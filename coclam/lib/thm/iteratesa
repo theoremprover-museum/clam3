@@ -1,0 +1,1 @@
+problem([]==>m:int=>f: (int=>int)=>iterates(f,f of m)=mapcar(iterates(f,m),f)in int list,_,_,_).

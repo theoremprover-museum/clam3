@@ -1,0 +1,1 @@
+problem([]==>s(0)div s(0)=s(0)in pnat,_,_,_).

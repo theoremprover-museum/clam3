@@ -1,0 +1,75 @@
+% GEN_THM Hint. Generalises a theorem into another more general already
+%  loaded .
+
+
+
+	hint( gen_thm(Context,Thm),
+              H==>G,
+              [ hint_context(gen_thm, Context, H==>G, [Thm]),
+                theorem(Thm,Goal),
+                matrix(V,M,Goal),
+                select(Var:_,V,V1),
+	        replace_all(Var,_,M,M1),
+                matrix(V1,M1,Goal1),
+                applcble(method,[]==>Goal1,sym_eval(_),_,[H==>G])
+              ],
+              [],
+              [H==>Goal],
+              gen_thm(Context, Thm)
+            ).
+
+
+
+% -----------------------------------------------------------------sny.
+% Context to generalise theorem rot into rotlen.
+%
+
+hint_context( gen_thm,
+              rot,
+              []==> l:(int list)=>rotate(length(l),l)=l in int list,
+              [ rotlen ]).
+
+
+
+
+
+
+
+
+| ?- display.
+rot: [] incomplete autotactic(idtac) 
+==> l:int list=>rotate(length(l),l)=l in int list
+by _
+
+
+yes
+| ?- dhtplan([after(_,gen_thm(_,_))]).
+
+
+ (Hint-)Method: gen_thm(_47,_56) is not applicable for _1186 effects.
+Selected method at depth 0: gen_thm(rot,rotlen)
+|Selected method at depth 1: induction([v0::v1],l:int list)
+||Selected method at depth 2: sym_eval(...)
+|||Terminating method at depth 3: tautology(...)
+||Selected method at depth 2: ripple(...)
+|||Selected method at depth 3: weak_fertilize(left,[.])
+||||Selected method at depth 4: ripple(...)
+|||||Terminating method at depth 5: tautology(...)
+gen_thm(rot,rotlen) then 
+  induction([v0::v1],l:int list) then 
+    [sym_eval(...) then 
+       tautology(...),
+     ripple(...) then 
+       weak_fertilize(left,[.]) then 
+         ripple(...) then 
+           tautology(...)
+    ]
+
+yes
+
+| ?- theorem(rotlen,T).
+
+T = l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list 
+
+| ?- 
+

@@ -1,0 +1,3 @@
+problem([]==>m:int=>tconst(m)in bintree(int),_,_,_).
+
+

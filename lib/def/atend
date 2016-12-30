@@ -1,0 +1,1 @@
+atend(x,y) <==> term_of(atend)of x of y.

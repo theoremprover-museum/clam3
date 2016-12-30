@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>myodd(s(s(x)))=myodd(x)in u(1),_,_,_).

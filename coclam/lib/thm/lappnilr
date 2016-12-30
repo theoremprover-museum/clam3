@@ -1,0 +1,1 @@
+problem([]==>l:int list=>lapp(l, nil)=l in int list,_,_,_).

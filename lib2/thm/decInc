@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>dec(inc(x))=x in{word},_,_,_).

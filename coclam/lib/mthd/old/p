@@ -1,0 +1,16 @@
+method(p(UnAnn),
+       H==>G,
+       [ wave_fronts(UnAnn, _, G),
+	 matrix(Vs, Matrix in T, UnAnn),
+	 sinks(NoSinks, _, Matrix),
+	 \+ (exp_at(NoSinks, _, p(X)), \+X = s(_)),
+	 setof([X, p(s(X))], Pos^exp_at(NoSinks, Pos, p(s(X))), Pairs)
+       ],
+       [ rep(NoSinks, NohdMatrix, Pairs),
+	 mark_sinks(Vs, NohdMatrix, Sinks),
+	 matrix(Vs, Sinks in T, NewG),
+	 [All|Seqs] = [H==>NewG]
+	],
+       [All|Seqs],
+	[]
+      ).

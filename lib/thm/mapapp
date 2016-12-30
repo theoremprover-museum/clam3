@@ -1,0 +1,4 @@
+problem([]==>w:(pnat => pnat)=>x:pnat list=>y:pnat=>z:pnat list=>
+map(w,app(x,y::z)) = app(map(w,x),map(w,app(y::nil,z))) in pnat list,_,_,_).
+
+

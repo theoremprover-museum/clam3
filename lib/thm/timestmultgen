@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=> z:pnat=> plus(times(x,y),z) = tmult(x,y,z)in pnat,_,_,_).

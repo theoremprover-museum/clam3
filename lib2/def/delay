@@ -1,0 +1,3 @@
+delay(t,x)<==>p_ind(t,nil,[~,~,x]).
+
+

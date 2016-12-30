@@ -1,0 +1,1 @@
+problem([]==>n:int=>t:(int=>int)=>h:(int=>int)=>infl1(n, h, t)=h of n::infl1(t of n, h, t)in int list,_,_,_).

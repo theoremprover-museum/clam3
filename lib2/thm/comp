@@ -1,0 +1,55 @@
+problem([]==>a:pnat=>b:pnat=>plus(a,b)=plus(b,a)in pnat,
+induction(s(v0),a:pnat),lambda(a,p_ind(a,_182,[v0,v1,_188])),
+[problem([a:pnat]==>b:pnat=>plus(0,b)=plus(b,0)in pnat,
+ sym_eval([base([1,1],plus1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _250,[plus1 of v0],[v1]),[term_of(plus1)],[plus1])),
+ [problem([a:pnat]==>b:pnat=>b=plus(b,0)in pnat,
+  induction(s(v0),b:pnat),lambda(b,p_ind(b,_324,[v0,v1,_330])),
+  [problem([a:pnat,b:pnat]==>0=plus(0,0)in pnat,
+   sym_eval([base([2,1],plus1)]),su(su(_380,[plus1 of 0],[v0]),[term_of(plus1)],[plus1]),
+   [problem([a:pnat,b:pnat]==>0=0 in pnat,
+    tautology(identity),axiom,
+    [
+    ]) ext _380
+   ]) ext _324,
+   problem([a:pnat,b:pnat,v0:pnat,v1:v0=plus(v0,0)in pnat]==>s(v0)=plus(s(v0),0)in pnat,
+   wave([2,1],[plus2,left]),su(su(su(_502,[v2 of 0],[v3]),[plus2 of v0],[v2]),[term_of(plus2)],[plus2]),
+   [problem([a:pnat,b:pnat,v0:pnat,v1:v0=plus(v0,0)in pnat]==>s(v0)=s(plus(v0,0))in pnat,
+    weak_fertilize(right,[weak_fertilize(right,in,[1],v1)]),_533,
+    [problem([a:pnat,b:pnat,v0:pnat,v1:v0=plus(v0,0)in pnat]==>s(v0)=s(v0)in pnat,
+     tautology(identity),axiom,
+     [
+     ]) ext _533
+    ]) ext _502
+   ]) ext _330
+  ]) ext _250
+ ]) ext _182,
+ problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat]==>b:pnat=>plus(s(v0),b)=plus(b,s(v0))in pnat,
+ wave([1,1],[plus2,left]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _742,[v3 of v2],[v4]),[plus2 of v0],[v3]),[term_of(plus2)],[plus2])),
+ [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat]==>b:pnat=>s(plus(v0,b))=plus(b,s(v0))in pnat,
+  weak_fertilize(left,[weak_fertilize(left,in,[1],v1)]),lambda(v2,su(lambda(v3,su(v4,[v3 of v2],[v4]))of _866,[v1 of v2],[v3])),
+  [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat]==>b:pnat=>s(plus(b,v0))=plus(b,s(v0))in pnat,
+   induction(s(v2),b:pnat),lambda(b,p_ind(b,_969,[v2,v3,_975])),
+   [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat]==>s(plus(0,v0))=plus(0,s(v0))in pnat,
+    sym_eval([base([2,1],plus1),base([1,1,1],plus1)]),su(su(su(su(_1079,[plus1 of v0],[v2]),[term_of(plus1)],[plus1]),[plus1 of s(v0)],[v2]),[term_of(plus1)],[plus1]),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat]==>s(v0)=s(v0)in pnat,
+     tautology(identity),axiom,
+     [
+     ]) ext _1079
+    ]) ext _969,
+    problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat,v2:pnat,v3:s(plus(v2,v0))=plus(v2,s(v0))in pnat]==>s(plus(s(v2),v0))=plus(s(v2),s(v0))in pnat,
+    wave([2,1],[plus2,left]),su(su(su(_1290,[v4 of s(v0)],[v5]),[plus2 of v2],[v4]),[term_of(plus2)],[plus2]),
+    [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat,v2:pnat,v3:s(plus(v2,v0))=plus(v2,s(v0))in pnat]==>s(plus(s(v2),v0))=s(plus(v2,s(v0)))in pnat,
+     wave([1,1,1],[plus2,left]),su(su(su(_1434,[v4 of v0],[v5]),[plus2 of v2],[v4]),[term_of(plus2)],[plus2]),
+     [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat,v2:pnat,v3:s(plus(v2,v0))=plus(v2,s(v0))in pnat]==>s(s(plus(v2,v0)))=s(plus(v2,s(v0)))in pnat,
+      weak_fertilize(right,[weak_fertilize(right,in,[1],v3)]),_1465,
+      [problem([a:pnat,v0:pnat,v1:b:pnat=>plus(v0,b)=plus(b,v0)in pnat,b:pnat,v2:pnat,v3:s(plus(v2,v0))=plus(v2,s(v0))in pnat]==>s(s(plus(v2,v0)))=s(s(plus(v2,v0)))in pnat,
+       tautology(identity),axiom,
+       [
+       ]) ext _1465
+      ]) ext _1434
+     ]) ext _1290
+    ]) ext _975
+   ]) ext _866
+  ]) ext _742
+ ]) ext _188
+]).

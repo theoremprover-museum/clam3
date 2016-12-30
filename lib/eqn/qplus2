@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>qplus(s(x),y)= qplus(x,s(y))in pnat,
+repeat intro then simplify,lambda(x,lambda(y,axiom)),
+[
+]).

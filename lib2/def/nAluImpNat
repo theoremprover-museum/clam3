@@ -1,0 +1,1 @@
+nAluImpNat(n,s0,s1,s2,x,y,ci)<==>numVal(s(n))of nAluImpGood(n,s0,s1,s2,x,y,ci).

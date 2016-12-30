@@ -1,0 +1,1 @@
+problem([]==>h1:{bool}=>h2:{bool}=>t1:{word}=>t2:{word}=> (h1=h2 in{bool}#t1=t2 in{word})=>h1::t1=h2::t2 in{word},_,_,_).

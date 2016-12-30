@@ -1,0 +1,16 @@
+
+
+method(induction(IndTerms, VarTyps),
+       H==>G,
+       [wave_occ(H, G, VarTyps, IndTerms)
+       ],
+       [scheme(IndTerms, VarTyps, H==>G, BaseSeqs, StepSeqs),
+        append(BaseSeqs, StepSeqs, [All|Seqs])
+       ],
+       [All|Seqs],
+       []
+      ).
+
+
+
+

@@ -1,0 +1,1 @@
+problem([]==>hd(nil)=0 in int list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>m:int=>f:(int=>int)=>lconst(iterates(f, f(m)))=lconst(mapcar(iterates(f, m), f))in (int list) list,_,_,_).

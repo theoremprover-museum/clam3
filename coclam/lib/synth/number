@@ -1,0 +1,10 @@
+problem([]==>num:pnat=>{sexp},
+normalize_goal([[unroll,_2163]]),_2144,
+[problem([]==>num:pnat=>rec(sexp,unary\atom\pnat\sexp#sexp),
+ intro_hyps([]),lambda(num,_2203),
+ [problem([num:pnat]==>rec(sexp,unary\atom\pnat\sexp#sexp),
+  intro(explicit(inr(inr(inl(num)))))then prove_mem,inr(inr(inl(num))),
+  [
+  ]) ext _2203
+ ]) ext _2144
+]).

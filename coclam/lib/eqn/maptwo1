@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>map2(nil,f)=nil in (int list) list,_,_,_).

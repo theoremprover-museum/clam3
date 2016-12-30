@@ -1,0 +1,4 @@
+problem([]==>h:int=>l:int list=>length(h::l)=s(length(l))in pnat,
+repeat intro then simplify,lambda(h,lambda(l,axiom)),
+[
+]).

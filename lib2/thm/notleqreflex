@@ -1,0 +1,17 @@
+problem([]==>x:pnat=>leq(x,x),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_294,[v0,v1,_300])),
+[problem([x:pnat]==>leq(0,0),
+ base([],leq1),su(su(_331,[leq1 of 0],[v0]),[term_of(leq1)],[leq1]),
+ [problem([x:pnat]==>{true},
+  tautology(istrue),0,
+  [
+  ]) ext _331
+ ]) ext _294,
+ problem([x:pnat,v0:pnat,v1:leq(v0,v0)]==>leq(s(v0),s(v0)),
+ wave([],[leq3,left]),su(su(su(_421,[v2 of v0],[v3]),[leq3 of v0],[v2]),[term_of(leq3)],[leq3]),
+ [problem([x:pnat,v0:pnat,v1:leq(v0,v0)]==>leq(v0,v0),
+  tautology(intro),v1,
+  [
+  ]) ext _421
+ ]) ext _300
+]).

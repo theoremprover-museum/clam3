@@ -1,0 +1,1 @@
+problem([]==>t:tree(int)=>dpsearch(t, nil) in int list,_,_,_).

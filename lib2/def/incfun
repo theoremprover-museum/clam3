@@ -1,0 +1,1 @@
+incfun(x)<==>lambda(t,inc(x of t)).

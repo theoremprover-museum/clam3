@@ -1,0 +1,1 @@
+problem([]==>l:int list=>nth(0,l)=l in int list,_,_,_).

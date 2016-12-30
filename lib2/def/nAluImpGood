@@ -1,0 +1,1 @@
+nAluImpGood(n,s0,s1,s2,x,y,ci)<==>nAluImp(n)of s0 of s1 of s2 of x of y of ci.

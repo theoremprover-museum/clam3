@@ -1,0 +1,2 @@
+problem([]==>x:pnat list => length(rev(x)) = length(x) in pnat list, _,_,_).
+

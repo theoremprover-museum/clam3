@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{word}=>b:{word}=>ci:{bool}=>nAluImp(s(n))of s0 of s1 of s2 of a of b of ci=aluHead(s0,s1,s2,hd(a),hd(b),ci)::nAluImp(n)of s0 of s1 of s2 of tl(a)of tl(b)of aluCarry(s0,s1,s2,hd(a),hd(b),ci)in{word},_,_,_).

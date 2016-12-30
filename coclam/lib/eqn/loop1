@@ -1,0 +1,1 @@
+problem([]==>f:(int#int=>int)=>a:int=>b:int list=>loop(f, a, b)=mapcar(merge2(a::loop(f, a, b), b), f)in int list,_,_,_).

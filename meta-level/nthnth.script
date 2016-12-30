@@ -1,0 +1,178 @@
+
+yes
+| ?- plan(nthnth1).
+loading synth(nth)...done
+loading synth(nth)...done
+loading def(nth)...done
+loading eqn(nth1)...done
+loading eqn(nth2)...done
+loading eqn(nth3)...done
+ adding wave-rules for nth1:..done
+ adding wave-rules for nth2:..done
+ adding wave-rules for nth3:..done
+ adding defeqn-record for nth1...done 
+ adding defeqn-record for nth2...done 
+ adding defeqn-record for nth3...done 
+loading thm(nthnth1)...done
+nthnth1([])
+==>x:pnat=>y:pnat=>z:pnat list=>nth(x,nth(y,z))=nth(y,nth(x,z))in pnat list
+SELECTED METHOD at depth 0: induction([s(v2),v0::v1],[x:pnat,z:pnat list])
+|nthnth1([3])
+|v0:pnat
+|v1:pnat list
+|v2:pnat
+|v3:ih(y:pnat=>nth(v2,nth(y,v1))=nth(y,nth(v2,v1))in pnat list)
+|z:pnat list
+|x:pnat
+|==>y:pnat=>nth(``s({v2})''<out>,nth(\y/,``v0::{v1}''<out>))=nth(\y/,nth(``s({v2})''<out>,``v0::{v1}''<out>))in pnat list
+|SELECTED METHOD at depth 1: wave([2,2,1],[nth3,equ(left)])
+||nthnth1([1,3])
+||v0:pnat
+||v1:pnat list
+||v2:pnat
+||v3:ih(y:pnat=>nth(v2,nth(y,v1))=nth(y,nth(v2,v1))in pnat list)
+||z:pnat list
+||x:pnat
+||==>y:pnat=>nth(``s({v2})''<out>,nth(\y/,``v0::{v1}''<out>))=nth(\y/,nth(v2,v1))in pnat list
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[v0:pnat,v1:pnat list,v2:pnat,y:pnat]
+
+|- nth(s(v2),nth(y,v0::v1))=nth(v2,nth(y,v1))in pnat list
+
+saving thm(lemma1)...done
+lemma1([])
+==>v0:pnat=>v1:pnat list=>v2:pnat=>y:pnat=>nth(s(v2),nth(y,v0::v1))=nth(v2,nth(y,v1))in pnat list
+SELECTED METHOD at depth 0: induction([s(v5),v3::v4],[y:pnat,v1:pnat list])
+|lemma1([3])
+|v3:pnat
+|v4:pnat list
+|v5:pnat
+|v6:ih(v0:pnat=>v2:pnat=>nth(s(v2),nth(v5,v0::v4))=nth(v2,nth(v5,v4))in pnat list)
+|v1:pnat list
+|y:pnat
+|==>v0:pnat=>v2:pnat=>nth(s(\v2/),nth(``s({v5})''<out>,\v0/ ::``v3::{v4}''<out>))=nth(\v2/,nth(``s({v5})''<out>,``v3::{v4}''<out>))in pnat list
+|SELECTED METHOD at depth 1: wave([2,2,1],[nth3,equ(left)])
+||lemma1([1,3])
+||v3:pnat
+||v4:pnat list
+||v5:pnat
+||v6:ih(v0:pnat=>v2:pnat=>nth(s(v2),nth(v5,v0::v4))=nth(v2,nth(v5,v4))in pnat list)
+||v1:pnat list
+||y:pnat
+||==>v0:pnat=>v2:pnat=>nth(s(\v2/),nth(``s({v5})''<out>,\v0/ ::``v3::{v4}''<out>))=nth(\v2/,nth(v5,v4))in pnat list
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma2:
+
+[v0:pnat,v2:pnat,v3:pnat,v4:pnat list,v5:pnat]
+
+|- nth(s(v2),nth(s(v5),v0::v3::v4))=nth(s(v2),nth(v5,v0::v4))in pnat list
+
+saving thm(lemma2)...done
+lemma2([])
+==>v0:pnat=>v2:pnat=>v3:pnat=>v4:pnat list=>v5:pnat=>nth(s(v2),nth(s(v5),v0::v3::v4))=nth(s(v2),nth(v5,v0::v4))in pnat list
+SELECTED METHOD at depth 0: eval_def([2,1,1],nth3)
+|lemma2([1])
+|==>v0:pnat=>v2:pnat=>v3:pnat=>v4:pnat list=>v5:pnat=>nth(s(v2),nth(v5,v3::v4))=nth(s(v2),nth(v5,v0::v4))in pnat list
+
+Failed at depth 1
+Planning partially complete for lemma2
+
+
+
+Prolog interruption (h for help)? a
+! Execution aborted
+
+| ?- delete_lemmas.
+deleting theorem record for lemma1...done
+deleting thm(lemma1)...done
+deleting theorem record for lemma2...done
+deleting thm(lemma2)...done
+
+yes
+| ?- plan(nthnth2).
+loading thm(nthnth2)...done
+nthnth2([])
+==>w:pnat=>x:pnat=>y:pnat=>z:pnat list=>nth(w,nth(x,nth(y,z)))=nth(y,nth(x,nth(w,z)))in pnat list
+SELECTED METHOD at depth 0: induction([s(v2),v0::v1],[w:pnat,z:pnat list])
+|nthnth2([3])
+|v0:pnat
+|v1:pnat list
+|v2:pnat
+|v3:ih(x:pnat=>y:pnat=>nth(v2,nth(x,nth(y,v1)))=nth(y,nth(x,nth(v2,v1)))in pnat list)
+|z:pnat list
+|w:pnat
+|==>x:pnat=>y:pnat=>nth(``s({v2})''<out>,nth(\x/,nth(\y/,``v0::{v1}''<out>)))=nth(\y/,nth(\x/,nth(``s({v2})''<out>,``v0::{v1}''<out>)))in pnat list
+|SELECTED METHOD at depth 1: wave([2,2,2,1],[nth3,equ(left)])
+||nthnth2([1,3])
+||v0:pnat
+||v1:pnat list
+||v2:pnat
+||v3:ih(x:pnat=>y:pnat=>nth(v2,nth(x,nth(y,v1)))=nth(y,nth(x,nth(v2,v1)))in pnat list)
+||z:pnat list
+||w:pnat
+||==>x:pnat=>y:pnat=>nth(``s({v2})''<out>,nth(\x/,nth(\y/,``v0::{v1}''<out>)))=nth(\y/,nth(\x/,nth(v2,v1)))in pnat list
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[v0:pnat,v1:pnat list,v2:pnat,x:pnat,y:pnat]
+
+|- nth(s(v2),nth(x,nth(y,v0::v1)))=nth(v2,nth(x,nth(y,v1)))in pnat list
+
+saving thm(lemma1)...done
+lemma1([])
+==>v0:pnat=>v1:pnat list=>v2:pnat=>x:pnat=>y:pnat=>nth(s(v2),nth(x,nth(y,v0::v1)))=nth(v2,nth(x,nth(y,v1)))in pnat list
+SELECTED METHOD at depth 0: induction([s(v5),v3::v4],[y:pnat,v1:pnat list])
+|lemma1([3])
+|v3:pnat
+|v4:pnat list
+|v5:pnat
+|v6:ih(v0:pnat=>v2:pnat=>x:pnat=>nth(s(v2),nth(x,nth(v5,v0::v4)))=nth(v2,nth(x,nth(v5,v4)))in pnat list)
+|v1:pnat list
+|y:pnat
+|==>v0:pnat=>v2:pnat=>x:pnat=>nth(s(\v2/),nth(\x/,nth(``s({v5})''<out>,\v0/ ::``v3::{v4}''<out>)))=nth(\v2/,nth(\x/,nth(``s({v5})''<out>,``v3::{v4}''<out>)))in pnat list
+|SELECTED METHOD at depth 1: wave([2,2,2,1],[nth3,equ(left)])
+||lemma1([1,3])
+||v3:pnat
+||v4:pnat list
+||v5:pnat
+||v6:ih(v0:pnat=>v2:pnat=>x:pnat=>nth(s(v2),nth(x,nth(v5,v0::v4)))=nth(v2,nth(x,nth(v5,v4)))in pnat list)
+||v1:pnat list
+||y:pnat
+||==>v0:pnat=>v2:pnat=>x:pnat=>nth(s(\v2/),nth(\x/,nth(``s({v5})''<out>,\v0/ ::``v3::{v4}''<out>)))=nth(\v2/,nth(\x/,nth(v5,v4)))in pnat list
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma2:
+
+[v0:pnat,v2:pnat,v3:pnat,v4:pnat list,v5:pnat,x:pnat]
+
+|- nth(s(v2),nth(x,nth(s(v5),v0::v3::v4)))=nth(s(v2),nth(x,nth(v5,v0::v4)))in pnat list
+
+saving thm(lemma2)...done
+lemma2([])
+==>v0:pnat=>v2:pnat=>v3:pnat=>v4:pnat list=>v5:pnat=>x:pnat=>nth(s(v2),nth(x,nth(s(v5),v0::v3::v4)))=nth(s(v2),nth(x,nth(v5,v0::v4)))in pnat list
+SELECTED METHOD at depth 0: eval_def([2,2,1,1],nth3)
+|lemma2([1])
+|==>v0:pnat=>v2:pnat=>v3:pnat=>v4:pnat list=>v5:pnat=>x:pnat=>nth(s(v2),nth(x,nth(v5,v3::v4)))=nth(s(v2),nth(x,nth(v5,v0::v4)))in pnat list
+
+Failed at depth 1
+Planning partially complete for lemma2
+
+
+
+Prolog interruption (h for help)? a
+! Execution aborted
+
+| ?- 

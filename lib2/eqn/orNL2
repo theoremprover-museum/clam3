@@ -1,0 +1,4 @@
+problem([]==>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>orNL(a::x)of (b::y)= (a or b)::orNL(x)of y in{word},_,_,_).
+
+%problem([]==>a:{bool}=>x:{word}=>y:{word}=>orNL(a::x)of y= (a or hd(y))::orNL(x)of tl(y) in{word},_,_,_).
+

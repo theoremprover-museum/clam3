@@ -1,0 +1,16 @@
+/*
+ * @(#)greater3,v 1.1 1994/09/16 09:38:16 dream Exp
+ *
+ * greater3,v
+ * Revision 1.1  1994/09/16  09:38:16  dream
+ * Initial revision
+ *
+ */
+
+problem([]==>x:pnat=> (x=0 in pnat=>void)=>greater(x,0),
+compute(x:pnat=> (x=0 in pnat=>void)=>[[unfold]]),_7407,
+[problem([]==>x:pnat=> (x=0 in pnat=>void)=>less(0,x),
+ lemma(less5,new[v0])then dequantify then elim_on(v0,[x],_7510)then hyp(_7514),su(v0,[term_of(less5)],[v0]),
+ [
+ ]) ext _7407
+]).

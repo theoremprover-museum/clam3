@@ -1,0 +1,1 @@
+nAluImp(n)<==>p_ind(n,lambda(s0,lambda(s1,lambda(s2,lambda(a,lambda(b,lambda(ci,((not s2)and ci)::nil)))))),[k,w,lambda(s0,lambda(s1,lambda(s2,lambda(a,lambda(b,lambda(ci,aluHead(s0,s1,s2,hd(a),hd(b),ci)::w of s0 of s1 of s2 of tl(a)of tl(b)of aluCarry(s0,s1,s2,hd(a),hd(b),ci)))))))]).

@@ -1,0 +1,1 @@
+problem([]==>a:pnat list=> b:pnat list =>pnat list,_,_,_).

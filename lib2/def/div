@@ -1,0 +1,1 @@
+div(x,y) <==> term_of(div) of x of y.

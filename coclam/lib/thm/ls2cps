@@ -1,0 +1,1 @@
+problem([]==>f:st(char, char)=>f=ls2cps(f)in io,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>fac(x) = qfac(x, s(0)) in pnat, _, _, _).

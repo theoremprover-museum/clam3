@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>x:int=>iterates(f, x)=x::mapcar(iterates(f, x), f)in int list,_,_,_).

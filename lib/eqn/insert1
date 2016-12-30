@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>insert(n,nil) = n::nil in pnat list,_,_,_).

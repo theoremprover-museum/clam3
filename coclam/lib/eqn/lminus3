@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>lminus(s(x), y)=s(lminus(x, y))in pnat,_,_,_).

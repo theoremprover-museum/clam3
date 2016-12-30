@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>fib(x) = qfib(x, 0) in pnat, _, _, _).

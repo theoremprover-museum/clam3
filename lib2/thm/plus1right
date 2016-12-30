@@ -1,0 +1,20 @@
+problem([]==>x:pnat=>plus(x,0)=x in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_296,[v0,v1,_302])),
+[problem([x:pnat]==>plus(0,0)=0 in pnat,
+ base([1,1],plus1),su(lambda(v0,v0)of _344,[term_of(plus1)],[plus1]),
+ [problem([x:pnat]==>0=0 in pnat,
+  identity,axiom,
+  [
+  ]) ext _344
+ ]) ext _296,
+ problem([x:pnat,v0:pnat,v1:plus(v0,0)=v0 in pnat]==>plus(s(v0),0)=s(v0)in pnat,
+ wave([1,1],plus2),su(lambda(v2,v2)of _441,[term_of(plus2)],[plus2]),
+ [problem([x:pnat,v0:pnat,v1:plus(v0,0)=v0 in pnat]==>s(plus(v0,0))=s(v0)in pnat,
+  weak_fertilize([1],[left,v1]),lambda(v2,v2)of _512,
+  [problem([x:pnat,v0:pnat,v1:plus(v0,0)=v0 in pnat]==>s(v0)=s(v0)in pnat,
+   identity,axiom,
+   [
+   ]) ext _512
+  ]) ext _441
+ ]) ext _302
+]).

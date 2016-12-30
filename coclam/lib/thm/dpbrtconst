@@ -1,0 +1,1 @@
+problem([]==>m:int=>dpsearch(tconsti(m), nil)=brsearch(tconsti(m), nil)in int list,_,_,_).

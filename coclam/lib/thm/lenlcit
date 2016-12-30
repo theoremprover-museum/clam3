@@ -1,0 +1,1 @@
+problem([]==>m:pnat=>n:pnat=>f:(int=>int)=>length(lconst(m))=length(iterates(f, n))in pnat,_,_,_).

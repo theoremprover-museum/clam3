@@ -1,0 +1,1 @@
+putST(h, f, t)<==>nil.

@@ -1,0 +1,1 @@
+moveWordNC(n,a)<==>addW(n)of a of (wordVal(n)of 0)of{false}.

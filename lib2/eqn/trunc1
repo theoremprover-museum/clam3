@@ -1,0 +1,1 @@
+problem([]==>a:{word}=>trunc(0)of a=nil in{word},_,_,_).

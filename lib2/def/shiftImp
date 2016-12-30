@@ -1,0 +1,1 @@
+shiftImp(n)<==>p_ind(n,lambda(s0,lambda(s1,lambda(si,lambda(x,nil)))),[~,w,lambda(s0,lambda(s1,lambda(si,lambda(x,muxImp(s0,s1,hd(x),si,hd(tl(x)),{false})::w of s0 of s1 of hd(x)of tl(x)))))]).

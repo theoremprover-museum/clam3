@@ -1,0 +1,3 @@
+partition(x1,y1,z1)<==>term_of(partition) of x1 of y1 of z1.
+
+

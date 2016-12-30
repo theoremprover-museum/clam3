@@ -1,0 +1,1 @@
+nAddB(x)<==>list_ind(x,lambda(y,lambda(ci,ci::nil)),[h,t,r,lambda(y,lambda(ci,faSum(h,hd(y),ci)::r of tl(y)of faCarry(h,hd(y),ci)))]).

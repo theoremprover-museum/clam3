@@ -1,0 +1,6 @@
+faSum(a,b,ci) <==> or(or(and(and(not(a),not(b)),
+                             ci),
+                         and(and(not(a),b),not(ci))),
+                      or(and(and(a,not(b)),
+                             not(ci)),
+                         and(and(a,b),ci))).

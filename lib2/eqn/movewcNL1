@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>movewcNL(x)=cadd(x,ones(length(x)),{true})in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>l:int list=>qrev(nil,l)=l in int list,_,_,_).

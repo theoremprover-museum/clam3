@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>half(plus(x,x)) = half(s(plus(x,x))) in pnat,_,_,_).

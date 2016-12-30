@@ -1,0 +1,1 @@
+problem([]==>h:pnat=>t:pnat list=>primes(h::t)=h::primes(sieve(h, t)) in pnat list,_,_,_).

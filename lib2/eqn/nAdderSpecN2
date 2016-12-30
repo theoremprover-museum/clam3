@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>ci:{bool}=>x:pnat=>y:pnat=>nAdderSpecN(0,x,y,ci)=plus(x,plus(y,bitval(ci)))in pnat,_,_,_).

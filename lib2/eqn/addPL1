@@ -1,0 +1,1 @@
+problem([]==>x:{bool}=>y:{bool}=>z:{word}=>addPL(x,y,z)=faCarry(x,y,hd(z))::faSum(x,y,hd(z))::tl(z) in{word},_,_,_).

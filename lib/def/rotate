@@ -1,0 +1,3 @@
+rotate(x1,y1)<==>term_of(rotate) of x1 of y1.
+
+

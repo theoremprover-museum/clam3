@@ -1,0 +1,4 @@
+problem([]==>h:pnat=>l1:pnat list=>l2:pnat list=>pnatapp(h::l1,l2)=h::pnatapp(l1,l2)in pnat list,
+repeat intro then simplify then wfftacs,lambda(h,lambda(l1,lambda(l2,axiom))),
+[
+]).

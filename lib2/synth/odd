@@ -1,0 +1,21 @@
+problem([]==>x:pnat=>u(1),
+repeat dequantify_once,lambda(x,_7634),
+[problem([x:pnat]==>u(1),
+ universe(2),_7643,
+ [problem([x:pnat]==>u(1),
+  induction(s(s(v0)),x:pnat),su(su(su(su(su(su(v7,[v6 of x],[v7]),[v5 of lambda(v0,lambda(v1,_7728))],[v6]),[v4 of _7735],[v5]),[v3 of _7742],[v4]),[v2 of lambda(x,u(1))],[v3]),[term_of(twos)],[v2]),
+  [problem([x:pnat]==>u(1),
+   intro(void)then wfftacs,void,
+   [
+   ]) ext _7742,
+   problem([x:pnat]==>u(1),
+   intro(explicit({true}))then wfftacs,{true},
+   [
+   ]) ext _7735,
+   problem([x:pnat,v0:pnat,v1:u(1)]==>u(1),
+   hyp(v1),v1,
+   [
+   ]) ext _7728
+  ]) ext _7643
+ ]) ext _7634
+]).

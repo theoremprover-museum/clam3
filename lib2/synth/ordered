@@ -1,0 +1,54 @@
+problem([]==>x:int list=>u(1),
+repeat intro,lambda(x,_7585),
+[problem([x:int list]==>u(1),
+ elim(x),list_ind(x,_7612,[v0,v1,v2,_7620]),
+ [problem([x:int list]==>u(1),
+  intro(explicit(int))then intro,int,
+  [
+  ]) ext _7612,
+  problem([x:int list,v0:int,v1:int list,v2:u(1)]==>u(1),
+  seq(v1=nil in int list\h:int#t:int list#v1=h::t in int list,new[v3]),lambda(v3,_7740)of _7737,
+  [problem([x:int list,v0:int,v1:int list,v2:u(1)]==>v1=nil in int list\h:int#t:int list#v1=h::t in int list,
+   elim(v1),list_ind(v1,_7820,[v3,v4,v5,_7828]),
+   [problem([x:int list,v0:int,v1:int list,v2:u(1)]==>nil=nil in int list\h:int#t:int list#nil=h::t in int list,
+    intro(left)then repeat intro,inl(axiom),
+    [
+    ]) ext _7820,
+    problem([x:int list,v0:int,v1:int list,v2:u(1),v3:int,v4:int list,v5:v4=nil in int list\h:int#t:int list#v4=h::t in int list]==>v3::v4=nil in int list\h:int#t:int list#v3::v4=h::t in int list,
+    intro(right)then repeat intro,inr(_8056),
+    [problem([x:int list,v0:int,v1:int list,v2:u(1),v3:int,v4:int list,v5:v4=nil in int list\h:int#t:int list#v4=h::t in int list]==>h:int#t:int list#v3::v4=h::t in int list,
+     intro(v3)then repeat intro,v3&_8186,
+     [problem([x:int list,v0:int,v1:int list,v2:u(1),v3:int,v4:int list,v5:v4=nil in int list\h:int#t:int list#v4=h::t in int list]==>t:int list#v3::v4=v3::t in int list,
+      intro(v4)then repeat intro,v4&axiom,
+      [
+      ]) ext _8186
+     ]) ext _8056
+    ]) ext _7828
+   ]) ext _7737,
+   problem([x:int list,v0:int,v1:int list,v2:u(1),v3:v1=nil in int list\h:int#t:int list#v1=h::t in int list]==>u(1),
+   elim(v3),decide(v3,[v4,_8401],[v5,_8405]),
+   [problem([x:int list,v0:int,v1:int list,v2:u(1),v3:v1=nil in int list\h:int#t:int list#v1=h::t in int list,v4:v1=nil in int list,v6:v3=inl(v4)in (v1=nil in int list\h:int#t:int list#v1=h::t in int list)]==>u(1),
+    intro(explicit(int))then intro,int,
+    [
+    ]) ext _8401,
+    problem([x:int list,v0:int,v1:int list,v2:u(1),v3:v1=nil in int list\h:int#t:int list#v1=h::t in int list,v5:h:int#t:int list#v1=h::t in int list,v7:v3=inr(v5)in (v1=nil in int list\h:int#t:int list#v1=h::t in int list)]==>u(1),
+    elim(v5),spread(v5,[h,v4,_8728]),
+    [problem([x:int list,v0:int,v1:int list,v2:u(1),v3:v1=nil in int list\h:int#t:int list#v1=h::t in int list,v5:h:int#t:int list#v1=h::t in int list,v7:v3=inr(v5)in (v1=nil in int list\h:int#t:int list#v1=h::t in int list),h:int,v4:t:int list#v1=h::t in int list,v6:v5=h&v4 in (h:int#t:int list#v1=h::t in int list)]==>u(1),
+     elim(v4),spread(v4,[t,v8,_8968]),
+     [problem([x:int list,v0:int,v1:int list,v2:u(1),v3:v1=nil in int list\h:int#t:int list#v1=h::t in int list,v5:h:int#t:int list#v1=h::t in int list,v7:v3=inr(v5)in (v1=nil in int list\h:int#t:int list#v1=h::t in int list),h:int,v4:t:int list#v1=h::t in int list,v6:v5=h&v4 in (h:int#t:int list#v1=h::t in int list),t:int list,v8:v1=h::t in int list,v9:v4=t&v8 in (t:int list#v1=h::t in int list)]==>u(1),
+      thin([v3,v5,v7,v4,v6,v9])then decide(h<v0),less(h,v0,su(_9283,[axiom],[v3]),su(_9291,[lambda(~,axiom)],[v3])),
+      [problem([x:int list,v0:int,v1:int list,v2:u(1),h:int,t:int list,v8:v1=h::t in int list,v3:h<v0]==>u(1),
+       intro(void)then intro,void,
+       [
+       ]) ext _9283,
+       problem([x:int list,v0:int,v1:int list,v2:u(1),h:int,t:int list,v8:v1=h::t in int list,v3:h<v0=>void]==>u(1),
+       hyp(v2),v2,
+       [
+       ]) ext _9291
+      ]) ext _8968
+     ]) ext _8728
+    ]) ext _8405
+   ]) ext _7740
+  ]) ext _7620
+ ]) ext _7585
+]).

@@ -1,0 +1,2 @@
+problem([]==>x:int list=>equiv(app(x,nil),x) in int list,
+_,_,_).

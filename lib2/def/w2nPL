@@ -1,0 +1,1 @@
+w2nPL(n)<==>p_ind(n,lambda(x,0),[k,r,lambda(x,plus(times(bitval(hd(x)),exp(s(s(0)),k)),r of tl(x)))]).

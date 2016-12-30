@@ -1,0 +1,1 @@
+problem([]==>x:pnat => (x = 0 in pnat)\(x = s(0) in pnat)\(n:pnat# x = s(s(n)) in pnat),_,_,_).

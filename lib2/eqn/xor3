@@ -1,0 +1,1 @@
+problem([]==>xor({false},{true})={true}in{bool},_,_,_).

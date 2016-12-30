@@ -1,0 +1,2 @@
+problem([]==>a:pnat list=> b:pnat list => even(length(app(a,b))) = even(length(app(b,a))) in u(1),_,_,_).
+

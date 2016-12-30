@@ -1,0 +1,4 @@
+problem([]==>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>xorNL(a::x)of (b::y)=xor(a,b)::xorNL(x)of y in{word},_,_,_).
+
+
+%problem([]==>a:{bool}=>x:{word}=>y:{word}=>xorNL(a::x)of y=xor(a,hd(y))::xorNL(x)of tl(y) in{word},_,_,_).

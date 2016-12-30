@@ -1,0 +1,1 @@
+problem([]==>n:int=>insert(n,nil)=n::nil in int list,_,_,_).

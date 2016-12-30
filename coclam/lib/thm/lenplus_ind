@@ -1,0 +1,1 @@
+problem([]==>x:pnat list=>y:pnat list=>sim(length(app(x,y)),plus(length(y),length(x)))in pnat,_,_,_).

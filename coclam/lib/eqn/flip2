@@ -1,0 +1,1 @@
+problem([]==>flip(s(0))=0 in int, _,_,_).

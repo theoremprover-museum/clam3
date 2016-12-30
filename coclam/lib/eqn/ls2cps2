@@ -1,0 +1,1 @@
+problem([]==>f:st(char, char)=>ready(f)=r in rwd(char)=>ls2cps(f)=input(lam(c, ls2cps(giveST(c, f)))) in cps,_,_,_).

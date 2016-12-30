@@ -1,0 +1,1 @@
+qrev(l,q)<==>list_ind(l,lambda(q,q),[hl,~,recl,lambda(q,recl of (hl::q))]) of q.

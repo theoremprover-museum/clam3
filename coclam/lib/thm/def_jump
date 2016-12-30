@@ -1,0 +1,1 @@
+problem([]==>n:int=>m:int=>jump(n, m)=n::jump(plus(n, m), m)in int list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>value:{word}=>initial({false},value)=value in {word},_,_,_).

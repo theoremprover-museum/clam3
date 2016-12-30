@@ -1,0 +1,1 @@
+jkFF(t,j,k)<==>p_ind(t,{false},[~,w,j and w or (not k)and w]).

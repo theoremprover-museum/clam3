@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>minus(s(x),s(y))=minus(x,y) in pnat,_,_,_).
+
+
+%problem([]==>minus(0,0)=0 in pnat,_,_,_).

@@ -1,0 +1,324 @@
+% loading file /home/dream3/air/clam/clam.v3.2/make/clam.v3.2.qui
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% clam.v3.2.qui loaded in module user, 0.733 sec 664,220 bytes
+
+CLaM Proof Planner: Critics Version (v3.2) (29/1/96 10:56)
+
+% compiling file /home/dream3/air/clam/clam.v3.2/lib/needs.pl
+% needs.pl compiled in module user, 0.667 sec 324 bytes
+Quintus Prolog Release 3.1.4 (Sun-4, SunOS 4.1)
+Copyright (C) 1993, Quintus Corporation.  All rights reserved.
+2100 Geng Road, Palo Alto, California U.S.A. (415) 813-3800
+CLaM Proof Planner (v3.2) -- libraries only (29/1/96 10:55)
+CLaM Proof Planner: Critics Version (v3.2) (29/1/96 10:56)
+
+| ?- plan(doubleplus).
+loading def(double)...done
+loading eqn(double1)...done
+loading eqn(double2)...done
+ adding wave-rules for double1:..done
+ adding wave-rules for double2:..............done
+ adding defeqn-record for double1...done 
+ adding defeqn-record for double2...done 
+loading def(plus)...done
+loading eqn(plus1)...done
+loading eqn(plus2)...done
+ adding wave-rules for plus1:..done
+ adding wave-rules for plus2:.................done
+ adding defeqn-record for plus1...done 
+ adding defeqn-record for plus2...done 
+loading thm(doubleplus)...done
+doubleplus([])
+==>x:pnat=>double(x)=plus(x,x)in pnat
+SELECTED METHOD at depth 0: induction([s(x)],[x:pnat])
+|doubleplus([2])
+|x:pnat
+|v0:ih(double(x)=plus(x,x)in pnat)
+|==>double(``s({x})''<out>)=plus(``s({x})''<out>,``s({x})''<out>)in pnat
+|SELECTED METHOD at depth 1: wave([1,1],[double2,equ(left)])
+||doubleplus([1,2])
+||x:pnat
+||v0:ih(double(x)=plus(x,x)in pnat)
+||==>``s({``s({double(x)})''<out>})''<out> =plus(``s({x})''<out>,``s({x})''<out>)in pnat
+||SELECTED METHOD at depth 2: wave([2,1],[plus2,equ(left)])
+|||doubleplus([1,1,2])
+|||x:pnat
+|||v0:ih(double(x)=plus(x,x)in pnat)
+|||==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[v0:pnat,x:pnat]
+
+|- plus(v0,s(x))=s(plus(v0,x))in pnat
+
+saving thm(lemma1)...done
+lemma1([])
+==>v0:pnat=>x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat
+SELECTED METHOD at depth 0: induction([s(v0)],[v0:pnat])
+|lemma1([2])
+|v0:pnat
+|v1:ih(x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat)
+|==>x:pnat=>plus(``s({v0})''<out>,s(\x/))=s(plus(``s({v0})''<out>,\x/))in pnat
+|SELECTED METHOD at depth 1: wave([1,2,1],[plus2,equ(left)])
+||lemma1([1,2])
+||v0:pnat
+||v1:ih(x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat)
+||==>x:pnat=>plus(``s({v0})''<out>,s(\x/))=s(``s({plus(v0,\x/)})''<out>)in pnat
+||SELECTED METHOD at depth 2: wave([1,1],[plus2,equ(left)])
+|||lemma1([1,1,2])
+|||v0:pnat
+|||v1:ih(x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat)
+|||==>x:pnat=>``s({plus(v0,s(\x/))})''<out> =s(``s({plus(v0,\x/)})''<out>)in pnat
+
+>>>>> INVOKING meta-ripple-position CRITIC <<<<<
+
+|||lemma1([1,1,2])
+|||v0:pnat
+|||v1:ih(x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat)
+|||==>x:pnat=>``s({plus(v0,s(\x/))})''<out> =``s({s(plus(v0,\x/))})''<out>in pnat
+|||SELECTED METHOD at depth 3: fertilize(weak(v1))
+||||lemma1([1,1,1,2])
+||||v0:pnat
+||||v1:ih(x:pnat=>plus(v0,s(x))=s(plus(v0,x))in pnat)
+||||==>x:pnat=>s(plus(v0,s(x)))=s(plus(v0,s(x)))in pnat
+||||TERMINATING METHOD at depth 4: elementary(...)
+|lemma1([1])
+|v0:pnat
+|==>x:pnat=>plus(0,s(x))=s(plus(0,x))in pnat
+|SELECTED METHOD at depth 1: eval_def([1,1],plus1)
+||lemma1([1,1])
+||v0:pnat
+||==>x:pnat=>s(x)=s(plus(0,x))in pnat
+||SELECTED METHOD at depth 2: eval_def([1,2,1],plus1)
+|||lemma1([1,1,1])
+|||v0:pnat
+|||==>x:pnat=>s(x)=s(x)in pnat
+|||TERMINATING METHOD at depth 3: elementary(...)
+ adding wave-rules for lemma1:.................done
+|||doubleplus([1,1,2])
+|||x:pnat
+|||v0:ih(double(x)=plus(x,x)in pnat)
+|||==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat
+|||SELECTED METHOD at depth 3: wave([1,2,1],[lemma1,equ(left)])
+||||doubleplus([1,1,1,2])
+||||x:pnat
+||||v0:ih(double(x)=plus(x,x)in pnat)
+||||==>``s({``s({double(x)})''<out>})''<out> =``s({``s({plus(x,x)})''<out>})''<out>in pnat
+||||SELECTED METHOD at depth 4: fertilize(weak(v0))
+|||||doubleplus([1,1,1,1,2])
+|||||x:pnat
+|||||v0:ih(double(x)=plus(x,x)in pnat)
+|||||==>s(s(double(x)))=s(s(double(x)))in pnat
+|||||TERMINATING METHOD at depth 5: elementary(...)
+|doubleplus([1])
+|x:pnat
+|==>double(0)=plus(0,0)in pnat
+|SELECTED METHOD at depth 1: eval_def([2,1],plus1)
+||doubleplus([1,1])
+||x:pnat
+||==>double(0)=0 in pnat
+||SELECTED METHOD at depth 2: eval_def([1,1],double1)
+|||doubleplus([1,1,1])
+|||x:pnat
+|||==>0=0 in pnat
+|||TERMINATING METHOD at depth 3: elementary(...)
+Planning complete for doubleplus
+
+------------------------------------------------------------
+doubleplus:
+
+[x:pnat]
+
+|- double(x)=plus(x,x)in pnat
+
+induction([s(x)],[x:pnat]) then 
+  [eval_def([2,1],plus1) then 
+     eval_def([1,1],double1) then 
+       elementary(...),
+   wave([1,1],[double2,equ(left)]) then 
+     wave([2,1],[plus2,equ(left)]) then 
+       wave([1,2,1],[lemma1,equ(left)]) then 
+         fertilize(weak(v0)) then 
+           elementary(...)
+  ]
+
+------------------------------------------------------------
+lemma1:
+
+[v0:pnat,x:pnat]
+
+|- plus(v0,s(x))=s(plus(v0,x))in pnat
+
+induction([s(v0)],[v0:pnat]) then 
+  [eval_def([1,1],plus1) then 
+     eval_def([1,2,1],plus1) then 
+       elementary(...),
+   wave([1,2,1],[plus2,equ(left)]) then 
+     wave([1,1],[plus2,equ(left)]) then 
+       fertilize(weak(v1)) then 
+         elementary(...)
+  ]
+
+
+yes
+| ?- dt.
+------------------------------------------------------------
+Plan node:     lemma1([])
+Status:        closed
+Hypotheses:    []
+Quantifiers:   [v0:pnat,x:pnat]
+Conclusion:    plus(v0,s(x))=s(plus(v0,x))in pnat
+Method:        induction([s(v0)],[v0:pnat])
+Substitutions: []
+Preconds:      0
+Subgoals:      2
+------------------------------------------------------------
+
+yes
+| ?- sg(doubleplus).
+
+yes
+| ?- dt.
+------------------------------------------------------------
+Plan node:     doubleplus([])
+Status:        closed
+Hypotheses:    []
+Quantifiers:   [x:pnat]
+Conclusion:    double(x)=plus(x,x)in pnat
+Method:        induction([s(x)],[x:pnat])
+Substitutions: []
+Preconds:      0
+Subgoals:      2
+------------------------------------------------------------
+
+yes
+| ?- dd(2).
+------------------------------------------------------------
+Plan node:     doubleplus([2])
+Status:        closed
+Hypotheses:    [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]
+Quantifiers:   []
+Conclusion:    double(``s({x})''<out>)=plus(``s({x})''<out>,``s({x})''<out>)in pnat
+Method:        wave([1,1],[double2,equ(left)])
+Substitutions: []
+Preconds:      7
+Subgoals:      1
+------------------------------------------------------------
+
+yes
+| ?- dd.
+------------------------------------------------------------
+Plan node:     doubleplus([1,2])
+Status:        closed
+Hypotheses:    [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]
+Quantifiers:   []
+Conclusion:    ``s({``s({double(x)})''<out>})''<out> =plus(``s({x})''<out>,``s({x})''<out>)in pnat
+Method:        wave([2,1],[plus2,equ(left)])
+Substitutions: []
+Preconds:      5
+Subgoals:      1
+------------------------------------------------------------
+
+yes
+| ?- dd.
+------------------------------------------------------------
+Plan node:     doubleplus([1,1,2])
+Status:        closed
+Hypotheses:    [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]
+Quantifiers:   []
+Conclusion:    ``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat
+Method:        wave([1,2,1],[lemma1,equ(left)])
+Substitutions: []
+Preconds:      6
+Subgoals:      1
+------------------------------------------------------------
+
+yes
+| ?- cp.
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[1,2,1],plus(x,``s({x})''<out>))
+false
+false
+-------------
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[1,2,1],plus(x,``s({x})''<out>))
+false
+false
+false
+-------------
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[1],``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>)
+false
+false
+false
+-------------
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[],``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat)
+false
+false
+false
+-------------
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[1],``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>)
+false
+false
+-------------
+wave_occ_at(``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,[],``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat)
+false
+false
+-------------
+
+
+yes
+| ?- current_goal(Goal).
+
+Goal = ``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat 
+
+| ?- current_goal(Goal),construct_lemma_lhs(Goal,LHS,Typ).
+
+no
+
+
+| ?- current_sequent(H).
+
+H = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat 
+
+| ?- current_sequent(Seq),construct_lemma_lhs(Seq,LHS,Typ).
+current_sequent(Seq),construct_lemma_lhs(Seq,LHS,Typ).
+
+Seq = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,
+LHS = ``s({plus(x,``s({x})''<out>)})''<out>,
+Typ = equ(pnat) ;
+
+no
+| ?- current_sequent(Seq),construct_lemma_lhs(Seq,LHS,Typ),construct_lemma_rhs(Seq,RHS,Typ).
+current_sequent(Seq),construct_lemma_lhs(Seq,LHS,Typ),construct_lemma_rhs(Seq,RHS,Typ).
+
+Seq = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,
+LHS = ``s({plus(x,``s({x})''<out>)})''<out>,
+Typ = equ(pnat),
+RHS = ``s(s({plus(x,x)}))''<in> ;
+
+Seq = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,
+LHS = ``s({plus(x,``s({x})''<out>)})''<out>,
+Typ = equ(pnat),
+RHS = plus(x,x) ;
+
+Seq = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)]==>``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,
+LHS = ``s({plus(x,``s({x})''<out>)})''<out>,
+Typ = equ(pnat),
+RHS = plus(x,x) ;
+
+no
+| ?- current_sequent(H==>G),construct_context(H,G,Context),construct_lemma_lhs(H==>G,LHS,Typ),construct_lemma_rhs(H==>G,RHS,Typ),construct_generalized_lemma(LHS,RHS,Typ,Context,Na:Lemma).
+current_sequent(H==>G),construct_context(H,G,Context),construct_lemma_lhs(H==>G,LHS,Typ),construct_lemma_rhs(H==>G,RHS,Typ),construct_generalized_lemma(LHS,RHS,Typ,Context,Na:Lemma).
+
+H = Context = [x:pnat,v0:ih(double(x)=plus(x,x)in pnat)],
+G = ``s({``s({double(x)})''<out>})''<out> =``s({plus(x,``s({x})''<out>)})''<out>in pnat,
+LHS = ``s({plus(x,``s({x})''<out>)})''<out>,
+Typ = equ(pnat),
+RHS = ``s(s({plus(x,x)}))''<in>,
+Na = lemma2,
+Lemma = []==>x:pnat=>plus(x,s(x))=s(plus(x,x))in pnat ;
+
+no
+| ?- 

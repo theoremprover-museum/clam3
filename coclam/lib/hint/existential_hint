@@ -1,0 +1,12 @@
+%	 EXISTENTIAL_HINT hint method.
+%
+%	This hint method provides existential witnesses. Value is the witness
+% for the existentially quantified variable Var of type Type. 
+
+hint(existential_hint( HintName, Var:Type, Value ),
+       H==>Var:Type#G,
+       [hint_context( existential_hint, HintName, H==>Var:Type#G, [ Value ] )],
+       [replace_all(Var,Value,G,NewG)],
+       [H==>NewG],
+       existential(Var:Type,Value)
+      ).

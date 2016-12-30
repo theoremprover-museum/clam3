@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>l:int list=>mapcar(f) of l=mapcar(l, f) in int list,_,_,_).

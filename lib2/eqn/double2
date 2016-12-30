@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>double(s(n))=s(s(double(n)))in pnat,_,_,_).

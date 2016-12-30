@@ -1,0 +1,1 @@
+problem([]==>v1:pnat=>x:pnat=>y:pnat=>'M6'(times(x,y),v1)=mult(x,y,'M7'(v1))in pnat,_,_,_).

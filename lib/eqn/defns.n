@@ -1,0 +1,25 @@
+problem([]==>l:pnat list=>app(nil,l)=l in pnat list,_,_,_).
+
+problem([]==>h:int=>l1:int list=>l2:int list=>app(h::l1,l2)=h::app(l1,l2)in int list,
+repeat intro then simplify then wfftacs,lambda(h,lambda(l1,lambda(l2,axiom))),
+[
+]).
+problem([]==>rev(nil)=nil in pnat list,_,_,_).
+
+problem([]==>h:int=>l:int list=>rev(h::l)=app(rev(l),h::nil)in int list,
+repeat intro then simplify then wfftacs,lambda(h,lambda(l,axiom)),
+[
+]).
+problem([]==>l:pnat list=>qrev(nil,l)=l in pnat list,_,_,_).
+problem([]==>h:pnat=>t:pnat list=>l:pnat list=>qrev(h::t,l)=qrev(t,h::l)in pnat list,_,_,_).
+problem([]==>length(nil)=0 in pnat,
+simplify,axiom,
+[
+]).
+problem([]==>h:int=>l:int list=>length(h::l)=s(length(l))in pnat,
+repeat intro then simplify,lambda(h,lambda(l,axiom)),
+[
+]).
+problem([]==>y:pnat list=>rotate(0,y)= y in pnat list,_,_,_).
+problem([]==>x:pnat=> rotate(x,nil)=nil in pnat list,_,_,_).
+

@@ -1,0 +1,40 @@
+boolVal(n)<==>
+p_ind(n,
+        lambda(v,
+           lambda(m,pnat_eq(m,0,
+                                pnat_eq(v,0,{false},{true}),
+                                arb))),
+        [k,u,lambda(v,
+                      lambda(m,pnat_eq(m,s(k),
+                                     pless(v,exp(s(s(0)),s(k)),                                                                        {false},{true}
+                                          ), 
+                                     pless(v,exp(s(s(0)),s(k)),                                                           u of v of m,
+                                           u of minus(v,exp(s(s(0)),s(k))) of m                                           )
+                                       )               
+                              )
+                    )
+         ]
+      ).
+                                         
+% | ?- eval(boolVal(s(s(s(0)))) of s(s(s(0))) of s(s(s(0))),X).
+
+% X = inr(unit)
+
+% | ?- eval(boolVal(s(s(s(0)))) of val(s(s(s(0))),lambda(n,vec(n))) of s(s(s(0)% )),X).
+
+
+% X = inr(unit)
+
+
+% | ?- eval(boolVal(s(s(0))) of val(s(s(0)),lambda(n,vec(n))) of s(s(0)),X).
+
+
+% X = inl(unit)
+
+% eval(boolVal(s(s(s(0)))) of
+%     plus(val(s(s(0)),lambda(n,vec(n))),val(s(s(0)),lambda(n,vec(n))))
+%     of s(0),X).
+
+
+% X = inl(unit)
+

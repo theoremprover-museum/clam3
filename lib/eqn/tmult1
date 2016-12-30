@@ -1,0 +1,2 @@
+problem([]==>y:pnat=>z:pnat=> tmult(0,y,z) = z in pnat,_,_,_).
+

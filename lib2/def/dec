@@ -1,0 +1,1 @@
+dec(x)<==>cadd(x,ones(length(x)),{false}).

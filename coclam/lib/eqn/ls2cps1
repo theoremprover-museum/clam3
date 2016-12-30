@@ -1,0 +1,1 @@
+problem([]==>f:st(char, char)=>ready(f)=d in rwd(char)=>ls2cps(f)=done in cps,_,_,_).

@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>greater(z,0)=>
+(greater(x,y)=>greater(times(z,x),times(z,y))),_,_,_).

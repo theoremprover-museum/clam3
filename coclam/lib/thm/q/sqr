@@ -1,0 +1,431 @@
+problem([]==>x:pnat=>y:pnat#leq(times(y,y),x)#less(x,times(s(y),s(y))),
+intro,lambda(x,_173),
+[problem([x:pnat]==>y:pnat#leq(times(y,y),x)#less(x,times(s(y),s(y))),
+ elim(x),p_ind(x,_221,[v0,v1,_227]),
+ [problem([x:pnat]==>y:pnat#leq(times(y,y),0)#less(0,times(s(y),s(y))),
+  intro(0),0&_276,
+  [problem([x:pnat]==>0 in pnat,
+   intro,axiom,
+   [
+   ]),
+   problem([x:pnat]==>leq(times(0,0),0)#less(0,times(s(0),s(0))),
+   intro,_333&_334,
+   [problem([x:pnat]==>leq(times(0,0),0),
+    simplify,_343,
+    [problem([x:pnat]==>0<*0\0=0 in pnat,
+     intro(right),inr(_392),
+     [problem([x:pnat]==>0=0 in pnat,
+      intro,axiom,
+      [problem([x:pnat]==>pnat in u(1),
+       intro,axiom,
+       [
+       ]),
+       problem([x:pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ])
+      ]) ext _392,
+      problem([x:pnat]==>0<*0 in u(1),
+      intro,axiom,
+      [problem([x:pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ]),
+       problem([x:pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ])
+      ])
+     ]) ext _343
+    ]) ext _333,
+    problem([x:pnat]==>less(0,times(s(0),s(0))),
+    simplify,_522,
+    [problem([x:pnat]==>0<*s(0),
+     intro,axiom,
+     [
+     ]) ext _522
+    ]) ext _334
+   ]) ext _276,
+   problem([x:pnat,y:pnat]==>(leq(times(y,y),0)#less(0,times(s(y),s(y))))in u(1),
+   intro,axiom,
+   [problem([x:pnat,y:pnat]==>leq(times(y,y),0)in u(1),
+    simplify,_614,
+    [problem([x:pnat,y:pnat]==>(p_ind(y,0,[~,v,plus(v,y)])<*0\p_ind(y,0,[~,v,plus(v,y)])=0 in pnat)in u(1),
+     intro,axiom,
+     [problem([x:pnat,y:pnat]==>p_ind(y,0,[~,v,plus(v,y)])<*0 in u(1),
+      intro,axiom,
+      [problem([x:pnat,y:pnat]==>p_ind(y,0,[~,v,plus(v,y)])in pnat,
+       intro,axiom,
+       [problem([x:pnat,y:pnat]==>y in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat]==>0 in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>plus(v1,y)in pnat,
+        simplify,_834,
+        [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>p_ind(v1,y,[~,v,s(v)])in pnat,
+         intro,axiom,
+         [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>v1 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>y in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>s(v3)in pnat,
+          intro,axiom,
+          [problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>v3 in pnat,
+           intro,axiom,
+           [
+           ])
+          ])
+         ]) ext _834
+        ])
+       ]),
+       problem([x:pnat,y:pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ])
+      ]),
+      problem([x:pnat,y:pnat]==>p_ind(y,0,[~,v,plus(v,y)])=0 in pnat in u(1),
+      intro,axiom,
+      [problem([x:pnat,y:pnat]==>pnat in u(1),
+       intro,axiom,
+       [
+       ]),
+       problem([x:pnat,y:pnat]==>p_ind(y,0,[~,v,plus(v,y)])in pnat,
+       intro,axiom,
+       [problem([x:pnat,y:pnat]==>y in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat]==>0 in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>plus(v1,y)in pnat,
+        simplify,_1246,
+        [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>p_ind(v1,y,[~,v,s(v)])in pnat,
+         intro,axiom,
+         [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>v1 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>y in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>s(v3)in pnat,
+          intro,axiom,
+          [problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>v3 in pnat,
+           intro,axiom,
+           [
+           ])
+          ])
+         ]) ext _1246
+        ])
+       ]),
+       problem([x:pnat,y:pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ])
+      ])
+     ]) ext _614
+    ]),
+    problem([x:pnat,y:pnat]==>less(0,times(s(y),s(y)))in u(1),
+    simplify,_1507,
+    [problem([x:pnat,y:pnat]==>0<*p_ind(p_ind(y,0,[~,v,plus(v,s(y))]),s(y),[~,v,s(v)])in u(1),
+     intro,axiom,
+     [problem([x:pnat,y:pnat]==>0 in pnat,
+      intro,axiom,
+      [
+      ]),
+      problem([x:pnat,y:pnat]==>p_ind(p_ind(y,0,[~,v,plus(v,s(y))]),s(y),[~,v,s(v)])in pnat,
+      intro,axiom,
+      [problem([x:pnat,y:pnat]==>p_ind(y,0,[~,v,plus(v,s(y))])in pnat,
+       intro,axiom,
+       [problem([x:pnat,y:pnat]==>y in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat]==>0 in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>plus(v1,s(y))in pnat,
+        simplify,_1761,
+        [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>p_ind(v1,s(y),[~,v,s(v)])in pnat,
+         intro,axiom,
+         [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>v1 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>s(y)in pnat,
+          intro,axiom,
+          [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>y in pnat,
+           intro,axiom,
+           [
+           ])
+          ]),
+          problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>s(v3)in pnat,
+          intro,axiom,
+          [problem([x:pnat,y:pnat,v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>v3 in pnat,
+           intro,axiom,
+           [
+           ])
+          ])
+         ]) ext _1761
+        ])
+       ]),
+       problem([x:pnat,y:pnat]==>s(y)in pnat,
+       intro,axiom,
+       [problem([x:pnat,y:pnat]==>y in pnat,
+        intro,axiom,
+        [
+        ])
+       ]),
+       problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>s(v1)in pnat,
+       intro,axiom,
+       [problem([x:pnat,y:pnat,v0:pnat,v1:pnat]==>v1 in pnat,
+        intro,axiom,
+        [
+        ])
+       ])
+      ])
+     ]) ext _1507
+    ])
+   ])
+  ]) ext _221,
+  problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))]==>y:pnat#leq(times(y,y),s(v0))#less(s(v0),times(s(y),s(y))),
+  elim(v1),spread(v1,[y,v2,_2240]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))))]==>y_:pnat#leq(times(y_,y_),s(v0))#less(s(v0),times(s(y_),s(y_))),
+   decide(s(v0)<*times(s(y),s(y))),pless(s(v0),times(s(y),s(y)),su(_2421,[axiom],[v4]),su(_2429,[lambda(~,axiom)],[v4])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>y_:pnat#leq(times(y_,y_),s(v0))#less(s(v0),times(s(y_),s(y_))),
+    intro(y),y&_2610,
+    [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>y in pnat,
+     intro,axiom,
+     [
+     ]),
+     problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>leq(times(y,y),s(v0))#less(s(v0),times(s(y),s(y))),
+     intro,_2911&_2912,
+     [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>leq(times(y,y),s(v0)),
+      elim(v2),spread(v2,[v5,v6,_3068]),
+      [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),v5:leq(times(y,y),v0),v6:less(v0,times(s(y),s(y))),v7:v2=v5&v6 in (leq(times(y,y),v0)#less(v0,times(s(y),s(y))))]==>leq(times(y,y),s(v0)),
+       seq(leq(v0,s(v0)),new[v8]),lambda(v8,_3292)of _3289,
+       [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),v5:leq(times(y,y),v0),v6:less(v0,times(s(y),s(y))),v7:v2=v5&v6 in (leq(times(y,y),v0)#less(v0,times(s(y),s(y))))]==>leq(v0,s(v0)),
+        apply_lemma(lem2),su(su(v9,[v8 of v0],[v9]),[term_of(lem2)],[v8]),
+        [
+        ]) ext _3289,
+        problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),v5:leq(times(y,y),v0),v6:less(v0,times(s(y),s(y))),v7:v2=v5&v6 in (leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v8:leq(v0,s(v0))]==>leq(times(y,y),s(v0)),
+        backchain_lemma(leqtrans),su(su(su(su(su(v10,[v12 of (v5&v8)],[v10]),[v11 of s(v0)],[v12]),[v10 of v0],[v11]),[v9 of times(y,y)],[v10]),[term_of(leqtrans)],[v9]),
+        [
+        ]) ext _3292
+       ]) ext _3068
+      ]) ext _2911,
+      problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>less(s(v0),times(s(y),s(y))),
+      compute([[unfold]]),_3805,
+      [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))]==>s(v0)<*times(s(y),s(y)),
+       intro,v4,
+       [
+       ]) ext _3805
+      ]) ext _2912
+     ]) ext _2610,
+     problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>(leq(times(y_,y_),s(v0))#less(s(v0),times(s(y_),s(y_))))in u(1),
+     intro,axiom,
+     [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>leq(times(y_,y_),s(v0))in u(1),
+      simplify,_4276,
+      [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>(p_ind(y_,0,[~,v,plus(v,y_)])<*s(v0)\p_ind(y_,0,[~,v,plus(v,y_)])=s(v0)in pnat)in u(1),
+       intro,axiom,
+       [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(y_,0,[~,v,plus(v,y_)])<*s(v0)in u(1),
+        intro,axiom,
+        [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(y_,0,[~,v,plus(v,y_)])in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>y_ in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>0 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>plus(v6,y_)in pnat,
+          simplify,_5224,
+          [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>p_ind(v6,y_,[~,v,s(v)])in pnat,
+           intro,axiom,
+           [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>v6 in pnat,
+            intro,axiom,
+            [
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>y_ in pnat,
+            intro,axiom,
+            [
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>s(v8)in pnat,
+            intro,axiom,
+            [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>v8 in pnat,
+             intro,axiom,
+             [
+             ])
+            ])
+           ]) ext _5224
+          ])
+         ]),
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>s(v0)in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>v0 in pnat,
+          intro,axiom,
+          [
+          ])
+         ])
+        ]),
+        problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(y_,0,[~,v,plus(v,y_)])=s(v0)in pnat in u(1),
+        intro,axiom,
+        [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>pnat in u(1),
+         intro,axiom,
+         [
+         ]),
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(y_,0,[~,v,plus(v,y_)])in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>y_ in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>0 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>plus(v6,y_)in pnat,
+          simplify,_7223,
+          [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>p_ind(v6,y_,[~,v,s(v)])in pnat,
+           intro,axiom,
+           [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>v6 in pnat,
+            intro,axiom,
+            [
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>y_ in pnat,
+            intro,axiom,
+            [
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>s(v8)in pnat,
+            intro,axiom,
+            [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>v8 in pnat,
+             intro,axiom,
+             [
+             ])
+            ])
+           ]) ext _7223
+          ])
+         ]),
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>s(v0)in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>v0 in pnat,
+          intro,axiom,
+          [
+          ])
+         ])
+        ])
+       ]) ext _4276
+      ]),
+      problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>less(s(v0),times(s(y_),s(y_)))in u(1),
+      simplify,_8469,
+      [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>s(v0)<*p_ind(p_ind(y_,0,[~,v,plus(v,s(y_))]),s(y_),[~,v,s(v)])in u(1),
+       intro,axiom,
+       [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>s(v0)in pnat,
+        intro,axiom,
+        [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>v0 in pnat,
+         intro,axiom,
+         [
+         ])
+        ]),
+        problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(p_ind(y_,0,[~,v,plus(v,s(y_))]),s(y_),[~,v,s(v)])in pnat,
+        intro,axiom,
+        [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>p_ind(y_,0,[~,v,plus(v,s(y_))])in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>y_ in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>0 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>plus(v6,s(y_))in pnat,
+          simplify,_9712,
+          [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>p_ind(v6,s(y_),[~,v,s(v)])in pnat,
+           intro,axiom,
+           [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>v6 in pnat,
+            intro,axiom,
+            [
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>s(y_)in pnat,
+            intro,axiom,
+            [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>y_ in pnat,
+             intro,axiom,
+             [
+             ])
+            ]),
+            problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>s(v8)in pnat,
+            intro,axiom,
+            [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat,v7:pnat,v8:pnat]==>v8 in pnat,
+             intro,axiom,
+             [
+             ])
+            ])
+           ]) ext _9712
+          ])
+         ]),
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>s(y_)in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat]==>y_ in pnat,
+          intro,axiom,
+          [
+          ])
+         ]),
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>s(v6)in pnat,
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y)),y_:pnat,v5:pnat,v6:pnat]==>v6 in pnat,
+          intro,axiom,
+          [
+          ])
+         ])
+        ])
+       ]) ext _8469
+      ])
+     ])
+    ]) ext _2421,
+    problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>y_:pnat#leq(times(y_,y_),s(v0))#less(s(v0),times(s(y_),s(y_))),
+    intro(s(y)),s(y)&_11596,
+    [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>s(y)in pnat,
+     repeat intro,axiom,
+     [
+     ]),
+     problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>leq(times(s(y),s(y)),s(v0))#less(s(v0),times(s(s(y)),s(s(y)))),
+     intro,_11917&_11918,
+     [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>leq(times(s(y),s(y)),s(v0)),
+      compute([[unfold]]),_11927,
+      [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>times(s(y),s(y))<*s(v0)\times(s(y),s(y))=s(v0)in pnat,
+       intro(left),inl(_12252),
+       [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>times(s(y),s(y))<*s(v0),
+        elim(v4),su(_12409,[v4 of _12416],[v5]),
+        [problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>s(v0)<*times(s(y),s(y)),_,_,_) ext _12416,
+         problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void,v5:void]==>times(s(y),s(y))<*s(v0),_,_,_) ext _12409
+        ]) ext _12252,
+        problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>times(s(y),s(y))=s(v0)in pnat in u(1),_,_,_)
+       ]) ext _11927
+      ]) ext _11917,
+      problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void]==>less(s(v0),times(s(s(y)),s(s(y)))),_,_,_) ext _11918
+     ]) ext _11596,
+     problem([x:pnat,v0:pnat,v1:y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y))),y:pnat,v2:leq(times(y,y),v0)#less(v0,times(s(y),s(y))),v3:v1=y&v2 in (y:pnat#leq(times(y,y),v0)#less(v0,times(s(y),s(y)))),v4:s(v0)<*times(s(y),s(y))=>void,y_:pnat]==>(leq(times(y_,y_),s(v0))#less(s(v0),times(s(y_),s(y_))))in u(1),_,_,_)
+    ]) ext _2429
+   ]) ext _2240
+  ]) ext _227
+ ]) ext _173,
+ problem([]==>pnat in u(1),
+ intro,axiom,
+ [
+ ])
+]).

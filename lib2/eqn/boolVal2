@@ -1,0 +1,8 @@
+problem([]==>n:pnat=>boolVal(s(n))=lambda(v,lambda(m,
+pnat_eq(m,s(n),
+pless(v,exp(s(s(0)),s(n)),{false},{true}),
+pless(v,exp(s(s(0)),s(n)),
+boolVal(n) of v of m
+,boolVal(n)of minus(v,exp(s(s(0)),s(n)))of m)
+))) in {bool},_,_,_).
+

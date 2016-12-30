@@ -1,0 +1,1 @@
+problem([]==>v0:(int=>int)=>v3:pnat=>v1:int=>appn(s(v3), lam(v2-int, v0 of v2), v1)=v0 of appn(v3, lam(v2-int, v0 of v2), v1)in int list,_,_,_).

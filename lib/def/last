@@ -1,0 +1,1 @@
+last(x)<==>lambda(x,list_ind(x,nil,[v0,v1,v2,list_ind(v1,v0::v1,[~,~,~,v2])])).

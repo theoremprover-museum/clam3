@@ -1,0 +1,1 @@
+problem([]==>minusW(nil,nil)=nil in {word},_,_,_).

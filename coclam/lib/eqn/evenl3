@@ -1,0 +1,2 @@
+problem([]==>u:pnat=>v:pnat=>w:pnat list=>evenl(u::v::w)=evenl(w) in u(1),_,_,_).
+

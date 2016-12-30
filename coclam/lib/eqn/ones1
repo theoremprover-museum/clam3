@@ -1,0 +1,1 @@
+problem([]==>ones=1::ones in int list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>x:int=>v1:int=>h:int list=>t:int list=>(h=x::v1::nil in int list=>void)=>assoc(x,h::t)=assoc(x,t)in int list,_,_,_).

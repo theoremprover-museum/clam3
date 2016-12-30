@@ -1,0 +1,4 @@
+problem([]==>y:pnat=>times(0,y)=0 in pnat,
+repeat intro then simplify,lambda(y,axiom),
+[
+]).

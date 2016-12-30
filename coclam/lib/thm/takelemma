@@ -1,0 +1,1 @@
+problem([]==>a:int list=>n:pnat=>b:int list=>(a=b in int list)=>take(s(n), a)=take(s(n), b) in int list,_,_,_).

@@ -1,0 +1,2 @@
+problem([]==>t:pnat list=>a:pnat =>rev(app(rev(t),a::nil))= a::t in pnat list,_,_,_).
+

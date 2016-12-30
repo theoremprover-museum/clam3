@@ -1,0 +1,1 @@
+problem([]==>x:int=>l:int list=>member(x,l)=>member(x,sort(l)),_,_,_).

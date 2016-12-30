@@ -1,0 +1,4 @@
+problem([]==>reset:flip=>countImp(reset)of 0=zeroes(length(nil))in{word},_,_,_).
+
+
+%problem([]==>n:pnat=>reset:flip=>countImp(n,reset)of 0=zeroes(n)in{word},_,_,_).

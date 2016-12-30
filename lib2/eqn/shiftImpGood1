@@ -1,0 +1,9 @@
+problem([]==>s0:{bool}=>s1:{bool}=>si:{bool}=>shiftImpGood(0,s0,s1,si,nil)=bool_eq(s1,{false},bool_eq(s0,{false},{false}::nil,si::nil),bool_eq(s0,{false},{false}::{false}::nil,{false}::nil)) in{word},_,_,_).
+
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>si:{bool}=>x:{word}=>shiftImpGood(0,s0,s1,si,nil)={false}::nil in{word},_,_,_).
+
+
+
+

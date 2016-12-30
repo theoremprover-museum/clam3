@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>b:pnat=>a:pnat=>appn(n, lplus(a), s(b))=s(appn(n, lplus(a), b))in pnat,_,_,_).

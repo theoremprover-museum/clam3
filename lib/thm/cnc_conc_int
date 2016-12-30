@@ -1,0 +1,1 @@
+problem([]==>x:int=>y:int list=>z:int list=>y=z in int list=>x::y=x::z in int list,_,_,_).

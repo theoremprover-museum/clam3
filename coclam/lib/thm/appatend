@@ -1,0 +1,4 @@
+problem([]==>x:pnat list=>y:pnat =>z:pnat list=> 
+app(x,y::z) = app(atend(y,x),z) in pnat list,_,_,_).
+
+

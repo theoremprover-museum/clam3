@@ -1,0 +1,11 @@
+        % ELEMENTARY METHOD: applies if current method is easily provable
+        % using (some) propositional and equational reasoning, and
+        % (very) elementary facts about nat, list.
+method(elementary(I),
+       H==>G,
+       [elementary(H==>G,I)],
+       [],
+       [],
+       []
+      ).
+

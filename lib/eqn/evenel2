@@ -1,0 +1,2 @@
+problem([]==>h:pnat=>t:pnat list=>
+           even(h)=>evenel(h::t)=h::evenel(t) in pnat list,_,_,_).

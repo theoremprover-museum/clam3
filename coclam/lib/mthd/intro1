@@ -1,0 +1,57 @@
+method(intro1(Rs, Cs),
+       H==>G,
+       [%  write('attempting intro1'), nl,
+         matrix(Vs, Phi1, G),
+	 sort_conds(Phi1, CondsPhi, Type, Phi),
+	 Phi =.. [and, A, B],
+	 ((A =.. [act, ST], P = [1, 1]);
+                 ((B =.. [act, ST], \+ ST = type(_,_)), P = [1, 2])), 
+	 find_Vs(HypVars, H, Rest),
+	 replace_ho_universal_vars(HypVars, H, LH, _),
+	 (\+ transition(_, ST,_,_);
+	      \+ (transition(C, ST, _, _),
+                  check_tran_conds(C, H, G, ST, Vs))
+         ),
+	 n_strict(ST, H1, R1, P, H, Cout),
+         eval_bf([ST-r([], P, H, Vs)], Rules, Conds, 0, G, H1, R1, Cout, Vs),
+	 case_are(Rules, Rs, Cs), \+ (Rs = [], Cs = [], Conds=[]),
+	 trivial_list(H==>Conds, Conditions)
+       ],
+       [
+	intro_cons(Rs, H==>G, NewH==>Goal, G, Cs, Conditions, Cases),
+	make_ground([NewH, Goal, Cases]),
+	tidy_lam(NewH==>Goal, G3),
+	other_goals(Cases, G2)],
+       [G3|G2],
+	[]
+      ).
+/* Jan 29th 1998 -- is this needed ? -- yes April 1st */
+method(intro1(Rs, Cs),
+       H==>G,
+       [%  write('attempting intro1'), nl,
+         matrix(Vs, Phi1, G),
+	 sort_conds(Phi1, CondsPhi, Type, Phi),
+	 Phi =.. [and, A, B],
+	 ((A =.. [act, ST], P = [1, 1]); ((B =.. [act, type(ST,SType)]), P = [1,
+1, 2])), 
+	 find_Vs(HypVars, H, Rest),
+	 replace_ho_universal_vars(HypVars, H, LH, _),
+	 (\+ transition(_, ST,_,_);
+	      \+ (transition(C, ST, _, _),
+                  check_tran_conds(C, H, G, type(ST, SType),Vs))
+         ),
+	 n_strict(ST, H1, R1, P, H, Cout),
+	 eval_bf([ST-r([], P, H, Vs)], Rules, Conds, 0, G, H1, R1, Cout, Vs),
+	 case_are(Rules, Rs, Cs), \+ (Rs = [], Cs = [], Conds=[]),
+	 trivial_list(H==>Conds, Conditions)
+       ],
+       [
+	intro_cons(Rs, H==>G, NewH==>Goal, G, Cs, Conditions, Cases),
+	make_ground([NewH, NewGoal, Cases]),
+	tidy_lam(NewH==>Goal, G3),
+	other_goals(Cases, G2)],
+       [G3|G2],
+	[]
+      ).
+
+

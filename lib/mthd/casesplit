@@ -1,0 +1,47 @@
+	% CASESPLIT METHOD:
+	% We introduce a case-split in the proof when there are
+	% applicable conditional wave-rules, none of whose conditions
+	% are known as true among the hypotheses.
+	%
+	% This will then enable the application of the conditional
+	% wave-rules in the next step of the proof. 
+	%
+	% Notice that this may leed to a partial de-quantification of
+	% the goal since we may have to do a case-split on some of the
+	% universally quantified variables, which will have to be moved
+	% into the hyp-list (all this happens in the post-conds).
+	%
+	% NOTE: In order to justify a case split we need a
+	% "complementary set" of wave rules, that is: a set of wave
+	% rules whose conditions disjunctively amount to "true".
+
+method(casesplit(NSWConds),
+      H==>G,
+      [ 
+       % Note that as currently written casesplit will never apply unless
+       % and induction hypothesis exists.
+       member( _:[ihmarker(_,Mark)|IHyps], H ),
+       % There must be at least one potentially applicable wave-rule
+       % in some complementary set for it to be considered
+       matrix(Vars,Matrix,G),
+       wave_rule(_,_,[_|_]=>LL:=>_),
+       copy(LL,L),
+       exp_at(Matrix,MatPos,L),
+       correct_wave_vars( LL, L ),
+       condition_set(LL, RhsInstsLst, Conds ),
+       wave_fronts( NWConds,_, Conds ),
+       sinks( NSWConds,_,  NWConds),
+       append( MatPos, Mark, Pos ),
+       % The complementary set's conditions must be new, and all
+       % the wave-rules in the complementary set must be applicable
+       forall {RhsInsts\RhsInstsLst}:
+              (RhsInsts = [] ; adjust_ind_hyps(  RhsInsts, IHyps, Pos,[_|_], _ )),
+       forall {C\NSWConds}: (\+ elementary(H==>C, _))
+      ],
+      [listof(Var:Typ,(member(Var:Typ,Vars),\+ freevarinterm(NSWConds,Var)),NVars),
+       matrix(NVars,Matrix,NMatrix),
+       split_into_cases( NSWConds, H==>NMatrix, [New|Goals] )
+      ],
+      [New|Goals],
+      casesplit(NSWConds)
+     ).

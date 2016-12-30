@@ -1,0 +1,1 @@
+problem([]==>x:char=>outgot(got(x))=x in char,_,_,_).

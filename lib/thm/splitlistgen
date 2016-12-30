@@ -1,0 +1,5 @@
+problem([]==>f:(pnat => pnat)=>t:pnat list=>n:pnat=>a:pnat=>b:pnat list=>
+        map(f,app(b,t)) = reduce(lam(x,lam(y,app(x,y))),
+                          map(lam(y,map(f,y)),
+                              split(a,n,b,t))) in pnat list,_,_,_).
+

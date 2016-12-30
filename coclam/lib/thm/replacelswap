@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>replace(a, b, lswap(a, b))=lconst(a) in int list,_,_,_).

@@ -1,0 +1,4 @@
+problem([]==>u:{posint}=>v:{posint}list=>w:{posint}=>prod(v)=w in{posint}=>prod(u::v)=times(u,w)in{posint},
+step_case(tautology(_7349)or (sym_eval([eval_def([1,1,2],prod2),reduction([2],cnc_posint_times)])then try tautology(dequantify_once then dequantify_once then dequantify_once then intro(new[v0])then[hyp(v0),wfftacs]))),lambda(v0,lambda(v1,lambda(v2,su(su(su(lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of lambda(v0,lambda(v1,lambda(v2,su(lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of prod(v1)],[v5]),[cnc_posint_times of v0],[v4]))of (lambda(v3,su(su(su(v6,[v5 of v2],[v6]),[v4 of v1],[v5]),[v3 of v0],[v4]))of lambda(u,lambda(v,lambda(w,lambda(v0,v0))))),[term_of(cnc_posint_times)],[cnc_posint_times])))),[v3 of v1],[v4]),[prod2 of v0],[v3]),[term_of(prod2)],[prod2])))),
+[
+]).

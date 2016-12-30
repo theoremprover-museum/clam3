@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>x:{word}=>w2nPL(s(n))of x=plus(times(bitval(hd(x)),exp(s(s(0)),n)),w2nPL(n)of tl(x))in pnat,_,_,_).

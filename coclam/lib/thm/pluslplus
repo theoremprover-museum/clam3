@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>b:pnat=>lplus(a, b)=plus(b, a) in pnat,_,_,_).

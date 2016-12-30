@@ -1,0 +1,1 @@
+problem([]==>p:{bool}=>q:{bool}=> (tr(p)#tr(q))=>tr(p and q),_,_,_).

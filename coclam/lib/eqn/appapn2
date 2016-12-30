@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>b:pnat list=>appn(n, app(nil), b)=b in pnat,_,_,_).

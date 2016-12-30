@@ -1,0 +1,1 @@
+problem([]==>r:pnat => i:pnat => out(r,0,s(i)) = out(s(0),s(i),i) in pnat,_,_,_).

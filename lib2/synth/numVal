@@ -1,0 +1,4 @@
+problem([]==>pnat=>{bool}list=>pnat,
+because,atom(incomplete),
+[
+]).

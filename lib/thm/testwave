@@ -1,0 +1,3 @@
+problem([]==>x:pnat=>f(s(x)) = f(s(f(x))) in pnat,_,_,_).
+
+

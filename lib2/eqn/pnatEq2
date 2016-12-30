@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>a:{bool}=>b:{bool}=> (x=y in pnat=>void)=>pnatEq(x,y,a,b)=b in{bool},_,_,_).

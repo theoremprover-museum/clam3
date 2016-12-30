@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>z:{word}=>remW(plusW(x,y),z)=minusW(plusW(x,y),timesW(z,divW(plusW(x,y),z))) in{word},_,_,_).

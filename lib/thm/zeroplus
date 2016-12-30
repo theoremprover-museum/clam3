@@ -1,0 +1,14 @@
+problem([]==>x:pnat=>y:pnat=>(x=0 in pnat#y=0 in pnat)=>plus(x,y)=0 in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_203,[v0,v1,_209])),
+[problem([x:pnat]==>y:pnat=>(0=0 in pnat#y=0 in pnat)=>plus(0,y)=0 in pnat,
+ sym_eval([base([1,1,2],plus1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _288,[plus1 of v0],[v1]),[term_of(plus1)],[plus1])),
+ [problem([x:pnat]==>y:pnat=>(0=0 in pnat#y=0 in pnat)=>y=0 in pnat,
+  tautology(dequantify_once then intro then[elim(v0)then hyp(v2),wfftacs]),lambda(y,lambda(v0,spread(v0,[v1,v2,v2]))),
+  [
+  ]) ext _288
+ ]) ext _203,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>(v0=0 in pnat#y=0 in pnat)=>plus(v0,y)=0 in pnat]==>y:pnat=>(s(v0)=0 in pnat#y=0 in pnat)=>plus(s(v0),y)=0 in pnat,
+ tautology(dequantify_once then intro then[elim(v2)then clam_arith,wfftacs]),lambda(y,lambda(v2,spread(v2,[v3,v4,atom(incomplete)]))),
+ [
+ ]) ext _209
+]).

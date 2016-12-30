@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>geq(x,0)={true} in u(1),_,_,_).

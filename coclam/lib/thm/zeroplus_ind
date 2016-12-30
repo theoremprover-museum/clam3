@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>(x=0 in pnat#y=0 in pnat)=>plus(x,y)=0 in pnat,
+_,_,_).

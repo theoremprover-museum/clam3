@@ -1,0 +1,1 @@
+ha_s(a,b,s,c)<==>a+b=2*c+s in int.

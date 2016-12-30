@@ -1,0 +1,1 @@
+problem([]==>f:(int#int=>int)=>a:int=>b:int list=>loop2(f, a, b)=loop(f, a, b)in int list,_,_,_).

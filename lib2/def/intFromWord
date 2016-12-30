@@ -1,0 +1,1 @@
+intFromWord(n,w)<==>bool_eq(nBitW(n)of w,{true},intFromNat(numVal(n)of twoCompW(n,w)),intFromNat(numVal(n)of w)).

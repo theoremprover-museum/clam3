@@ -1,0 +1,1 @@
+problem([]==>k:pnat=>from(k)=k::from(s(k))in pnat list,_,_,_).

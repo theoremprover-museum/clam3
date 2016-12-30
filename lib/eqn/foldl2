@@ -1,0 +1,2 @@
+problem([]==>x:(pnat => pnat) => y: pnat => z:pnat list => w:pnat =>
+foldl(x,w,y::z) = ap(ap(x,y),foldl(x,w,z)) in pnat,_,_,_).

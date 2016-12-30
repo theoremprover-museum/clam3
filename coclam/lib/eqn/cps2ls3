@@ -1,0 +1,2 @@
+problem([]==>c:char=>q:cps=>cps2ls(output(c, q))=putST(c, cps2ls(q))in st(char, char),_,_,_).
+

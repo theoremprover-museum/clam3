@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>nat2word(s(times(s(s(0)),n)))={true}::nat2word(n) in{word},_,_,_).

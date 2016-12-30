@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>notW(s(n))of a= (not hd(a))::notW(n)of tl(a)in{word},_,_,_).

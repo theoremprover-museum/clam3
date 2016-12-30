@@ -1,0 +1,1 @@
+problem([]==>change(0, nil)=0 in int,_,_,_).

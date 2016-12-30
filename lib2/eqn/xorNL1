@@ -1,0 +1,4 @@
+problem([]==>xorNL(nil)of nil=nil in{word},_,_,_).
+
+
+%problem([]==>xorNL(nil)of y=nil in{word},_,_,_).

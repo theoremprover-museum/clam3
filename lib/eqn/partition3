@@ -1,0 +1,2 @@
+problem([]==> x:pnat => y:pnat list => a:pnat list => b:pnat list => 
+               odd(x) => partition(x::y,a,b) = partition(y,a,atend(x,b)) in pnat list,_,_,_).

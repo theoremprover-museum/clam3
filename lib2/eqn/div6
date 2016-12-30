@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>plus(x,y)div y=s(x div y)in pnat,_,_,_).

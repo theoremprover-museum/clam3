@@ -1,0 +1,1 @@
+problem([]==>a:int=>l:int list=>tl(a::l)=l in int list,_,_,_).

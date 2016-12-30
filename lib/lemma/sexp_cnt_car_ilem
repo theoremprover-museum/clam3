@@ -1,0 +1,44 @@
+problem([]==>cons:{sexp}=>w:j(consp(cons))=>sexp_cnt(car(cons,w))<*sexp_cnt(cons),
+intro_type_hyps_upto(cons),lambda(cons,_105534),
+[problem([cons:{sexp}]==>w:j(consp(cons))=>sexp_cnt(car(cons,w))<*sexp_cnt(cons),
+ str_case_anal(cons),lambda(v0,v0)of su(su(su(su(v1,[v0 of(lambda(w,_105609)&lambda(sym,lambda(w,_105618))&lambda(num,lambda(w,_105627))&lambda(car,lambda(cdr,lambda(w,_105636))))],[v1]),[v1 of cons],[v0]),[v0 of lambda(cons,w:j(consp(cons))=>sexp_cnt(car(cons,w))<*sexp_cnt(cons))],[v1]),[term_of(sexp_strcaselem)],[v0]),
+ [problem([cons:{sexp},w:j(consp({nul}))]==>sexp_cnt(car({nul},w))<*sexp_cnt({nul}),
+  normalize_hyp([[unroll,_105734]],w),_105690,
+  [problem([cons:{sexp},w:void]==>sexp_cnt(car({nul},w))<*sexp_cnt({nul}),
+   elim(w),any(w),
+   [
+   ]) ext _105690
+  ]) ext _105609,
+  problem([cons:{sexp},sym:atom,w:j(consp(symbol(sym)))]==>sexp_cnt(car(symbol(sym),w))<*sexp_cnt(symbol(sym)),
+  normalize_hyp([[unroll,_105836]],w),_105787,
+  [problem([cons:{sexp},sym:atom,w:void]==>sexp_cnt(car(symbol(sym),w))<*sexp_cnt(symbol(sym)),
+   elim(w),any(w),
+   [
+   ]) ext _105787
+  ]) ext _105618,
+  problem([cons:{sexp},num:pnat,w:j(consp(number(num)))]==>sexp_cnt(car(number(num),w))<*sexp_cnt(number(num)),
+  normalize_hyp([[unroll,_105943]],w),_105894,
+  [problem([cons:{sexp},num:pnat,w:void]==>sexp_cnt(car(number(num),w))<*sexp_cnt(number(num)),
+   elim(w),any(w),
+   [
+   ]) ext _105894
+  ]) ext _105627,
+  problem([cons:{sexp},car:{sexp},cdr:{sexp},w:j(consp(cons(car,cdr)))]==>sexp_cnt(car(cons(car,cdr),w))<*sexp_cnt(cons(car,cdr)),
+  normalize_hyp([[unroll,_106062]],w),_106001,
+  [problem([cons:{sexp},car:{sexp},cdr:{sexp},w:unary]==>sexp_cnt(car(cons(car,cdr),w))<*sexp_cnt(cons(car,cdr)),
+   normalize_goal([[unroll,_106125]]),_106072,
+   [problem([cons:{sexp},car:{sexp},cdr:{sexp},w:unary]==>rec_ind(car,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4,v10,s(p_ind(v2 of v4,v2 of v10,[~,'v$',s('v$')]))])])])])])<*s(p_ind(rec_ind(car,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4_,v10,s(p_ind(v2 of v4_,v2 of v10,[~,'v$',s('v$')]))])])])])]),rec_ind(cdr,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4,v10_,s(p_ind(v2 of v4,v2 of v10_,[~,'v$',s('v$')]))])])])])]),[~,'v$',s('v$')])),
+    arith,axiom,
+    [problem([cons:{sexp},car:{sexp},cdr:{sexp},w:unary]==>rec_ind(car,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4,v10,s(p_ind(v2 of v4,v2 of v10,[~,'v$',s('v$')]))])])])])])in pnat,
+     try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+     [
+     ]),
+     problem([cons:{sexp},car:{sexp},cdr:{sexp},w:unary]==>s(p_ind(rec_ind(car,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4_,v10,s(p_ind(v2 of v4_,v2 of v10,[~,'v$',s('v$')]))])])])])]),rec_ind(cdr,[v2,v3,decide(v3,[~,0],[v5,decide(v5,[~,0],[v6,decide(v6,[~,0],[v8,spread(v8,[v4,v10_,s(p_ind(v2 of v4,v2 of v10_,[~,'v$',s('v$')]))])])])])]),[~,'v$',s('v$')]))in pnat,
+     try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+     [
+     ])
+    ]) ext _106072
+   ]) ext _106001
+  ]) ext _105636
+ ]) ext _105534
+]).

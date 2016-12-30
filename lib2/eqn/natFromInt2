@@ -1,0 +1,1 @@
+problem([]==>natFromInt(0)=0 in pnat,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>del(0, lconst(1))=del(0, lswap2(1, 0))in pnat list,_,_,_).

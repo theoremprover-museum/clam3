@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>b:pnat=>odd(b)=>(exp(a,b) = times(a,exp(times(a,a),div(b,2))) in pnat),_,_,_).

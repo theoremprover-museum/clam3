@@ -1,0 +1,5 @@
+/* Bug in wave-rule parser makes this definition dangerous */
+problem([]==>
+	x:pnat=>y:pnat=> minus(x,y) = minus(s(x),s(y)) in pnat,
+_,_,_).
+

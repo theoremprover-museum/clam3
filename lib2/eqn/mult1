@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>mult(x,nil)=zeroes(length(x))in{word},_,_,_).

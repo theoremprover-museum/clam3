@@ -1,0 +1,1 @@
+problem([]==>a:{word}=>hd(a)={false} in {bool}\hd(a)={true} in {bool},_,_,_).

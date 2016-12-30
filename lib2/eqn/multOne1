@@ -1,0 +1,1 @@
+problem([]==>u:{bool}=>multOne(nil,u)=nil in{word},_,_,_).

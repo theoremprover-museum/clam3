@@ -1,0 +1,13 @@
+problem([]==>x:pnat=>y:pnat=>x=0 in pnat=>times(x,y)=0 in pnat,
+dequantify,lambda(x,lambda(y,_322)),
+[problem([x:pnat,y:pnat]==>x=0 in pnat=>times(x,y)=0 in pnat,
+ normalise([normal(imply_intro),normal(subst(x=0 in pnat))]),lambda(v0,_384),
+ [problem([x:pnat,y:pnat,v0:x=0 in pnat]==>times(0,y)=0 in pnat,
+  base([1,1],times1),su(su(_440,[times1 of y],[v1]),[term_of(times1)],[times1]),
+  [problem([x:pnat,y:pnat,v0:x=0 in pnat]==>0=0 in pnat,
+   identity,axiom,
+   [
+   ]) ext _440
+  ]) ext _384
+ ]) ext _322
+]).

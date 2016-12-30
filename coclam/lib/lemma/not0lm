@@ -1,0 +1,19 @@
+problem([]==>n:pnat=>m:pnat=>(times(n,m)=0 in pnat=>void)=>n=0 in pnat=>void,
+dequantify,lambda(n,lambda(m,_169)),
+[problem([n:pnat,m:pnat]==>(times(n,m)=0 in pnat=>void)=>n=0 in pnat=>void,
+ intro then wfftacs,lambda(v0,_222),
+ [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void]==>n=0 in pnat=>void,
+  intro then wfftacs,lambda(v1,_277),
+  [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:n=0 in pnat]==>void,
+   elim(v0)then wfftacs then try intro,su(v2,[v0 of _347],[v2]),
+   [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:n=0 in pnat]==>times(n,m)=0 in pnat,
+    rewrite(n=0 in pnat)then wfftacs,_358,
+    [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:n=0 in pnat]==>times(0,m)=0 in pnat,
+     simplify then wfftacs,axiom,
+     [
+     ]) ext _358
+    ]) ext _347
+   ]) ext _277
+  ]) ext _222
+ ]) ext _169
+]).

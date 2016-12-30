@@ -1,0 +1,3 @@
+muxSpec(n)<==>p_ind(n,lambda(x,hd(x)),[k,w,lambda(x,w of tl(x))]).
+
+%muxSpec(n,x)<==>nBitW(s(n))of x.

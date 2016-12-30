@@ -1,0 +1,13 @@
+problem([]==>a:int list=>n:int=>app(rev(a),n::nil)=rev(n::a)in int list,
+autotactic(idtac),_70868,
+[problem([]==>a:int list=>n:int=>app(rev(a),n::nil)=rev(n::a)in int list,
+ dequantify,lambda(a,lambda(n,_70963)),
+ [problem([a:int list,n:int]==>app(rev(a),n::nil)=rev(n::a)in int list,
+  wave([2,1],rev2),su(_71021,[term_of(rev2)],[rev2]),
+  [problem([a:int list,n:int]==>app(rev(a),n::nil)=app(rev(a),n::nil)in int list,
+   identity,axiom,
+   [
+   ]) ext _71021
+  ]) ext _70963
+ ]) ext _70868
+]).

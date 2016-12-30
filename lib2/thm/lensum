@@ -1,0 +1,17 @@
+problem([]==>x:int list=>y:int list=>length(app(x,y))=plus(length(x),length(y))in pnat,
+autotactic(idtac),_66319,
+[problem([]==>x:int list=>y:int list=>length(app(x,y))=plus(length(x),length(y))in pnat,
+ dequantify,lambda(x,lambda(y,_66412)),
+ [problem([x:int list,y:int list]==>length(app(x,y))=plus(length(x),length(y))in pnat,
+  ind_strat(_66462::_66463,x:int list),list_ind(x,su(su(su(_66482,[term_of(app1)],[app1]),[term_of(plus1)],[plus1]),[term_of(length1)],[length1]),[v0,v1,v2,su(su(su(su(_66524,[term_of(length2)],[length2]),[term_of(app2)],[app2]),[term_of(plus2)],[plus2]),[term_of(length2)],[length2])]),
+  [problem([x:int list,y:int list]==>length(y)=length(y)in pnat,
+   identity,axiom,
+   [
+   ]) ext _66482,
+   problem([x:int list,y:int list,v0:int,v1:int list,v2:length(app(v1,y))=plus(length(v1),length(y))in pnat]==>s(length(app(v1,y)))=s(length(app(v1,y)))in pnat,
+   identity,axiom,
+   [
+   ]) ext _66524
+  ]) ext _66412
+ ]) ext _66319
+]).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>n:pnat=>l:pnat list=>member(x,nth(n,l))=>member(x,l),_,_,_).

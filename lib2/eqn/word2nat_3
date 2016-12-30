@@ -1,0 +1,4 @@
+problem([]==>h1:{bool}=>h2:{bool}=>t:{word}=>word2nat(add(h1,h2,t))=plus(times(bitval(h1),exp(s(s(0)),length(h2::t))),word2nat(h2::t))in pnat,_,_,_).
+
+
+%problem([]==>h1:{bool}=>h2:{bool}=>t:{word}=>word2nat(h1::h2::t)=plus(times(bitval(h1),exp(s(s(0)),length(h2::t))),word2nat(h2::t))in pnat,_,_,_).

@@ -1,0 +1,206 @@
+% loading file /home/dream3/air/clam/clam.v3.2/make/clam-cutting-edge.v3.2.qui
+%  foreign file /disk/local/src/quintus3/generic/qplib3.1.4/library/sun4-4/libpl.so loaded
+% clam-cutting-edge.v3.2.qui loaded in module user, 0.617 sec 657,768 bytes
+
+CLaM Proof Planner Version 3.2 (3/7/95 14:48)
+
+% compiling file /home/dream3/air/clam/clam.v3.2/lib/needs.pl
+% needs.pl compiled in module user, 0.600 sec 444 bytes
+Quintus Prolog Release 3.1.4 (Sun-4, SunOS 4.1)
+Copyright (C) 1993, Quintus Corporation.  All rights reserved.
+2100 Geng Road, Palo Alto, California U.S.A. (415) 813-3800
+CLaM Proof Planner Version 3.2 (libraries only) (23/6/94 09:51)
+CLaM Proof Planner Version 3.2 (3/7/95 14:48)
+
+| ?- [load].
+% compiling file /home/dream3/air/clam/clam.v3.2/planner/load.pl
+loading critic(wave/1) ......... done
+%  compiling file /home/dream3/air/clam/clam.v3.2/planner/planner.pl
+* Singleton variables, clause 1 of plan/0: Addr
+* Approximate line: 26, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Clauses for update_plan_record/2 are not together in the source file
+* Approximate line: 107, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of refine_node/3: Mthd, LowerBound, Level, UpperBound, N
+* Approximate line: 201, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 2 of refine_node/3: Mthd, UpperBound, N
+* Approximate line: 206, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 3 of refine_node/3: LowerBound, N
+* Approximate line: 212, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 4 of refine_node/3: LowerBound, N
+* Approximate line: 222, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of apply_critic/6: NumSGs, Arity
+* Approximate line: 336, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of eval_critic_preconds/4: PreL, Input
+* Approximate line: 396, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+* Singleton variables, clause 1 of gen_subgoal_addresses/3: Addr
+* Approximate line: 613, file: '/home/dream3/air/clam/clam.v3.2/planner/planner.pl'
+%  planner.pl compiled in module user, 1.550 sec 2,920 bytes
+%  compiling file /home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl
+* Singleton variables, clause 2 of skeleton_wave_args/2: NewArg
+* Approximate line: 155, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 3 of skeleton_wave_args/2: MVar
+* Approximate line: 158, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 3 of size/2: F
+* Approximate line: 241, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of construct_transverse_rhs/3: AbsWHPos
+* Approximate line: 311, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of validate_speculation/2: Lemma, Addr
+* Approximate line: 619, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 5 of skeleton_term_/3: F
+* Approximate line: 687, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+* Singleton variables, clause 1 of construct_context/3: Mat
+* Approximate line: 701, file: '/home/dream3/air/clam/clam.v3.2/meta-level/critics_pre.pl'
+%  critics_pre.pl compiled in module user, 1.500 sec 944 bytes
+% load.pl compiled in module user, 3.217 sec 4,656 bytes
+
+yes
+| ?- plan(qplus1right).
+loading def(qplus)...done
+loading eqn(qplus1)...done
+loading eqn(qplus2)...done
+adding wave-rules for qplus1:..done
+adding wave-rules for qplus2:..done
+ adding defeqn-record for qplus1...done 
+ adding defeqn-record for qplus2...done 
+loading thm(qplus1right)...done
+qplus1right([])
+==>x:pnat=>qplus(x,0)=x in pnat
+SELECTED METHOD at depth 0: induction([s(x)],[x:pnat])
+|qplus1right([2])
+|x:pnat
+|v0:ih(qplus(x,0)=x in pnat)
+|==>qplus(``s({x})''<out>,0)=``s({x})''<out>in pnat
+
+>>>>> INVOKING lemma-calculation CRITIC <<<<<
+
+------------------------------------------------------------
+lemma1:
+
+[x:pnat]
+
+|- qplus(s(x),0)=s(qplus(x,0))in pnat
+
+saving thm(lemma1)...done
+lemma1([])
+==>x:pnat=>qplus(s(x),0)=s(qplus(x,0))in pnat
+SELECTED METHOD at depth 0: eval_def([1,1],qplus2)
+|lemma1([1])
+|==>x:pnat=>qplus(x,s(0))=s(qplus(x,0))in pnat
+|SELECTED METHOD at depth 1: induction([s(x)],[x:pnat])
+||lemma1([2,1])
+||x:pnat
+||v0:ih(qplus(x,s(0))=s(qplus(x,0))in pnat)
+||==>qplus(``s({x})''<out>,s(0))=s(qplus(``s({x})''<out>,0))in pnat
+
+>>>>> INVOKING generalize CRITIC <<<<<
+
+------------------------------------------------------------
+lemma2:
+
+[v1:pnat,x:pnat]
+
+|- qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat
+
+saving thm(lemma2)...done
+Depth bound set to 4
+lemma2([])
+==>v1:pnat=>x:pnat=>qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat
+SELECTED METHOD at depth 0: induction([s(x)],[x:pnat])
+|lemma2([2])
+|x:pnat
+|v0:ih(v1:pnat=>qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat)
+|==>v1:pnat=>qplus(``s({x})''<out>,s(M1(\v1/)))=s(qplus(``s({x})''<out>,M2(\v1/)))in pnat
+|SELECTED METHOD at depth 1: wave([1,2,1],[qplus2,equ(left)])
+||lemma2([1,2])
+||x:pnat
+||v0:ih(v1:pnat=>qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat)
+||==>v1:pnat=>qplus(``s({x})''<out>,s(M1(\v1/)))=s(qplus(x,``s({M2(\v1/)})''<in>))in pnat
+||SELECTED METHOD at depth 2: wave([1,1],[qplus2,equ(left)])
+|||lemma2([1,1,2])
+|||x:pnat
+|||v0:ih(v1:pnat=>qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat)
+|||==>v1:pnat=>qplus(x,``s({s(M1(\v1/))})''<in>)=s(qplus(x,``s({M2(\v1/)})''<in>))in pnat
+
+>>>>> INVOKING meta-ripple-position CRITIC <<<<<
+
+|||lemma2([1,1,2])
+|||x:pnat
+|||v0:ih(v1:pnat=>qplus(x,s(M1(v1)))=s(qplus(x,M2(v1)))in pnat)
+|||==>v1:pnat=>qplus(x,s(``s({M1(\v1/)})''<in>))=s(qplus(x,``s({M2(\v1/)})''<in>))in pnat
+[x:pnat,v0:ih(v1:pnat=>qplus(x,s(v1))=s(qplus(x,v1))in pnat)]==>v1:pnat=>qplus(x,s(s(v1)))=s(qplus(x,s(v1)))in pnat
+|||TERMINATING METHOD at depth 3: fertilize(strong(v0))
+|lemma2([1])
+|x:pnat
+|==>v1:pnat=>qplus(0,s(v1))=s(qplus(0,v1))in pnat
+|SELECTED METHOD at depth 1: eval_def([1,1],qplus1)
+||lemma2([1,1])
+||x:pnat
+||==>v1:pnat=>s(v1)=s(qplus(0,v1))in pnat
+||SELECTED METHOD at depth 2: eval_def([1,2,1],qplus1)
+|||lemma2([1,1,1])
+|||x:pnat
+|||==>v1:pnat=>s(v1)=s(v1)in pnat
+|||TERMINATING METHOD at depth 3: elementary(...)
+------------------------------------------------------------
+lemma2:
+
+[v1:pnat,x:pnat]
+
+|- qplus(x,s(v1))=s(qplus(x,v1))in pnat
+
+WARNING: generalization requires verifying.
+
+adding wave-rules for lemma1:.................done
+|qplus1right([2])
+|x:pnat
+|v0:ih(qplus(x,0)=x in pnat)
+|==>qplus(``s({x})''<out>,0)=``s({x})''<out>in pnat
+|SELECTED METHOD at depth 1: wave([1,1],[lemma1,equ(left)])
+||qplus1right([1,2])
+||x:pnat
+||v0:ih(qplus(x,0)=x in pnat)
+||==>``s({qplus(x,0)})''<out> =``s({x})''<out>in pnat
+||SELECTED METHOD at depth 2: fertilize(weak(v0))
+|||qplus1right([1,1,2])
+|||x:pnat
+|||v0:ih(qplus(x,0)=x in pnat)
+|||==>s(qplus(x,0))=s(qplus(x,0))in pnat
+|||TERMINATING METHOD at depth 3: elementary(...)
+|qplus1right([1])
+|x:pnat
+|==>qplus(0,0)=0 in pnat
+|SELECTED METHOD at depth 1: eval_def([1,1],qplus1)
+||qplus1right([1,1])
+||x:pnat
+||==>0=0 in pnat
+||TERMINATING METHOD at depth 2: elementary(...)
+Planning complete for qplus1right
+
+------------------------------------------------------------
+qplus1right:
+
+[x:pnat]
+
+|- qplus(x,0)=x in pnat
+
+induction([s(x)],[x:pnat]) then 
+  [eval_def([1,1],qplus1) then 
+     elementary(...),
+   wave([1,1],[lemma1,equ(left)]) then 
+     fertilize(weak(v0)) then 
+       elementary(...)
+  ]
+
+------------------------------------------------------------
+lemma1:
+
+[x:pnat]
+
+|- qplus(s(x),0)=s(qplus(x,0))in pnat
+
+eval_def([1,1],qplus2) then 
+  generalize(lemma2)
+
+
+yes
+| ?- 

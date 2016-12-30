@@ -1,0 +1,2 @@
+problem([]==>n:pnat=>v1:int=>v2:int=>appn(s(n), exp(v1), v2)=exp(v1, appn(n
+, exp(v1), v2))in int,_,_,_).

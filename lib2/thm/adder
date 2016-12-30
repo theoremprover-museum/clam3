@@ -1,0 +1,2 @@
+problem([]==>n:int=>a:{vector}=>b:{vector}=>s:{vector}=>ci:{bool}=>co:{bool}=>adder(n,a,b,s,ci,co)=>exp(2,n)*co+val(n,s)=val(n,a)+val(n,b)+ci
+in {bool},_,_,_).

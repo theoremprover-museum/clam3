@@ -1,0 +1,19 @@
+
+method(comp_rewrite(Pos,[Rule,Dir]),
+       H==>G,
+       [expression_at(G,Pos,Exp),
+        complementary_rewrite(Exp,Rule:C=>_:=>R),
+        trivial(H==>C)
+       ],
+       [replace_in_matrix(Pos,R,G,NG),
+        strip_meta_annotations(NG, NewG)
+       ],
+       [H==>NewG],
+       []
+      ).
+
+
+
+
+
+

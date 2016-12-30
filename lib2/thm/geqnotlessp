@@ -1,0 +1,33 @@
+problem([]==>x:pnat=>y:pnat=>geq(x,y)=>less(x,y)=>void,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_305,[v0,v1,_311])),
+[problem([x:pnat]==>y:pnat=>geq(0,y)=>less(0,y)=>void,
+ base([1,2],less1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _365),[term_of(less1)],[less1]),
+ [problem([x:pnat]==>y:pnat=>geq(0,y)=>(y=0 in pnat=>void)=>void,
+  base([1],geq1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _442),[term_of(geq1)],[geq1]),
+  [problem([x:pnat]==>y:pnat=>y=0 in pnat=>(y=0 in pnat=>void)=>void,
+   tautology((intro then wfftacs)then intro then[intro then[elim(v1)then[intro,intro],repeat intro],repeat intro]),lambda(y,lambda(v0,lambda(v1,su(v2,[v1 of axiom],[v2])))),
+   [
+   ]) ext _442
+  ]) ext _365
+ ]) ext _305,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void]==>y:pnat=>geq(s(v0),y)=>less(s(v0),y)=>void,
+ induction(s(v2),y:pnat),lambda(y,p_ind(y,_644,[v2,v3,_650])),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void,y:pnat]==>geq(s(v0),0)=>less(s(v0),0)=>void,
+  base([1,2],less2),su(lambda(v2,v2)of _732,[term_of(less2)],[less2]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void,y:pnat]==>geq(s(v0),0)=>void=>void,
+   tautology(intro then[intro then[intro,repeat intro],repeat intro]),lambda(v2,lambda(v3,v3)),
+   [
+   ]) ext _732
+  ]) ext _644,
+  problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void,y:pnat,v2:pnat,v3:geq(s(v0),v2)=>less(s(v0),v2)=>void]==>geq(s(v0),s(v2))=>less(s(v0),s(v2))=>void,
+  wave([1,2],less3),su(lambda(v4,v4)of _940,[term_of(less3)],[less3]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void,y:pnat,v2:pnat,v3:geq(s(v0),v2)=>less(s(v0),v2)=>void]==>geq(s(v0),s(v2))=>less(v0,v2)=>void,
+   wave([1],geq3),su(lambda(v4,v4)of _1054,[term_of(geq3)],[geq3]),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(v0,y)=>less(v0,y)=>void,y:pnat,v2:pnat,v3:geq(s(v0),v2)=>less(s(v0),v2)=>void]==>geq(v0,v2)=>less(v0,v2)=>void,
+    strong_fertilize(v1),su(v4,[v1 of v2],[v4]),
+    [
+    ]) ext _1054
+   ]) ext _940
+  ]) ext _650
+ ]) ext _311
+]).

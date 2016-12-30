@@ -1,0 +1,1 @@
+problem([]==>x:int=>y:int=>ltimes(x, s(y))=lplus(x, ltimes(x, y))in int,_,_,_).

@@ -1,0 +1,10 @@
+method(gfp_membership(F),
+       H==>G,
+       [%  write('attempting gfp_membership'), nl,
+         subset_goal(G, Conds, Set, F, Type)],
+       [ gfp_proof_goals(H, Set, F, Type, [All|Seqs], Conds),
+	  make_ground([All|Seqs])
+	],
+       [All|Seqs],
+	[]
+          ).

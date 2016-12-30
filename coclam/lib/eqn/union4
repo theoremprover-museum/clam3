@@ -1,0 +1,1 @@
+problem([]==>h:pnat=>t:(pnat list)=>l2:(pnat list)=>(member(h,l2)=>void)=>union(h::t,l2)=h::union(t,l2)in (pnat list),_,_,_).

@@ -1,0 +1,14 @@
+problem([]==>{word}=>{word},
+intro,lambda(v0,_961),
+[problem([v0:{word}]==>{word},
+ intro(explicit(list_ind(v0,nil,[a,~,c,app(c,a::nil)]))),list_ind(v0,nil,[a,~,c,app(c,a::nil)]),
+ [problem([v0:{word}]==>list_ind(v0,nil,[a,~,c,app(c,a::nil)])in{word},
+  because,atom(incomplete),
+  [
+  ])
+ ]) ext _961,
+ problem([]==>{word}in u(1),
+ because,atom(incomplete),
+ [
+ ])
+]).

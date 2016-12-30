@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>perm(rev(l),qrev(l,nil)),_,_,_). 

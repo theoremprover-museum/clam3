@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>geq(x,half(x)),_,_,_).

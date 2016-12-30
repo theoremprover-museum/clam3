@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>even(s(plus(x,y))) = even(plus(x,s(y))) in u(1),_,_,_).
+

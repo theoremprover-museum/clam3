@@ -1,0 +1,1 @@
+problem([]==> evenel(nil) = nil in pnat list,_,_,_).

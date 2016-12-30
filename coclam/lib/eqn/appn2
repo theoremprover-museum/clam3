@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>f:(int list=>int list)=>x:int list=>appn(s(n), f, x)=appn(n,f, f(x))in int list, _, _, _).

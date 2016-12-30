@@ -1,0 +1,37 @@
+problem([]==>m:{sexp}=>pnat,
+intro_hyps([]),lambda(m,_2241),
+[problem([m:rec(sexp,unary\atom\pnat\sexp#sexp)]==>pnat,
+ elim(m,new _2279),rec_ind(m,[v2,v3,_2287]),
+ [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0]==>pnat,
+  rec_induction_cases(v3),decide(v3,[v4,_2394],[v5,decide(v5,[v4,_2406],[v6,decide(v6,[v4,_2418],[v8,spread(v8,[v4,v10,_2431])])])]),
+  [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0)]==>pnat,
+   intro(explicit(0)),0,
+   [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0)]==>0 in pnat,
+    try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+    [
+    ])
+   ]) ext _2394,
+   problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>pnat,
+   intro(explicit(0)),0,
+   [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>0 in pnat,
+    try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+    [
+    ])
+   ]) ext _2406,
+   problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>pnat,
+   intro(explicit(0)),0,
+   [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>0 in pnat,
+    try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+    [
+    ])
+   ]) ext _2418,
+   problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>pnat,
+   intro(explicit(s(p_ind(v2 of v4,v2 of v10,['u$','v$',s('v$')])))),s(p_ind(v2 of v4,v2 of v10,['u$','v$',s('v$')])),
+   [problem([m:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:m:v0=>m in rec(sexp,unary\atom\pnat\sexp#sexp),v2:m:v0=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>s(p_ind(v2 of v4,v2 of v10,['u$','v$',s('v$')]))in pnat,
+    try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+    [
+    ])
+   ]) ext _2431
+  ]) ext _2287
+ ]) ext _2241
+]).

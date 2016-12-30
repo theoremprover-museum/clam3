@@ -1,0 +1,106 @@
+problem([]==>v:{posint}=>(v=s(0)in pnat=>void)=>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+autotactic(try wfftacs),_197,
+[problem([]==>v:{posint}=>(v=s(0)in pnat=>void)=>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+ repeat intro,lambda(v,lambda(v0,_324)),
+ [problem([v:{posint},v0:v=s(0)in pnat=>void]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+  seq(z:{posint}=>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v),new[v1]),lambda(v1,_460)of _457,
+  [problem([v:{posint},v0:v=s(0)in pnat=>void]==>z:{posint}=>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v),
+   intro,lambda(z,_559),
+   [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{posint}]==>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v),
+    compute(hyp(z),[[unfold]]),_568,
+    [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)}]==>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v),
+     elim(z),su(_771,[z,assert(greater(z,0))],[v1,v2]),
+     [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat]==>v1<*s(v)=>(w:{posint}=>w<*s(v1)=>divides(w,v)=>void)\w:{posint}#w<*s(v1)#divides(w,v),
+      elim(v1),p_ind(v1,_919,[v4,v5,_925]),
+      [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat]==>0<*s(v)=>(w:{posint}=>w<*s(0)=>divides(w,v)=>void)\w:{posint}#w<*s(0)#divides(w,v),
+       intro then try intro(left),lambda(v4,inl(_1066)),
+       [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:0<*s(v)]==>w:{posint}=>w<*s(0)=>divides(w,v)=>void,
+        because,atom(incomplete),
+        [
+        ]) ext _1066
+       ]) ext _919,
+       problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v)]==>s(v4)<*s(v)=>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+       intro,lambda(v6,_1375),
+       [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v)]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+        decide(v4=0 in pnat),pnat_eq(v4,0,su(_1588,[axiom],[v7]),su(_1596,[lambda(~,axiom)],[v7])),
+        [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+         intro(left)then apply(because),inl(atom(incomplete)),
+         [
+         ]) ext _1588,
+         problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+         elim(v5)then thin([v10,v11]),su(_2050,[v5 of _2057],[v8]),
+         [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void]==>v4<*s(v),
+          because,atom(incomplete),
+          [
+          ]) ext _2057,
+          problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v)]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+          elim(v8)then thin([v11,v12]),decide(v8,[v9,_2509],[v10,_2513]),
+          [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+           seq(divides(s(v4),v)\divides(s(v4),v)=>void,new[v10]),lambda(v10,_2831)of _2828,
+           [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void]==>divides(s(v4),v)\divides(s(v4),v)=>void,
+            apply(lemma(dec_div,new[lemma]))then elim_on(lemma,[s(v4),v])then try intro,su(su(su(v11,[v10 of v],[v11]),[lemma of s(v4)],[v10]),[term_of(dec_div)],[lemma]),
+            [
+            ]) ext _2828,
+            problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void,v10:divides(s(v4),v)\divides(s(v4),v)=>void]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+            elim(v10)then thin([v13,v14]),decide(v10,[v11,_3474],[v12,_3478]),
+            [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void,v10:divides(s(v4),v)\divides(s(v4),v)=>void,v11:divides(s(v4),v)]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+             intro(right)then try intro(s(v4)),inr(s(v4)&_3814),
+             [problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void,v10:divides(s(v4),v)\divides(s(v4),v)=>void,v11:divides(s(v4),v)]==>s(v4)<*s(s(v4))#divides(s(v4),v),
+              intro then[apply(because),intro],atom(incomplete)&v11,
+              [
+              ]) ext _3814
+             ]) ext _3474,
+             problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v9:w:{posint}=>w<*s(v4)=>divides(w,v)=>void,v10:divides(s(v4),v)\divides(s(v4),v)=>void,v12:divides(s(v4),v)=>void]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+             intro(left)then apply(because),inl(atom(incomplete)),
+             [
+             ]) ext _3478
+            ]) ext _2831
+           ]) ext _2509,
+           problem([v:{posint},v0:v=s(0)in pnat=>void,z:{p:pnat\greater(p,0)},v1:pnat,v2:greater(z,0),v3:v1=z in pnat,v4:pnat,v5:v4<*s(v)=>(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v6:s(v4)<*s(v),v7:v4=0 in pnat=>void,v8:(w:{posint}=>w<*s(v4)=>divides(w,v)=>void)\w:{posint}#w<*s(v4)#divides(w,v),v10:w:{posint}#w<*s(v4)#divides(w,v)]==>(w:{posint}=>w<*s(s(v4))=>divides(w,v)=>void)\w:{posint}#w<*s(s(v4))#divides(w,v),
+           intro(right)then intro(explicit(v10)),inr(v10),
+           [
+           ]) ext _2513
+          ]) ext _2050
+         ]) ext _1596
+        ]) ext _1375
+       ]) ext _925
+      ]) ext _771
+     ]) ext _568
+    ]) ext _559
+   ]) ext _457,
+   problem([v:{posint},v0:v=s(0)in pnat=>void,v1:z:{posint}=>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v)]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+   do_elim_on(v1,[v],[v1,v2])then (append([],[v2],[v2])',' thin([])),su(_4903,[v1 of v],[v2]),
+   [problem([v:{posint},v0:v=s(0)in pnat=>void,v1:z:{posint}=>z<*s(v)=>(w:{posint}=>w<*s(z)=>divides(w,v)=>void)\w:{posint}#w<*s(z)#divides(w,v),v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v)]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+    thin([v1])then thinelim(v2),su(_5108,[v2 of _5115],[v1]),
+    [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v)]==>v<*s(v),
+     arith then try intro,axiom,
+     [
+     ]) ext _5115,
+     problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v)]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+     elim(v1)then thin([v5,v6]),decide(v1,[v3,_5407],[v4,_5411]),
+     [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v3:w:{posint}=>w<*s(v)=>divides(w,v)=>void]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+      intro(s(s(0)))then apply(because),s(s(0))&atom(incomplete),
+      [
+      ]) ext _5407,
+      problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v4:w:{posint}#w<*s(v)#divides(w,v)]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+      elim(v4)then thin([v6,v7]),spread(v4,[w,v3,_5840]),
+      [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v4:w:{posint}#w<*s(v)#divides(w,v),w:{posint},v3:w<*s(v)#divides(w,v),v5:v4=w&v3 in (w:{posint}#w<*s(v)#divides(w,v))]==>p:{prime}#x:{posint}#v=times(p,x)in{posint},
+       intro(w),w&_6095,
+       [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v4:w:{posint}#w<*s(v)#divides(w,v),w:{posint},v3:w<*s(v)#divides(w,v),v5:v4=w&v3 in (w:{posint}#w<*s(v)#divides(w,v))]==>x:{posint}#v=times(w,x)in{posint},
+        elim(v3)then thin([v8,v9]),spread(v3,[v6,v7,_6355]),
+        [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v4:w:{posint}#w<*s(v)#divides(w,v),w:{posint},v3:w<*s(v)#divides(w,v),v5:v4=w&v3 in (w:{posint}#w<*s(v)#divides(w,v)),v6:w<*s(v),v7:divides(w,v)]==>x:{posint}#v=times(w,x)in{posint},
+         compute(hyp(v7),[[unfold]]),_6365,
+         [problem([v:{posint},v0:v=s(0)in pnat=>void,v2:v<*s(v)=>(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v1:(w:{posint}=>w<*s(v)=>divides(w,v)=>void)\w:{posint}#w<*s(v)#divides(w,v),v4:w:{posint}#w<*s(v)#divides(w,v),w:{posint},v3:w<*s(v)#divides(w,v),v5:v4=w&v3 in (w:{posint}#w<*s(v)#divides(w,v)),v6:w<*s(v),v7:z:{posint}#v=times(w,z)in{posint}]==>x:{posint}#v=times(w,x)in{posint},
+          intro,v7,
+          [
+          ]) ext _6365
+         ]) ext _6355
+        ]) ext _6095
+       ]) ext _5840
+      ]) ext _5411
+     ]) ext _5108
+    ]) ext _4903
+   ]) ext _460
+  ]) ext _324
+ ]) ext _197
+]).

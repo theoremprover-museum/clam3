@@ -1,0 +1,2 @@
+problem([]==>x:pnat=> rotate(x,nil)=nil in pnat list,_,_,_).
+

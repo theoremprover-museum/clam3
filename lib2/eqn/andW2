@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>b:{word}=>andW(s(n))of a of b= (hd(a)and hd(b))::andW(n)of tl(a)of tl(b)in{word},_,_,_).

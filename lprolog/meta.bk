@@ -1,0 +1,128 @@
+
+partial_wave_rule_match(Exp, Pos, Rn, MissingWaves):-
+    generate_hov_pattern(Exp, NewExp, HoVarPatts),
+    wave_fronts(Exp1, [Pos-_|_], NewExp),
+    convert(Exp1,LExp1),!,
+    wave_rule(Rn,_,_=>LHS:=>_),
+    wave_fronts(Exp2, _, LHS),
+    convert(Exp2,LExp2),
+    unify([[LExp1,LExp2]],_,SubstL),
+    apply_subs_to_term(SubstL, LExp1, NewLExp1),
+    convert_to_p(NewExp1, NewLExp1),
+    missing_wave_skels(HoVarPatts, SubstL, MissingWaves).
+
+missing_wave_skels([], _, []).
+missing_wave_skels([Var-Patt|VarPatts], SubstL, [Skel|Skels]):-
+    member([cv(Var, _, v),_], SubstL),
+    convert(Patt, LPatt),
+    apply_subs_to_term(SubstL, LPatt, NewLPatt),
+    convert_to_p(NewPatt, NewLPatt),
+    generate_wave_skel(NewPatt, Skel),
+    missing_wave_skels(VarPatts, SubstL, Skels).
+missing_wave_skels([_|VarPatts], SubstL, Skels):-
+    missing_wave_skels(VarPatts, SubstL, Skels).
+    
+generate_wave_skel('@sink@'(T), T).
+generate_wave_skel('@wave_var@'(_), '@wave_var@'(_)).
+generate_wave_skel('@wave_front@'(Typ,Dir,Term), '@wave_front@'(Typ,Dir,NTerm)):-
+    Term =..[F|Arg],
+    is_hov(F),
+    generate_wave_skel_list(Arg, [NTerm]).
+generate_wave_skel('@wave_front@'(Typ,Dir,Term), '@wave_front@'(Typ,Dir,NTerm)):-
+    Term =..[F|Args],
+    generate_wave_skel_list(Args, NArgs),
+    NTerm =.. [F|NArgs].
+generate_wave_skel(Term, NTerm):-
+    Term =..[F|Arg],
+    is_hov(F),
+    generate_wave_skel_list(Arg, [NTerm]).
+generate_wave_skel(Term, NTerm):-
+    Term =..[F|Args],
+    generate_wave_skel_list(Arg, NArgs),
+    NTerm =.. [F|NArgs].
+
+generate_wave_skel_list([], []).
+generate_wave_skel_list([Term|Terms], [NTerm|NTerms]):-
+    generate_wave_skel(Term, NTerm),
+    generate_wave_skel_list(Terms, NTerms).
+
+
+generate_hov_pattern(Exp, NewExp, HoVarPatts):-
+    elim_nested_waves(Exp, Exp1),
+    wave_function(Exp1, Func),
+    arg_types(Func, TypArgs),
+    skel_args(Args, PosArgs, Exp1),
+    generate_potential_waves(Args, TypArgs, HoVars, PWs),
+    zip(PWsPosArgs, PWs, PosArgs),
+    zip(HoVarPatts, HoVars, PWs),
+    replace_list(PWsPosArgs, Exp1, NewExp).
+
+elim_nested_waves(Exp, NewExp):-
+    wave_fronts(RawExp, [WFSpec|_], Exp),
+    wave_fronts(RawExp, [WFSpec], NewExp).
+    
+
+replace_list([],E,E).
+replace_list([SubE-SubPos|T],Exp,NewExp):- 
+    replace(SubPos,SubE,Exp,IntExp),
+    replace_list(T,IntExp,NewExp).
+
+generate_potential_waves([], [], [], []).
+generate_potential_waves([Arg|Args], [Typ|Typs], [Var|Vars], [PWave|PWaves]):-
+    generate_hov(Typ--->Typ, Var),
+    Term =.. [Var,Arg],
+    wave_fronts(Term, [[]-[[1]]/[hard,out]], PWave),
+    generate_potential_waves(Args, Typs, Vars, PWaves).
+    
+generate_hov(Typ, Var):-
+    gen_hov(Var),
+    assertz(type(clam, Var, Typ)),
+    add_env(Var-[Var-v]).
+
+gen_hov(Var):-
+    tag_with_number(hov, hov_cnt, Var).
+
+is_hov(Var):-
+    name(Var, [104,111,118|_]).
+
+skel_args(Args, PosArgs, Exp):-
+    Exp =.. [_|Terms],
+    skel_args_(Terms, 1, Args, PosArgs).
+
+skel_args_([], _, [], []).
+skel_args_([H|T], Pos, [H|T1], [[Pos]|T2]):-
+    \+ wave_fronts(_, [_|_], H),
+    NPos is Pos + 1,
+    skel_args_(T, NPos, T1, T2).
+skel_args_([H|T], Pos, [SubH|T1], [AbsPos|T2]):-
+    wave_holes([SubH], [RelPos], H),
+    append(RelPos, [Pos], AbsPos),
+    NPos is Pos + 1,
+    skel_args_(T, NPos, T1, T2).
+
+wave_holes(WHs, AbsWHs, Exp):-
+    wave_fronts(_, WFSpec, Exp),
+    wave_holes_(WFSpec, Exp, WHs, AbsWHs).
+
+wave_holes_([], _, [], []).
+wave_holes_([WFPos-RelWHs/_|WFSpec], Exp, WHsAll, AbsWHsALL):-
+    maplist(RelWHs, RelPos:=>AbsPos, append(RelPos, WFPos, AbsPos), AbsWHs),
+    findset(WH, (member(WHPos, AbsWHs), exp_at(Exp, WHPos, WH)), WHs),
+    wave_holes_(WFSpec, Exp, WHsRest, AbsWHsRest),
+    append(WHs, WHsRest, WHsAll),
+    append(AbsWHs, AbsWHsRest, AbsWHsALL).
+
+arity2list(Typ1 ---> Typ, [Typ1|Typ2]):-
+    arity2list(Typ, Typ2).
+arity2list(Typ, [Typ]).
+
+arg_types(Func, Types):-
+    type(clam, Func, FuncTyp),
+    arity2list(FuncTyp, TypList),
+    reverse(TypList,[_|TL]),
+    reverse(TL, Types).
+    
+wave_function(WaveTerm, WaveFunc):-
+    wave_fronts(_, [[_|WF]-WHs/_|_], WaveTerm),
+    exp_at(WaveTerm, WF, WaveOcc),
+    WaveOcc =.. [WaveFunc|_].

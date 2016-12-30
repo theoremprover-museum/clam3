@@ -1,0 +1,1 @@
+problem([]==>ordered(nil)={true}in u(1),_,_,_).

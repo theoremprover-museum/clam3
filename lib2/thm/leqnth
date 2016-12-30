@@ -1,0 +1,74 @@
+problem([]==>l:int list=>n:pnat=>leq(length(nth(n,l)),length(l)),
+induction(v0::v1,l:int list),lambda(l,list_ind(l,_185,[v0,v1,v2,_193])),
+[problem([l:int list]==>n:pnat=>leq(length(nth(n,nil)),length(nil)),
+ sym_eval([base([1,1],nth2),base([2],length1),base([1],length1),base([],leq1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _350,[leq1 of 0],[v1]),[term_of(leq1)],[leq1])),[term_of(length1)],[length1])),[term_of(length1)],[length1])),[nth2 of v0],[v1]),[term_of(nth2)],[nth2])),
+ [problem([l:int list]==>n:pnat=>{true},
+  tautology(dequantify_once then istrue),lambda(n,0),
+  [
+  ]) ext _350
+ ]) ext _185,
+ problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1))]==>n:pnat=>leq(length(nth(n,v0::v1)),length(v0::v1)),
+ wave([2],[length2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _540,[v4 of v1],[v5]),[length2 of v0],[v4]),[term_of(length2)],[length2])),
+ [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1))]==>n:pnat=>leq(length(nth(n,v0::v1)),s(length(v1))),
+  induction(s(v3),n:pnat),lambda(n,p_ind(n,_662,[v3,v4,_668])),
+  [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat]==>leq(length(nth(0,v0::v1)),s(length(v1))),
+   sym_eval([base([1,1],nth1)]),su(su(_759,[nth1 of (v0::v1)],[v3]),[term_of(nth1)],[nth1]),
+   [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat]==>leq(length(v0::v1),s(length(v1))),
+    wave([1],[length2,left]),su(su(su(_866,[v3 of v1],[v4]),[length2 of v0],[v3]),[term_of(length2)],[length2]),
+    [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat]==>leq(s(length(v1)),s(length(v1))),
+     wave([],[leq3,left]),su(su(su(_974,[v3 of length(v1)],[v4]),[leq3 of length(v1)],[v3]),[term_of(leq3)],[leq3]),
+     [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat]==>leq(length(v1),length(v1)),
+      generalise(length(v1),v3:pnat),lambda(v3,su(v4,[v3 of length(v1)],[v4]))of _1076,
+      [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat]==>v3:pnat=>leq(v3,v3),
+       induction(s(v4),v3:pnat),lambda(v3,p_ind(v3,_1173,[v4,v5,_1179])),
+       [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat]==>leq(0,0),
+        sym_eval([base([],leq1)]),su(su(_1259,[leq1 of 0],[v4]),[term_of(leq1)],[leq1]),
+        [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat]==>{true},
+         tautology(istrue),0,
+         [
+         ]) ext _1259
+        ]) ext _1173,
+        problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:pnat,v5:leq(v4,v4)]==>leq(s(v4),s(v4)),
+        wave([],[leq3,left]),su(su(su(_1441,[v6 of v4],[v7]),[leq3 of v4],[v6]),[term_of(leq3)],[leq3]),
+        [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:pnat,v5:leq(v4,v4)]==>leq(v4,v4),
+         tautology(hyp(v5)),v5,
+         [
+         ]) ext _1441
+        ]) ext _1179
+       ]) ext _1076
+      ]) ext _974
+     ]) ext _866
+    ]) ext _759
+   ]) ext _662,
+   problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1)))]==>leq(length(nth(s(v3),v0::v1)),s(length(v1))),
+   wave([1,1],[nth3,left]),su(su(su(su(_1671,[v6 of v1],[v7]),[v5 of v0],[v6]),[nth3 of v3],[v5]),[term_of(nth3)],[nth3]),
+   [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1)))]==>leq(length(nth(v3,v1)),s(length(v1))),
+    weak_fertilize(left,[weak_fertilize(left,leq,[],v2)]),lambda(v8,lambda(v10,lambda(v9,su(su(su(su(su(su(su(su(su(v13,[v6 of v10],[v13]),[v7 of v5],[v12]),[v11 of v5],[v6]),[v6 of length(v1)],[v7]),[v9 of length(nth(v3,v1))],[v6]),[v7 of s(length(v1))],[v11]),[v6 of length(v1)],[v7]),[v8 of length(nth(v3,v1))],[v6]),[v2 of v3],[v5]))of lambda(v5,lambda(m,lambda(v6,v6))))of _1814)of atom(incomplete),
+    [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1)))]==>leq(length(v1),s(length(v1))),
+     generalise(length(v1),v5:pnat),lambda(v5,su(v6,[v5 of length(v1)],[v6]))of _2054,
+     [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1)))]==>v5:pnat=>leq(v5,s(v5)),
+      induction(s(v6),v5:pnat),lambda(v5,p_ind(v5,_2178,[v6,v7,_2184])),
+      [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1))),v5:pnat]==>leq(0,s(0)),
+       sym_eval([base([],leq1)]),su(su(_2291,[leq1 of s(0)],[v6]),[term_of(leq1)],[leq1]),
+       [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1))),v5:pnat]==>{true},
+        tautology(istrue),0,
+        [
+        ]) ext _2291
+       ]) ext _2178,
+       problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1))),v5:pnat,v6:pnat,v7:leq(v6,s(v6))]==>leq(s(v6),s(s(v6))),
+       wave([2],[ssid,right]),su(su(_2527,[ssid of v6],[v8]),[term_of(ssid)],[ssid]),
+       [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1))),v5:pnat,v6:pnat,v7:leq(v6,s(v6))]==>leq(s(v6),s(s(v6))),
+        wave([],[leq3,left]),su(su(su(_2671,[v8 of s(v6)],[v9]),[leq3 of v6],[v8]),[term_of(leq3)],[leq3]),
+        [problem([l:int list,v0:int,v1:int list,v2:n:pnat=>leq(length(nth(n,v1)),length(v1)),n:pnat,v3:pnat,v4:leq(length(nth(v3,v0::v1)),s(length(v1))),v5:pnat,v6:pnat,v7:leq(v6,s(v6))]==>leq(v6,s(v6)),
+         tautology(hyp(v7)),v7,
+         [
+         ]) ext _2671
+        ]) ext _2527
+       ]) ext _2184
+      ]) ext _2054
+     ]) ext _1814
+    ]) ext _1671
+   ]) ext _668
+  ]) ext _540
+ ]) ext _193
+]).

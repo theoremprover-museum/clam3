@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>b:{bool}=>ci:{bool}=>faCarry(a,b,ci)=faCarryImp(a,b,ci)in{bool},_,_,_).

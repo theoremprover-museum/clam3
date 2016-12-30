@@ -1,0 +1,14 @@
+        % See the weak_fertilize/4 submethod for details on fertilization.
+	%
+method(weak_fertilize(Dir,Ms),
+	H==>G,
+        [((Dir=right,
+          applicable_submethod(H==>G,weak_fertilize_right(Ms),_,[HH==>GG]))
+         v
+         (Dir=left,
+          applicable_submethod(H==>G,weak_fertilize_left(Ms),_,[HH==>GG])))
+        ],
+        [strip_meta_annotations(GG,NewG)],
+        [HH==>NewG],
+        []
+       ).

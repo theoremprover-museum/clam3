@@ -1,0 +1,1 @@
+problem([]==>x:{bool}=>ci:{bool}=>cincbit(x,ci)= (x and ci)in{bool},_,_,_).

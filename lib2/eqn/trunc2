@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:{word}=>trunc(s(n))of a=hd(a)::trunc(n)of tl(a)in{word},_,_,_).

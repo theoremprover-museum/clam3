@@ -1,0 +1,34 @@
+problem([]==>n:int=>v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},
+intro,lambda(n,_9899),
+[problem([n:int]==>v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},
+ elim(n),ind(n,[v0,v2,_9971],_9965,[v0,v2,_9977]),
+ [problem([n:int,v0:int,v1:v0<0,v2:v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool}]==>v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},
+  repeat intro,v2,
+  [
+  ]) ext _9971,
+  problem([n:int]==>v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},
+  intro then try intro then try intro then try intro then try intro then wfftacs,lambda(v1,lambda(v2,lambda(v3,lambda(b1,lambda(b2,_10198))))),
+  [problem([n:int,v1:{vector},v2:{vector},v3:{vector},b1:{bool},b2:{bool}]==>{bool},
+   intro(explicit(iff(b1,b2))),iff(b1,b2),
+   [problem([n:int,v1:{vector},v2:{vector},v3:{vector},b1:{bool},b2:{bool}]==>iff(b1,b2)in{bool},
+    because,atom(incomplete),
+    [
+    ])
+   ]) ext _10198
+  ]) ext _9965,
+  problem([n:int,v0:int,v1:0<v0,v2:v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool}]==>v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},
+  pure(intro)then try pure(intro)then try pure(intro)then try pure(intro)then try pure(intro)then wfftacs,lambda(v3,lambda(v4,lambda(v3_,lambda(b1,lambda(b2,_10491))))),
+  [problem([n:int,v0:int,v1:0<v0,v2:v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},v3:{vector},v4:{vector},v3_:{vector},b1:{bool},b2:{bool}]==>{bool},
+   intro(explicit(exb(lambda(b,v2 of v3 of v4 of v3_ of b1 of b and add1(v3 of n,v4 of n,v3_ of n,b,b2))))),exb(lambda(b,v2 of v3 of v4 of v3_ of b1 of b and add1(v3 of n,v4 of n,v3_ of n,b,b2))),
+   [problem([n:int,v0:int,v1:0<v0,v2:v1:{vector}=>v2:{vector}=>v3:{vector}=>b1:{bool}=>b2:{bool}=>{bool},v3:{vector},v4:{vector},v3_:{vector},b1:{bool},b2:{bool}]==>exb(lambda(b,v2 of v3 of v4 of v3_ of b1 of b and add1(v3 of n,v4 of n,v3_ of n,b,b2)))in{bool},
+    because,atom(incomplete),
+    [
+    ])
+   ]) ext _10491
+  ]) ext _9977
+ ]) ext _9899,
+ problem([]==>int in u(1),
+ because,atom(incomplete),
+ [
+ ])
+]).

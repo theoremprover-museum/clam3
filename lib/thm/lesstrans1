@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=> ((less(x,z)=>void)#less(z,y)=>void)=>less(x,y)=>void,_,_,_).

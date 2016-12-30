@@ -1,0 +1,33 @@
+problem([]==>x:int list=>length(x)=length(rev(x))in pnat,
+autotactic(idtac),_72059,
+[problem([]==>x:int list=>length(x)=length(rev(x))in pnat,
+ dequantify,lambda(x,_72121),
+ [problem([x:int list]==>length(x)=length(rev(x))in pnat,
+  ind_strat(_72158::_72159,x:int list),list_ind(x,su(su(_72174,[term_of(length1)],[length1]),[term_of(rev1)],[rev1]),[v0,v1,v2,su(su(_72202,[term_of(length2)],[length2]),[term_of(rev2)],[rev2])]),
+  [problem([x:int list]==>0=0 in pnat,
+   identity,axiom,
+   [
+   ]) ext _72174,
+   problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat]==>s(length(rev(v1)))=length(app(rev(v1),v0::nil))in pnat,
+   generalise(rev(v1)),lambda(v3,su(axiom,[v3 of rev(v1)],[v4]))of lambda(v3,_72339),
+   [problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat,v3:int list]==>s(length(v3))=length(app(v3,v0::nil))in pnat,
+    ind_strat(_72418::_72419,v3:int list),list_ind(v3,su(su(_72434,[term_of(length1)],[length1]),[term_of(app1)],[app1]),[v4,v5,v6,su(su(su(_72466,[term_of(length2)],[length2]),[term_of(length2)],[length2]),[term_of(app2)],[app2])]),
+    [problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat,v3:int list]==>s(0)=length(v0::nil)in pnat,
+     wave([2,1],length2),su(_72567,[term_of(length2)],[length2]),
+     [problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat,v3:int list]==>s(0)=s(length(nil))in pnat,
+      base([1,2,1],length1),su(_72654,[term_of(length1)],[length1]),
+      [problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat,v3:int list]==>s(0)=s(0)in pnat,
+       identity,axiom,
+       [
+       ]) ext _72654
+      ]) ext _72567
+     ]) ext _72434,
+     problem([x:int list,v0:int,v1:int list,v2:length(v1)=length(rev(v1))in pnat,v3:int list,v4:int,v5:int list,v6:s(length(v5))=length(app(v5,v0::nil))in pnat]==>s(s(length(v5)))=s(s(length(v5)))in pnat,
+     identity,axiom,
+     [
+     ]) ext _72466
+    ]) ext _72339
+   ]) ext _72202
+  ]) ext _72121
+ ]) ext _72059
+]).

@@ -1,0 +1,1 @@
+allb(f)<==>and(f of {true},f of {false}).

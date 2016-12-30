@@ -1,0 +1,1 @@
+problem([]==>l:int list=>pairlist(l,nil)=nil in int list,_,_,_).

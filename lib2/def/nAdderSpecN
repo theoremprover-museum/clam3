@@ -1,0 +1,1 @@
+nAdderSpecN(n,x,y,ci)<==>p_ind(n,bitval(ci),[~,~,plus(x,plus(y,bitval(ci)))]).

@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>count(a,nil)=0 in pnat,_,_,_).

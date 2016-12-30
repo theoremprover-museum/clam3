@@ -1,0 +1,1 @@
+problem([]==>tl(nil)=nil in {word},_,_,_).

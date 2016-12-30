@@ -1,0 +1,4 @@
+problem([]==>even(0)={true} in u(1),
+simplify,axiom,
+[
+]).

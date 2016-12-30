@@ -1,0 +1,54 @@
+problem([]==>x:pnat=>y:pnat=>pnat,
+intro then wfftacs,lambda(x,_293),
+[problem([x:pnat]==>y:pnat=>pnat,
+ elim(x,cv),cv_ind(x,[v2,v0,_328]),
+ [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat]==>y:pnat=>pnat,
+  intro then wfftacs,lambda(y,_392),
+  [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat]==>pnat,
+   elim(y,cv),cv_ind(y,[v4,v1,_459]),
+   [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat]==>pnat,
+    decide(v2=v4 in pnat),pnat_eq(v2,v4,su(_558,[axiom],[v3]),su(_566,[lambda(~,axiom)],[v3])),
+    [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat]==>pnat,
+     intro(explicit(v4))then wfftacs,v4,
+     [
+     ]) ext _558,
+     problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void]==>pnat,
+     decide(v2<*v4),pless(v2,v4,su(_785,[axiom],[v5]),su(_793,[lambda(~,axiom)],[v5])),
+     [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4]==>pnat,
+      elim(v1,on(minus(v4,v2))),su(_917,[v1 of minus(v4,v2)],[v6]),
+      [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4]==>minus(v4,v2)in{v3:pnat\v3<*v4},
+       because,atom(incomplete),
+       [
+       ]),
+       problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4,v6:pnat]==>pnat,
+       intro(explicit(v6))then wfftacs,v6,
+       [
+       ]) ext _917
+      ]) ext _785,
+      problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void]==>pnat,
+      seq(v4<*v2,new[v6]),lambda(v6,_1291)of _1288,
+      [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void]==>v4<*v2,
+       because,atom(incomplete),
+       [
+       ]) ext _1288,
+       problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void,v6:v4<*v2]==>pnat,
+       elim(v0,on(minus(v2,v4))),su(_1530,[v0 of minus(v2,v4)],[v7]),
+       [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void,v6:v4<*v2]==>minus(v2,v4)in{v1:pnat\v1<*v2},
+        because,atom(incomplete),
+        [
+        ]),
+        problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void,v6:v4<*v2,v7:y:pnat=>pnat]==>pnat,
+        elim(v7,on(v4))then wfftacs,su(_1811,[v7 of v4],[v8]),
+        [problem([x:pnat,v2:pnat,v0:v1:{v1:pnat\v1<*v2}=>y:pnat=>pnat,y:pnat,v4:pnat,v1:v3:{v3:pnat\v3<*v4}=>pnat,v3:v2=v4 in pnat=>void,v5:v2<*v4=>void,v6:v4<*v2,v7:y:pnat=>pnat,v8:pnat]==>pnat,
+         intro(explicit(v8))then wfftacs,v8,
+         [
+         ]) ext _1811
+        ]) ext _1530
+       ]) ext _1291
+      ]) ext _793
+     ]) ext _566
+    ]) ext _459
+   ]) ext _392
+  ]) ext _328
+ ]) ext _293
+]).

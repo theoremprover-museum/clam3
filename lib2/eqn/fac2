@@ -1,0 +1,4 @@
+problem([]==>n:pnat=>fac(s(n))=times(s(n),fac(n))in pnat,
+repeat intro then simplify then repeat intro then repeat wfftacs,lambda(n,axiom),
+[
+]).

@@ -1,0 +1,1 @@
+problem([]==>h:pnat=>t:pnat=>mynth(0, h::t)=h in pnat,_,_,_).

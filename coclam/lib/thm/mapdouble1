@@ -1,0 +1,1 @@
+problem([]==>l:int list=>mapcar(l, double)=mapcar(l, lam(x, plus(x, x)))in int list,_,_,_).

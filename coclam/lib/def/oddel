@@ -1,0 +1,1 @@
+oddel(x)<==> term_of(oddel) of x.

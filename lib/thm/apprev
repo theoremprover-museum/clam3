@@ -1,0 +1,73 @@
+problem([]==>l:int list=>m:int list=>app(rev(l),rev(m))=rev(app(m,l))in int list,
+induction(v0::v1,m:int list),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(m,list_ind(m,_222,[v0,v1,v2,_230])))),
+[problem([m:int list]==>l:int list=>app(rev(l),rev(nil))=rev(app(nil,l))in int list,
+ sym_eval([base([1,2,1],app1),base([2,1,1],rev1)]),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of _341,[term_of(rev1)],[rev1])),[app1 of v0],[v1]),[term_of(app1)],[app1])),
+ [problem([m:int list]==>l:int list=>app(rev(l),nil)=rev(l)in int list,
+  generalise(rev(l),v0:int list),lambda(v0,lambda(v1,su(su(v3,[v2 of v1],[v3]),[v0 of rev(v1)],[v2])))of _430,
+  [problem([m:int list]==>v0:int list=>l:int list=>app(v0,nil)=v0 in int list,
+   induction(v1::v2,v0:int list),lambda(v0,list_ind(v0,_524,[v1,v2,v3,_532])),
+   [problem([m:int list,v0:int list]==>l:int list=>app(nil,nil)=nil in int list,
+    sym_eval([base([1,1],app1)]),lambda(v1,su(su(lambda(v2,su(v3,[v2 of v1],[v3]))of _604,[app1 of nil],[v2]),[term_of(app1)],[app1])),
+    [problem([m:int list,v0:int list]==>l:int list=>nil=nil in int list,
+     tautology(dequantify_once then identity),lambda(l,axiom),
+     [
+     ]) ext _604
+    ]) ext _524,
+    problem([m:int list,v0:int list,v1:int,v2:int list,v3:l:int list=>app(v2,nil)=v2 in int list]==>l:int list=>app(v1::v2,nil)=v1::v2 in int list,
+    wave([1,1],[app2,left]),lambda(v4,su(su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _803,[v6 of nil],[v7]),[v5 of v2],[v6]),[app2 of v1],[v5]),[term_of(app2)],[app2])),
+    [problem([m:int list,v0:int list,v1:int,v2:int list,v3:l:int list=>app(v2,nil)=v2 in int list]==>l:int list=>v1::app(v2,nil)=v1::v2 in int list,
+     weak_fertilize(right,[weak_fertilize(right,in,[2],v3)]),lambda(v4,su(lambda(v5,su(v6,[v5 of v4],[v6]))of _954,[v3 of m],[v5])),
+     [problem([m:int list,v0:int list,v1:int,v2:int list,v3:l:int list=>app(v2,nil)=v2 in int list]==>l:int list=>v1::app(v2,nil)=v1::app(v2,nil)in int list,
+      tautology(dequantify_once then identity),lambda(l,axiom),
+      [
+      ]) ext _954
+     ]) ext _803
+    ]) ext _532
+   ]) ext _430
+  ]) ext _341
+ ]) ext _222,
+ problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>l:int list=>app(rev(l),rev(v0::v1))=rev(app(v0::v1,l))in int list,
+ wave([2,1,1],[rev2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1204,[v4 of v1],[v5]),[rev2 of v0],[v4]),[term_of(rev2)],[rev2])),
+ [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>l:int list=>app(rev(l),app(rev(v1),v0::nil))=rev(app(v0::v1,l))in int list,
+  wave([1,2,1],[app2,left]),lambda(v3,su(su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1375,[v5 of v3],[v6]),[v4 of v1],[v5]),[app2 of v0],[v4]),[term_of(app2)],[app2])),
+  [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>l:int list=>app(rev(l),app(rev(v1),v0::nil))=rev(v0::app(v1,l))in int list,
+   wave([2,1],[rev2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1547,[v4 of app(v1,v3)],[v5]),[rev2 of v0],[v4]),[term_of(rev2)],[rev2])),
+   [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>l:int list=>app(rev(l),app(rev(v1),v0::nil))=app(rev(app(v1,l)),v0::nil)in int list,
+    weak_fertilize(right,[weak_fertilize(right,in,[1],v2)]),lambda(v3,su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1711,[v2 of v3],[v4])),
+    [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>l:int list=>app(rev(l),app(rev(v1),v0::nil))=app(app(rev(l),rev(v1)),v0::nil)in int list,
+     generalise(rev(l),v3:int list),lambda(v3,lambda(v4,su(su(v6,[v5 of v4],[v6]),[v3 of rev(v4)],[v5])))of _1852,
+     [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>v3:int list=>l:int list=>app(v3,app(rev(v1),v0::nil))=app(app(v3,rev(v1)),v0::nil)in int list,
+      generalise(rev(v1),v4:int list),lambda(v3,lambda(v5,lambda(v6,su(su(su(v8,[v7 of v6],[v8]),[v4 of v5],[v7]),[v3 of rev(v1)],[v4]))))of _2006,
+      [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list]==>v4:int list=>v3:int list=>l:int list=>app(v3,app(v4,v0::nil))=app(app(v3,v4),v0::nil)in int list,
+       induction(v5::v6,v3:int list),lambda(v5,lambda(v4,lambda(v3,lambda(v6,su(su(su(v9,[v8 of v3],[v9]),[v7 of v5],[v8]),[v6 of v4],[v7]))of lambda(v3,list_ind(v3,_2230,[v5,v6,v7,_2238]))))),
+       [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list]==>v4:int list=>l:int list=>app(nil,app(v4,v0::nil))=app(app(nil,v4),v0::nil)in int list,
+        sym_eval([base([1,1],app1),base([1,2,1],app1)]),lambda(v5,lambda(v4,su(su(lambda(v6,su(su(v8,[v7 of v4],[v8]),[v6 of v5],[v7]))of lambda(v5,lambda(v4,su(su(lambda(v6,su(su(v8,[v7 of v4],[v8]),[v6 of v5],[v7]))of _2434,[app1 of v5],[v6]),[term_of(app1)],[app1]))),[app1 of app(v5,v0::nil)],[v6]),[term_of(app1)],[app1]))),
+        [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list]==>v4:int list=>l:int list=>app(v4,v0::nil)=app(v4,v0::nil)in int list,
+         tautology(dequantify_once then dequantify_once then identity),lambda(v4,lambda(l,axiom)),
+         [
+         ]) ext _2434
+        ]) ext _2230,
+        problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list,v5:int,v6:int list,v7:v4:int list=>l:int list=>app(v6,app(v4,v0::nil))=app(app(v6,v4),v0::nil)in int list]==>v4:int list=>l:int list=>app(v5::v6,app(v4,v0::nil))=app(app(v5::v6,v4),v0::nil)in int list,
+        wave([1,1],[app2,left]),lambda(v8,lambda(v9,su(su(su(su(lambda(v4,su(su(v11,[v10 of v9],[v11]),[v4 of v8],[v10]))of _2828,[v10 of app(v8,v0::nil)],[v11]),[v4 of v6],[v10]),[app2 of v5],[v4]),[term_of(app2)],[app2]))),
+        [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list,v5:int,v6:int list,v7:v4:int list=>l:int list=>app(v6,app(v4,v0::nil))=app(app(v6,v4),v0::nil)in int list]==>v4:int list=>l:int list=>v5::app(v6,app(v4,v0::nil))=app(app(v5::v6,v4),v0::nil)in int list,
+         wave([1,2,1],[app2,left]),lambda(v8,lambda(v9,su(su(su(su(lambda(v4,su(su(v11,[v10 of v9],[v11]),[v4 of v8],[v10]))of _3103,[v10 of v8],[v11]),[v4 of v6],[v10]),[app2 of v5],[v4]),[term_of(app2)],[app2]))),
+         [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list,v5:int,v6:int list,v7:v4:int list=>l:int list=>app(v6,app(v4,v0::nil))=app(app(v6,v4),v0::nil)in int list]==>v4:int list=>l:int list=>v5::app(v6,app(v4,v0::nil))=app(v5::app(v6,v4),v0::nil)in int list,
+          wave([2,1],[app2,left]),lambda(v8,lambda(v9,su(su(su(su(lambda(v4,su(su(v11,[v10 of v9],[v11]),[v4 of v8],[v10]))of _3370,[v10 of (v0::nil)],[v11]),[v4 of app(v6,v8)],[v10]),[app2 of v5],[v4]),[term_of(app2)],[app2]))),
+          [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list,v5:int,v6:int list,v7:v4:int list=>l:int list=>app(v6,app(v4,v0::nil))=app(app(v6,v4),v0::nil)in int list]==>v4:int list=>l:int list=>v5::app(v6,app(v4,v0::nil))=v5::app(app(v6,v4),v0::nil)in int list,
+           weak_fertilize(right,[weak_fertilize(right,in,[2],v7)]),lambda(v8,lambda(v9,su(su(lambda(v4,su(su(v11,[v10 of v9],[v11]),[v4 of v8],[v10]))of _3636,[v4 of m],[v10]),[v7 of v8],[v4]))),
+           [problem([m:int list,v0:int,v1:int list,v2:l:int list=>app(rev(l),rev(v1))=rev(app(v1,l))in int list,v3:int list,v5:int,v6:int list,v7:v4:int list=>l:int list=>app(v6,app(v4,v0::nil))=app(app(v6,v4),v0::nil)in int list]==>v4:int list=>l:int list=>v5::app(v6,app(v4,v0::nil))=v5::app(v6,app(v4,v0::nil))in int list,
+            tautology(dequantify_once then dequantify_once then identity),lambda(v4,lambda(l,axiom)),
+            [
+            ]) ext _3636
+           ]) ext _3370
+          ]) ext _3103
+         ]) ext _2828
+        ]) ext _2238
+       ]) ext _2006
+      ]) ext _1852
+     ]) ext _1711
+    ]) ext _1547
+   ]) ext _1375
+  ]) ext _1204
+ ]) ext _230
+]).

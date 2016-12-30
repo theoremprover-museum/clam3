@@ -1,0 +1,1 @@
+problem([]==>h:{bool}=>l1:{word}=>l2:{word}=>app(h::l1,l2)=h::app(l1,l2)in{word},_,_,_).

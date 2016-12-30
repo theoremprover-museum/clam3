@@ -1,0 +1,1 @@
+problem([]==>l:pnat list=>length(qrev(l,nil)) = length(l) in pnat,_,_,_). 

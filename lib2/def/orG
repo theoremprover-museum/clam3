@@ -1,0 +1,1 @@
+orG(x,y,z)<==>iff(z,x or y).

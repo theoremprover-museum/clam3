@@ -1,0 +1,20 @@
+problem([]==>x:pnat=>less(x,s(x)),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_296,[v0,v1,_302])),
+[problem([x:pnat]==>less(0,s(0)),
+ base([],less1),su(su(_335,[less1 of s(0)],[v0]),[term_of(less1)],[less1]),
+ [problem([x:pnat]==>s(0)=0 in pnat=>void,
+  tautology(intro then[clam_arith,wfftacs]),lambda(v0,atom(incomplete)),
+  [
+  ]) ext _335
+ ]) ext _296,
+ problem([x:pnat,v0:pnat,v1:less(v0,s(v0))]==>less(s(v0),s(s(v0))),
+ wave([2],[ssid,right]),su(su(_452,[ssid of v0],[v2]),[term_of(ssid)],[ssid]),
+ [problem([x:pnat,v0:pnat,v1:less(v0,s(v0))]==>less(s(v0),s(s(v0))),
+  wave([],[less3,left]),su(su(su(_526,[v2 of s(v0)],[v3]),[less3 of v0],[v2]),[term_of(less3)],[less3]),
+  [problem([x:pnat,v0:pnat,v1:less(v0,s(v0))]==>less(v0,s(v0)),
+   tautology(intro),v1,
+   [
+   ]) ext _526
+  ]) ext _452
+ ]) ext _302
+]).

@@ -1,0 +1,1117 @@
+==>a:pnat=>b:pnat=>plus(a,b)=plus(b,a)in pnat
+SELECTED METHOD at depth 0: coinduction_lts(plus(a,b),plus(b,a)))
+|comp([1])
+|==>related(plus(a,b),plus(b,a))<=related(plus(a,b),plus(b,a))
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([1,1])
+||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||==>a:pnat=>b:pnat=>(act(plus(a,b))and act(plus(b,a)))in pnat
+
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[a-1])
+|||comp([2,1,1])
+|||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||==>b:pnat=>(act(plus(0,b))and act(plus(b,0)))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,1,1])
+||||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||==>b:pnat=>(act(b)and act(plus(b,0)))in pnat
+
+||||SELECTED METHOD at depth 4: intro1([],[b-1])
+|||||comp([2,1,2,1,1])
+|||||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||==>(act(0)and act(plus(0,0)))in pnat
+...
+
+|||||comp([1,1,2,1,1])
+|||||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(plus(``s({\v0/})''<out>,0)))
+|||||SELECTED METHOD at depth 5: intro1([plus2-[1,2]],[])
+||||||comp([1,1,1,2,1,1])
+||||||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(``s({plus(\v0/,0)})''<out>))
+n pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,1,2,1,1])
+|||||||v0:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||||==>v0:pnat=>related(\v0/,plus(\v0/,0))in pnat
+
+>>>>> INVOKING revise-bisimulation CRITIC <<<<<
+
+SELECTED METHOD at depth 0: coinduction_lts(related(plus(a,b),plus(b,a))
+                       related(v0,plus(v0,0))
+|comp([1])
+
+....
+
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([2,1])
+||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||==>v0:pnat=>(act(v0)and act(plus(v0,0)))in pnat
+
+||SELECTED METHOD at depth 2: intro1([],[v0-1])
+|||comp([2,2,1])
+|||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||==>(act(0)and act(plus(0,0)))in pnat
+...
+
+|||comp([1,2,1])
+|||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||==>v1:pnat=>(act(``s({\v1/})''<out>)and act(plus(``s({\v1/})''<out>,0)))
+...
+
+||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||==>a:pnat=>b:pnat=>(act(plus(a,b))and act(plus(b,a)))in pnat
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[a-1])
+|||comp([2,1,1])
+|||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||==>b:pnat=>(act(plus(0,b))and act(plus(b,0)))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,1,1])
+||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||==>b:pnat=>(act(b)and act(plus(b,0)))in pnat
+||||SELECTED METHOD at depth 4: intro1([],[b-1])
+|||||comp([2,1,2,1,1])
+|||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||==>(act(0)and act(plus(0,0)))in pnat
+|||||SELECTED METHOD at depth 5: eval_def([1,2,1],plus1)
+||||||comp([1,2,1,2,1,1])
+||||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>(act(0)and act(0))in pnat
+||||||SELECTED METHOD at depth 6: transition([0])
+|||||||comp([1,1,2,1,2,1,1])
+|||||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||==>related(bot,bot)in pnat
+|||||||TERMINATING METHOD at depth 7: strong(bot)
+|||||comp([1,1,2,1,1])
+|||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(plus(``s({\v0/})''<out>,0)))
+|||||SELECTED METHOD at depth 5: intro1([plus2-[1,2]],[])
+||||||comp([1,1,1,2,1,1])
+||||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(``s({plus(\v0/,0)})''<out>))
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,1,2,1,1])
+|||||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||==>v0:pnat=>related(\v0/,plus(\v0/,0))in pnat
+|||||||TERMINATING METHOD at depth 7: fertilize(strong(v1))
+|||comp([1,1,1])
+|||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||t=>(act(``s({plus(\v0/,\b/)})''<out>)and act(plus(\b/,``s({\v0/})''<out>)))
+|||SELECTED METHOD at depth 3: intro1([plus2-[1,2]],[b-1])
+||||comp([2,1,1,1])
+||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||==>v0:pnat=>(act(s(plus(v0,0)))and act(plus(0,s(v0))))in pnat
+||||SELECTED METHOD at depth 4: eval_def([1,2,1],plus1)
+|||||comp([1,2,1,1,1])
+|||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||==>v0:pnat=>(act(s(plus(v0,0)))and act(s(v0)))in pnat
+|||||SELECTED METHOD at depth 5: transition([p])
+||||||comp([1,1,2,1,1,1])
+||||||v2:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||||v1:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>v0:pnat=>related(plus(v0,0),v0)in pnat
+
+>>>>> INVOKING revise-bisimulation CRITIC <<<<<
+
+SELECTED METHOD at depth 0: coinduction_lts(
+  related(plus(a,b),plus(b,a)) related(v0,plus(v0,0)) related(plus(v0,0),v0))
+|comp([1])
+
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([3,1])
+||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||==>v0:pnat=>(act(plus(v0,0))and act(v0))in pnat
+
+.....
+||comp([2,1])
+||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||==>v0:pnat=>(act(v0)and act(plus(v0,0)))in pnat
+
+.....
+||comp([1,1])
+||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||==>a:pnat=>b:pnat=>(act(plus(a,b))and act(plus(b,a)))in pnat
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[a-1])
+|||comp([2,1,1])
+|||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||==>b:pnat=>(act(plus(0,b))and act(plus(b,0)))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,1,1])
+||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||==>b:pnat=>(act(b)and act(plus(b,0)))in pnat
+||||SELECTED METHOD at depth 4: intro1([],[b-1])
+
+.....
+
+|||comp([1,1,1])
+|||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||==>v0:p(act(``s({plus(\v0/,\b/)})''<out>)and act(plus(\b/,``s({\v0/})''<out>
+|||SELECTED METHOD at depth 3: intro1([plus2-[1,2]],[b-1])
+||||comp([2,1,1,1])
+||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||==>v0:pnat=>(act(s(plus(v0,0)))and act(plus(0,s(v0))))in pnat
+||||SELECTED METHOD at depth 4: eval_def([1,2,1],plus1)
+|||||comp([1,2,1,1,1])
+|||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||==>v0:pnat=>(act(s(plus(v0,0)))and act(s(v0)))in pnat
+|||||SELECTED METHOD at depth 5: transition([p])
+||||||comp([1,1,2,1,1,1])
+||||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||==>v0:pnat=>related(plus(v0,0),v0)in pnat
+||||||TERMINATING METHOD at depth 6: fertilize(strong(v1))
+||||comp([1,1,1,1])
+||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||==>v1:pnat=>v0:pnat=>(act(``s({plus(\v0/,``s({\v1/})''<out>)})''<out>)and
+  act(``s({plus(\v1/,``s({\v0/})''<out>)})''<out>))in pnat
+||||SELECTED METHOD at depth 4: transition([p])
+|||||comp([1,1,1,1,1])
+|||||v3:ih(a:pnat=>b:pnat=>related(plus(a,b),plus(b,a))in pnat)
+|||||v2:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v1:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||=>related(plus(\v0/,``s({\v1/})''<out>),plus(\v1/,``s({\v0/})''<out>))
+
+>>>>> INVOKING revise-bisimulation CRITIC <<<<<
+
+SELECTED METHOD at depth 0: coinduction_lts(
+related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))))))
+related(plus(v0,0),v0)) related(v0,plus(v0,0))
+|comp([1])
+
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([3,1])
+||v5:ih(related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))in pnat)
+||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||==>v0:pnat=>(act(v0)and act(plus(v0,0)))in pnat
+
+....
+
+
+||comp([2,1])
+||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||==>v0:pnat=>(act(plus(v0,0))and act(v0))in pnat
+
+.....
+
+||comp([1,1])
+||v5:ih(=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))in pnat)
+||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||==>vp>v0:pnat=>(act(plus(v0,appn(v2,s,v1)))and act(plus(v1,appn(v2,s,v0))))
+
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[v0-1])
+|||comp([2,1,1])
+|||v5:ih(v2:v1=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||==>v2:p1:pnat=>(act(plus(0,appn(v2,s,v1)))and act(plus(v1,appn(v2,s,0))))
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,1,1])
+||||v5:ih(v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||==>v2:pnat=>v1:pnat=>(act(appn(v2,s,v1))and act(plus(v1,appn(v2,s,0))))
+nat
+
+||||SELECTED METHOD at depth 4: intro1([sapn2-[1,1]],[v2-1])
+|||||comp([2,1,2,1,1])
+|||||v5:ih(v2t=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||==>v1:pnat=>(act(appn(0,s,v1))and act(plus(v1,appn(0,s,0))))in pnat
+|||||SELECTED METHOD at depth 5: eval_def([2,1,2,1],sapn1)
+||||||comp([1,2,1,2,1,1])
+||||||v5:ih(vv0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>v1:pnat=>(act(appn(0,s,v1))and act(plus(v1,0)))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,1,1],sapn1)
+|||||||comp([1,1,2,1,2,1,1])
+|||||||v5:ih(=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||==>v1:pnat=>(act(v1)and act(plus(v1,0)))in pnat
+
+|||||||SELECTED METHOD at depth 7: intro1([],[v1-1])
+||||||||comp([2,1,1,2,1,2,1,1])
+||||||||v5:ih(v>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||==>(act(0)and act(plus(0,0)))in pnat
+||||||||SELECTED METHOD at depth 8: eval_def([1,2,1],plus1)
+|||||||||comp([1,2,1,1,2,1,2,1,1])
+|||||||||v5:ih(>v1:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||==>(act(0)and act(0))in pnat
+|||||||||SELECTED METHOD at depth 9: transition([0])
+||||||||||comp([1,1,2,1,1,2,1,2,1,1])
+||||||||||v5:ih(v2:at=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||==>related(bot,bot)in pnat
+||||||||||TERMINATING METHOD at depth 10: strong(bot)
+||||||||v5:ihv0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||==>act(``s({\v0/})''<out>)and act(plus(``s({\v0/})''<out>,0))
+||||||||SELECTED METHOD at depth 8: intro1([plus2-[1,2]],[])
+|||||||||comp([1,1,1,1,2,1,2,1,1])
+|||||||||v5:=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(``s({plus(\v0/,0)})''<out>
+|||||||||SELECTED METHOD at depth 9: transition([p])
+||||||||||comp([1,1,1,1,1,2,1,2,1,1])
+||||||||||v5:ih(v2vpnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||==>v0:pnat=>related(\v0/,plus(\v0/,0))in pnat
+||||||||||TERMINATING METHOD at depth 10: fertilize(strong(v3))
+
+|||||comp([1,1,2,1,1])
+|||||v5:ih(v2=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||act(``s({appn(\v0/,s,\v1/)})''<out>)and
+                     act(plus(\v1/,appn(``s({\v0/})''<out>,s,0))))in pnat
+|||||SELECTED METHOD at depth 5: intro1([plus2-[1,2]],[v1-1])
+||||||comp([2,1,1,2,1,1])
+||||||v5:ih(:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(plus(0,appn(s(v0),s,0))))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,2,1],plus1)
+|||||||comp([1,2,1,1,2,1,1])
+|||||||v5:ih(vat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(appn(s(v0),s,0)))in pnat
+|||||||SELECTED METHOD at depth 7: eval_def([1,2,1],sapn2)
+||||||||comp([1,1,2,1,1,2,1,1])
+||||||||v5:ih(:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(s(appn(v0,s,0))))in pnat
+||||||||SELECTED METHOD at depth 8: transition([p])
+|||||||||comp([1,1,1,2,1,1,2,1,1])
+|||||||||v5:ih(v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||==>v0:pnat=>related(appn(v0,s,0),appn(v0,s,0))in pnat
+|||||||||TERMINATING METHOD at depth 9: strong(appn(v0,s,0))
+||||||comp([1,1,1,2,1,1])
+||||||v5:ih(at=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))in pnat)
+||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||==>v2:pnat=>v0:pnat=>(act(``s({appn(\v0/,s,``s({\v2/})''<out>)})''<out>)
+       and act(``s({plus(\v2/,appn(``s({\v0/})''<out>,s,0))})''<out>))in pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,1,2,1,1])
+|||||||v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0)))
+|||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||==>v2:pnat=>v0:pnat=>related(appn(\v0/,s,``s({\v2/})''<out>),plus(\v2/,a\
+ppn(``s({\v0/})''<out>,s,0)))in pnat
+|||||||SELECTED METHOD at depth 7: wave([1,1,2,2,2,2],[sapn2thm,equ(left)])
+||||||||comp([1,1,1,1,1,2,1,1])
+||||||||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||==>v2:pnat=>v0:pnat=>related(``s({appn(\v0/,s,\v2/)})''<out>,plus(\v2/,\
+appn(``s({\v0/})''<out>,s,0)))in pnat
+||||||||SELECTED METHOD at depth 8: wave([2,2,1,2,2,2,2],[sapn2,equ(left)])
+|||||||||comp([1,1,1,1,1,1,2,1,1])
+|||||||||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||==>v2:pnat=>v0:pnat=>related(``s({appn(\v0/,s,\v2/)})''<out>,plus(\v2/\
+,``s({appn(\v0/,s,0)})''<out>))in pnat
+|||||||||SELECTED METHOD at depth 9: wave([1,1,2,2,2,2],[sapn2,equ(right)])
+||||||||||comp([1,1,1,1,1,1,1,2,1,1])
+||||||||||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(\
+v1,appn(v2,s,v0)))in pnat)
+||||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||==>v2:pnat=>v0:pnat=>related(appn(``s({\v0/})''<in>,s,\v2/),plus(\v2/\
+,``s({appn(\v0/,s,0)})''<out>))in pnat
+||||||||||SELECTED METHOD at depth 10: wave([2,2,1,2,2,2,2],[sapn2,equ(right)])
+|||||||||||comp([1,1,1,1,1,1,1,1,2,1,1])
+|||||||||||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus\
+(v1,appn(v2,s,v0)))in pnat)
+|||||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||||==>v2:pnat=>v0:pnat=>related(appn(``s({\v0/})''<in>,s,\v2/),plus(\v2\
+/,appn(``s({\v0/})''<in>,s,0)))in pnat
+|||||||||||SELECTED METHOD at depth 11: wave(sinkexp,[v2:pnat=>v0:pnat=>related\
+(appn(\``s({v0})''<in>/,s,\v2/),plus(\v2/,appn(\``s({v0})''<in>/,s,0)))in pnat,\
+b])
+||||||||||||comp([1,1,1,1,1,1,1,1,1,2,1,1])
+||||||||||||v5:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plu\
+s(v1,appn(v2,s,v0)))in pnat)
+||||||||||||v4:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||||v3:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||||==>v2:pnat=>v0:pnat=>related(appn(\``s({v0})''<in>/,s,\v2/),plus(\v\
+2/,appn(\``s({v0})''<in>/,s,0)))in pnat
+
+>>>>> INVOKING revise-bisimulation CRITIC <<<<<
+
+SELECTED METHOD at depth 0: coinduction_lts(union([range(pnat-lam(v2-pnat,lam(v\
+1-pnat,lam(v0-pnat,related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),r\
+ange(pnat-lam(v0-pnat,related(plus(v0,0),v0))),range(pnat-lam(v0-pnat,related(v\
+0,plus(v0,0)))),range(pnat-lam(v2-pnat,lam(v0-pnat,related(appn(s(v0),s,v2),plu\
+s(v2,appn(s(v0),s,0))))))]),obs_fun)
+|comp([1])
+|==>subset(union([range(pnat-lam(v2-pnat,lam(v1-pnat,lam(v0-pnat,related(plus(v\
+0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),range(pnat-lam(v0-pnat,related(plu\
+s(v0,0),v0))),range(pnat-lam(v0-pnat,related(v0,plus(v0,0)))),range(pnat-lam(v2\
+-pnat,lam(v0-pnat,related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))))))]),obs_f\
+un of union([range(pnat-lam(v2-pnat,lam(v1-pnat,lam(v0-pnat,related(plus(v0,app\
+n(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),range(pnat-lam(v0-pnat,related(plus(v0,\
+0),v0))),range(pnat-lam(v0-pnat,related(v0,plus(v0,0)))),range(pnat-lam(v2-pnat\
+,lam(v0-pnat,related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))))))]))in set(pna\
+t)
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([4,1])
+||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in \
+pnat)
+||==>v2:pnat=>v0:pnat=>(act(appn(s(v0),s,v2))and act(plus(v2,appn(s(v0),s,0))))\
+in pnat
+||SELECTED METHOD at depth 2: eval_def([2,1,2,1],sapn2)
+|||comp([1,4,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>v2:pnat=>v0:pnat=>(act(appn(s(v0),s,v2))and act(plus(v2,s(appn(v0,s,0))))\
+)in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],sapn2)
+||||comp([1,1,4,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>v2:pnat=>v0:pnat=>(act(s(appn(v0,s,v2)))and act(plus(v2,s(appn(v0,s,0)))\
+))in pnat
+||||SELECTED METHOD at depth 4: intro1([plus2-[1,2]],[v2-1])
+|||||comp([2,1,1,4,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(plus(0,s(appn(v0,s,0)))))in pnat
+|||||SELECTED METHOD at depth 5: eval_def([1,2,1],plus1)
+||||||comp([1,2,1,1,4,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(s(appn(v0,s,0))))in pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,2,1,1,4,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v0:pnat=>related(appn(v0,s,0),appn(v0,s,0))in pnat
+|||||||TERMINATING METHOD at depth 7: strong(appn(v0,s,0))
+|||||comp([1,1,1,4,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v1:pnat=>v0:pnat=>(act(s(appn(\v0/,s,``s({\v1/})''<out>)))and act(``s({\
+plus(\v1/,s(appn(\v0/,s,0)))})''<out>))in pnat
+|||||SELECTED METHOD at depth 5: transition([p])
+||||||comp([1,1,1,1,4,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v1:pnat=>v0:pnat=>related(appn(\v0/,s,``s({\v1/})''<out>),plus(\v1/,s(\
+appn(\v0/,s,0))))in pnat
+||||||SELECTED METHOD at depth 6: wave([1,1,2,2,2,2],[sapn2thm,equ(left)])
+|||||||comp([1,1,1,1,1,4,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v1:pnat=>v0:pnat=>related(``s({appn(\v0/,s,\v1/)})''<out>,plus(\v1/,s\
+(appn(\v0/,s,0))))in pnat
+|||||||SELECTED METHOD at depth 7: wave([1,1,2,2,2,2],[sapn2,equ(right)])
+||||||||comp([1,1,1,1,1,1,4,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v1:pnat=>v0:pnat=>related(appn(``s({\v0/})''<in>,s,\v1/),plus(\v1/,s\
+(appn(\v0/,s,0))))in pnat
+||||||||TERMINATING METHOD at depth 8: fertilize(strong(v3))
+||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in \
+pnat)
+||==>v0:pnat=>(act(v0)and act(plus(v0,0)))in pnat
+||SELECTED METHOD at depth 2: intro1([],[v0-1])
+|||comp([2,3,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>(act(0)and act(plus(0,0)))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,2,1],plus1)
+||||comp([1,2,3,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>(act(0)and act(0))in pnat
+||||SELECTED METHOD at depth 4: transition([0])
+|||||comp([1,1,2,3,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>related(bot,bot)in pnat
+|||||TERMINATING METHOD at depth 5: strong(bot)
+|||comp([1,3,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>v1:pnat=>(act(``s({\v1/})''<out>)and act(plus(``s({\v1/})''<out>,0)))in p\
+nat
+|||SELECTED METHOD at depth 3: intro1([plus2-[1,2]],[])
+||||comp([1,1,3,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>v1:pnat=>(act(``s({\v1/})''<out>)and act(``s({plus(\v1/,0)})''<out>))in \
+pnat
+||||SELECTED METHOD at depth 4: transition([p])
+|||||comp([1,1,1,3,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v1:pnat=>related(\v1/,plus(\v1/,0))in pnat
+|||||TERMINATING METHOD at depth 5: fertilize(strong(v4))
+||comp([2,1])
+||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in \
+pnat)
+||==>v0:pnat=>(act(plus(v0,0))and act(v0))in pnat
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[v0-1])
+|||comp([2,2,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>(act(plus(0,0))and act(0))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,2,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>(act(0)and act(0))in pnat
+||||SELECTED METHOD at depth 4: transition([0])
+|||||comp([1,1,2,2,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>related(bot,bot)in pnat
+|||||TERMINATING METHOD at depth 5: strong(bot)
+|||comp([1,2,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>v1:pnat=>(act(``s({plus(\v1/,0)})''<out>)and act(``s({\v1/})''<out>))in p\
+nat
+|||SELECTED METHOD at depth 3: transition([p])
+||||comp([1,1,2,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>v1:pnat=>related(plus(\v1/,0),\v1/)in pnat
+||||TERMINATING METHOD at depth 4: fertilize(strong(v5))
+||comp([1,1])
+||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in \
+pnat)
+||==>v2:pnat=>v1:pnat=>v0:pnat=>(act(plus(v0,appn(v2,s,v1)))and act(plus(v1,app\
+n(v2,s,v0))))in pnat
+||SELECTED METHOD at depth 2: intro1([plus2-[1,1]],[v0-1])
+|||comp([2,1,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>v2:pnat=>v1:pnat=>(act(plus(0,appn(v2,s,v1)))and act(plus(v1,appn(v2,s,0)\
+)))in pnat
+|||SELECTED METHOD at depth 3: eval_def([1,1,1],plus1)
+||||comp([1,2,1,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>v2:pnat=>v1:pnat=>(act(appn(v2,s,v1))and act(plus(v1,appn(v2,s,0))))in p\
+nat
+||||SELECTED METHOD at depth 4: intro1([sapn2-[1,1]],[v2-1])
+|||||comp([2,1,2,1,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v1:pnat=>(act(appn(0,s,v1))and act(plus(v1,appn(0,s,0))))in pnat
+|||||SELECTED METHOD at depth 5: eval_def([2,1,2,1],sapn1)
+||||||comp([1,2,1,2,1,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v1:pnat=>(act(appn(0,s,v1))and act(plus(v1,0)))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,1,1],sapn1)
+|||||||comp([1,1,2,1,2,1,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v1:pnat=>(act(v1)and act(plus(v1,0)))in pnat
+|||||||SELECTED METHOD at depth 7: intro1([],[v1-1])
+||||||||comp([2,1,1,2,1,2,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>(act(0)and act(plus(0,0)))in pnat
+||||||||SELECTED METHOD at depth 8: eval_def([1,2,1],plus1)
+|||||||||comp([1,2,1,1,2,1,2,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>(act(0)and act(0))in pnat
+|||||||||SELECTED METHOD at depth 9: transition([0])
+||||||||||comp([1,1,2,1,1,2,1,2,1,1])
+||||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(\
+v1,appn(v2,s,v0)))in pnat)
+||||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s\
+,0)))in pnat)
+||||||||||==>related(bot,bot)in pnat
+||||||||||TERMINATING METHOD at depth 10: strong(bot)
+||||||||comp([1,1,1,2,1,2,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(plus(``s({\v0/})''<out>,0))\
+)in pnat
+||||||||SELECTED METHOD at depth 8: intro1([plus2-[1,2]],[])
+|||||||||comp([1,1,1,1,2,1,2,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>v0:pnat=>(act(``s({\v0/})''<out>)and act(``s({plus(\v0/,0)})''<out>\
+))in pnat
+|||||||||SELECTED METHOD at depth 9: transition([p])
+||||||||||comp([1,1,1,1,1,2,1,2,1,1])
+||||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(\
+v1,appn(v2,s,v0)))in pnat)
+||||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s\
+,0)))in pnat)
+||||||||||==>v0:pnat=>related(\v0/,plus(\v0/,0))in pnat
+||||||||||TERMINATING METHOD at depth 10: fertilize(strong(v4))
+|||||comp([1,1,2,1,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v0:pnat=>v1:pnat=>(act(``s({appn(\v0/,s,\v1/)})''<out>)and act(plus(\v1\
+/,appn(``s({\v0/})''<out>,s,0))))in pnat
+|||||SELECTED METHOD at depth 5: intro1([plus2-[1,2]],[v1-1])
+||||||comp([2,1,1,2,1,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(plus(0,appn(s(v0),s,0))))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,2,1],plus1)
+|||||||comp([1,2,1,1,2,1,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(appn(s(v0),s,0)))in pnat
+|||||||SELECTED METHOD at depth 7: eval_def([1,2,1],sapn2)
+||||||||comp([1,1,2,1,1,2,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(s(appn(v0,s,0))))in pnat
+||||||||SELECTED METHOD at depth 8: transition([p])
+|||||||||comp([1,1,1,2,1,1,2,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>v0:pnat=>related(appn(v0,s,0),appn(v0,s,0))in pnat
+|||||||||TERMINATING METHOD at depth 9: strong(appn(v0,s,0))
+||||||comp([1,1,1,2,1,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v2:pnat=>v0:pnat=>(act(``s({appn(\v0/,s,``s({\v2/})''<out>)})''<out>)a\
+nd act(``s({plus(\v2/,appn(``s({\v0/})''<out>,s,0))})''<out>))in pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,1,2,1,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v2:pnat=>v0:pnat=>related(appn(\v0/,s,``s({\v2/})''<out>),plus(\v2/,a\
+ppn(``s({\v0/})''<out>,s,0)))in pnat
+|||||||SELECTED METHOD at depth 7: wave([1,1,2,2,2,2],[sapn2thm,equ(left)])
+||||||||comp([1,1,1,1,1,2,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v2:pnat=>v0:pnat=>related(``s({appn(\v0/,s,\v2/)})''<out>,plus(\v2/,\
+appn(``s({\v0/})''<out>,s,0)))in pnat
+||||||||SELECTED METHOD at depth 8: wave([2,2,1,2,2,2,2],[sapn2,equ(left)])
+|||||||||comp([1,1,1,1,1,1,2,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>v2:pnat=>v0:pnat=>related(``s({appn(\v0/,s,\v2/)})''<out>,plus(\v2/\
+,``s({appn(\v0/,s,0)})''<out>))in pnat
+|||||||||SELECTED METHOD at depth 9: wave([1,1,2,2,2,2],[sapn2,equ(right)])
+||||||||||comp([1,1,1,1,1,1,1,2,1,1])
+||||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(\
+v1,appn(v2,s,v0)))in pnat)
+||||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s\
+,0)))in pnat)
+||||||||||==>v2:pnat=>v0:pnat=>related(appn(``s({\v0/})''<in>,s,\v2/),plus(\v2/\
+,``s({appn(\v0/,s,0)})''<out>))in pnat
+||||||||||TERMINATING METHOD at depth 10: fertilize(strong(v3))
+|||comp([1,1,1])
+|||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||==>v3:pnat=>v2:pnat=>v1:pnat=>(act(``s({plus(\v3/,appn(\v2/,s,\v1/))})''<out\
+>)and act(plus(\v1/,appn(\v2/,s,``s({\v3/})''<out>))))in pnat
+|||SELECTED METHOD at depth 3: intro1([plus2-[1,2]],[v1-1])
+||||comp([2,1,1,1])
+||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||==>v3:pnat=>v2:pnat=>(act(s(plus(v3,appn(v2,s,0))))and act(plus(0,appn(v2,s\
+,s(v3)))))in pnat
+||||SELECTED METHOD at depth 4: eval_def([1,2,1],plus1)
+|||||comp([1,2,1,1,1])
+|||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||==>v3:pnat=>v2:pnat=>(act(s(plus(v3,appn(v2,s,0))))and act(appn(v2,s,s(v3)\
+)))in pnat
+|||||SELECTED METHOD at depth 5: intro1([sapn2-[1,2]],[v2-1])
+||||||comp([2,1,2,1,1,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v3:pnat=>(act(s(plus(v3,appn(0,s,0))))and act(appn(0,s,s(v3))))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,2,1],sapn1)
+|||||||comp([1,2,1,2,1,1,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v3:pnat=>(act(s(plus(v3,appn(0,s,0))))and act(s(v3)))in pnat
+|||||||SELECTED METHOD at depth 7: eval_def([2,1,1,1,1],sapn1)
+||||||||comp([1,1,2,1,2,1,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v3:pnat=>(act(s(plus(v3,0)))and act(s(v3)))in pnat
+||||||||SELECTED METHOD at depth 8: transition([p])
+|||||||||comp([1,1,1,2,1,2,1,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>v3:pnat=>related(plus(v3,0),v3)in pnat
+|||||||||TERMINATING METHOD at depth 9: fertilize(strong(v5))
+||||||comp([1,1,2,1,1,1])
+||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||==>v0:pnat=>v3:pnat=>(act(s(plus(\v3/,appn(``s({\v0/})''<out>,s,0))))and \
+act(``s({appn(\v0/,s,s(\v3/))})''<out>))in pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,2,1,1,1])
+|||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||==>v0:pnat=>v3:pnat=>related(plus(\v3/,appn(``s({\v0/})''<out>,s,0)),app\
+n(\v0/,s,s(\v3/)))in pnat
+|||||||SELECTED METHOD at depth 7: wave([2,1,1,2,2,2,2],[sapn2,equ(left)])
+||||||||comp([1,1,1,1,2,1,1,1])
+||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||==>v0:pnat=>v3:pnat=>related(plus(\v3/,``s({appn(\v0/,s,0)})''<out>),ap\
+pn(\v0/,s,s(\v3/)))in pnat
+||||||||SELECTED METHOD at depth 8: wave([2,1,1,2,2,2,2],[sapn2,equ(right)])
+|||||||||comp([1,1,1,1,1,2,1,1,1])
+|||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||==>v0:pnat=>v3:pnat=>related(plus(\v3/,appn(``s({\v0/})''<in>,s,0)),ap\
+pn(\v0/,s,s(\v3/)))in pnat
+|||||||||SELECTED METHOD at depth 9: wave(sinkexp,[v0:pnat=>v3:pnat=>related(pl\
+us(\v3/,appn(\``s({v0})''<in>/,s,0)),appn(\v0/,s,s(\v3/)))in pnat,b])
+||||||||||comp([1,1,1,1,1,1,2,1,1,1])
+||||||||||v6:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(\
+v1,appn(v2,s,v0)))in pnat)
+||||||||||v5:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||||v4:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||||v3:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s\
+,0)))in pnat)
+||||||||||==>v0:pnat=>v3:pnat=>related(plus(\v3/,appn(\``s({v0})''<in>/,s,0)),a\
+ppn(\v0/,s,s(\v3/)))in pnat
+
+>>>>> INVOKING revise-bisimulation CRITIC <<<<<
+
+SELECTED METHOD at depth 0: coinduction_lts(union([range(pnat-lam(v2-pnat,lam(v\
+1-pnat,lam(v0-pnat,related(plus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),r\
+ange(pnat-lam(v0-pnat,related(plus(v0,0),v0))),range(pnat-lam(v0-pnat,related(v\
+0,plus(v0,0)))),range(pnat-lam(v2-pnat,lam(v0-pnat,related(appn(s(v0),s,v2),plu\
+s(v2,appn(s(v0),s,0)))))),range(pnat-lam(v0-pnat,lam(v3-pnat,related(plus(v3,ap\
+pn(s(v0),s,0)),appn(v0,s,s(v3))))))]),obs_fun)
+|comp([1])
+|==>subset(union([range(pnat-lam(v2-pnat,lam(v1-pnat,lam(v0-pnat,related(plus(v\
+0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),range(pnat-lam(v0-pnat,related(plu\
+s(v0,0),v0))),range(pnat-lam(v0-pnat,related(v0,plus(v0,0)))),range(pnat-lam(v2\
+-pnat,lam(v0-pnat,related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))))),range(p\
+nat-lam(v0-pnat,lam(v3-pnat,related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3))))\
+))]),obs_fun of union([range(pnat-lam(v2-pnat,lam(v1-pnat,lam(v0-pnat,related(p\
+lus(v0,appn(v2,s,v1)),plus(v1,appn(v2,s,v0))))))),range(pnat-lam(v0-pnat,relate\
+d(plus(v0,0),v0))),range(pnat-lam(v0-pnat,related(v0,plus(v0,0)))),range(pnat-l\
+am(v2-pnat,lam(v0-pnat,related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))))),ra\
+nge(pnat-lam(v0-pnat,lam(v3-pnat,related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v\
+3))))))]))in set(pnat)
+|SELECTED METHOD at depth 1: gfp_membership(obs_fun)
+||comp([5,1])
+||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn(\
+v2,s,v0)))in pnat)
+||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in \
+pnat)
+||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)))in \
+pnat)
+||==>v0:pnat=>v3:pnat=>(act(plus(v3,appn(s(v0),s,0)))and act(appn(v0,s,s(v3))))\
+in pnat
+||SELECTED METHOD at depth 2: eval_def([2,1,1,1],sapn2)
+|||comp([1,5,1])
+|||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,appn\
+(v2,s,v0)))in pnat)
+|||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))in\
+ pnat)
+|||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)))in\
+ pnat)
+|||==>v0:pnat=>v3:pnat=>(act(plus(v3,s(appn(v0,s,0))))and act(appn(v0,s,s(v3)))\
+)in pnat
+|||SELECTED METHOD at depth 3: intro1([plus2-[1,1]],[v3-1])
+||||comp([2,1,5,1])
+||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,app\
+n(v2,s,v0)))in pnat)
+||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))i\
+n pnat)
+||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)))i\
+n pnat)
+||||==>v0:pnat=>(act(plus(0,s(appn(v0,s,0))))and act(appn(v0,s,s(0))))in pnat
+||||SELECTED METHOD at depth 4: eval_def([1,1,1],plus1)
+|||||comp([1,2,1,5,1])
+|||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,ap\
+pn(v2,s,v0)))in pnat)
+|||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)))\
+in pnat)
+|||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)))\
+in pnat)
+|||||==>v0:pnat=>(act(s(appn(v0,s,0)))and act(appn(v0,s,s(0))))in pnat
+|||||SELECTED METHOD at depth 5: intro1([sapn2-[1,2]],[v0-1])
+||||||comp([2,1,2,1,5,1])
+||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3))\
+)in pnat)
+||||||==>(act(s(appn(0,s,0)))and act(appn(0,s,s(0))))in pnat
+||||||SELECTED METHOD at depth 6: eval_def([1,2,1],sapn1)
+|||||||comp([1,2,1,2,1,5,1])
+|||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)\
+))in pnat)
+|||||||==>(act(s(appn(0,s,0)))and act(s(0)))in pnat
+|||||||SELECTED METHOD at depth 7: eval_def([1,1,1,1],sapn1)
+||||||||comp([1,1,2,1,2,1,5,1])
+||||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3\
+)))in pnat)
+||||||||==>(act(s(0))and act(s(0)))in pnat
+||||||||SELECTED METHOD at depth 8: transition([p])
+|||||||||comp([1,1,1,2,1,2,1,5,1])
+|||||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v\
+3)))in pnat)
+|||||||||==>related(0,0)in pnat
+|||||||||TERMINATING METHOD at depth 9: strong(0)
+||||||comp([1,1,2,1,5,1])
+||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,a\
+ppn(v2,s,v0)))in pnat)
+||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0))\
+)in pnat)
+||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3))\
+)in pnat)
+||||||==>v1:pnat=>(act(s(appn(``s({\v1/})''<out>,s,0)))and act(``s({appn(\v1/,s\
+,s(0))})''<out>))in pnat
+||||||SELECTED METHOD at depth 6: transition([p])
+|||||||comp([1,1,1,2,1,5,1])
+|||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1,\
+appn(v2,s,v0)))in pnat)
+|||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0)\
+))in pnat)
+|||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3)\
+))in pnat)
+|||||||==>v1:pnat=>related(appn(``s({\v1/})''<out>,s,0),appn(\v1/,s,s(0)))in pn\
+at
+|||||||SELECTED METHOD at depth 7: wave([1,1,2,2],[sapn2,equ(left)])
+||||||||comp([1,1,1,1,2,1,5,1])
+||||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v1\
+,appn(v2,s,v0)))in pnat)
+||||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+||||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+||||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,0\
+)))in pnat)
+||||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v3\
+)))in pnat)
+||||||||==>v1:pnat=>related(``s({appn(\v1/,s,0)})''<out>,appn(\v1/,s,s(0)))in p\
+nat
+||||||||SELECTED METHOD at depth 8: wave([1,1,2,2],[sapn2,equ(right)])
+|||||||||comp([1,1,1,1,1,2,1,5,1])
+|||||||||v8:ih(v2:pnat=>v1:pnat=>v0:pnat=>related(plus(v0,appn(v2,s,v1)),plus(v\
+1,appn(v2,s,v0)))in pnat)
+|||||||||v7:ih(v0:pnat=>related(plus(v0,0),v0)in pnat)
+|||||||||v6:ih(v0:pnat=>related(v0,plus(v0,0))in pnat)
+|||||||||v5:ih(v2:pnat=>v0:pnat=>related(appn(s(v0),s,v2),plus(v2,appn(s(v0),s,\
+0)))in pnat)
+|||||||||v4:ih(v0:pnat=>v3:pnat=>related(plus(v3,appn(s(v0),s,0)),appn(v0,s,s(v\
+3)))in pnat)
+|||||||||==>v1:pnat=>related(appn(``s({\v1/})''<in>,s,0),appn(\v1/,s,s(0)))in p\
+nat
+
+Prolog interruption (h for help)? a
+{Execution aborted}

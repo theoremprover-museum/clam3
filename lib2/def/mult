@@ -1,0 +1,1 @@
+mult(x,y)<==>list_ind(y,zeroes(length(x)),[h,t,v,cadd(appnd(multOne(x,h),zeroes(length(t))),v,{false})]).

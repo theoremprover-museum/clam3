@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>a:pnat=>b:pnat=>appn(n, exp(s(s(a))), s(b))=s(a + (times(s(s(a)),  exp(s(s(a)), pred(appn(n, exp(s(s(a))), b)))))) in pnat,_,_,_).

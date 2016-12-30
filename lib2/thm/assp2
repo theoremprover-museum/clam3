@@ -1,0 +1,11 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>plus(x,plus(y,z))=plus(plus(x,y),z)in pnat,
+induction([s(v0)],[x:pnat]),lambda(x,p_ind(x,_7615,[v0,v1,_7621])),
+[problem([x:pnat]==>y:pnat=>z:pnat=>plus(0,plus(y,z))=plus(plus(0,y),z)in pnat,
+ base_case([sym_eval([eval_def([1,1],plus1),eval_def([1,2,1],plus1)]),elementary(dequantify_once then dequantify_once then identity)]),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(y,lambda(z,axiom)),[plus1 of v0],[v2]),[term_of(plus1)],[plus1]))),[plus1 of plus(v0,v1)],[v2]),[term_of(plus1)],[plus1]))),
+ [
+ ]) ext _7615,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>plus(v0,plus(y,z))=plus(plus(v0,y),z)in pnat]==>y:pnat=>z:pnat=>plus(s(v0),plus(y,z))=plus(plus(s(v0),y),z)in pnat,
+ step_case(ripple(wave([1,1],[plus2,left],[])then[wave([1,2,1],[plus2,left],[])then[wave([2,1],[plus2,left],[])then[wave([],[cnc_s,impl],[])]]])then[fertilize(strong,[v1,[]])]),lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of lambda(v2,lambda(v3,su(su(su(su(v4,[v5 of (lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of v1)],[v4]),[v4 of plus(plus(v0,v2),v3)],[v5]),[cnc_s of plus(v0,plus(v2,v3))],[v4]),[term_of(cnc_s)],[cnc_s]))),[v4 of v3],[v5]),[plus2 of plus(v0,v2)],[v4]),[term_of(plus2)],[plus2]))),[v4 of v2],[v5]),[plus2 of v0],[v4]),[term_of(plus2)],[plus2]))),[v4 of plus(v2,v3)],[v5]),[plus2 of v0],[v4]),[term_of(plus2)],[plus2]))),
+ [
+ ]) ext _7621
+]).

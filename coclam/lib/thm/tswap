@@ -1,0 +1,3 @@
+problem([]==>m:int=>n:int=>tswap(m, n)in bintree(int),_,_,_).
+
+

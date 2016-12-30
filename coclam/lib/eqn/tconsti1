@@ -1,0 +1,1 @@
+problem([]==>m:int=>tconsti(m)=node(m, tconsti(m)::nil) in tree(int),_,_,_).

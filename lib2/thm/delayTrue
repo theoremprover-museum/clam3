@@ -1,0 +1,1 @@
+problem([]==>delay(s(0),{true}::nil)={true}::nil in{word},_,_,_).

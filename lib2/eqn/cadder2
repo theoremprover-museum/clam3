@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>cadder(nil,y,{true})=inc(y) in {word},_,_,_).

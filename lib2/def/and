@@ -1,0 +1,2 @@
+and(x,y)<==>decide(x,[l,y],[r,{false}]).
+

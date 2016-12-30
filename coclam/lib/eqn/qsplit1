@@ -1,0 +1,1 @@
+problem([]==>v:pnat => w: pnat => x:pnat list=> qsplit(v,w,x,nil) = x::nil in pnat list,_,_,_).

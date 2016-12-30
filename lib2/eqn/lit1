@@ -1,0 +1,1 @@
+problem([]==>y:int list=>f:(int=>int list=>int list)=>lit(nil,y,f)=y in int list,_,_,_).

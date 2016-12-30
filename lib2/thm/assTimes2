@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>times(times(x,y),z)=times(x,times(y,z))in pnat,_,_,_).

@@ -1,0 +1,80 @@
+problem([]==>num:{sexp}=>w:j(numberp(num))=>pnat,
+normalize_goal([[unroll,_4026]]),_3997,
+[problem([]==>num:rec(sexp,unary\atom\pnat\sexp#sexp)=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+ intro_type_hyps_upto(num),lambda(num,_4128),
+ [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp)]==>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+  elim(num,new _4228),rec_ind(num,[v2,v3,_4236]),
+  [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0]==>w:decide(decide(v3,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+   elim(v3,new _4463),decide(v3,[v4,_4470],[v5,_4474]),
+   [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0)]==>w:decide(decide(inl(v4),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+    intro(at(_4733),_4731),lambda(w,_4736),
+    [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0),w:decide(decide(inl(v4),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])]==>pnat,
+     normalize_hyp([[unroll,_4996]],w),_4745,
+     [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0),w:void]==>pnat,
+      elim(w),any(w),
+      [
+      ]) ext _4745
+     ]) ext _4736,
+     problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v4:unary,v6:v3=inl(v4)in(unary\atom\pnat\v0#v0)]==>decide(decide(inl(v4),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])in u(1),
+     try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+     [
+     ])
+    ]) ext _4470,
+    problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0)]==>w:decide(decide(inr(v5),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+    elim(v5,new _5720),decide(v5,[v4,_5727],[v6,_5731]),
+    [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>w:decide(decide(inr(inl(v4)),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+     intro(at(_6028),_6026),lambda(w,_6031),
+     [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0),w:decide(decide(inr(inl(v4)),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])]==>pnat,
+      normalize_hyp([[unroll,_6329]],w),_6040,
+      [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0),w:void]==>pnat,
+       elim(w),any(w),
+       [
+       ]) ext _6040
+      ]) ext _6031,
+      problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v4:atom,v8:v5=inl(v4)in(atom\pnat\v0#v0)]==>decide(decide(inr(inl(v4)),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])in u(1),
+      try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+      [
+      ])
+     ]) ext _5727,
+     problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0)]==>w:decide(decide(inr(inr(v6)),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+     elim(v6,new _7162),decide(v6,[v4,_7169],[v8,_7173]),
+     [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>w:decide(decide(inr(inr(inl(v4))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+      intro(at(_7502),_7500),lambda(w,_7505),
+      [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0),w:decide(decide(inr(inr(inl(v4))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])]==>pnat,
+       normalize_hyp([[unroll,_7835]],w),_7514,
+       [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0),w:unary]==>pnat,
+        intro(explicit(decide(inr(inr(inl(v4))),[l,l],[r,decide(r,[l,l],[r,decide(r,[l,l],[r,r])])]))),decide(inr(inr(inl(v4))),[l,l],[r,decide(r,[l,l],[r,decide(r,[l,l],[r,r])])]),
+        [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0),w:unary]==>decide(inr(inr(inl(v4))),[l,l],[r,decide(r,[l,l],[r,decide(r,[l,l],[r,r])])])in pnat,
+         prove_mem,axiom,
+         [
+         ])
+        ]) ext _7514
+       ]) ext _7505,
+       problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v4:pnat,v10:v6=inl(v4)in(pnat\v0#v0)]==>decide(decide(inr(inr(inl(v4))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])in u(1),
+       try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+       [
+       ])
+      ]) ext _7169,
+      problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0)]==>w:decide(decide(inr(inr(inr(v8))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+      elim(v8,new _9145),spread(v8,[v4,v10,_9153]),
+      [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>w:decide(decide(inr(inr(inr(v4&v10))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,
+       intro(at(_9515),_9513),lambda(w,_9518),
+       [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0),w:decide(decide(inr(inr(inr(v4&v10))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])]==>pnat,
+        normalize_hyp([[unroll,_9881]],w),_9527,
+        [problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0),w:void]==>pnat,
+         elim(w),any(w),
+         [
+         ]) ext _9527
+        ]) ext _9518,
+        problem([num:rec(sexp,unary\atom\pnat\sexp#sexp),v0:u(1),v1:num:v0=>num in rec(sexp,unary\atom\pnat\sexp#sexp),v2:num:v0=>w:decide(decide(num,[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])=>pnat,v3:unary\atom\pnat\v0#v0,v5:atom\pnat\v0#v0,v7:v3=inr(v5)in(unary\atom\pnat\v0#v0),v6:pnat\v0#v0,v9:v5=inr(v6)in(atom\pnat\v0#v0),v8:v0#v0,v11:v6=inr(v8)in(pnat\v0#v0),v4:v0,v10:v0,v12:v8=v4&v10 in(v0#v0)]==>decide(decide(inr(inr(inr(v4&v10))),[~,inr(unit)],[r,decide(r,[~,inr(unit)],[r,decide(r,[~,inl(unit)],[~,inr(unit)])])]),[~,unary],[~,void])in u(1),
+        try (repeat normalize_mem)then repeat prove_mem_step,axiom,
+        [
+        ])
+       ]) ext _9153
+      ]) ext _7173
+     ]) ext _5731
+    ]) ext _4474
+   ]) ext _4236
+  ]) ext _4128
+ ]) ext _3997
+]).

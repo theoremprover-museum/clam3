@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>x:reg=>del(x) of s(t)=x of t in {word},_,_,_).

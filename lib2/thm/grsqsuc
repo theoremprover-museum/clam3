@@ -1,0 +1,1 @@
+problem([]==> n:pnat=>greater(n,s(0))=>greater(times(n,n),s(n)),_,_,_).

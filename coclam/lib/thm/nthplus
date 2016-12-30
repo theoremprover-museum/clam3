@@ -1,0 +1,1 @@
+problem([]==>i:pnat=>j:pnat=>l:pnat list=>nth(plus(i,j),l)=nth(j,nth(i,l))in pnat list,_,_,_).

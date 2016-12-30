@@ -1,0 +1,1 @@
+problem([]==>m:pnat=>l:pnat list=>lconst(m)=app(lconst(m), l)in pnat list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>u:{posint}=>v:{posint} list=>w:{posint}=>prod(v)=w in {posint}=>prod(u::v)=times(u,w)in {posint},_,_,_).

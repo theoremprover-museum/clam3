@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>times(word2nat(x),word2nat(y))=word2nat(timesW(x,y))in{word},_,_,_).

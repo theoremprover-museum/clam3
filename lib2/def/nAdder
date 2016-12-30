@@ -1,0 +1,1 @@
+nAdder(n,a,b,ci)<==>term_of(nAdder)of n of a of b of ci.

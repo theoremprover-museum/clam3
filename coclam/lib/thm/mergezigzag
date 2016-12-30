@@ -1,0 +1,1 @@
+problem([]==>a:int list=>b:int list=>merge(merge(oddlist(a), oddlist(b)),merge(evenlist(a), evenlist(b)))=zig_zag(nil, a::nil, b::nil)in int list,_,_,_).

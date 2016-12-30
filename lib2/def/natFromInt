@@ -1,0 +1,1 @@
+natFromInt(x)<==>ind(x,[~,xn,s(xn)],0,[~,xp,s(xp)]).

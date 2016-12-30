@@ -1,0 +1,1 @@
+problem([]==>v1:pnat=>myeven(n)=>related(true,myodd(s(n)))in bool,_,_,_).

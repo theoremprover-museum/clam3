@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>s(s(x))=s(s(x))in pnat,
+tautology((intro then wfftacs)then identity),lambda(x,axiom),
+[
+]).

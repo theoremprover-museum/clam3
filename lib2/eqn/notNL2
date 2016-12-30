@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>x:{word}=>notNL(a::x)=not(a)::notNL(x)in{word},_,_,_).

@@ -1,0 +1,1 @@
+word2nat(x)<==>list_ind(x,0,[h,t,v,plus(times(bitval(h),exptwo(length(t))),v)]).

@@ -1,0 +1,1 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>ci:{bool}=>oneAluSpec(s0,s1,s2,a,b,ci)=nAluSpec(s(0),s0,s1,s2,a::nil,b::nil,ci)in{word},_,_,_).

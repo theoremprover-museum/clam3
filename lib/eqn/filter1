@@ -1,0 +1,1 @@
+problem([]==>p:(pnat => pnat) => filter(p,nil) = nil in pnat list,_,_,_).

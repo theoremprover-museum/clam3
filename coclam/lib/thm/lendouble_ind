@@ -1,0 +1,2 @@
+problem([]==>x:pnat list=>length(app(x,x))=double(length(x)) in pnat, _,_,_).
+

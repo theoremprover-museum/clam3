@@ -1,0 +1,30 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>{word},
+repeat intro,lambda(s0,lambda(s1,lambda(s2,lambda(ci,lambda(x,lambda(y,x)))))),
+[problem([s0:{bool},s1:{bool},s2:{bool},ci:{bool},x:{word}]==>{word}in u(1),
+ intro(explicit(list_ind(x,lambda(y,((not s2)and ci)::nil),[h,t,r,lambda(y,aluAux(s0,s1,s2,h,hd(y),r of tl(y)))]))),list_ind(x,lambda(y,((not s2)and ci)::nil),[h,t,r,lambda(y,aluAux(s0,s1,s2,h,hd(y),r of tl(y)))]),
+ [problem([s0:{bool},s1:{bool},s2:{bool},ci:{bool},x:{word}]==>list_ind(x,lambda(y,((not s2)and ci)::nil),[h,t,r,lambda(y,aluAux(s0,s1,s2,h,hd(y),r of tl(y)))])in ({word}in u(1)),
+  wfftacs then apply(because),atom(incomplete),
+  [
+  ])
+ ]) ext _1210,
+ problem([s0:{bool},s1:{bool},s2:{bool},ci:{bool}]==>{word}in u(1),
+ repeat wfftac,axiom,
+ [
+ ]) ext _1451,
+ problem([s0:{bool},s1:{bool},s2:{bool}]==>{bool}in u(1),
+ repeat wfftac,axiom,
+ [
+ ]) ext _1501,
+ problem([s0:{bool},s1:{bool}]==>{bool}in u(1),
+ repeat wfftac,axiom,
+ [
+ ]) ext _1544,
+ problem([s0:{bool}]==>{bool}in u(1),
+ repeat wfftac,axiom,
+ [
+ ]) ext _1580,
+ problem([]==>{bool}in u(1),
+ repeat wfftac,axiom,
+ [
+ ]) ext _1609
+]).

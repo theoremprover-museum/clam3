@@ -1,0 +1,2 @@
+problem([]==>a:int=>b:int=>iterates(lam(y, plus(a, y)), b)=infl1(0,
+lam(x, plus(times(x, a), b)), s)in int list,_,_,_). 

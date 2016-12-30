@@ -1,0 +1,23 @@
+problem([]==>x:pnat=>y:pnat=>geq(plus(x,y),x),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_310,[v0,v1,_316])),
+[problem([x:pnat]==>y:pnat=>geq(plus(0,y),0),
+ base([1],plus1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _362),[term_of(plus1)],[plus1]),
+ [problem([x:pnat]==>y:pnat=>geq(y,0),
+  base([],geq2),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _422),[term_of(geq2)],[geq2]),
+  [problem([x:pnat]==>y:pnat=>{true},
+   tautology((intro then wfftacs)then istrue),lambda(y,0),
+   [
+   ]) ext _422
+  ]) ext _362
+ ]) ext _310,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>geq(plus(v0,y),v0)]==>y:pnat=>geq(plus(s(v0),y),s(v0)),
+ wave([1],plus2),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _548),[term_of(plus2)],[plus2]),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(plus(v0,y),v0)]==>y:pnat=>geq(s(plus(v0,y)),s(v0)),
+  wave([],geq3),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _637),[term_of(geq3)],[geq3]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>geq(plus(v0,y),v0)]==>y:pnat=>geq(plus(v0,y),v0),
+   tautology(intro),v1,
+   [
+   ]) ext _637
+  ]) ext _548
+ ]) ext _316
+]).

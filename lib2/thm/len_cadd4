@@ -1,0 +1,2 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y)in pnat=>
+plus(exptwo(length(tl(cadd(x,y,ci)))),exptwo(length(tl(cadd(x,y,ci)))))=plus(exptwo(length(x)),exptwo(length(y)))in pnat,_,_,_).

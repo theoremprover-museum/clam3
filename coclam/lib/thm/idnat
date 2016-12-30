@@ -1,0 +1,1 @@
+problem([]==>a:pnat=>idnat of a=a in pnat,_,_,_).

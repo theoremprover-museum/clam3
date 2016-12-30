@@ -1,0 +1,1 @@
+problem([]==>h:req=>t:list(req)=>f:st(ack, req)=>f(bot)=h::t in list(req)=>nextST(f)=yes(h) in maybe(req),_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>n:int=>sumlist(n, nil)=n in int,_,_,_).

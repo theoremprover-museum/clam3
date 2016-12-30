@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>i:pnat=>exp(s(s(n)),s(i))=s(plus(n, times(s(s(n)), exp(s(s(n)),i))))in pnat,_,_,_).

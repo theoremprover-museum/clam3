@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>f:(pnat=>pnat)=>m:pnat=>mynth(n, mapcar(iterates(f, m), f))=mynth(iterates(f, f of m))in pnat,_,_,_).

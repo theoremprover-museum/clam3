@@ -1,0 +1,1 @@
+length(r)<==>list_ind(r,0,[~,~,v,s(v)]).

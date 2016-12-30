@@ -1,0 +1,1 @@
+problem([]==>word2nat(nil)=0 in pnat,_,_,_).

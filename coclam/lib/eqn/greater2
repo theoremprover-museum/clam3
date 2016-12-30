@@ -1,0 +1,30 @@
+/*
+ * @(#)greater2,v 1.1 1994/09/16 09:38:16 dream Exp
+ *
+ * greater2,v
+ * Revision 1.1  1994/09/16  09:38:16  dream
+ * Initial revision
+ *
+ */
+
+problem([]==>x:pnat=>greater(x,0)=>x=0 in pnat=>void,
+intro,lambda(x,_7426),
+[problem([x:pnat]==>greater(x,0)=>x=0 in pnat=>void,
+ elim(x),p_ind(x,_7464,[v0,v1,_7470]),
+ [problem([x:pnat]==>greater(0,0)=>0=0 in pnat=>void,
+  simplify,_7480,
+  [problem([x:pnat]==>void=>0=0 in pnat=>void,
+   intro(new[v0])then[elim(v0),wfftacs],lambda(v0,any(v0)),
+   [
+   ]) ext _7480
+  ]) ext _7464,
+  problem([x:pnat,v0:pnat,v1:greater(v0,0)=>v0=0 in pnat=>void]==>greater(s(v0),0)=>s(v0)=0 in pnat=>void,
+  intro(new[v2])then[intro(new[v3])then[clam_arith(v3:s(v0)=0 in pnat),wfftacs],wfftacs],lambda(v2,lambda(v3,su(su(su(any(v6),[v5 of v3],[v6]),[v4 of v0],[v5]),[term_of(arith1)],[v4]))),
+  [
+  ]) ext _7470
+ ]) ext _7426,
+ problem([]==>pnat in u(1),
+ repeat wfftac,axiom,
+ [
+ ])
+]).

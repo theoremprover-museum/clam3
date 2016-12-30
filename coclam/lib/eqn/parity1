@@ -1,0 +1,1 @@
+problem([]==>value:bool=>parity(value, nil)=nil in bool list, _, _, _).

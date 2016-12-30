@@ -1,0 +1,1 @@
+problem([]==>h:O=>t:list(O)=>f:st(I, O)=>f(bot)=h::t in O=>nextST(f)=yes(h) in maybe(O),_,_,_).

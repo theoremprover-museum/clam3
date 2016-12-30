@@ -1,0 +1,4 @@
+problem([]==>a:{bool}=>b:{bool}=>ci:{bool}=>({bool}#{bool}),
+repeat intro then simplify then repeat intro,lambda(a,lambda(b,lambda(ci,a&a))),
+[
+]).

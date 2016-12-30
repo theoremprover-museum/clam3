@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>intFromNat(s(n))=intFromNat(n)+1 in int,_,_,_).

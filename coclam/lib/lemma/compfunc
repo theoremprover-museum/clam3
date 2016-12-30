@@ -1,0 +1,3 @@
+problem([]==>x:int=>f:(int=>int)=>g:(int=>int)=>
+	o(f, g) of x=f(g(x)) in int,
+_,_,_).

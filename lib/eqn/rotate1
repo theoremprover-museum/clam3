@@ -1,0 +1,1 @@
+problem([]==>y:pnat list=>rotate(0,y)= y in pnat list,_,_,_).

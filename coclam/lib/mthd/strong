@@ -1,0 +1,49 @@
+method(strong(X),
+       H==>G,
+       [%  write('attempting strong'), nl,
+         matrix_conds(Vs, _, related(X,Y), _, G),
+	 strip_meta_annotations(X, T),
+	 strip_meta_annotations(Y, T)
+       ],
+       [],
+       [],
+	[]
+      ).
+
+method(strong(X),
+       H==>G,
+       [%  write('attempting strong'), nl,
+         matrix_conds(Vs, _,related(X,type(Y,Type)), _, G),
+	 strip_meta_annotations(X, T),
+	 strip_meta_annotations(Y, T),
+	 (member(T:Type, Vs); data(T, Type, _, _))
+       ],
+       [],
+       [],
+	[]
+      ).
+
+method(strong(X),
+       H==>G,
+       [%  write('attempting strong'), nl,
+         matrix_conds(Vs, _,related(X,type(Y,bot)), _, G),
+	 strip_meta_annotations(X, bot),
+	 strip_meta_annotations(Y, bot)
+       ],
+       [],
+       [],
+	[]
+      ).
+
+method(strong(X),
+       H==>G,
+       [%  write('attempting strong'), nl,
+         (matrix_conds(Vs, Conds,related(true, Y), _, G);
+	 matrix_conds(Vs, Conds,related(Y, true), _, G)),
+	 strip_meta_annotations(Y, UnAnn),
+	 member(UnAnn, Conds)
+       ],
+       [],
+       [],
+	[]
+      ).

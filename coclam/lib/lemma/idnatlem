@@ -1,0 +1,1 @@
+problem([]==>n:int=>lambda(x, idnat(x)) of n=n in int,_,_,_).

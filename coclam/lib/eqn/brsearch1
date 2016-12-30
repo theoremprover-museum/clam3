@@ -1,0 +1,1 @@
+problem([]==>a:int=>brsearch(node(a, nil), nil) = a::nil in int list,_,_,_).

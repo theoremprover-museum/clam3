@@ -1,0 +1,4 @@
+problem([]==>m:int=>f:(int=>int)=>n:int=>flatten(mapcar(lconst(m), lam(a,
+mapcar(iterates(f, n), lam(b, a::b::nil)))))=foldright(lam(x, lam(pairs,
+foldright(lam(y, lam(l, (x::y::nil)::l)), iterates(f, n), pairs))), lconst(m), nil)in int
+list,_,_,_).

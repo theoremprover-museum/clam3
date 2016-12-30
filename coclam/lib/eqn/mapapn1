@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>n:pnat=>appn(n, mapcar(f), nil)=nil in int list,_,_,_).

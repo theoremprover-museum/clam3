@@ -1,0 +1,130 @@
+% loading file /home/sin1/air/bin/lprog
+%  foreign file /usr/local/src/quintus3/generic/qplib3.1.2/library/sun4-4/libpl.so loaded
+% lprog loaded in module user, 0.600 sec 166,940 bytes
+
+?- use example.
+example
+ yes
+?- (G (rev x) u v) = (app (rev x) (cons U nil)).
+
+G = Var6 \ Var7 \ Var8 \ (app (rev x) (cons (Var4 Var6 Var7 Var8) nil))
+U = Var4 (rev x) u v ;
+
+G = Var11 \ Var12 \ Var13 \ (app Var11 (cons (Var9 Var11 Var12 Var13) nil))
+U = Var9 (rev x) u v ;
+
+G = G
+U = U
+
+ The remaining flexible - flexible pairs:
+<Var14 (cons w nil) u v , G (rev x) u v> 
+;
+|: 
+G = G
+U = U
+
+ The remaining flexible - flexible pairs:
+<Var21 w u v , G (rev x) u v> 
+|: .
+ yes
+?-  (G x u v) = (app x (cons U nil)).
+
+G = Var5 \ Var6 \ Var7 \ (app x (cons (Var3 Var5 Var6 Var7) nil))
+U = Var3 x u v ;
+
+G = Var10 \ Var11 \ Var12 \ (app Var10 (cons (Var8 Var10 Var11 Var12) nil))
+U = Var8 x u v ;
+
+ no
+?- (M x) = (app V W).
+
+M = W1 \ (app (Var1 W1) (Var2 W1))
+V = Var1 x
+W = Var2 x ;
+
+M = M
+V = rev Var4
+W = cons Var5 nil
+
+ The remaining flexible - flexible pairs:
+<Var3 (cons w nil) u v , M x> 
+|: 
+|: 
+|: .
+ yes
+?- (M x)  = (app V W).
+
+M = W1 \ (app (Var1 W1) (Var2 W1))
+V = Var1 x
+W = Var2 x ;
+
+M = M
+V = rev Var4
+W = cons Var5 nil
+
+ The remaining flexible - flexible pairs:
+<Var3 (cons w nil) u v , M x> 
+|: .
+ yes
+?- V = (rev (rev v)).
+
+V = rev (rev v) ;
+
+V = Var24 x ;
+
+ no
+?- (F x u (rev v)) = (cons U x) <> W.
+( F x u ( rev v ) ) = ( cons U x ) <> W .
+ Syntax error :  Types are incompatible. 
+    Cannot apply cons U x : list int
+    to           <> : A1
+?- (F x u (rev v)) = (app (cons U x) W).
+
+F = Var5 \ Var6 \ Var7 \ (app (cons (Var3 Var5 Var6 Var7) x) (Var2 Var5 Var6 Var7))
+U = Var3 x u (rev v)
+W = Var2 x u (rev v) ;
+
+F = Var8 \ Var9 \ Var10 \ (app (cons (Var3 Var8 Var9 Var10) Var8) (Var2 Var8 Var9 Var10))
+U = Var3 x u (rev v)
+W = Var2 x u (rev v) ;
+
+ no
+?- (app (F x u (rev v)) v) = (app (cons U x) W).
+
+F = Var3 \ Var4 \ Var5 \ (cons (Var1 Var3 Var4 Var5) x)
+U = Var1 x u (rev v)
+W = v ;
+
+F = Var6 \ Var7 \ Var8 \ (cons (Var1 Var6 Var7 Var8) Var6)
+U = Var1 x u (rev v)
+W = v ;
+
+ no
+?- (app (F (rev (rev v)) u (rev v)) v) = (app (cons U V) W).
+
+F = W1 \ W2 \ W3 \ (cons (Var1 W1 W2 W3) (Var2 W1 W2 W3))
+U = Var1 (rev (rev v)) u (rev v)
+V = Var2 (rev (rev v)) u (rev v)
+W = v 
+|: .
+ yes
+?- (app (F (rev (rev v)) u (rev v)) v) = (app (cons U V) W).
+
+F = W1 \ W2 \ W3 \ (cons (Var1 W1 W2 W3) (Var2 W1 W2 W3))
+U = Var1 (rev (rev v)) u (rev v)
+V = Var2 (rev (rev v)) u (rev v)
+W = v 
+|: .
+ yes
+?- (rev (rev v)) = (F (rev (rev v)) u (rev v)).
+
+F = Var3 \ Var4 \ Var5 \ (rev (rev v)) ;
+
+F = Var6 \ Var7 \ Var8 \ (rev Var8) ;
+
+F = W1 \ W2 \ W3 \ W1 ;
+
+F = Var19 \ Var20 \ Var21 \ (app (rev (Var16 Var19 Var20 Var21)) (cons (Var17 Var19 Var20 Var21) nil)) 
+F = Var19 \ Var20 \ Var21 \ (app (rev (Var16 Var19 Var20 Var21)) (cons (Var17 Var19 Var20 Var21) nil)) 
+ yes
+?- 

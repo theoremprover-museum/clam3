@@ -1,0 +1,1 @@
+problem([]==>h:int nestedlist=>t:int nestedlist=>l:int list=>flattenmc(inr(h)::t,l)=flattenmc(h,flattenmc(t,l))in int list,_,_,_).

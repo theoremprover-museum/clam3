@@ -1,0 +1,1 @@
+problem([]==>a:pnat list=>b:pnat list=>subset(a,b)=>union(a,b)=b in pnat list,_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>nat2word(0)=nil in{word},_,_,_).

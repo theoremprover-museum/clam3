@@ -1,0 +1,1 @@
+problem([]==>u1:pnat=>v:pnat=>w:pnat=>v=w in pnat=>times(v,u1)=times(w,u1)in pnat,_,_,_).

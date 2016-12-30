@@ -1,0 +1,1 @@
+multOne(x,u)<==>list_ind(x,nil,[h,~,r,(h and u)::r]).

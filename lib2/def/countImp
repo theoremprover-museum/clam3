@@ -1,0 +1,3 @@
+countImp(reset)<==>lambda(t,p_ind(t,zeroes(length(nat2word(t))),[p,r,del(restart(reset,incfun(lambda(u,r))))of t])).
+
+%countImp(n,reset)<==>lambda(t,p_ind(t,zeroes(n),[p,r,del(restart(n,reset,incfun(lambda(u,r))))of t])).

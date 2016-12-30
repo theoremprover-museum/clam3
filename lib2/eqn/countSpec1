@@ -1,0 +1,10 @@
+problem([]==>reset:flip=>countSpec(reset)of 0=0 in pnat,_,_,_).
+
+
+
+
+%problem([]==>n:pnat=>reset:flip=>countSpec(n,reset)of 0=0 in pnat,_,_,_).
+
+
+
+

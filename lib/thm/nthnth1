@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat list=>nth(x,nth(y,z)) = nth(y,nth(x,z))in pnat list,_,_,_).

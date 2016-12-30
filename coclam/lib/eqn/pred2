@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>pred(s(0))=0 in pnat,_,_,_).

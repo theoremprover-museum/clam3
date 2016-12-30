@@ -1,0 +1,23 @@
+problem([]==>pnat=>{word},
+intro then wfftacs,lambda(v0,_7537),
+[problem([v0:pnat]==>{word},
+ elim(v0,cv),cv_ind(v0,[v3,v1,_7568]),
+ [problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word}]==>{word},
+  decide(v3=0 in pnat)then wfftacs,pnat_eq(v3,0,su(_7636,[axiom],[v2]),su(_7644,[lambda(~,axiom)],[v2])),
+  [problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word},v2:v3=0 in pnat]==>{word},
+   intro(explicit(nil)),nil,
+   [problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word},v2:v3=0 in pnat]==>nil in{word},
+    repeat wfftac,axiom,
+    [
+    ])
+   ]) ext _7636,
+   problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word},v2:v3=0 in pnat=>void]==>{word},
+   intro(explicit(app(v1 of (v3 div s(s(0))),boolV(rem(v3,s(s(0))))::nil))),app(v1 of (v3 div s(s(0))),boolV(rem(v3,s(s(0))))::nil),
+   [problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word},v2:v3=0 in pnat=>void]==>app(v1 of (v3 div s(s(0))),boolV(rem(v3,s(s(0))))::nil)in{word},
+    repeat wfftac,_7902,
+    [problem([v0:pnat,v3:pnat,v1:v2:{v2:pnat\v2<*v3}=>{word},v2:v3=0 in pnat=>void]==>list_ind(v1 of (v3 div s(s(0))),boolV(rem(v3,s(s(0))))::nil,[t,~,v,t::v])in{bool}list,_,_,_) ext _7902
+    ])
+   ]) ext _7644
+  ]) ext _7568
+ ]) ext _7537
+]).

@@ -1,0 +1,9 @@
+increm(value)<==>lambda(t,tl(inc(value of t))).
+
+% | ?- eval(increm(lambda(t,({true}::{false}::{true}::nil))) of s(s(0)),X).
+%
+% X = inl(unit)::inl(unit)::inr(unit)::nil 
+% 
+% | ?- eval(increm(lambda(t,({true}::{true}::{true}::nil))) of s(s(0)),X).
+% 
+% X = inr(unit)::inr(unit)::inr(unit)::nil 

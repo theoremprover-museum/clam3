@@ -1,0 +1,1 @@
+someb(f) <==> or(f of {true}, f of {false}).

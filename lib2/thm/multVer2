@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>exp(times(word2nat(x),s(s(0))),length(y)) = word2nat(app(multOne(x,{true}),zeros(length(y)))) in pnat,_,_,_).

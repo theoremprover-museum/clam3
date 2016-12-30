@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>nAdderB(incB(x),y,ci)=incB(nAdderB(x,y,ci))in{word},_,_,_).

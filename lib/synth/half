@@ -1,0 +1,18 @@
+problem([]==>n:pnat=>pnat,
+repeat dequantify_once,lambda(n,_282),
+[problem([n:pnat]==>pnat,
+ induction(s(s(v0)),n:pnat),su(su(su(su(su(su(v7,[v6 of n],[v7]),[v5 of lambda(v0,lambda(v1,_352))],[v6]),[v4 of _359],[v5]),[v3 of _366],[v4]),[v2 of lambda(n,pnat)],[v3]),[term_of(twos)],[v2]),
+ [problem([n:pnat]==>pnat,
+  intro(explicit(0))then wfftacs,0,
+  [
+  ]) ext _366,
+  problem([n:pnat]==>pnat,
+  intro(explicit(0))then wfftacs,0,
+  [
+  ]) ext _359,
+  problem([n:pnat,v0:pnat,v1:pnat]==>pnat,
+  intro(explicit(s(v1)))then wfftacs,s(v1),
+  [
+  ]) ext _352
+ ]) ext _282
+]).

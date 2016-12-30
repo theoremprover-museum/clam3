@@ -1,0 +1,2 @@
+problem([]==>h:pnat list => t:(pnat list) list => rev_flatten(h::t)=app(rev_flatten(t),h) in pnat list,_,_,_).
+

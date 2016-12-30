@@ -1,0 +1,1 @@
+problem([]==>primes(nil)=nil in pnat list,_,_,_).

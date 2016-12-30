@@ -1,0 +1,13 @@
+initial(reset,value)<==>bool_eq(reset,{true},zeroes(length(value)),value).
+
+
+%initial(reset,initVal)<==>lambda(t,bool_eq(reset of t,{true},zeroes(length(initVal of t)),initVal of t)).
+
+% | ?- eval(initial(lambda(t,{true}),lambda(t,({true}::{false}::{true}::nil))) of s(0),X).
+% 
+% X = inr(unit)::inr(unit)::inr(unit)::nil 
+%
+% | ?- eval(initial(lambda(t,{false}),lambda(t,({true}::{false}::{true}::nil))) of s(0),X).
+%
+% X = inl(unit)::inr(unit)::inl(unit)::nil 
+

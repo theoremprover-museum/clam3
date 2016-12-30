@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>greater(x,y)\greater(x,y)=>void,
+repeat intro then simplify then repeat intro then because,lambda(x,lambda(y,atom(incomplete))),
+[
+]).

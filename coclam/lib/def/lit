@@ -1,0 +1,1 @@
+lit(x,y,f)<==>list_ind(x,y,[h,t,r,f of h of r]).

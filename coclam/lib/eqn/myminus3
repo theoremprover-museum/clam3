@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>myminus(s(x),s(y))=myminus(x, y) in pnat,_,_,_).

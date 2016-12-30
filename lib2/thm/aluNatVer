@@ -1,0 +1,10 @@
+problem([]==>s1:{bool}=>s0:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>length(x)=length(y) in pnat=>aluSpecNat(s0,s1,x,y,ci)=word2nat(aluImp(s0,s1,{false},x,y,ci))in pnat,_,_,_).
+
+/*
+xx2: [] incomplete autotactic(idtac) 
+[]==> x:({word})=>
+    y:({word})=>
+      (length(x)=length(y)in pnat)=>
+        (aluSpecNat({false},{true},x,y,{false})
+         = word2nat(aluImp({false},{true},{false},x,y,{false}))
+         in pnat).

@@ -1,0 +1,17 @@
+problem([]==>y:pnat=>min(0,y)=0 in pnat,
+repeat intro then simplify,lambda(y,_1129),
+[problem([y:pnat]==>pless(0,y,0,y)=0 in pnat,
+ elim(y),p_ind(y,_1163,[v0,v1,_1169]),
+ [problem([y:pnat]==>pless(0,0,0,0)=0 in pnat,
+  simplify then repeat intro,axiom,
+  [
+  ]) ext _1163,
+  problem([y:pnat,v0:pnat,v1:pless(0,v0,0,v0)=0 in pnat]==>pless(0,s(v0),0,s(v0))=0 in pnat,
+  reduce({true})then repeat intro,axiom,
+  [problem([y:pnat,v0:pnat,v1:pless(0,v0,0,v0)=0 in pnat]==>0<*s(v0),
+   because,atom(incomplete),
+   [
+   ]) ext _1270
+  ]) ext _1169
+ ]) ext _1129
+]).

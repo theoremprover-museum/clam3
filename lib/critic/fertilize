@@ -1,0 +1,25 @@
+%******************************************
+%*
+%*      The Fertilize critics
+%*
+%******************************************
+
+	% 1: Deals with equivalent but 
+        %    non-identical sinks
+	%
+	%
+
+critic(fertilize(sinks-mismatch),
+       Plan,
+       [current_node(Plan, Addr),
+        node(Plan, Addr, H==>G, _, _, _, Preconds, _),
+        matrix(_, Mat, G)
+       ],
+       [member([all_waves_sunk(_),
+                false], Preconds),
+       ],
+       [writef('Time to implement my new critic ...'),nl,
+        abort
+       ]
+      ).
+

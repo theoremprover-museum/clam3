@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>delay(s(t),inc(counterImp(t,{false})))=inc(counterImp(t,{false}))in{word},_,_,_).

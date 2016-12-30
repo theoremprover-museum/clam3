@@ -1,0 +1,69 @@
+problem([]==>f:(int=>int)=>l:int list=>rev(mapcar(l,f))=mapcar(rev(l),f)in int list,
+induction(v0::v1,l:int list),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(l,list_ind(l,_359,[v0,v1,v2,_367])))),
+[problem([l:int list]==>f:(int=>int)=>rev(mapcar(nil,f))=mapcar(rev(nil),f)in int list,
+ base([1,2,1],rev1),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of _434,[term_of(rev1)],[rev1])),
+ [problem([l:int list]==>f:(int=>int)=>rev(mapcar(nil,f))=mapcar(nil,f)in int list,
+  base([2,1],mapcar1),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _520,[mapcar1 of v0],[v1]),[term_of(mapcar1)],[mapcar1])),
+  [problem([l:int list]==>f:(int=>int)=>rev(mapcar(nil,f))=nil in int list,
+   base([1,1,1],mapcar1),lambda(v0,su(su(lambda(v1,su(v2,[v1 of v0],[v2]))of _612,[mapcar1 of v0],[v1]),[term_of(mapcar1)],[mapcar1])),
+   [problem([l:int list]==>f:(int=>int)=>rev(nil)=nil in int list,
+    base([1,1],rev1),lambda(v0,su(lambda(v1,su(v2,[v1 of v0],[v2]))of _695,[term_of(rev1)],[rev1])),
+    [problem([l:int list]==>f:(int=>int)=>nil=nil in int list,
+     identity,lambda(f,axiom),
+     [
+     ]) ext _695
+    ]) ext _612
+   ]) ext _520
+  ]) ext _434
+ ]) ext _359,
+ problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>f:(int=>int)=>rev(mapcar(v0::v1,f))=mapcar(rev(v0::v1),f)in int list,
+ wave([1,2,1],[rev2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _883,[v4 of v1],[v5]),[rev2 of v0],[v4]),[term_of(rev2)],[rev2])),
+ [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>f:(int=>int)=>rev(mapcar(v0::v1,f))=mapcar(app(rev(v1),v0::nil),f)in int list,
+  wave([1,1,1],[mapcar2,left]),lambda(v3,su(su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1052,[v5 of v1],[v6]),[v4 of v0],[v5]),[mapcar2 of v3],[v4]),[term_of(mapcar2)],[mapcar2])),
+  [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>f:(int=>int)=>rev(f of v0::mapcar(v1,f))=mapcar(app(rev(v1),v0::nil),f)in int list,
+   wave([1,1],[rev2,left]),lambda(v3,su(su(su(lambda(v4,su(v5,[v4 of v3],[v5]))of _1225,[v4 of mapcar(v1,v3)],[v5]),[rev2 of (v3 of v0)],[v4]),[term_of(rev2)],[rev2])),
+   [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>f:(int=>int)=>app(rev(mapcar(v1,f)),f of v0::nil)=mapcar(app(rev(v1),v0::nil),f)in int list,
+    weak_fertilize([1],[left,v2]),lambda(v3,lambda(v4,su(v5,[v4 of v3],[v5]))of _1386),
+    [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>f:(int=>int)=>app(mapcar(rev(v1),f),f of v0::nil)=mapcar(app(rev(v1),v0::nil),f)in int list,
+     generalise(rev(v1),v3:int list),lambda(v3,lambda(v4,su(su(v6,[v5 of v4],[v6]),[v3 of rev(v1)],[v5])))of _1519,
+     [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list]==>v3:int list=>f:(int=>int)=>app(mapcar(v3,f),f of v0::nil)=mapcar(app(v3,v0::nil),f)in int list,
+      induction(v4::v5,v3:int list),lambda(v3,list_ind(v3,_1676,[v4,v5,v6,_1684])),
+      [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>app(mapcar(nil,f),f of v0::nil)=mapcar(app(nil,v0::nil),f)in int list,
+       base([1,2,1],app1),lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _1817,[app1 of (v0::nil)],[v5]),[term_of(app1)],[app1])),
+       [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>app(mapcar(nil,f),f of v0::nil)=mapcar(v0::nil,f)in int list,
+        base([1,1,1],mapcar1),lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _1976,[mapcar1 of v4],[v5]),[term_of(mapcar1)],[mapcar1])),
+        [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>app(nil,f of v0::nil)=mapcar(v0::nil,f)in int list,
+         base([1,1],app1),lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _2127,[app1 of (v4 of v0::nil)],[v5]),[term_of(app1)],[app1])),
+         [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>f of v0::nil=mapcar(v0::nil,f)in int list,
+          step([2,1],mapcar2),lambda(v4,su(su(su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _2289,[v6 of nil],[v7]),[v5 of v0],[v6]),[mapcar2 of v4],[v5]),[term_of(mapcar2)],[mapcar2])),
+          [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>f of v0::nil=f of v0::mapcar(nil,f)in int list,
+           base([2,2,1],mapcar1),lambda(v4,su(su(lambda(v5,su(v6,[v5 of v4],[v6]))of _2456,[mapcar1 of v4],[v5]),[term_of(mapcar1)],[mapcar1])),
+           [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list]==>f:(int=>int)=>f of v0::nil=f of v0::nil in int list,
+            identity,lambda(f,axiom),
+            [
+            ]) ext _2456
+           ]) ext _2289
+          ]) ext _2127
+         ]) ext _1976
+        ]) ext _1817
+       ]) ext _1676,
+       problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list,v4:int,v5:int list,v6:f:(int=>int)=>app(mapcar(v5,f),f of v0::nil)=mapcar(app(v5,v0::nil),f)in int list]==>f:(int=>int)=>app(mapcar(v4::v5,f),f of v0::nil)=mapcar(app(v4::v5,v0::nil),f)in int list,
+       wave([1,2,1],[app2,left]),lambda(v7,su(su(su(su(lambda(v8,su(v9,[v8 of v7],[v9]))of _2791,[v9 of (v0::nil)],[v10]),[v8 of v5],[v9]),[app2 of v4],[v8]),[term_of(app2)],[app2])),
+       [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list,v4:int,v5:int list,v6:f:(int=>int)=>app(mapcar(v5,f),f of v0::nil)=mapcar(app(v5,v0::nil),f)in int list]==>f:(int=>int)=>app(mapcar(v4::v5,f),f of v0::nil)=mapcar(v4::app(v5,v0::nil),f)in int list,
+        wave([2,1],[mapcar2,left]),lambda(v7,su(su(su(su(lambda(v8,su(v9,[v8 of v7],[v9]))of _3038,[v9 of app(v5,v0::nil)],[v10]),[v8 of v4],[v9]),[mapcar2 of v7],[v8]),[term_of(mapcar2)],[mapcar2])),
+        [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list,v4:int,v5:int list,v6:f:(int=>int)=>app(mapcar(v5,f),f of v0::nil)=mapcar(app(v5,v0::nil),f)in int list]==>f:(int=>int)=>app(mapcar(v4::v5,f),f of v0::nil)=f of v4::mapcar(app(v5,v0::nil),f)in int list,
+         wave([1,1,1],[mapcar2,left]),lambda(v7,su(su(su(su(lambda(v8,su(v9,[v8 of v7],[v9]))of _3293,[v9 of v5],[v10]),[v8 of v4],[v9]),[mapcar2 of v7],[v8]),[term_of(mapcar2)],[mapcar2])),
+         [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list,v4:int,v5:int list,v6:f:(int=>int)=>app(mapcar(v5,f),f of v0::nil)=mapcar(app(v5,v0::nil),f)in int list]==>f:(int=>int)=>app(f of v4::mapcar(v5,f),f of v0::nil)=f of v4::mapcar(app(v5,v0::nil),f)in int list,
+          wave([1,1],[app2,left]),lambda(v7,su(su(su(su(lambda(v8,su(v9,[v8 of v7],[v9]))of _3543,[v9 of (v7 of v0::nil)],[v10]),[v8 of mapcar(v5,v7)],[v9]),[app2 of (v7 of v4)],[v8]),[term_of(app2)],[app2])),
+          [problem([l:int list,v0:int,v1:int list,v2:f:(int=>int)=>rev(mapcar(v1,f))=mapcar(rev(v1),f)in int list,v3:int list,v4:int,v5:int list,v6:f:(int=>int)=>app(mapcar(v5,f),f of v0::nil)=mapcar(app(v5,v0::nil),f)in int list]==>f:(int=>int)=>f of v4::app(mapcar(v5,f),f of v0::nil)=f of v4::mapcar(app(v5,v0::nil),f)in int list,_,_,_) ext _3543
+          ]) ext _3293
+         ]) ext _3038
+        ]) ext _2791
+       ]) ext _1684
+      ]) ext _1519
+     ]) ext _1386
+    ]) ext _1225
+   ]) ext _1052
+  ]) ext _883
+ ]) ext _367
+]).

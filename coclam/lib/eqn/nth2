@@ -1,0 +1,1 @@
+problem([]==>x:pnat => l:pnat list => nth(x,nil) = nil in pnat list,_,_,_).

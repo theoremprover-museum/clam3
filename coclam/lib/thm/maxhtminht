@@ -1,0 +1,12 @@
+problem([]==>t:int tree=>geq(maxht(t),minht(t)),_,_,_).
+/*
+induction(node(v1,v2),t:int tree) then 
+  [sym_eval([..]) then 
+     tautology(...),
+   wave([2],[minht2,left]) then 
+     wave([1],[maxht2,left]) then 
+       wave([],split(geq3,left)) then 
+         wave([],[minmaxgeq,impl]) then 
+           tautology(...)
+  ]
+*/

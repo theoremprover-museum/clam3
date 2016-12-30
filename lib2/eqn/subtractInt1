@@ -1,0 +1,1 @@
+problem([]==>x:int=>y:int=>subtractInt(x,y)=addInt(x,changeSign(y))in int,_,_,_).

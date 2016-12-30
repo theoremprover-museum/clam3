@@ -1,0 +1,5 @@
+%problem([]==>x:{word}=>multOne(x,{true})= x in{word},_,_,_).
+
+problem([]==>h:{bool}=>u:{bool}=>t:{word}=>multOne(h::t,u)= (h and u)::multOne(t,u)in{word},_,_,_).
+
+%problem([]==>x:{word}=>multOne(x,{false})= zeroes(length(x)) in{word},_,_,_).

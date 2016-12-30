@@ -1,0 +1,28 @@
+problem([]==>x:int=>y:(int list)list=>int list,
+intro then wfftacs then intro then wfftacs,lambda(x,lambda(y,_300)),
+[problem([x:int,y:(int list)list]==>int list,
+ elim(y,new[pair,tail,recval]),list_ind(y,_343,[pair,tail,recval,_351]),
+ [problem([x:int,y:(int list)list]==>int list,
+  intro(explicit(nil))then wfftacs,nil,
+  [
+  ]) ext _343,
+  problem([x:int,y:(int list)list,pair:int list,tail:(int list)list,recval:int list]==>int list,
+  elim(pair,new[e1,e2list,_450]),list_ind(pair,_454,[e1,e2list,v0,_462]),
+  [problem([x:int,y:(int list)list,pair:int list,tail:(int list)list,recval:int list]==>int list,
+   intro(explicit(nil))then wfftacs,nil,
+   [
+   ]) ext _454,
+   problem([x:int,y:(int list)list,pair:int list,tail:(int list)list,recval:int list,e1:int,e2list:int list,v0:int list]==>int list,
+   decide(x=e1 in int),int_eq(x,e1,su(_608,[axiom],[v1]),su(_616,[lambda(~,axiom)],[v1])),
+   [problem([x:int,y:(int list)list,pair:int list,tail:(int list)list,recval:int list,e1:int,e2list:int list,v0:int list,v1:x=e1 in int]==>int list,
+    hyp(pair),pair,
+    [
+    ]) ext _608,
+    problem([x:int,y:(int list)list,pair:int list,tail:(int list)list,recval:int list,e1:int,e2list:int list,v0:int list,v1:x=e1 in int=>void]==>int list,
+    hyp(recval),recval,
+    [
+    ]) ext _616
+   ]) ext _462
+  ]) ext _351
+ ]) ext _300
+]).

@@ -1,0 +1,5 @@
+
+
+
+problem([]==>l:pnat list=> 
+        qrev(qrev(l,nil),nil) = rev(reduce(lam(x,lam(y,atend(x,y))),l)) in pnat list,_,_,_).

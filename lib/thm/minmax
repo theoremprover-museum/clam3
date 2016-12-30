@@ -1,0 +1,45 @@
+problem([]==>x:pnat=>y:pnat=>leq(min(x,y),max(x,y)),
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_317,[v0,v1,_323])),
+[problem([x:pnat]==>y:pnat=>leq(min(0,y),max(0,y)),
+ base([2],max1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _372),[term_of(max1)],[max1]),
+ [problem([x:pnat]==>y:pnat=>leq(min(0,y),y),
+  base([1],min1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _437),[term_of(min1)],[min1]),
+  [problem([x:pnat]==>y:pnat=>leq(0,y),
+   base([],leq1),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _497),[term_of(leq1)],[leq1]),
+   [problem([x:pnat]==>y:pnat=>{true},
+    tautology((intro then wfftacs)then istrue),lambda(y,0),
+    [
+    ]) ext _497
+   ]) ext _437
+  ]) ext _372
+ ]) ext _317,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y))]==>y:pnat=>leq(min(s(v0),y),max(s(v0),y)),
+ induction(s(v2),y:pnat),lambda(y,p_ind(y,_628,[v2,v3,_634])),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat]==>leq(min(s(v0),0),max(s(v0),0)),
+  base([2],max2),su(lambda(v2,v2)of _708,[term_of(max2)],[max2]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat]==>leq(min(s(v0),0),s(v0)),
+   base([1],min2),su(lambda(v2,v2)of _787,[term_of(min2)],[min2]),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat]==>leq(0,s(v0)),
+    base([],leq1),su(lambda(v2,v2)of _859,[term_of(leq1)],[leq1]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat]==>{true},
+     tautology(istrue),0,
+     [
+     ]) ext _859
+    ]) ext _787
+   ]) ext _708
+  ]) ext _628,
+  problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat,v2:pnat,v3:leq(min(s(v0),v2),max(s(v0),v2))]==>leq(min(s(v0),s(v2)),max(s(v0),s(v2))),
+  wave([2],max3),su(lambda(v4,v4)of _1018,[term_of(max3)],[max3]),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat,v2:pnat,v3:leq(min(s(v0),v2),max(s(v0),v2))]==>leq(min(s(v0),s(v2)),s(max(v0,v2))),
+   wave([1],min3),su(lambda(v4,v4)of _1125,[term_of(min3)],[min3]),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat,v2:pnat,v3:leq(min(s(v0),v2),max(s(v0),v2))]==>leq(s(min(v0,v2)),s(max(v0,v2))),
+    wave([],leq3),su(lambda(v4,v4)of _1228,[term_of(leq3)],[leq3]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>leq(min(v0,y),max(v0,y)),y:pnat,v2:pnat,v3:leq(min(s(v0),v2),max(s(v0),v2))]==>leq(min(v0,v2),max(v0,v2)),
+     strong_fertilize(v1),su(v4,[v1 of v2],[v4]),
+     [
+     ]) ext _1228
+    ]) ext _1125
+   ]) ext _1018
+  ]) ext _634
+ ]) ext _323
+]).

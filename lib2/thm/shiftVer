@@ -1,0 +1,8 @@
+problem([]==>n:pnat=>s1:{bool}=>s0:{bool}=>si:{bool}=>x:{word}=>(n=length(x) in pnat)=>shiftSpec(n,s0,s1,si,x)=shiftImpGood(n,s0,s1,si,x)in{word},_,_,_).
+
+%problem([]==>n:pnat=>s1:{bool}=>s0:{bool}=>si:{bool}=>x:{word}=>shiftSpec(n,s0,s1,si,x)=numVal(n) of shiftImpGood(n,s0,s1,si,x)in pnat,_,_,_).
+
+%problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>si:{bool}=>x:{word}=>shiftSpec(n,s0,s1,si,x)=numVal(n) of (shiftImp(n) of s0 of s1 of si of x)in pnat,_,_,_).
+
+
+%problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>si:{bool}=>x:{word}=>shiftSpec(n,s0,s1,si,x)=shiftImpGood(n,s0,s1,si,x)in{word},_,_,_).

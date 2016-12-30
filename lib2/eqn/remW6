@@ -1,0 +1,5 @@
+problem([]==>x:pnat=>y:pnat=>remW(x,y)=minusW(x,timesW(divW(x,y),y)) in {word},_,_,_).
+
+% problem([]==>x:{word}=>y:{word}=>z:{word}=>remW(plusW(x,y),z)=minusW(plusW(x,y),timesW(z,divW(plusW(x,y),z))) in{word},_,_,_).
+
+%problem([]==>x:{word}=>y:{word}=>remW(plusW(x,y),y)=remW(x,y)in{word},_,_,_).

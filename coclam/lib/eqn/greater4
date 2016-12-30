@@ -1,0 +1,16 @@
+/*
+ * @(#)greater4,v 1.1 1994/09/16 09:38:16 dream Exp
+ *
+ * greater4,v
+ * Revision 1.1  1994/09/16  09:38:16  dream
+ * Initial revision
+ *
+ */
+
+problem([]==>x:pnat=>y:pnat=>greater(s(x),s(y))=greater(x,y)in u(1),
+compute(x:pnat=>y:pnat=>[[unfold]]=[[unfold]]in _7474),_7423,
+[problem([]==>x:pnat=>y:pnat=>less(s(y),s(x))=less(y,x)in u(1),
+ lemma(less3,new[v0])then dequantify then elim_on(v0,[y,x],_7548)then hyp(_7554),su(v0,[term_of(less3)],[v0]),
+ [
+ ]) ext _7423
+]).

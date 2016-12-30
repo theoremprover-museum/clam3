@@ -1,0 +1,1 @@
+problem([]==>evenlist(nil)=nil in int list,_,_,_).

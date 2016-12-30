@@ -1,0 +1,1 @@
+problem([]==>mapcar(jump(0, s(0)), lconst)=iterates(mapcar(s), lconst(0))in pnat list,_,_,_).

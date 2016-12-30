@@ -1,0 +1,1 @@
+problem([]==>x:(pnat => pnat) => ap(ap(map,x),nil) = nil in pnat list,_,_,_).

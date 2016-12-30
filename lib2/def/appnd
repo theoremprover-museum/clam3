@@ -1,0 +1,1 @@
+appnd(l,m)<==>list_ind(m,l,[t,~,v,t::v]).

@@ -1,0 +1,1 @@
+problem([]==>m:int=>tconst(m)=node(m, tconst(m), tconst(m)) in bintree(int),_,_,_).

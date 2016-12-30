@@ -1,0 +1,1 @@
+problem([]==>l1:pnat list=>union(l1,nil)=l1 in pnat list,_,_,_).

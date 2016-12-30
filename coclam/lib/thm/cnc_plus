@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>x=y in pnat=>plus(x,z)=plus(y,z)in pnat,
+_,_,_).

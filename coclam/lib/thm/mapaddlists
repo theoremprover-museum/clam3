@@ -1,0 +1,1 @@
+problem([]==>l:int list=>addlists(l, l)=mapcar(l, double) in int list, _, _,_).

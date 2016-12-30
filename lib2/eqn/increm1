@@ -1,0 +1,1 @@
+problem([]==>value:reg=>increm(value)=lambda(t,tl(inc(value of t)))in{word},_,_,_).

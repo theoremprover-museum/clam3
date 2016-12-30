@@ -1,0 +1,1 @@
+pnat_eq(x,y,a,b)<==>decide(term_of(pnat_eq)of x of y,[p,a],[p,b]).

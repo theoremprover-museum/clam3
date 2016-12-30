@@ -1,0 +1,1 @@
+problem([]==>label:int=>h:tree(int)=>t:list(tree(int))=>treelist:list(tree(int))=>dpsearch(node(label, h::t), treelist) = label::dpsearch(h, app(t, treelist)) in int list,_,_,_).

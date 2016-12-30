@@ -1,0 +1,1 @@
+problem([]==>explode(nil)=nil in (int list) list,_,_,_).

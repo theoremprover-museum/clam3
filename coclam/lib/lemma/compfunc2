@@ -1,0 +1,3 @@
+problem([]==>x:int=>f:(int=>int)=>g:(int=>int)=>v:int=>
+	related(v, v)in int list=>related(f of (g of x),f of g of x) in int,
+_,_,_).

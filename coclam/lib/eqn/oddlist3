@@ -1,0 +1,1 @@
+problem([]==>h1:int=>h2:int=>t:int list=>oddlist(h1::h2::t)=h1::oddlist(t)in int list,_,_,_).

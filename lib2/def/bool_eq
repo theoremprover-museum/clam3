@@ -1,0 +1,1 @@
+bool_eq(x,y,a,b)<==>decide(x,[l,decide(y,[l,a],[r,b])],[r,decide(y,[l,b],[r,a])]).

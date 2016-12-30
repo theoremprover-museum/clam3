@@ -1,0 +1,1 @@
+problem([]==>n:int=>a:{vector}=>b:{vector}=>s:{vector}=>ci:{bool}=>co:{bool}=>0<n=>adder(n+1,a,b,s,ci,co)=exb(lambda(cn,adder(n,a,b,s,co,cn)and add1(a of n,b of n,s of n,cn,co)))in{bool},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>faSum({true},{true},{false})={false} in {bool},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>l2:pnat list=>intersect(nil,l2)=nil in pnat list,_,_,_).

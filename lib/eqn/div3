@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat=>(y=0 in pnat=> void)=>
+                                   div(plus(y,x),y)=s(div(x,y)) in pnat,_,_,_).

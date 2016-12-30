@@ -1,0 +1,23 @@
+problem([]==>x:pnat=>times(x,0)=0 in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_302,[v0,v1,_308])),
+[problem([x:pnat]==>times(0,0)=0 in pnat,
+ base([1,1],times1),su(lambda(v0,v0)of _350,[term_of(times1)],[times1]),
+ [problem([x:pnat]==>0=0 in pnat,
+  tautology(intro),axiom,
+  [
+  ]) ext _350
+ ]) ext _302,
+ problem([x:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>times(s(v0),0)=0 in pnat,
+ wave([1,1],times2),su(lambda(v2,v2)of _447,[term_of(times2)],[times2]),
+ [problem([x:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>plus(times(v0,0),0)=0 in pnat,
+  weak_fertilize([1],[left,v1]),lambda(v2,v2)of _517,
+  [problem([x:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>plus(0,0)=0 in pnat,
+   base([1,1],plus1),su(lambda(v2,v2)of _580,[term_of(plus1)],[plus1]),
+   [problem([x:pnat,v0:pnat,v1:times(v0,0)=0 in pnat]==>0=0 in pnat,
+    tautology(intro),axiom,
+    [
+    ]) ext _580
+   ]) ext _517
+  ]) ext _447
+ ]) ext _308
+]).

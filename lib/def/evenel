@@ -1,0 +1,1 @@
+evenel(x)<==> term_of(evenel) of x.

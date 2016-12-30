@@ -1,0 +1,27 @@
+problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x,b::y,ci)=add(a,b,hd(cadd(x,y,ci))::tl(cadd(x,y,ci))) in{word},_,_,_).
+
+%problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x,b::y,ci)=add(a,b,cadd(x,y,ci)) in{word},_,_,_).
+
+%problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x,b::y,ci)=faCarry(a,b,hd(cadd(x,y,ci)))::faSum(a,b,hd(cadd(x,y,ci)))::cadd(x,y,ci) in{word},_,_,_).
+
+
+%problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x)of (b::y)of ci=add(a,b,cadd(x)of y of ci) in{word},_,_,_).
+
+%problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x)of (b::y)of ci=add(a,b,hd(cadd(x)of y of ci)::tl(cadd(x)of y of ci)) in{word},_,_,_).
+
+
+%problem([]==>ci:{bool}=>a:{bool}=>b:{bool}=>x:{word}=>y:{word}=>cadd(a::x)of (b::y)of ci=faCarry(a,b,hd(cadd(x) of y of ci))::faSum(a,b,hd(cadd(x) of y of ci))::cadd(x) of y of ci in{word},_,_,_).
+
+
+
+
+
+%problem([]==>ci:{bool}=>h1:{bool}=>x:{word}=>y:{word}=>cadd(h1::x)of y of ci=add(h1,hd(y),cadd(x)of tl(y) of ci)in{word},_,_,_).
+
+
+
+
+%cadd3:
+%problem([]==>ci:{bool}=>y:{word}=>cadd(nil)of y of ci=ci::nil in{word},_,_,_).
+%cadd4:
+%problem([]==>ci:{bool}=>y:{word}=>cadd(y)of nil of ci=ci::nil in{word},_,_,_).

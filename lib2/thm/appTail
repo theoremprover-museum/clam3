@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>app(x,y)=hd(x)::app(tl(x),y)in{word},_,_,_).

@@ -1,0 +1,42 @@
+problem([]==>x:pnat=>y:pnat=>z:pnat=>times(times(z,x),y)=times(times(z,y),x)in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_208,[v0,v1,_214])),
+[problem([x:pnat]==>y:pnat=>z:pnat=>times(times(z,0),y)=times(times(z,y),0)in pnat,
+ induction(s(v0),y:pnat),lambda(y,p_ind(y,_277,[v0,v1,_283])),
+ [problem([x:pnat,y:pnat]==>z:pnat=>times(times(z,0),0)=times(times(z,0),0)in pnat,
+  tautology(dequantify_once then identity),lambda(z,axiom),
+  [
+  ]) ext _277,
+  problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>times(times(z,0),v0)=times(times(z,v0),0)in pnat]==>z:pnat=>times(times(z,0),s(v0))=times(times(z,s(v0)),0)in pnat,
+  wave([1,1],[times2right,left]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _453,[v3 of v0],[v4]),[times2right of times(v2,0)],[v3]),[term_of(times2right)],[times2right])),
+  [problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>times(times(z,0),v0)=times(times(z,v0),0)in pnat]==>z:pnat=>plus(times(z,0),times(times(z,0),v0))=times(times(z,s(v0)),0)in pnat,
+   wave([1,2,1],[times2right,left]),lambda(v2,su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _610,[v3 of v0],[v4]),[times2right of v2],[v3]),[term_of(times2right)],[times2right])),
+   [problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>times(times(z,0),v0)=times(times(z,v0),0)in pnat]==>z:pnat=>plus(times(z,0),times(times(z,0),v0))=times(plus(z,times(z,v0)),0)in pnat,
+    wave([2,1],[disttwo,left]),lambda(v2,su(su(su(su(lambda(v3,su(v4,[v3 of v2],[v4]))of _767,[v4 of times(v2,v0)],[v5]),[v3 of v2],[v4]),[disttwo of 0],[v3]),[term_of(disttwo)],[disttwo])),
+    [problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>times(times(z,0),v0)=times(times(z,v0),0)in pnat]==>z:pnat=>plus(times(z,0),times(times(z,0),v0))=plus(times(z,0),times(times(z,v0),0))in pnat,
+     weak_fertilize(right,[weak_fertilize(right,in,[2],v1)]),lambda(v2,su(lambda(v3,su(v4,[v3 of v2],[v4]))of _926,[v1 of v2],[v3])),
+     [problem([x:pnat,y:pnat,v0:pnat,v1:z:pnat=>times(times(z,0),v0)=times(times(z,v0),0)in pnat]==>z:pnat=>plus(times(z,0),times(times(z,0),v0))=plus(times(z,0),times(times(z,0),v0))in pnat,
+      tautology(dequantify_once then identity),lambda(z,axiom),
+      [
+      ]) ext _926
+     ]) ext _767
+    ]) ext _610
+   ]) ext _453
+  ]) ext _283
+ ]) ext _208,
+ problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>times(times(z,v0),y)=times(times(z,y),v0)in pnat]==>y:pnat=>z:pnat=>times(times(z,s(v0)),y)=times(times(z,y),s(v0))in pnat,
+ wave([2,1],[times2right,left]),lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _1172,[v4 of v0],[v5]),[times2right of times(v3,v2)],[v4]),[term_of(times2right)],[times2right]))),
+ [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>times(times(z,v0),y)=times(times(z,y),v0)in pnat]==>y:pnat=>z:pnat=>times(times(z,s(v0)),y)=plus(times(z,y),times(times(z,y),v0))in pnat,
+  wave([1,1,1],[times2right,left]),lambda(v2,lambda(v3,su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _1350,[v4 of v0],[v5]),[times2right of v3],[v4]),[term_of(times2right)],[times2right]))),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>times(times(z,v0),y)=times(times(z,y),v0)in pnat]==>y:pnat=>z:pnat=>times(plus(z,times(z,v0)),y)=plus(times(z,y),times(times(z,y),v0))in pnat,
+   wave([1,1],[disttwo,left]),lambda(v2,lambda(v3,su(su(su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _1528,[v5 of times(v3,v0)],[v6]),[v4 of v3],[v5]),[disttwo of v2],[v4]),[term_of(disttwo)],[disttwo]))),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>times(times(z,v0),y)=times(times(z,y),v0)in pnat]==>y:pnat=>z:pnat=>plus(times(z,y),times(times(z,v0),y))=plus(times(z,y),times(times(z,y),v0))in pnat,
+    weak_fertilize(right,[weak_fertilize(right,in,[2],v1)]),lambda(v2,lambda(v3,su(su(lambda(v4,su(su(v6,[v5 of v3],[v6]),[v4 of v2],[v5]))of _1712,[v4 of v3],[v5]),[v1 of v2],[v4]))),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>z:pnat=>times(times(z,v0),y)=times(times(z,y),v0)in pnat]==>y:pnat=>z:pnat=>plus(times(z,y),times(times(z,v0),y))=plus(times(z,y),times(times(z,v0),y))in pnat,
+     tautology(dequantify_once then dequantify_once then identity),lambda(y,lambda(z,axiom)),
+     [
+     ]) ext _1712
+    ]) ext _1528
+   ]) ext _1350
+  ]) ext _1172
+ ]) ext _214
+]).

@@ -1,0 +1,1 @@
+problem([]==>v6:pnat=>v4:int=>appn(v6, plus(0), v4)=v4 in int,_,_,_).

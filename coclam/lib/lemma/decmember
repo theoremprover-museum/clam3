@@ -1,0 +1,39 @@
+problem([]==>v0:int=>l2:(int list)=>(member(v0,l2)=>void)\member(v0,l2),
+dequantify,lambda(v0,lambda(l2,_313)),
+[problem([v0:int,l2:(int list)]==>(member(v0,l2)=>void)\member(v0,l2),
+ elim(l2),list_ind(l2,_355,[v1,v2,v3,_363]),
+ [problem([v0:int,l2:(int list)]==>(member(v0,nil)=>void)\member(v0,nil),
+  intro(left)then[idtac,wfftacs],inl(_412),
+  [problem([v0:int,l2:(int list)]==>member(v0,nil)=>void,
+   sym_eval([base([1],member1)]),su(su(_458,[member1 of v0],[v1]),[term_of(member1)],[member1]),
+   [problem([v0:int,l2:(int list)]==>void=>void,
+    tautology(intro then[intro,wfftacs]),lambda(v1,v1),
+    [
+    ]) ext _458
+   ]) ext _412
+  ]) ext _355,
+  problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2)]==>(member(v0,v1::v2)=>void)\member(v0,v1::v2),
+  decide(v0=v1 in int),int_eq(v0,v1,su(_600,[axiom],[v4]),su(_608,[lambda(~,axiom)],[v4])),
+  [problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int]==>(member(v0,v1::v2)=>void)\member(v0,v1::v2),
+   rewrite(v4),_626,
+   [problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int]==>(member(v1,v1::v2)=>void)\member(v1,v1::v2),
+    intro(right)then[idtac,wfftacs],inr(_796),
+    [problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int]==>member(v1,v1::v2),
+     sym_eval([step([],member2)]),su(su(su(su(_888,[v6 of v2],[v7]),[v5 of v1],[v6]),[member2 of v1],[v5]),[term_of(member2)],[member2]),
+     [problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int]==>v1=v1 in int\member(v1,v2),
+      tautology(elim(v3)then[intro(left)then[identity,wfftacs],intro(left)then[identity,wfftacs]]),decide(v3,[v5,inl(axiom)],[v6,inl(axiom)]),
+      [
+      ]) ext _888
+     ]) ext _796
+    ]) ext _626
+   ]) ext _600,
+   problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int=>void]==>(member(v0,v1::v2)=>void)\member(v0,v1::v2),
+   sym_eval([step([2],member2),step([1,1],member2)]),su(su(su(su(su(su(su(su(_1173,[v6 of v2],[v7]),[v5 of v0],[v6]),[member2 of v1],[v5]),[term_of(member2)],[member2]),[v6 of v2],[v7]),[v5 of v0],[v6]),[member2 of v1],[v5]),[term_of(member2)],[member2]),
+   [problem([v0:int,l2:(int list),v1:int,v2:(int list),v3:(member(v0,v2)=>void)\member(v0,v2),v4:v0=v1 in int=>void]==>((v0=v1 in int\member(v0,v2))=>void)\v0=v1 in int\member(v0,v2),
+    tautology(elim(v3)then[intro(left)then[intro then[elim(v4)then[elim(v6)then[intro,elim(v5)then[intro,elim(v8)]],intro],wfftacs],wfftacs],intro(right)then[intro(right)then[intro,wfftacs],wfftacs]]),decide(v3,[v5,inl(lambda(v6,su(v8,[v4 of decide(v6,[v8,v8],[v9,su(any(v8),[v5 of v9],[v8])])],[v8])))],[v6,inr(inr(v6))]),
+    [
+    ]) ext _1173
+   ]) ext _608
+  ]) ext _363
+ ]) ext _313
+]).

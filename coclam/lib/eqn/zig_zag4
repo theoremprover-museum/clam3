@@ -1,0 +1,1 @@
+problem([]==>hh:int=>ht:int list=>t:(int list)list=>a:(int list)list=>zig_zag((hh::ht)::t, nil, a)=hh::zig_zag(t, a, ht::nil)in int list,_,_,_).

@@ -1,0 +1,4 @@
+problem([]==>p:int=>0+2*p = 0+p+p in int,
+repeat intro then simplify,lambda(x,lambda(y,axiom)),
+[
+]).

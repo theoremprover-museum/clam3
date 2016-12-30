@@ -1,0 +1,1 @@
+problem([]==>n:int=>appn(infinity, ::(n), nil)=lconst(n)in int list,_,_,_).

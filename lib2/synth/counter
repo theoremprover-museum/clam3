@@ -1,0 +1,57 @@
+problem([]==>n:pnat=>reset: (pnat=>{bool})=>t:pnat=>pnat,
+repeat dequantify_once,lambda(n,lambda(reset,lambda(t,_1430))),
+[problem([n:pnat,reset:pnat=>{bool},t:pnat]==>pnat,
+ elim(t),p_ind(t,_1468,[v0,v1,_1474]),
+ [problem([n:pnat,reset:pnat=>{bool},t:pnat]==>pnat,
+  intro(0),0,
+  [
+  ]) ext _1468,
+  problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat]==>pnat,
+  lemma(reset_dec),su(_1557,[term_of(reset_dec)],[v2]),
+  [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:t:pnat=>reset: (pnat=>{bool})=>reset of t={true}in{bool}\reset of t={false}in{bool}]==>pnat,
+   elim(v2,on(t),new[v3])then[wfftacs,thin([v2])then elist_(v3,[reset],v2)],su(su(_1695,[v3 of reset],[v2]),[v2 of t],[v3]),
+   [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool}]==>pnat,
+    elim(v2),decide(v2,[v3,_1797],[v4,_1801]),
+    [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v3:reset of t={true}in{bool},v5:v2=inl(v3)in (reset of t={true}in{bool}\reset of t={false}in{bool})]==>pnat,
+     intro(0),0,
+     [
+     ]) ext _1797,
+     problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool})]==>pnat,
+     intro(explicit(rem(s(v1),exp(s(s(0)),n)))),rem(s(v1),exp(s(s(0)),n)),
+     [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool})]==>term_of(rem)of s(v1)of exp(s(s(0)),n)in pnat,
+      simplify,axiom,
+      [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool})]==>s(p_ind(v1,0,[~,v3,pnat_eq(s(v3),exp(s(s(0)),n),0,s(v3))]))in pnat,
+       repeat intro,axiom,
+       [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:pnat,v5:pnat]==>p_ind(n,s(0),[~,v1,times(s(s(0)),v1)])in pnat,
+        repeat intro,axiom,
+        [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:pnat,v5:pnat,v7:pnat,v8:pnat]==>p_ind(s(s(0)),0,[~,v,plus(v,v8)])in pnat,
+         simplify then repeat intro,axiom,
+         [
+         ]) ext _2609
+        ]) ext _2438
+       ]) ext _2268,
+       problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool})]==>exp(s(s(0)),n)in pnat,
+       simplify then repeat intro,axiom,
+       [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:pnat,v5:pnat]==>p_ind(s(s(0)),0,[~,v,plus(v,v5)])in pnat,
+        simplify then repeat intro,axiom,
+        [
+        ]) ext _2943
+       ]) ext _2791,
+       problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:s(p_ind(v1,0,[~,v3,pnat_eq(s(v3),exp(s(s(0)),n),0,s(v3))]))=exp(s(s(0)),n)in pnat]==>0 in pnat,
+       intro,axiom,
+       [
+       ]) ext _3115,
+       problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:s(p_ind(v1,0,[~,v3,pnat_eq(s(v3),exp(s(s(0)),n),0,s(v3))]))=exp(s(s(0)),n)in pnat=>void]==>s(p_ind(v1,0,[~,v3,pnat_eq(s(v3),exp(s(s(0)),n),0,s(v3))]))in pnat,
+       repeat intro then simplify then repeat intro,axiom,
+       [problem([n:pnat,reset:pnat=>{bool},t:pnat,v0:pnat,v1:pnat,v2:reset of t={true}in{bool}\reset of t={false}in{bool},v4:reset of t={false}in{bool},v6:v2=inr(v4)in (reset of t={true}in{bool}\reset of t={false}in{bool}),v3:s(p_ind(v1,0,[~,v3,pnat_eq(s(v3),exp(s(s(0)),n),0,s(v3))]))=exp(s(s(0)),n)in pnat=>void,v5:pnat,v7:pnat,v8:pnat,v9:pnat]==>p_ind(s(s(0)),0,[~,v,plus(v,v9)])in pnat,
+        simplify then repeat intro,axiom,
+        [
+        ]) ext _3528
+       ]) ext _3301
+      ]) ext _2111
+     ]) ext _1801
+    ]) ext _1695
+   ]) ext _1557
+  ]) ext _1474
+ ]) ext _1430
+]).

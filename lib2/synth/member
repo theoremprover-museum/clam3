@@ -1,0 +1,27 @@
+problem([]==>m:int=>l:int list=>u(1),
+repeat intro,lambda(m,lambda(l,_8218)),
+[problem([m:int,l:int list]==>u(1),
+ elim(l),list_ind(l,_8250,[v0,v1,v2,_8258]),
+ [problem([m:int,l:int list]==>u(1),
+  intro(void),void,
+  [
+  ]) ext _8250,
+  problem([m:int,l:int list,v0:int,v1:int list,v2:u(1)]==>u(1),
+  decide(m=v0 in int),int_eq(m,v0,su(_8349,[axiom],[v3]),su(_8357,[lambda(~,axiom)],[v3])),
+  [problem([m:int,l:int list,v0:int,v1:int list,v2:u(1),v3:m=v0 in int]==>u(1),
+   intro(explicit({true})),{true},
+   [problem([m:int,l:int list,v0:int,v1:int list,v2:u(1),v3:m=v0 in int]==>{true}in u(1),
+    simplify,_8437,
+    [problem([m:int,l:int list,v0:int,v1:int list,v2:u(1),v3:m=v0 in int]==>int in u(1),
+     intro,axiom,
+     [
+     ]) ext _8437
+    ])
+   ]) ext _8349,
+   problem([m:int,l:int list,v0:int,v1:int list,v2:u(1),v3:m=v0 in int=>void]==>u(1),
+   hyp(v2),v2,
+   [
+   ]) ext _8357
+  ]) ext _8258
+ ]) ext _8218
+]).

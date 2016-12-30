@@ -1,0 +1,1 @@
+rev(l)<==>list_ind(l,nil,[a,~,c,app(c,a::nil)]).

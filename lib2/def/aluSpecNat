@@ -1,0 +1,19 @@
+aluSpecNat(s0,s1,x,y,ci)<==>
+bool_eq(s1,{false},
+    bool_eq(s0,{false},
+        bool_eq(ci,{false},
+            word2nat(x),
+            s(word2nat(x))),
+        bool_eq(ci,{false},
+            plus(word2nat(x),word2nat(y)),
+            s(plus(word2nat(x),word2nat(y))))
+           ),
+    bool_eq(s0,{false},
+        bool_eq(ci,{false},
+            pred(minus(word2nat(x),word2nat(y))),
+            minus(word2nat(x),word2nat(y))),
+        bool_eq(ci,{false},
+            pred(word2nat(x)),
+            word2nat(x))
+           )
+        ).

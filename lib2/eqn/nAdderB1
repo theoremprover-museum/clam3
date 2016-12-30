@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>nAdderB(nil,y,{false})=y in{word},_,_,_).

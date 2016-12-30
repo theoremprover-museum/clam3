@@ -1,0 +1,1 @@
+problem([]==>x:int=>times(x, 0)=0 in int,_,_,_).

@@ -1,0 +1,6 @@
+countSpec(reset)<==>lambda(t,p_ind(t,0,[p,r,bool_eq(reset of t,{true},0,s(r))])).
+
+%countSpec(n,reset)<==>lambda(t,p_ind(t,0,[p,r,bool_eq(reset of t,{true},0,rem(s(r),exp(s(s(0)),n)))])).
+
+
+

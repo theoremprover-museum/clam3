@@ -1,0 +1,4 @@
+problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>s2:{bool}=>x:{word}=>shiftImp(s(n))of s0 of s1 of x of x=muxImp(s0,s1,hd(x),s2,hd(tl(x)),{false})::shiftImp(n)of s0 of s1 of hd(x)of tl(x)in{word},
+because,atom(incomplete),
+[
+]).

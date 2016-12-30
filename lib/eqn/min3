@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>min(s(x),s(y))=s(min(x,y))in pnat,
+repeat intro,lambda(x,lambda(y,_1077)),
+[problem([x:pnat,y:pnat]==>min(s(x),s(y))=s(min(x,y))in pnat,_,_,_) ext _1077
+]).

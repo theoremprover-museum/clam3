@@ -1,0 +1,1 @@
+subtractInt(x,y)<==>addInt(x,changeSign(y)).

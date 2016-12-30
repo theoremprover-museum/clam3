@@ -1,0 +1,1 @@
+problem([]==>h1:int=>t1:int list=>h2:int=>t2:int list=>addlists(h1::t1, h2::t2)=plus(h1, h2)::addlists(t1, t2) in int list, _, _, _).

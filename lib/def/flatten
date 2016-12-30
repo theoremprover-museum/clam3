@@ -1,0 +1,1 @@
+flatten(x)<==>term_of(flatten)of x.

@@ -1,0 +1,26 @@
+sexp.
+[{sexp},[{nul},symbol(sym:atom),number(num:pnat),cons(car:{sexp},cdr:{sexp})],sexp_strcaselem,[sexp_cnt_car_ilem,sexp_cnt_cdr_ilem],[nulp_mutex,symbolp_mutex,numberp_mutex,consp_mutex],[]].
+[nul,nulp,[],[]].
+definition({nul}<==>term_of(nul),[],[],[],[]==>{sexp},[constructor]).
+definition(nulp(nul)<==>term_of(nulp)of nul,[nul],[nul],[],[nul:{sexp}]==>{bool},[recogniser]).
+[symbol,symbolp,[],[sym]].
+definition(symbol(sym)<==>term_of(symbol)of sym,[sym],[sym],[],[sym:atom]==>{sexp},[constructor]).
+definition(symbolp(symbol)<==>term_of(symbolp)of symbol,[symbol],[symbol],[],[symbol:{sexp}]==>{bool},[recogniser]).
+definition(sym(sym,w)<==>term_of(sym)of sym of w,[sym,w],[sym],[w:j(symbolp(sym))],[sym:{sexp}]==>atom,[destructor]).
+[number,numberp,[],[num]].
+definition(number(num)<==>term_of(number)of num,[num],[num],[],[num:pnat]==>{sexp},[constructor]).
+definition(numberp(number)<==>term_of(numberp)of number,[number],[number],[],[number:{sexp}]==>{bool},[recogniser]).
+definition(num(num,w)<==>term_of(num)of num of w,[num,w],[num],[w:j(numberp(num))],[num:{sexp}]==>pnat,[destructor]).
+[cons,consp,[car,cdr],[car,cdr]].
+definition(cons(car,cdr)<==>term_of(cons)of car of cdr,[car,cdr],[car,cdr],[],[car:{sexp},cdr:{sexp}]==>{sexp},[constructor]).
+definition(consp(cons)<==>term_of(consp)of cons,[cons],[cons],[],[cons:{sexp}]==>{bool},[recogniser]).
+definition(car(car,w)<==>term_of(car)of car of w,[car,w],[car],[w:j(consp(car))],[car:{sexp}]==>{sexp},[destructor]).
+definition(cdr(cdr,w)<==>term_of(cdr)of cdr of w,[cdr,w],[cdr],[w:j(consp(cdr))],[cdr:{sexp}]==>{sexp},[destructor]).
+definition(sexp_cnt(m)<==>term_of(sexp_cnt)of m,[m],[m],[],[m:{sexp}]==>m:{sexp}=>pnat,[builtin,measure]).
+sexp_strcaselem:([goal:{sexp}=>u(1),s:{sexp}]==>(goal of{nul}#(sym:atom=>goal of symbol(sym))#(num:pnat=>goal of number(num))#car:{sexp}=>cdr:{sexp}=>goal of cons(car,cdr))=>goal of s).
+sexp_cnt_car_ilem:([cons:{sexp},w:j(consp(cons))]==>sexp_cnt(car(cons,w))<*sexp_cnt(cons)).
+sexp_cnt_cdr_ilem:([cons:{sexp},w:j(consp(cons))]==>sexp_cnt(cdr(cons,w))<*sexp_cnt(cons)).
+nulp_mutex:([nul:{sexp},v0:nj(symbolp(nul)),v1:nj(numberp(nul)),v2:nj(consp(nul))]==>j(nulp(nul))).
+symbolp_mutex:([symbol:{sexp},v0:nj(nulp(symbol)),v1:nj(numberp(symbol)),v2:nj(consp(symbol))]==>j(symbolp(symbol))).
+numberp_mutex:([number:{sexp},v0:nj(nulp(number)),v1:nj(symbolp(number)),v2:nj(consp(number))]==>j(numberp(number))).
+consp_mutex:([cons:{sexp},v0:nj(nulp(cons)),v1:nj(symbolp(cons)),v2:nj(numberp(cons))]==>j(consp(cons))).

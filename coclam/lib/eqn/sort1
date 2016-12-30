@@ -1,0 +1,1 @@
+problem([]==>sort(nil)=nil in int list,_,_,_).

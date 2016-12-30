@@ -1,0 +1,18 @@
+% 	CASESPLIT_HINT hint method.
+%  
+%	This hint method specifies a case split in the proof. The Exp 
+% argument obtained from the context will be included as a new hipothesis
+% in the first case and the negation of Exp as a new hipothasis in the 
+% second case.
+
+hint(casesplit_hint(HintName,Exp),
+      H==>G,
+      [hint_context( casesplit_hint, HintName, H==>G, [ Exp ] )
+      ],
+      [free([NewHyp],H),
+      append([[NewHyp:Exp|H]==>G],[[NewHyp:(Exp=>void)|H]==>G],[New|Goals]) 
+      ],
+      [New|Goals],
+      casesplit(HintName,Exp)
+     ).
+

@@ -1,0 +1,1 @@
+problem([]==>ld:flip=>inp:reg=>init:{word}=>regA(0,ld,inp)=init in{word},_,_,_).

@@ -1,0 +1,1 @@
+problem([]==>l:int list=>m:int list=>mapcar(lconst(m), lam(n, app(l, n)))=lconst(app(l, m))in int list,_,_,_).

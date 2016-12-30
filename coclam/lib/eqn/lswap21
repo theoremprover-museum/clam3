@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>lswap2(a, b)=a::b::lswap2(a, b)in int list,_,_,_).

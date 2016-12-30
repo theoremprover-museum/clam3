@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>l:{word}=>tl(a::l)=l in {word},_,_,_).

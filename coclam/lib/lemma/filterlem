@@ -1,0 +1,1 @@
+problem([]==>f:(int=>pnat)=>g:(int=>int)=>l:int=>even(f of g of l)<==>even(f of(g of l)),_,_,_).

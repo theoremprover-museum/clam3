@@ -1,0 +1,7 @@
+problem([]==>x:int=>y:int=> (x<y=>void)\x<y,
+repeat intro,lambda(x,lambda(y,_7680)),
+[problem([x:int,y:int]==> (x<y=>void)\x<y,
+ because,atom(incomplete),
+ [
+ ]) ext _7680
+]).

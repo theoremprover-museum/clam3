@@ -1,0 +1,10 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>ci:{bool}=>aluImp(s0,s1,s2,nil,nil,ci) = ((not s2)and ci)::nil in{word},_,_,_).
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>ci:{bool}=>aluImp(s0,s1,s2,nil,ci) of nil = ((not s2)and ci)::nil in{word},_,_,_).
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>y:{word}=>ci:{bool}=>aluImp(s0,s1,s2,nil,ci) of y = ((not s2)and ci)::nil in{word},_,_,_).
+
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>ci:{bool}=>aluImp(nil) of s0 of s1 of s2 of nil of ci = ((not s2)and ci)::nil in{word},_,_,_).

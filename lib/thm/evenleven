@@ -1,0 +1,2 @@
+problem([]==>l:pnat list=>evenl(app(l,nil)) = even(length(l)) in u(1),_,_,_).
+

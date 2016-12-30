@@ -1,0 +1,1 @@
+notW(n)<==>p_ind(n,lambda(a,nil),[~,t,lambda(a,(not hd(a))::t of tl(a))]).

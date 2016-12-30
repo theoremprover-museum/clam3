@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>x:{word}=>moveSpec(n,x)=numVal(s(n))of (nAluImp(n)of{false}of{false}of{false}of x of (wordVal(n)of 0)of{false})in pnat,_,_,_).

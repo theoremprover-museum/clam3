@@ -1,0 +1,5 @@
+problem([]==>y:{word}=>cadder(nil,y,{false})=y in{word},_,_,_).
+
+%problem([]==>y:{word}=>cadder(nil,y,{false})={false}::nil in{word},_,_,_).
+
+

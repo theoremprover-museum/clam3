@@ -1,0 +1,1 @@
+problem([]==>h:int=>t1:int list=>t2:int list=>t1=t2 in int list=>h::t1=h::t2 in int list,_,_,_).

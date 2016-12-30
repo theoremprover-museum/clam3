@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>minusW(x,inc(y))=dec(minusW(x,y))in{word},_,_,_).

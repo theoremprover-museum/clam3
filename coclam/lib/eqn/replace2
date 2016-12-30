@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>h:int=>t:int list=>(b = h in int=>void)=>replace(a, b, h::t)=h::replace(a, b, t)in int list,_,_,_).

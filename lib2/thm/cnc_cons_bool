@@ -1,0 +1,1 @@
+problem([]==>x:{bool}=>y:{word}=>z:{word}=>y=z in{word}=>x::y=x::z in{word},_,_,_).

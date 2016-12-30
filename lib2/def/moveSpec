@@ -1,0 +1,1 @@
+moveSpec(n,x)<==>p_ind(n,0,[~,~,numVal(s(n))of app(x,{false}::nil)]).

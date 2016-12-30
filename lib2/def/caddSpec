@@ -1,0 +1,1 @@
+caddSpec(x,y,ci)<==>plus(word2nat(x),plus(word2nat(y),bitval(ci))) in pnat.

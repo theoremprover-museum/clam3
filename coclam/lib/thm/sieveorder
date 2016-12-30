@@ -1,0 +1,1 @@
+problem([]==>lconst(true)=map2args(lam(x, lam(y, less(x, y))), primes(nat)) in bool list,_,_,_).

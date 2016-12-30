@@ -1,0 +1,39 @@
+problem([]==>x:pnat=>times(x,s(0))=x in pnat,
+induction(s(v0),x:pnat),lambda(x,p_ind(x,_175,[v0,v1,_181])),
+[problem([x:pnat]==>times(0,s(0))=0 in pnat,
+ sym_eval([base([1,1],times1)]),su(su(_228,[times1 of s(0)],[v0]),[term_of(times1)],[times1]),
+ [problem([x:pnat]==>0=0 in pnat,
+  tautology(identity),axiom,
+  [
+  ]) ext _228
+ ]) ext _175,
+ problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>times(s(v0),s(0))=s(v0)in pnat,
+ wave([1,1],[times2,left]),su(su(su(_346,[v2 of s(0)],[v3]),[times2 of v0],[v2]),[term_of(times2)],[times2]),
+ [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>plus(times(v0,s(0)),s(0))=s(v0)in pnat,
+  weak_fertilize(right,[weak_fertilize(right,in,[1],v1)]),_379,
+  [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>plus(times(v0,s(0)),s(0))=s(times(v0,s(0)))in pnat,
+   generalise(times(v0,s(0)),v2:pnat),lambda(v2,su(v3,[v2 of times(v0,s(0))],[v3]))of _515,
+   [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat]==>v2:pnat=>plus(v2,s(0))=s(v2)in pnat,
+    induction(s(v3),v2:pnat),lambda(v2,p_ind(v2,_606,[v3,v4,_612])),
+    [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat]==>plus(0,s(0))=s(0)in pnat,
+     sym_eval([base([1,1],plus1)]),su(su(_687,[plus1 of s(0)],[v3]),[term_of(plus1)],[plus1]),
+     [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat]==>s(0)=s(0)in pnat,
+      tautology(identity),axiom,
+      [
+      ]) ext _687
+     ]) ext _606,
+     problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:pnat,v4:plus(v3,s(0))=s(v3)in pnat]==>plus(s(v3),s(0))=s(s(v3))in pnat,
+     wave([1,1],[plus2,left]),su(su(su(_865,[v5 of s(0)],[v6]),[plus2 of v3],[v5]),[term_of(plus2)],[plus2]),
+     [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:pnat,v4:plus(v3,s(0))=s(v3)in pnat]==>s(plus(v3,s(0)))=s(s(v3))in pnat,
+      weak_fertilize(left,[weak_fertilize(left,in,[1],v4)]),_898,
+      [problem([x:pnat,v0:pnat,v1:times(v0,s(0))=v0 in pnat,v2:pnat,v3:pnat,v4:plus(v3,s(0))=s(v3)in pnat]==>s(s(v3))=s(s(v3))in pnat,
+       tautology(identity),axiom,
+       [
+       ]) ext _898
+      ]) ext _865
+     ]) ext _612
+    ]) ext _515
+   ]) ext _379
+  ]) ext _346
+ ]) ext _181
+]).

@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>even(s(s(x)))=even(x)in u(1),_,_,_).

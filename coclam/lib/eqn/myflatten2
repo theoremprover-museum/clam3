@@ -1,0 +1,1 @@
+problem([]==>h:int list=>t:int nestedlist=>flatten(h::t)=app(h, flatten(t))in int list,_,_,_).

@@ -1,0 +1,10 @@
+%% problem([]==>from(s(0))=
+%%	enumerate(mapcar(makeqq(from(s(0)), from(s(0))), mapcar(pack))) in int list,_,_,_).
+
+
+%% pack(i, j) = 2^{i-1}(2j -1)
+%% makeqq(l1, l2) = map(lam(a, map(lam(b, pair(a, b))), l1), l2)
+
+problem([]==>from(s(0))=
+	enumerate(mapcar(mapcar(from(s(0)), lam(a, mapcar(from(s(0)), lam(b, pair(a, b))))), from(s(0))), mapcar(lam(i, lam(j, times(exp(s(s(0)), minus(i, s(0))), minus(times(s(s(0)), j), s(0)))))))) in int list,_,_,_).
+

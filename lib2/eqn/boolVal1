@@ -1,0 +1,1 @@
+problem([]==>boolVal(0)=lambda(v,lambda(m,pnat_eq(m,0,pnat_eq(v,0,{false},{true}),arb)))in{bool},_,_,_).

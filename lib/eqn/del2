@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>y:pnat list => z:pnat list => 
+          (x = y in pnat) => del(x,y::z) = z in pnat list,_,_,_).

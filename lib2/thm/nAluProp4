@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>ci:{bool}=>x:{word}=>y:{word}=>less(numVal(n)of y,numVal(n)of x)=>nSubtractSpec(n,x,y,ci)=numVal(s(n))of nAluImpGood(n,{true},{false},{false},x,y,ci)in pnat,_,_,_).

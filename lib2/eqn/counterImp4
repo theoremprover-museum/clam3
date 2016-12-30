@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>counterImp(t,{true})=nil in{word},_,_,_).

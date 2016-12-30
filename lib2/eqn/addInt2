@@ -1,0 +1,6 @@
+problem([]==>x:int=>y:int=>addInt(x+1,y)=addInt(x,y)+1 in int,_,_,_).
+
+%problem([]==>x:int=>y:int=>0<x=>addInt(x+1,y)=addInt(x,y)+1 in int,_,_,_).
+
+%addInt3:
+%problem([]==>x:int=>y:int=>x<0=>addInt(x-1,y)=addInt(x,y)-1 in int,_,_,_).

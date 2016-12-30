@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>app(x,y)=app(y,x)in{word},_,_,_).

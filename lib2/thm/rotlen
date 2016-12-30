@@ -1,0 +1,1 @@
+problem([]==>l:int list=>p:int list=>rotate(length(l),app(l,p))=app(p,l)in int list,_,_,_).

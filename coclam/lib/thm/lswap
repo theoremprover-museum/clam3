@@ -1,0 +1,3 @@
+problem([]==>n:int=>m:int=>lswap(m, n)in int list,_,_,_).
+
+

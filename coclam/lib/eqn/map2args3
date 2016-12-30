@@ -1,0 +1,1 @@
+problem([]==>f:(int#int=>int)=>h:int=>ha:int=>t:int list=>map2args(f, h::ha::t)=f of h of ha::map2args(f, t)in int list,_,_,_).

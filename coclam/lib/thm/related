@@ -1,0 +1,2 @@
+problem([]==>h1:int=>h2:int=>t1:int list=>t2:int list=>((h1=h2 in int)#((t1,
+t2)in int list))=>bisimilar(h1::t1, h2::t2)in int list,_,_,_).

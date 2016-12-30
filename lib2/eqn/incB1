@@ -1,0 +1,1 @@
+problem([]==>incB(nil)={true}::nil in{word},_,_,_).

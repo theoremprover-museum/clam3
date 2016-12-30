@@ -1,0 +1,4 @@
+problem([]==>a:u(1)=>b:u(1)=>c:u(1)=>(a=>b)=>a=>c\b,
+tautology((intro then wfftacs)then(intro then wfftacs)then(intro then wfftacs)then intro then[intro then[elim(v0)then[intro,intro(right)then[intro,repeat intro]],repeat intro],repeat intro]),lambda(a,lambda(b,lambda(c,lambda(v0,lambda(v1,su(inr(v2),[v0 of v1],[v2])))))),
+[
+]).

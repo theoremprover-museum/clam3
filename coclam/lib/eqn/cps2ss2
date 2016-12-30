@@ -1,0 +1,1 @@
+problem([]==>k:(char=>cps)=>cps2ss(input(k))=putST(get, getST(lam(c, cps2ss(k(outGot(c)))))) in st(ack, req),_,_,_).

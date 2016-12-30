@@ -1,0 +1,1 @@
+gcd(x,y)<==>term_of(gcd)of x of y.

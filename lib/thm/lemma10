@@ -1,0 +1,1 @@
+problem([]==>v0:int=>v2:int list=>v0::v2='M10'(v2,v0)in int list,_,_,_).

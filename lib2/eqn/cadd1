@@ -1,0 +1,4 @@
+problem([]==>ci:{bool}=>cadd(nil,nil,ci)=ci::nil in{word},_,_,_).
+
+
+%problem([]==>ci:{bool}=>cadd(nil)of nil of ci=ci::nil in{word},_,_,_).

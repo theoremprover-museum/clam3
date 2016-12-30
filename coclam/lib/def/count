@@ -1,0 +1,1 @@
+count(a,l)<==>list_ind(l,0,[hl,~,nr_of_a_in_tl,int_eq(a,hl,s(nr_of_a_in_tl),nr_of_a_in_tl)]).

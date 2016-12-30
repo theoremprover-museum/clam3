@@ -1,0 +1,1 @@
+problem([]==>n:Out=>f:st(In, Out)=>ready(putST(n, f))=w(n) in rwd(Out),_,_,_).

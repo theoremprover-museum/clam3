@@ -1,0 +1,2 @@
+problem([]==>v1:pnat=>related(idnat of appn(v4, s, v3), appn(v4,
+plus(s(0)), v3))in pnat, _, _, _).

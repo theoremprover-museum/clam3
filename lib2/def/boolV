@@ -1,0 +1,5 @@
+% boolV converts the number 0 to false and the number 1 to true. If the number
+% is greater than 1 it takes the last bit of that number and converts it to
+% either false or true depending on the value of the bit.
+
+boolV(n)<==>p_ind(n,{false},[k,v,not(v)]).

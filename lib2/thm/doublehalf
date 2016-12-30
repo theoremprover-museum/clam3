@@ -1,0 +1,21 @@
+problem([]==>n:pnat=>even(n)=>double(half(n))=n in pnat,
+induction(s(s(v0)),n:pnat),lambda(n,su(su(su(su(su(su(v7,[v6 of n],[v7]),[v5 of lambda(v0,lambda(v1,_347))],[v6]),[v4 of _354],[v5]),[v3 of _361],[v4]),[v2 of lambda(n,even(n)=>double(half(n))=n in pnat)],[v3]),[term_of(twos)],[v2])),
+[problem([n:pnat]==>even(0)=>double(half(0))=0 in pnat,
+ sym_eval([base([1,1,1,2],half1),base([1,1,2],double1),tautology(intro then[identity,repeat intro])]),su(lambda(v0,v0)of su(lambda(v0,v0)of lambda(v0,axiom),[term_of(double1)],[double1]),[term_of(half1)],[half1]),
+ [
+ ]) ext _361,
+ problem([n:pnat]==>even(s(0))=>double(half(s(0)))=s(0)in pnat,
+ sym_eval([base([1,1,1,2],half2),base([1,1,2],double1),base([1],even2),tautology(intro then[elim(v0),repeat intro])]),su(lambda(v0,v0)of su(lambda(v0,v0)of su(lambda(v0,v0)of lambda(v0,any(v0)),[term_of(even2)],[even2]),[term_of(double1)],[double1]),[term_of(half2)],[half2]),
+ [
+ ]) ext _354,
+ problem([n:pnat,v0:pnat,v1:even(v0)=>double(half(v0))=v0 in pnat]==>even(s(s(v0)))=>double(half(s(s(v0))))=s(s(v0))in pnat,
+ sym_eval([step([1,1,1,2],half3),step([1,1,2],double2),step([1],even3),normal(imply_intro),normal(imply_elim(v1,v2))]),su(lambda(v2,v2)of su(lambda(v2,v2)of su(lambda(v2,v2)of lambda(v2,su(_790,[v1 of v2],[v3])),[term_of(even3)],[even3]),[term_of(double2)],[double2]),[term_of(half3)],[half3]),
+ [problem([n:pnat,v0:pnat,v2:even(v0),v3:double(half(v0))=v0 in pnat]==>s(s(double(half(v0))))=s(s(v0))in pnat,
+  wave([],func2s),su(su(su(su(v1,[v4 of (lambda(v1,v3)of _907)],[v1]),[v1 of v0],[v4]),[func2s of double(half(v0))],[v1]),[term_of(func2s)],[func2s]),
+  [problem([n:pnat,v0:pnat,v2:even(v0),v3:double(half(v0))=v0 in pnat]==>double(half(v0))=v0 in pnat,
+   tautology(intro),axiom,
+   [
+   ]) ext _907
+  ]) ext _790
+ ]) ext _347
+]).

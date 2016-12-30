@@ -1,0 +1,24 @@
+
+	% LEMMA METHOD: optionally loaded. Is useful in places, but
+	% expensive in general.
+	% Bit of a hack to deal with commutativity of =.
+	% Possibly a more elegant solution to this would be to teach
+	% instantiate/3 about the commutativity of =, but that would
+	% increase the general cost of instantiate/3. 
+method(apply_lemma(Lemma),
+       _==>G,
+       [strip_meta_annotations(G,GG),
+        precon_matrix(_,AllPre=>Concl,GG),
+	append( _, Pre, AllPre ),
+	precon_matrix( [], Pre=>Concl, Matrix ),
+        theorem(Lemma,LemmaGoal),
+        not current_goaltree(Lemma),
+        (instantiate(LemmaGoal,Matrix,_)
+         v
+         (Matrix=(L=R in T),instantiate(LemmaGoal,R=L in T,_))
+        )
+       ],
+       [],
+       [],
+       []
+      ).

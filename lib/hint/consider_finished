@@ -1,0 +1,20 @@
+%            Consider Finished hint method.
+%
+%	This hint method stops the planning process in the branch where
+% it is called. It is useful when not all the methods to finish the proof
+% are available and the user is not interested in this branch anymore.
+% Rather than letting the planner fail because it couldnt solve the simplest
+% parts of the proof, the user may consider them finished and continue 
+% planning. The Input parameter is the sequent at which the planning process 
+% was stopped.
+
+
+hint( consider_finished(Context,Input),
+	Input,
+	[ hint_context( consider_finished, Context, Input, [] ) ],
+   	[],
+        [],
+        consider_finished
+     ).
+
+

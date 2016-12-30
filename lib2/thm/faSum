@@ -1,0 +1,1 @@
+problem([]==>a:{bool}=>b:{bool}=>ci:{bool}=>faSum(a,b,ci)=faSumImp(a,b,ci)in{bool},_,_,_).

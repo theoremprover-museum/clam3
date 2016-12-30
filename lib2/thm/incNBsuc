@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>w2nNB(incB(x))=s(w2nNB(x))in pnat,_,_,_).

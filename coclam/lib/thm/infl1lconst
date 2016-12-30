@@ -1,0 +1,1 @@
+problem([]==>m:int=>lconst(m)=infl1(m, idnat, idnat)in int list,_,_,_).

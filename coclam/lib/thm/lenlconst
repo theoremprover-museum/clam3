@@ -1,0 +1,1 @@
+problem([]==>m:pnat=>infinity=length(lconst(m))in pnat,_,_,_).

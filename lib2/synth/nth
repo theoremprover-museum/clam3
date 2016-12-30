@@ -1,0 +1,27 @@
+problem([]==>n:pnat=>l:int list=>int list,
+intro then wfftacs,lambda(n,_293),
+[problem([n:pnat]==>l:int list=>int list,
+ elim(n),p_ind(n,_326,[v0,v1,_332]),
+ [problem([n:pnat]==>l:int list=>int list,
+  intro then wfftacs then hyp(l),lambda(l,l),
+  [
+  ]) ext _326,
+  problem([n:pnat,v0:pnat,v1:l:int list=>int list]==>l:int list=>int list,
+  pure(intro)then wfftacs,lambda(l,_428),
+  [problem([n:pnat,v0:pnat,v1:l:int list=>int list,l:int list]==>int list,
+   elim(l),list_ind(l,_480,[v2,v3,v4,_488]),
+   [problem([n:pnat,v0:pnat,v1:l:int list=>int list,l:int list]==>int list,
+    intro(nil)then wfftacs,nil,
+    [
+    ]) ext _480,
+    problem([n:pnat,v0:pnat,v1:l:int list=>int list,l:int list,v2:int,v3:int list,v4:int list]==>int list,
+    elim(v1,on(v3))then wfftacs,su(_617,[v1 of v3],[v5]),
+    [problem([n:pnat,v0:pnat,v1:l:int list=>int list,l:int list,v2:int,v3:int list,v4:int list,v5:int list]==>int list,
+     hyp(v5),v5,
+     [
+     ]) ext _617
+    ]) ext _488
+   ]) ext _428
+  ]) ext _332
+ ]) ext _293
+]).

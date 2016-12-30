@@ -1,0 +1,80 @@
+problem([]==>x:pnat=>y:pnat=>u(1),
+intro,lambda(x,_8308),
+[problem([x:pnat]==>y:pnat=>u(1),
+ elim(x),p_ind(x,_8339,[v0,v1,_8345]),
+ [problem([x:pnat]==>y:pnat=>u(1),
+  intro,lambda(y,_8375),
+  [problem([x:pnat,y:pnat]==>u(1),
+   decide(y=0 in pnat),pnat_eq(y,0,su(_8415,[axiom],[v0]),su(_8423,[lambda(~,axiom)],[v0])),
+   [problem([x:pnat,y:pnat,v0:y=0 in pnat]==>u(1),
+    intro(void),void,
+    [
+    ]) ext _8415,
+    problem([x:pnat,y:pnat,v0:y=0 in pnat=>void]==>u(1),
+    intro(explicit({true}))then simplify then repeat intro,{true},
+    [
+    ]) ext _8423
+   ]) ext _8375,
+   problem([x:pnat]==>pnat in u(1),
+   intro,axiom,
+   [
+   ])
+  ]) ext _8339,
+  problem([x:pnat,v0:pnat,v1:y:pnat=>u(1)]==>y:pnat=>u(1),
+  intro(at(1),new[y]),lambda(y,_8601),
+  [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat]==>u(1),
+   decide(y=0 in pnat),pnat_eq(y,0,su(_8659,[axiom],[v2]),su(_8667,[lambda(~,axiom)],[v2])),
+   [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat]==>u(1),
+    intro(void),void,
+    [
+    ]) ext _8659,
+    problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void]==>u(1),
+    lemma(lessax),su(_8793,[term_of(lessax)],[v3]),
+    [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat]==>u(1),
+     elim(v3,on(y)),su(_8902,[v3 of y],[v4]),
+     [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat]==>y in pnat,
+      intro,axiom,
+      [
+      ]),
+      problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat]==>u(1),
+      elim(v4),su(_9132,[v4 of _9139],[v5]),
+      [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat]==>y=0 in pnat=>void,
+       intro,v2,
+       [
+       ]) ext _9139,
+       problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat]==>u(1),
+       elim(v5),spread(v5,[v6,v7,_9427]),
+       [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat,v6:pnat,v7:y=s(v6)in pnat,v8:v5=v6&v7 in (x:pnat#y=s(x)in pnat)]==>u(1),
+        intro(explicit(v1 of v6)),v1 of v6,
+        [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat,v6:pnat,v7:y=s(v6)in pnat,v8:v5=v6&v7 in (x:pnat#y=s(x)in pnat)]==>v1 of v6 in u(1),
+         intro,axiom,
+         [problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat,v6:pnat,v7:y=s(v6)in pnat,v8:v5=v6&v7 in (x:pnat#y=s(x)in pnat)]==>v1 in (y:pnat=>u(1)),
+          repeat intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat,v6:pnat,v7:y=s(v6)in pnat,v8:v5=v6&v7 in (x:pnat#y=s(x)in pnat)]==>v6 in pnat,
+          intro,axiom,
+          [
+          ]),
+          problem([x:pnat,v0:pnat,v1:y:pnat=>u(1),y:pnat,v2:y=0 in pnat=>void,v3:y:pnat=> (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v4: (y=0 in pnat=>void)=>x:pnat#y=s(x)in pnat,v5:x:pnat#y=s(x)in pnat,v6:pnat,v7:y=s(v6)in pnat,v8:v5=v6&v7 in (x:pnat#y=s(x)in pnat),v9:pnat,v10:u(1)]==>v10 in u(1),
+          intro,axiom,
+          [
+          ])
+         ])
+        ]) ext _9427
+       ]) ext _9132
+      ]) ext _8902
+     ]) ext _8793
+    ]) ext _8667
+   ]) ext _8601,
+   problem([x:pnat,v0:pnat,v1:y:pnat=>u(1)]==>pnat in u(1),
+   intro,axiom,
+   [
+   ])
+  ]) ext _8345
+ ]) ext _8308,
+ problem([]==>pnat in u(1),
+ intro,axiom,
+ [
+ ])
+]).

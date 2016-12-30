@@ -1,0 +1,1 @@
+problem([]==>y:pnat=>rem(s(0),y)=s(0)in pnat,_,_,_).

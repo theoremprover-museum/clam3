@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%	Coinduction Method
+%%
+%%	Author: Louise Dennis
+%%	Proof: For use with coinductive proof plans
+%%	Associated File:  Predicates in coinduction.pl
+%%	Last Modified: 4th June 1997
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+method(coinduction_lts(R),
+	H==>G,
+	[% write('attempting coinduction'), nl,
+         matrix(Vs, Ter, G),
+	 \+ exp_at(Ter, _, act),
+	 inT(G, T),
+	 gfp(T, F)],
+	[find_Vs(Vs1, H, Rest),
+         append(Vs, Vs1, Vs2),
+	 sort_conds(Ter, Conds, Type, Term),
+	 form_set(Vs2, R, Term, F, NewGoal, Type, Conds),
+%	 ((Conds=CondsA, append_conds(Conds, Rest, FC));
+%	   FC=CondsA),
+	 sort_conds(NT, Rest, set(Type), NewGoal),
+	 matrix([], NT, FinalGoal),
+	 [[]==>FinalGoal] = [All|Seqs]
+	],
+	[All|Seqs],
+	[]
+	).
+
+
+
+
+
+
+
+
+
+
+
+

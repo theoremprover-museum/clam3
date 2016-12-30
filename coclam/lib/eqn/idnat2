@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>idnat(s(x))=s(idnat(x))in pnat,_,_,_).

@@ -1,0 +1,17 @@
+method(lam(V, SubExp, NewExp),
+       H==>G,
+       [ matrix(Vs, Term in T, G),
+         wave_fronts(NoAnnTerm, WF, Term),
+	 exp_at(NoAnnTerm, Pos, lam(V-Type, SubExp)of NewExp)
+	],
+       [exp_at(Term, Pos, E),
+	exp_at(E, [2], AnnNew),
+	exp_at(E, [2, 1], AnnSub),
+	replace_all(V, AnnNew, AnnSub, NewSub),
+	replace_all(E, NewSub, Term, NewTerm),
+	matrix(Vs, NewTerm in T, NewG),
+	[All|Seqs] = [H==>NewG]
+	],
+       [All|Seqs],
+	[]
+      ).

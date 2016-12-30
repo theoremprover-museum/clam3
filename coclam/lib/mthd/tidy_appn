@@ -1,0 +1,12 @@
+method(tidy_appn(V),
+	H==>G,
+ 	[matrix_conds(Vs, Conds, Term, Type, G),
+	 strip_meta_annotations(Term, T),
+	 tidy_appn(T, Term, NewT, V),
+	 sinks(NewNewT, _, NewT),
+	 mark_sinks(Vs, NewNewT, NewTerm)],
+        [matrix_conds(Vs, Conds, NewTerm, Type, NewG),
+	 [All|Seqs] = [H==>NewG]],
+ 	[All|Seqs],
+	[]
+).

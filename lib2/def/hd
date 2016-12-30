@@ -1,0 +1,3 @@
+hd(l)<==>term_of(hd) of l.
+
+%hd(l)<==>list_ind(l,{false},[h,~,~,h]).

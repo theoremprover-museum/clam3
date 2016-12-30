@@ -1,0 +1,20 @@
+problem([]==>n:pnat=>double(n)=times(s(s(0)),n)in pnat,
+induction(s(v0),n:pnat),lambda(n,p_ind(n,_309,[v0,v1,_315])),
+[problem([n:pnat]==>double(0)=times(s(s(0)),0)in pnat,
+ sym_eval([base([1,1],double1),step([2,1],times2),step([1,2,1],times2),base([1,1,2,1],times1),base([1,2,1],plus1),base([2,1],plus1),tautology(identity)]),su(su(su(su(su(su(su(su(su(su(su(su(su(axiom,[plus1 of 0],[v0]),[term_of(plus1)],[plus1]),[plus1 of 0],[v0]),[term_of(plus1)],[plus1]),[times1 of 0],[v0]),[term_of(times1)],[times1]),[v0 of 0],[v1]),[times2 of 0],[v0]),[term_of(times2)],[times2]),[v0 of 0],[v1]),[times2 of s(0)],[v0]),[term_of(times2)],[times2]),[term_of(double1)],[double1]),
+ [
+ ]) ext _309,
+ problem([n:pnat,v0:pnat,v1:double(v0)=times(s(s(0)),v0)in pnat]==>double(s(v0))=times(s(s(0)),s(v0))in pnat,
+ wave([2,1],[times2right,left]),su(su(su(_639,[v2 of v0],[v3]),[times2right of s(s(0))],[v2]),[term_of(times2right)],[times2right]),
+ [problem([n:pnat,v0:pnat,v1:double(v0)=times(s(s(0)),v0)in pnat]==>double(s(v0))=plus(s(s(0)),times(s(s(0)),v0))in pnat,
+  wave([1,1],[double2,left]),su(su(_749,[double2 of v0],[v2]),[term_of(double2)],[double2]),
+  [problem([n:pnat,v0:pnat,v1:double(v0)=times(s(s(0)),v0)in pnat]==>s(s(double(v0)))=plus(s(s(0)),times(s(s(0)),v0))in pnat,
+   weak_fertilize([2],[right,v1]),_773,
+   [problem([n:pnat,v0:pnat,v1:double(v0)=times(s(s(0)),v0)in pnat]==>s(s(double(v0)))=plus(s(s(0)),double(v0))in pnat,
+    sym_eval([step([2,1],plus2),step([1,2,1],plus2),base([1,1,2,1],plus1),tautology(identity)]),su(su(su(su(su(su(su(su(axiom,[plus1 of double(v0)],[v2]),[term_of(plus1)],[plus1]),[v2 of double(v0)],[v3]),[plus2 of 0],[v2]),[term_of(plus2)],[plus2]),[v2 of double(v0)],[v3]),[plus2 of s(0)],[v2]),[term_of(plus2)],[plus2]),
+    [
+    ]) ext _773
+   ]) ext _749
+  ]) ext _639
+ ]) ext _315
+]).

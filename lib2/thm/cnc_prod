@@ -1,0 +1,1 @@
+problem([]==>h:pnat=>v:pnat=>t:{p:pnat\prime(p)}list=>prod(t)=v in pnat=>prod(h::t)=times(h,v) in pnat,_,_,_).

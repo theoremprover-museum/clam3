@@ -1,0 +1,1 @@
+leadzeroes(n,x)<==>p_ind(n,x,[~,r,{false}::r]).

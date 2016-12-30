@@ -1,0 +1,3 @@
+nAdderImp(n)<==>p_ind(n,lambda(x,lambda(y,lambda(z,z::nil))),[k,w,lambda(x,lambda(y,lambda(z,faSum(hd(x),hd(y),z)::w of tl(x)of tl(y)of faCarry(hd(x),hd(y),z))))]).
+
+

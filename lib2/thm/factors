@@ -1,0 +1,17 @@
+problem([]==>x:{posint}=>xl:{prime}list#prod(xl)=x in{posint},
+induction([times(v0,v1)],x:{posint}),lambda(x,su(su(su(su(su(v7,[v6 of x],[v7]),[v5 of lambda(v0,lambda(v1,lambda(v2,_286)))],[v6]),[v4 of _293],[v5]),[v3 of lambda(x,xl:{prime}list#prod(xl)=x in{posint})],[v4]),[term_of(primescheme)],[v3])),
+[problem([x:{posint}]==>xl:{prime}list#prod(xl)=s(0)in{posint},
+ sym_eval([existential(xl:{prime}list,nil),eval_def([1,1],prod1)]),nil&su(_401,[term_of(prod1)],[prod1]),
+ [problem([x:{posint}]==>s(0)=s(0)in{posint},
+  tautology(identity),axiom,
+  [
+  ]) ext _401
+ ]) ext _293,
+ problem([x:{posint},v0:{prime},v1:{posint},v2:xl:{prime}list#prod(xl)=v1 in{posint}]==>xl:{prime}list#prod(xl)=times(v0,v1)in{posint},
+ wave([1,1],[prod2,left],[xl:{prime}list,v3::v4])then[wave([],[cnc_posint_times,impl],[v3:{prime},v0])],lambda(exhyp,spread(exhyp,[v3,v5,spread(v5,[v4,v7,(v3::v4)&su(su(su(v7,[v9 of v4],[v10]),[prod2 of v3],[v9]),[term_of(prod2)],[prod2])])]))of (lambda(exhyp,v0&su(lambda(v3,spread(v3,[v4,v5,v4&su(su(su(su(v7,[v9 of v5],[v7]),[v8 of v1],[v9]),[v7 of prod(v4)],[v8]),[cnc_posint_times of v0],[v7])]))of v2,[term_of(cnc_posint_times)],[cnc_posint_times]))of _638),
+ [problem([x:{posint},v0:{prime},v1:{posint},v2:xl:{prime}list#prod(xl)=v1 in{posint}]==>v4:{prime}list#prod(v4)=v1 in{posint},
+  strong_fertilize(v2),v2,
+  [
+  ]) ext _638
+ ]) ext _286
+]).

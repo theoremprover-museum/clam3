@@ -1,0 +1,4 @@
+problem([]==>p:int=>f(s(p)) = p+p in int,
+repeat intro then simplify,lambda(x,lambda(y,axiom)),
+[
+]).

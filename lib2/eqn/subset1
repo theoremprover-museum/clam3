@@ -1,0 +1,1 @@
+problem([]==>l:int list=>subset(nil,l)={true}in u(1),_,_,_).

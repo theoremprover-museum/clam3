@@ -1,0 +1,1 @@
+aluCarry(s0,s1,s2,a,b,ci)<==>hd(tl(oneAluImp(s0,s1,s2,a,b,ci))).

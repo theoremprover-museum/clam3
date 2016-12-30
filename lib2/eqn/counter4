@@ -1,0 +1,1 @@
+problem([]==>t:pnat=>counter(s(t),{true})=0 in pnat,_,_,_).

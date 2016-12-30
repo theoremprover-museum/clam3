@@ -1,0 +1,20 @@
+problem([]==>x:pnat=>y:pnat=>geq(plus(x,y),y),
+induction(s(v0),y:pnat),lambda(v0,lambda(v1,lambda(v2,su(su(v4,[v3 of v0],[v4]),[v2 of v1],[v3]))of lambda(y,p_ind(y,_337,[v0,v1,_343])))),
+[problem([y:pnat]==>x:pnat=>geq(plus(x,0),0),
+ base([],geq2),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _387),[term_of(geq2)],[geq2]),
+ [problem([y:pnat]==>x:pnat=>{true},
+  tautology((intro then wfftacs)then istrue),lambda(x,0),
+  [
+  ]) ext _387
+ ]) ext _337,
+ problem([y:pnat,v0:pnat,v1:x:pnat=>geq(plus(x,v0),v0)]==>x:pnat=>geq(plus(x,s(v0)),s(v0)),
+ wave([1],plus2right),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _513),[term_of(plus2right)],[plus2right]),
+ [problem([y:pnat,v0:pnat,v1:x:pnat=>geq(plus(x,v0),v0)]==>x:pnat=>geq(s(plus(x,v0)),s(v0)),
+  wave([],geq3),su(lambda(v2,lambda(v3,su(v4,[v3 of v2],[v4]))of _602),[term_of(geq3)],[geq3]),
+  [problem([y:pnat,v0:pnat,v1:x:pnat=>geq(plus(x,v0),v0)]==>x:pnat=>geq(plus(x,v0),v0),
+   tautology(intro),v1,
+   [
+   ]) ext _602
+  ]) ext _513
+ ]) ext _343
+]).

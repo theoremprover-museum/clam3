@@ -1,0 +1,30 @@
+problem([]==>x:pnat=>odd(x)=>even(x)=>void,
+induction(s(s(v0)),x:pnat),lambda(x,su(su(su(su(su(su(v7,[v6 of x],[v7]),[v5 of lambda(v0,lambda(v1,_342))],[v6]),[v4 of _349],[v5]),[v3 of _356],[v4]),[v2 of lambda(x,odd(x)=>even(x)=>void)],[v3]),[term_of(twos)],[v2])),
+[problem([x:pnat]==>odd(0)=>even(0)=>void,
+ base([1],odd1),su(_419,[term_of(odd1)],[odd1]),
+ [problem([x:pnat]==>void=>even(0)=>void,
+  tautology(intro then[elim(v0),wfftacs]),lambda(v0,any(v0)),
+  [
+  ]) ext _419
+ ]) ext _356,
+ problem([x:pnat]==>odd(s(0))=>even(s(0))=>void,
+ base([1],odd2),su(_508,[term_of(odd2)],[odd2]),
+ [problem([x:pnat]==>{true}=>even(s(0))=>void,
+  base([1,2],even2),su(_553,[term_of(even2)],[even2]),
+  [problem([x:pnat]==>{true}=>void=>void,
+   tautology(intro then[intro then[intro,wfftacs],wfftacs]),lambda(v0,lambda(v1,v1)),
+   [
+   ]) ext _553
+  ]) ext _508
+ ]) ext _349,
+ problem([x:pnat,v0:pnat,v1:odd(v0)=>even(v0)=>void]==>odd(s(s(v0)))=>even(s(s(v0)))=>void,
+ wave([1],[odd3,left]),su(su(_678,[odd3 of v0],[v2]),[term_of(odd3)],[odd3]),
+ [problem([x:pnat,v0:pnat,v1:odd(v0)=>even(v0)=>void]==>odd(v0)=>even(s(s(v0)))=>void,
+  wave([1,2],[even3,left]),su(su(_762,[even3 of v0],[v2]),[term_of(even3)],[even3]),
+  [problem([x:pnat,v0:pnat,v1:odd(v0)=>even(v0)=>void]==>odd(v0)=>even(v0)=>void,
+   tautology(intro),v1,
+   [
+   ]) ext _762
+  ]) ext _678
+ ]) ext _342
+]).

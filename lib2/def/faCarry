@@ -1,0 +1,5 @@
+faCarry(a,b,ci) <==> or(or(and(a,b),
+                          and(a,ci)
+                         ),
+                       and(b,ci)
+                      ).

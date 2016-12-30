@@ -1,0 +1,1 @@
+problem([]==>p:cps=>p=cps2ls(p)in io,_,_,_).

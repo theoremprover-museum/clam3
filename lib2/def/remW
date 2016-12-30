@@ -1,0 +1,1 @@
+remW(x,y)<==>p_ind(word2nat(x),nil,[k,r,pnat_eq(word2nat(inc(r)),word2nat(y),nil,inc(r))]).

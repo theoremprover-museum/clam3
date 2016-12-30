@@ -1,0 +1,2 @@
+problem([]==>l:pnat list=>app(nil,l)=l in pnat list,_,_,_).
+

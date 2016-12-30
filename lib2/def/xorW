@@ -1,0 +1,1 @@
+xorW(n)<==>p_ind(n,lambda(a,lambda(b,nil)),[~,t,lambda(a,lambda(b,xor(hd(a),hd(b))::t of tl(a)of tl(b)))]).

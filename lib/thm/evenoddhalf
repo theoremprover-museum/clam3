@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>even(half(x)) \ odd(half(x)),_,_,_).
+

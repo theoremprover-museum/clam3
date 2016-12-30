@@ -1,0 +1,1 @@
+problem([]==>ci:{bool}=>x:{word}=>y:{word}=>word2nat(cadd(x)of y of ci)=plus(word2nat(x),plus(word2nat(y),ci))in pnat,_,_,_).

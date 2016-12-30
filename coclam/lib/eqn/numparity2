@@ -1,0 +1,1 @@
+problem([]==>value:pnat=>t:bool list=>numparity(value, void::t)=myeven(value)::numparity(value, t) in bool list, _, _, _).

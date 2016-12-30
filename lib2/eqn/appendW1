@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>appendW(0)of x of y=y in{word},_,_,_).

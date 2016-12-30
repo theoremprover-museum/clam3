@@ -1,0 +1,3 @@
+perm(x1,y1)<==>term_of(perm) of x1 of y1.
+
+

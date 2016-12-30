@@ -1,0 +1,1 @@
+problem([]==>a:int=>b:int=>merge(lconst(a), lconst(b))=lswap(a, b)in int list,_,_,_).

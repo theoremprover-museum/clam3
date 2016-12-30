@@ -1,0 +1,4 @@
+problem([]==>x:pnat=>y:pnat=>(leq(x,y)=>void)=>less(y,x),
+because,atom(incomplete),
+[
+]).

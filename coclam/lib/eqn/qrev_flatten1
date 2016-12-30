@@ -1,0 +1,2 @@
+problem([]==>a:pnat list => qrev_flatten(nil,a) = a in pnat list,_,_,_).
+

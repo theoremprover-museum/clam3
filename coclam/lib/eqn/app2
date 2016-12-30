@@ -1,0 +1,4 @@
+problem([]==>h:int=>l1:int list=>l2:int list=>app(h::l1,l2)=h::app(l1,l2)in int list,
+repeat intro then simplify then wfftacs,lambda(h,lambda(l1,lambda(l2,axiom))),
+[
+]).

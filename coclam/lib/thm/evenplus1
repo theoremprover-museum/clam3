@@ -1,0 +1,2 @@
+problem([]==>x:pnat=>even(plus(x,x)),_,_,_).
+

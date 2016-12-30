@@ -1,0 +1,1 @@
+t nestedlist <==> rec(z,(t\z)list).

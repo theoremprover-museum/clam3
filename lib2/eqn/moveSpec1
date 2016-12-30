@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>moveSpec(0,x)=0 in pnat,_,_,_).

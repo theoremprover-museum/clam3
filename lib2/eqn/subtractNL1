@@ -1,0 +1,1 @@
+problem([]==>x:{word}=>y:{word}=>ci:{bool}=>subtractNL(x,y,ci)=cadd(x,notNL(y),ci) in{word},_,_,_).

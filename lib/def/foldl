@@ -1,0 +1,1 @@
+foldl(f,t,r) <==> void.

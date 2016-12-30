@@ -1,0 +1,1 @@
+problem([]==>p:pnat=>sieve(p, nil)=nil in pnat list,_,_,_).

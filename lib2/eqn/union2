@@ -1,0 +1,1 @@
+problem([]==>l1:int list=>union(l1,nil)=l1 in int list,_,_,_).

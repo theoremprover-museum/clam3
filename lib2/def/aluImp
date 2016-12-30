@@ -1,0 +1,7 @@
+aluImp(s0,s1,s2,x,y,ci)<==>term_of(aluImp) of s0 of s1 of s2 of ci of x of y. 
+
+
+%aluImp(s0,s1,s2,x,ci)<==>list_ind(x,lambda(y,((not s2)and ci)::nil),[h,t,r,lambda(y,aluAux(s0,s1,s2,h,hd(y),r of tl(y)))]).
+
+%aluImp(x)<==>list_ind(x,lambda(s0,lambda(s1,lambda(s2,lambda(y,lambda(ci,((not s2)and ci)::nil))))),[h,t,r,lambda(s0,lambda(s1,lambda(s2,lambda(y,lambda(ci,aluAux(s0,s1,s2,h,hd(y),r of s0 of s1 of s2 of tl(y) of ci))))))]).
+

@@ -1,0 +1,17 @@
+problem([]==>el:int=>h:int=>l:int list=>el=h in int=>member(el,h::l)={true}in u(1),
+repeat intro then simplify,lambda(el,lambda(h,lambda(l,lambda(v0,_10222)))),
+[problem([el:int,h:int,l:int list,v0:el=h in int]==>int_eq(el,h,{true},list_ind(l,void,[v0,~,v2,int_eq(el,v0,{true},v2)]))=int in u(1),
+ dec_eq(true),lambda(v1,_10305)of axiom,
+ [problem([el:int,h:int,l:int list,v0:el=h in int]==>el=h in int,
+  intro,v0,
+  [
+  ]) ext _10310,
+  problem([el:int,h:int,l:int list,v0:el=h in int]==>{true}=int in u(1),
+  simplify,_10361,
+  [problem([el:int,h:int,l:int list,v0:el=h in int]==>int=int in u(1),
+   intro,axiom,
+   [
+   ]) ext _10361
+  ]) ext _10305
+ ]) ext _10222
+]).

@@ -1,0 +1,110 @@
+         % eval_def submethod symbolically evaluates a term in the goal
+         % by applying one of its defining equations.  In order to prevent
+         % interference with rippling it wil not apply wave-rules when
+         % waves are present. 
+method(eval_def(Pos, beta-reduce),
+       H==>G,
+       [not contains_meta_variables(G),
+        wave_fronts(EG, WFSpec, G),
+        expression_at(EG, Pos, ap(lam(X,Y), T)),
+        replace_all(X, T, Y, R)
+       ],
+       [replace_in_matrix(Pos,R,EG,NewEG),
+        wave_fronts(NewEG, WFSpec, NewG)
+       ],
+       [H==>NewG],
+       []
+      ).
+
+
+method(eval_def( Pos, Rule),
+       H==>G,
+       [not contains_meta_variables(G),
+        expression_at(G,Pos,Exp),
+        not wave_fronts(_, [_|_], Exp),
+        function_defn(Exp,Rule:C=>Exp:=>R),
+        trivial(H==>C)
+       ],
+       [replace_in_matrix(Pos,R,G,NewG)
+       ],
+       [H==>NewG],
+       []
+      ).
+
+        % Note: previously unblock/2
+        %
+method(eval_def( Pos, Rule),
+       H==>G,
+       [not contains_meta_variables(G),
+        expression_at(G,Pos,Exp),
+        not wave_fronts(_, [_|_], Exp),
+        reduction_rule(Exp,Rule:C=>Exp:=>R,_),
+        trivial(H==>C)
+       ],
+       [replace_in_matrix(Pos,R,G,NewG)
+       ],
+       [H==>NewG],
+       []
+      ).
+
+	% Note: previously unblock/2
+        %
+method(eval_def(Pos,Rule),
+       H==>G,
+       [ground(G),
+        matrix(Vars,Matrix,G),
+        wave_fronts(_,WaveFronts,Matrix),
+        member(WaveFrontPos-_,WaveFronts),
+        exp_at(Matrix,WaveFrontPos,Wave),
+        wave_front_proper( Wave, Typ, Dir, WaveProper ), 
+        exp_at(WaveProper, WPos, Exp ),
+        func_defeqn(Exp,Rule:C=>Exp:=>NewExp),
+        elementary(H==>C,_),
+        wave_var_terms(WaveProper,ExpVT),
+        replace(WPos, NewExp, WaveProper, NewWaveProper ),
+        wave_var_terms(NewWaveProper,NewExpVT),
+        NewExpVT \= [],
+        subset( NewExpVT, ExpVT ),
+        wave_front_proper(NewWave, Typ, Dir, NewWaveProper ),
+        wave_fronts(_, [_-WHs/_], Wave),
+        wave_fronts(_, [_-NewWHs/_], NewWave),
+        same_length(WHs, NewWHs)
+       ],
+       [
+        replace(WaveFrontPos,NewWave,Matrix,NewMatrix),
+        matrix(Vars,NewMatrix,NewG),
+        append( WaveFrontPos, WPos, Pos )
+       ],
+       [H==>NewG],
+       []
+      ).
+
+	% Note: previously unblock/2
+        %
+method(eval_def(Pos,Rule),
+       H==>G,
+       [ground(G),
+        matrix(Vars,Matrix,G),
+        sinks(_,Sinks,Matrix),
+        member(SinkPos,Sinks),
+        exp_at(Matrix,SinkPos,Sink),
+        sink_proper( Sink, SinkProper ), 
+        wave_front_proper(SinkProper,Typ, Dir, WaveProper),
+        exp_at(WaveProper, WSPos, Exp ),
+        func_defeqn(Exp,Rule:C=>Exp:=>NewExp),
+        elementary(H==>C,_),
+        replace(WSPos, NewExp, WaveProper, NewWaveProper )
+       ],
+       [
+        wave_front_proper(NewSink,Typ,Dir, NewWaveProper),
+        replace(SinkPos,NewSink,Matrix,NewMatrix),
+        matrix(Vars,NewMatrix,NewG),
+        append( SinkPos, WSPos, Pos)
+       ],
+       [H==>NewG],
+       []
+      ).
+
+
+
+

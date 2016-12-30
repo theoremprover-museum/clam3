@@ -1,0 +1,8 @@
+problem([]==>inc(nil)=({true}::nil) in{word},_,_,_).
+
+
+% inc2
+%problem([]==>x:{word}=>inc(x)=cadd(x)of zeroes(length(x))of{true}in{word},_,_,_).
+
+% This may cause trouble in the proofs of Binary arithmetic
+% This causes trouble in the counter verification proof

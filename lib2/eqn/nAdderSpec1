@@ -1,0 +1,7 @@
+problem([]==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>nAdderSpec(n,a,b,ci) = plus(numVal(n)of a,plus(numVal(n)of b,bitval(ci))) in pnat,_,_,_).
+
+
+%problem([]==>a:{word}=>b:{word}=>ci:{bool}=>nAdderSpec(0,a,b,ci)=bitval(ci) in pnat,_,_,_).
+
+%problem([]==>a:{word}=>b:{word}=>ci:{bool}=>nAdderSpec(0,a,b,ci)=0 in pnat,_,_,_).
+

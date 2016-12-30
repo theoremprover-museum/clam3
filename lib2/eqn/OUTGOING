@@ -1,0 +1,492 @@
+From francisc Wed Nov 24 03:57:43 1993
+Date: Wed, 24 Nov 93 03:57:43
+From: Francisco Cantu Ortiz <francisc>
+Subject: 
+To: smaill
+Cc: francisc
+
+Alan:
+
+I cannot run Quintus Prolog neither the Clam version of it. It says
+that the authorization code has expired.
+
+Do you know what is the problem?
+
+Francisco
+
+
+From francisc Wed Nov 24 04:04:43 1993
+Date: Wed, 24 Nov 93 04:04:43
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: Rest of sabbatical in Mexico?
+To: goebel@jp.ac.u-tokyo.t.mtl
+In-Reply-To: goebel@jp.ac.u-tokyo.t.mtl's message of Wed, 24 Nov 93 12:20:32 GMT
+Cc: fcantu@campus.mty.itesm.mx
+
+Hi Randy!!!
+
+Glad to hear from you.
+
+I'll come back to you soon with an answer to your question.
+
+In principle, we would be very glad to have you spend that time
+at ITESM.
+
+Say the family hello. Hope Lannie is doing fine.
+
+Cheers
+
+Francisco
+
+PS
+Las month I was at Edinburgh. Now I am at Monterrey until January.
+You can reach me in Monterrey at fcantu@campus.mty.itesm.mx
+
+From francisc Wed Nov 24 04:16:06 1993
+Date: Wed, 24 Nov 93 04:16:06
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: Thesis proposal change
+To: Karen Konstroffer <karenk@ed.aifh>
+In-Reply-To: Karen Konstroffer's message of Mon, 1 Nov 93 08:43:37 GMT
+Cc: 
+
+
+Karen:
+
+Can I send you a new proposal with some changes?
+
+Francisco
+
+> > Karen:
+> > 
+> > I have some other changes to my thesis proposal.
+> > 
+> > Could you please hold it for publication until I have incorporated
+> > those changes?
+> > 
+> > Thanks and best Regards
+> > 
+> > Francisco
+> > 
+> 
+> 
+> OK,
+> 
+> Karen
+> 
+
+From francisc Tue Dec 14 03:35:51 1993
+Date: Tue, 14 Dec 93 03:35:51
+From: Francisco Cantu Ortiz <francisc>
+Subject: bug in n-bit adder theorem
+To: smaill
+Cc: francisc
+
+Alan:
+
+I am proof-planning the n-bit Adder verification theorem. There is a
+bug that I have been trying to detect for three days without success.
+I gave up. May be you can help me.
+
+The theorem is in my directory ~francisc/clam/lib and you load it with
+lib_load(thm(nAdderVer)). The needs file ~francisc/clam/lib/needs has
+all the required entries.
+
+I display the partial planning and the error I get:
+
+Thanks
+
+Francisco
+=======================================================================
+| ?- select(nAdderVer).
+
+
+yes
+| ?- dplan.
+DEPTH: 0
+==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>nAdderSpec(n,a,b,ci)=numVal(nAdderImp\
+(n)of a of b of ci)in pnat
+SELECTED METHOD at depth 0: base_case([...])
+|DEPTH: 1
+|==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>pnat_eq(n,0,bitval(ci)
+,numVal(a)+(n\
+umVal(b)+bitval(ci)))=numVal(nAdderImp(n)of a of b of ci)in pnat
+|SELECTED METHOD at depth 1: induction([s(v0)],[n:pnat]
+||DEPTH: 2
+||n:pnat
+||==>a:{word}=>b:{word}=>ci:{bool}=>pnat_eq(0,0,bitval(ci),numVal(a)+ (numVal(b\
+)+bitval(ci)))=numVal(nAdderImp(0)of a of b of ci)in pnat
+||SELECTED METHOD at depth 2: base_case([...])
+|||DEPTH: 3
+|||n:pnat
+|||==>a:{word}=>b:{word}=>ci:{bool}=>bitval(ci)=bitval(ci)+0 in pnat
+
+
+** failed to guess type of ind(_176209,_176210,_176211,_176212) **
+
+
+** failed to guess type of ind(_176219,_176220,_176221,_176222) **
+
+
+** failed to guess type of ind(_176229,_176230,_176231,_176232) **
+
+
+** failed to guess type of ind(_176239,_176240,_176241,_176242) **
+
+etc....... 
+
+
+
+From francisc Thu Dec 16 00:59:57 1993
+Date: Thu, 16 Dec 93 00:59:57
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: Unofficial news...
+To: goebel@jp.ac.u-tokyo.t.mtl
+In-Reply-To: goebel@jp.ac.u-tokyo.t.mtl's message of Tue, 14 Dec 93 10:58:40 GMT
+Cc: 
+
+Dear Randy:
+
+GREAT NEWS!!!
+
+I am very glad to hear that!
+
+Very well deserved!
+
+Congratulations and best wishes!
+
+Francisco
+
+
+From francisc Thu Dec 16 01:22:58 1993
+Date: Thu, 16 Dec 93 01:22:58
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: 7th ISAI
+To: goebel@jp.ac.u-tokyo.t.mtl
+In-Reply-To: goebel@jp.ac.u-tokyo.t.mtl's message of Tue, 14 Dec 93 15:49:11 GMT
+Cc: 
+
+Dear Randy:
+
+
+> As you saw in my broadcast message, I heard, still unofficially, that I will
+> be promoted to full professor as of July 1, 1994.
+
+I was very glad tro hear that great news, makes me feel very good.
+
+> I received your letter inviting me to participate in the next symposium,
+> and I accept, of course.  I can provide you with a title and abstract whenever
+> you require...as I said, I will talk about what it means to do "industrially
+> relevant reasoning."
+
+Good, let's keep in touch.
+
+> Lanie is now home from the hospital (she came home on November 27th, two weeks
+> early, as she couldn't rest in the hospital...she was the only foreigner in a
+> huge university hospital, two hours train ride from where we live).  She is
+> recovery slowly, but the signs of improvements of the disease are positive
+> so far.  Thursday we get some lab results taken yesterday, which will give us
+> a better indication of how successful the operation is.  We expect to see her
+> back to more normal by the new year.
+
+Give her mine and Carmen's best regards
+
+> I have heard little more here about jobs for April to August.  There are 
+> possibilities at Keio University and at Osaka University...but I will have to
+> wait and see.  There are also possibilities for short stays at three Australian
+> places: AAAI in Melbourne, ANU in Canberra, and Griffiths in Brisbane.  In
+> addition to the possibility at ITESM, Nick Cercone (who is now Dean of Grad.
+> Studies and Associate VicePresident of Research at U. of Regina) is creating a
+> special temporary position for me there.
+> 
+> The decision will be the one that makes things best for my family, but until
+> I hear from everyone, I can't begin to debate it.
+
+Right, you seem to have very good choices and I am glad.
+I have one question. You said that your average salary is around 4,000
+.00 dollars,what about taxes? is that figure before or after taxes,
+are tthe taxes paid in Japan or in Canada?.
+
+Shortly, ITESM will make you a concrete offer for the April-August period.
+
+> Christmas preparations are hard to imagine here, as this is
+not primarily a > Christian culture.  While most Japanese say they are
+not "religious" in fact > they are very religious...they pray often,
+and have great respect as Buddhists > and Shintoists.  They seem to
+have a shopping mall approach to spirituality: > selecting the "best"
+aspects of Budhism, Shintoism and Christianity.
+
+That is a very interesting culture, isn't it?
+
+> Still we will be celebrating our first Christmas away from home, so even though
+> there is no snow and cold, we will try to get the spirit.  Lanie found a church
+> close to our house (Japanese) but we might attend the Christmas eve service
+> there (even though we don't understand Japanese, I'm sure it will be good).
+> 
+> The stores here really get into Christmas...as you might imagine.  In this
+> city of about 13 million, every store is busy trying to make the most of the
+> commercial aspects of Christmas. 
+
+I am sure that is a very intersting experience particularly, being the
+family all together.
+
+Best wishes and have a joyful celebration.
+
+We'll stay here at home. I'll be in Lisbon Portugal January 8-15 and
+then in Edinburgh January 16-30.
+
+Let's keep in touch.
+
+Feliz Navidad!
+
+Francisco
+
+From francisc Wed Dec 22 01:40:49 1993
+Date: Wed, 22 Dec 93 01:40:49
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: bug in n-bit adder theorem 
+To: Alan Smaill <smaill@ed.dcs>
+In-Reply-To: Alan Smaill's message of Tue, 14 Dec 93 12:36:11 GMT
+Cc: bundy,francisc
+
+Alan:
+
+
+> Francisco
+> > 
+> > I am proof-planning the n-bit Adder verification theorem. There is a
+> > bug that I have been trying to detect for three days without success.
+> > I gave up. May be you can help me.
+> > 
+> > 
+> > 
+> > ** failed to guess type of ind(_176209,_176210,_176211,_176212) **
+> > 
+> > 
+> > ** failed to guess type of ind(_176219,_176220,_176221,_176222) **
+> > 
+> > 
+> > ** failed to guess type of ind(_176229,_176230,_176231,_176232) **
+> > 
+> > 
+> > ** failed to guess type of ind(_176239,_176240,_176241,_176242) **
+> > 
+> > etc....... 
+> 
+> That looks horribly familiar.
+> I should be able to track it down - will let you know.
+> 
+> alan
+
+I circumvented the problem the following way:
+
+The n-bit Adder verification theorem was:
+
+[]==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>nAdderSpec(n,a,b,ci)=numVal(nAdderImp(n)ofa of b of ci) in pnat. 
+
+and I changed it to:
+
+[]==>ci:{bool}=>n:pnat=>a:{word}=>b:{word}=>nAdderSpec(n,a,b,ci)
+=numVal(nAdderI\mp(n)ofaof b of ci) in pnat. 
+
+that is, I put the ci:{bool} first and also, I loaded the bool_cases
+method first, and the problem disappeared. Apparently, it couldn't
+deal with the equation bitval(ci)=bitval(ci)+0, because the bool_case
+method wasn't available.
+
+It proceeded long further, in fact tha planning process stopped after
+1.5 hours, without being able to produce the required proof plan yet.
+However, this represents some progress though. I will keep working on it.
+
+The theorem is planned by Clam for specific values of n, a, b and ci, though.
+
+In fact, both the specification nAdderSpec and the implementation
+numVal(nAdderImp) work correctly when evaluated with Prolog's eval command.
+
+Also, I have to explicitly load the true definition, since the
+built-in true cannot be override. This doesn't happen with the pnat_eq
+definition which does override the built-in pnat_eq. I wonder why.
+
+Regards
+
+Francisco
+
+From francisc Mon Dec 27 17:39:46 1993
+Date: Mon, 27 Dec 93 17:39:46
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: Your next visit
+To: Alan Bundy <bundy@ed.aisb>
+In-Reply-To: Alan Bundy's message of Wed, 22 Dec 93 09:49:00 GMT
+Cc: 
+
+Alan:
+
+> 	When do you visit next? Will you be able to attend any of
+> the Godel meetings?
+
+My next visit is Jnury 16-30. Is there more information about this
+meetings?. In principle they sound very interesting.
+
+Hope you had a Merry Crhistmas!
+
+Francisco
+
+From francisc Wed Apr 13 17:39:40 1994
+Date: Wed, 13 Apr 94 17:39:40
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: equations for boolean all, some 
+To: smaill@ed.aisb
+In-Reply-To: smaill@ed.aisb's message of Sun, 10 Apr 94 20:29:37 +0100
+Cc: francisc
+
+Alan:
+
+> > I also define quantifiers as follows:
+> > 
+> > all(p) <==> and(p of {true}, p of {false})
+> > some(p) <==> or(p of {true}, p of {false})
+> > 
+> > How should the predicate p be represented?,
+> 
+
+> That's fine as it stands -- oyster will accept that as a definition.
+> The only problem will be dealing with the quantification scope when
+> you use this: in use, p will be given by something like
+> 
+>   lambda(x, or(and(x,y),and(x,z)) )
+> 
+> since you have to indicate which is the quantified variable somehow.
+
+That's fine, no problem.
+
+Regarding the corresponding equation:
+
+> Just  all(p) = and( p of true, p of false ) in bool .
+
+the question is how to declare p, as Oyster is giving a syntax error
+because it must be declared with some type. This is the original
+question I tried to pose (but I didn't make it clear).
+
+I give:
+
+[]==>all(p)=and(p of {true},p of {false}) in {bool}.
+
+and I get (as expected):
+
+syntax error: p (three times)
+
+Francisco
+
+From francisc Wed Apr 13 18:28:59 1994
+Date: Wed, 13 Apr 94 18:28:59
+From: Francisco Cantu Ortiz <francisc>
+Subject: Re: equations for boolean all, some 
+To: smaill@ed.aisb
+In-Reply-To: smaill@ed.aisb's message of Wed, 13 Apr 94 17:44:50 +0100
+Cc: francisc
+
+Alan:
+
+> You should universally quantify p: since its type is bool => bool
+> (I suppose), that gives:
+> 
+> []==>p:({bool}=>{bool})=>all(p)=and(p of {true},p of {false}) in {bool} .
+
+That makes a lot of sense (after I see it). It worked, indeed, thanks.
+
+I am trying the relational verification of circuits, starting with
+their representation and the verification of non-recursive circuits
+(1-bit Adder). There shouldn't be any problem verifying these
+circuits, and I hope to report this proof soon.
+
+After this, I will try the recursive ones, where I will address again
+the wave-rule parsing and rippling problems.
+
+Cheers
+
+Francisco
+
+From francisc Thu Apr 14 00:13:11 1994
+Date: Thu, 14 Apr 94 00:13:11
+From: Francisco Cantu Ortiz <francisc>
+Subject: type of a lambda abstraction
+To: smaill
+Cc: francisc
+
+Alan:
+
+I gave the definitions and equations for all and some.
+
+Now, I am trying to prove that:
+for all x [for all y ~(x->y) = ~(exists y (x->y))]
+
+In Oyster syntax this is:
+
+[]==>x:{bool}=>(all(lambda(y,not(imp(x,y))))=not(some(lambda(y,imp(x,y))))
+in {bool}).
+
+the proof planning proceeds by using dplan. After base_case,
+bool_cases and base_case again, it fails in calculating the type of a
+lambda abstraction, that is, it can not deal with:
+
+(lambda(y,not y)of{true}and lambda(y,not y)of{false})= (not lambda(y,y)of\
+{true}or lambda(y,y)of{false})in{bool}
+
+procedure find_type/3 works for definitions that have associated a
+synth theorem, but here we have an anonymous function (a lambda
+abstraction).
+Should find_type/3 be extended?, or may be I am missing something
+else. The method bool_cases doesn't deal with this situation, anyway.
+
+The equivalence above is true for any predicate p of type bool=>bool,
+but here I am giving an instance of p, that is imp(x,y), which has
+type bool=>bool=>bool. There seems to be a conflict with types, isn't it?
+
+Francisco
+
+From francisc Thu Apr 14 02:15:26 1994
+Date: Thu, 14 Apr 94 02:15:26
+From: Francisco Cantu Ortiz <francisc>
+Subject: type_finding
+To: smaill
+Cc: francisc
+
+Alan:
+
+The question is:
+if x is of type bool and p is of type bool=>bool then how does
+procedure find_type/3 detrmines that the type of lambda(x,p of x) must
+be bool.
+
+I added the following clauses to find_type/3, but it is not working yet:
+
+find_type(Hyps,lambda(X,F),({bool}=>{bool})):-find_type(Hyps,X,{bool})
+,find_type(Hyps,F,{bool}).
+find_type(Hyps,lambda(X,F) of X,({bool}=>{bool})):-find_type(Hyps,X,
+{bool}),fin d_type(Hyps,F,{bool}). 
+
+Francisco
+
+From francisc Sat Oct  8 22:18:22 1994
+Date: Sat,  8 Oct 94 22:18:22
+From: Francisco Cantu Ortiz <francisc>
+Subject: n-bit adder
+To: tw
+Cc: toby
+
+Hi Toby:
+
+I managed to verify the carry n-bit adder using the little endian
+representation. Summands can be of different length. On backtracking I
+get more that 10 different proof plans.
+
+I'll report this proof in a note.
+
+Have a good trip back to Italy.
+
+Cheers
+
+Francisco
+
+
+

@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>w:{word}=>nBitW(n)of w={false}in{bool}=>intFromWord(n,w)=intFromNat(numVal(n)of w)in int,_,_,_).

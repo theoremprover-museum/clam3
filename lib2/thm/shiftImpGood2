@@ -1,0 +1,1 @@
+problem([]==>n:pnat=>s0:{bool}=>s1:{bool}=>si:{bool}=>x:{word}=>shiftImpGood(s(n),s0,s1,si,x)=muxImp(s0,s1,hd(x),si,hd(tl(x)),{false})::shiftImpGood(n,s0,s1,hd(x),tl(x))in{word},_,_,_).

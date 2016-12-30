@@ -1,0 +1,1 @@
+problem([]==>n:int=>a:{vector}=>b:{vector}=>s:{vector}=>ci:{bool}=>co:{bool}=>adder(0,a,b,s,ci,co)=iff(ci,co) in {bool},_,_,_).

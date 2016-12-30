@@ -1,0 +1,2 @@
+problem([]==>a:int=>h:tree(int)=>t:list(tree(int))=>brsearch(node(a, nil),
+h::t)=a::brsearch(h, t) in int list,_,_,_).

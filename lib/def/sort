@@ -1,0 +1,1 @@
+sort(l)<==>list_ind(l,nil,[v0,v1,v2,insert(v0,v2)]).

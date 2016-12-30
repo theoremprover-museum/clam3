@@ -1,0 +1,2 @@
+problem([]==>x:(pnat => pnat) => y: pnat => z:pnat list => 
+map(x,y::z) = ap(x,y)::map(x,z) in pnat list,_,_,_).

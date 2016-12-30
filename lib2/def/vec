@@ -1,0 +1,1 @@
+vec(n)<==>pnat_eq(n,0,{true},pnat_eq(n,s(0),{false},pnat_eq(n,s(s(0)),{true},{false}))).

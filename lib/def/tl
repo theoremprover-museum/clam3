@@ -1,0 +1,1 @@
+tl(l)<==>list_ind(l,nil,[~,t,~,t]).

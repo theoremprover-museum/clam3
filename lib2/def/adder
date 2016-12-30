@@ -1,0 +1,2 @@
+adder(n,v1,v2,v3,b1,b2)<==>term_of(adderdefp) of n of v1 of v2 of
+v3 of b1 of b2.

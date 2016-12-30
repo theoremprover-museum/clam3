@@ -1,0 +1,23 @@
+problem([]==>n:pnat=>m:pnat=>(times(n,m)=0 in pnat=>void)=>m=0 in pnat=>void,
+autotactic(idtac),_132,
+[problem([]==>n:pnat=>m:pnat=>(times(n,m)=0 in pnat=>void)=>m=0 in pnat=>void,
+ dequantify,lambda(n,lambda(m,_229)),
+ [problem([n:pnat,m:pnat]==>(times(n,m)=0 in pnat=>void)=>m=0 in pnat=>void,
+  intro then wfftacs,lambda(v0,_282),
+  [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void]==>m=0 in pnat=>void,
+   intro then wfftacs,lambda(v1,_337),
+   [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:m=0 in pnat]==>void,
+    elim(v0),su(_392,[v0 of _399],[v2]),
+    [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:m=0 in pnat]==>times(n,m)=0 in pnat,
+     fertilize_left([2],v1),_410,
+     [problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:m=0 in pnat]==>times(n,0)=0 in pnat,_,_,_) ext _410
+     ]) ext _399,
+     problem([n:pnat,m:pnat,v0:times(n,m)=0 in pnat=>void,v1:m=0 in pnat,v2:void]==>void,
+     tautology(intro),v2,
+     [
+     ]) ext _392
+    ]) ext _337
+   ]) ext _282
+  ]) ext _229
+ ]) ext _132
+]).

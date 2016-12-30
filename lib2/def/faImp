@@ -1,0 +1,1 @@
+faImp(a,b,ci,sm,co)<==>some(lambda(x1,some(lambda(x2,some(lambda(x3,xorG(x1,ci,sm)and xorG(a,b,x1)and orG(x2,x3,co)and andG(x1,ci,x2)and andG(a,b,x3))))))).

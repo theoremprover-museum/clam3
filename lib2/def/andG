@@ -1,0 +1,1 @@
+andG(x,y,z)<==>iff(z,x and y).

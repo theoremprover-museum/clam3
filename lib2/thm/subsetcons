@@ -1,0 +1,56 @@
+problem([]==>x:int list=>y:int list=>n:int=>subset(x,y)=>subset(x,n::y),
+induction(v0::v1,x:int list),lambda(x,list_ind(x,_195,[v0,v1,v2,_203])),
+[problem([x:int list]==>y:int list=>n:int=>subset(nil,y)=>subset(nil,n::y),
+ sym_eval([base([2],subset1),base([1],subset1)]),lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of lambda(v0,lambda(v1,su(su(lambda(v2,su(su(v4,[v3 of v1],[v4]),[v2 of v0],[v3]))of _325,[subset1 of v0],[v2]),[term_of(subset1)],[subset1]))),[subset1 of (v1::v0)],[v2]),[term_of(subset1)],[subset1]))),
+ [problem([x:int list]==>y:int list=>n:int=>{true}=>{true},
+  tautology(dequantify_once then dequantify_once then intro then[hyp(v0),wfftacs]),lambda(y,lambda(n,lambda(v0,v0))),
+  [
+  ]) ext _325
+ ]) ext _195,
+ problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y)]==>y:int list=>n:int=>subset(v0::v1,y)=>subset(v0::v1,n::y),
+ casesplit([member(v0,n::y)=>void,member(v0,n::y)]),lambda(v3,lambda(v4,lambda(v5,su(su(v7,[v6 of v3],[v7]),[v5 of v4],[v6]))of lambda(n,lambda(y,lambda(v4,decide(v4,[v5,lambda(v3,_622)of v5],[v6,lambda(v3,_632)of v6]))of su(su(su(v5,[v4 of (n::y)],[v5]),[v3 of v0],[v4]),[term_of(decmember)],[v3]))))),
+ [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void]==>subset(v0::v1,y)=>subset(v0::v1,n::y),
+  wave([2],[subset2,left]),su(su(su(su(su(_801,[v6 of v3],[v4]),[v5 of (n::y)],[v6]),[v4 of v1],[v5]),[subset2 of v0],[v4]),[term_of(subset2)],[subset2]),
+  [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void]==>subset(v0::v1,y)=>void,
+   casesplit([member(v0,y)=>void,member(v0,y)]),lambda(v5,decide(v5,[v6,lambda(v4,_973)of v6],[v7,lambda(v4,_983)of v7]))of su(su(su(v6,[v5 of y],[v6]),[v4 of v0],[v5]),[term_of(decmember)],[v4]),
+   [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void,v4:member(v0,y)=>void]==>subset(v0::v1,y)=>void,
+    wave([1],[subset2,left]),su(su(su(su(su(_1151,[v7 of v4],[v5]),[v6 of y],[v7]),[v5 of v1],[v6]),[subset2 of v0],[v5]),[term_of(subset2)],[subset2]),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void,v4:member(v0,y)=>void]==>void=>void,
+     tautology(intro then[hyp(v5),wfftacs]),lambda(v5,v5),
+     [
+     ]) ext _1151
+    ]) ext _973,
+    problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void,v4:member(v0,y)]==>subset(v0::v1,y)=>void,
+    weak_fertilize(right,[weak_fertilize(right,=>,[],v3)]),lambda(v8,lambda(v10,lambda(v9,su(su(su(su(su(lambda(v5,su(v11,[v3 of su(v11,[v10 of v5],[v11])],[v11])),[v5 of void],[v6]),[v9 of member(v0,n::y)],[v5]),[v6 of void],[v7]),[v5 of member(v0,n::y)],[v6]),[v8 of subset(v0::v1,y)],[v5]))of lambda(v5,lambda(m,lambda(v6,v6))))of _1429)of lambda(v5,lambda(v6,lambda(v7,lambda(v8,lambda(v9,lambda(v10,su(su(v12,[v9 of v11],[v12]),[v8 of v10],[v11]))))))),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void,v4:member(v0,y)]==>subset(v0::v1,y)=>member(v0,n::y),
+     sym_eval([step([2],member2),step([1],subset3)]),su(su(su(su(su(su(su(su(su(_1747,[v7 of v4],[v5]),[v6 of y],[v7]),[v5 of v1],[v6]),[subset3 of v0],[v5]),[term_of(subset3)],[subset3]),[v6 of y],[v7]),[v5 of v0],[v6]),[member2 of n],[v5]),[term_of(member2)],[member2]),
+     [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)=>void,v4:member(v0,y)]==>subset(v1,y)=>v0=n in int\member(v0,y),
+      tautology(intro then[intro(right)then[hyp(v4),wfftacs],wfftacs]),lambda(v5,inr(v4)),
+      [
+      ]) ext _1747
+     ]) ext _1429
+    ]) ext _983
+   ]) ext _801
+  ]) ext _622,
+  problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)]==>subset(v0::v1,y)=>subset(v0::v1,n::y),
+  wave([2],[subset3,left]),su(su(su(su(su(_2081,[v6 of v3],[v4]),[v5 of (n::y)],[v6]),[v4 of v1],[v5]),[subset3 of v0],[v4]),[term_of(subset3)],[subset3]),
+  [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y)]==>subset(v0::v1,y)=>subset(v1,n::y),
+   casesplit([member(v0,y)=>void,member(v0,y)]),lambda(v5,decide(v5,[v6,lambda(v4,_2256)of v6],[v7,lambda(v4,_2266)of v7]))of su(su(su(v6,[v5 of y],[v6]),[v4 of v0],[v5]),[term_of(decmember)],[v4]),
+   [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y),v4:member(v0,y)=>void]==>subset(v0::v1,y)=>subset(v1,n::y),
+    wave([1],[subset2,left]),su(su(su(su(su(_2437,[v7 of v4],[v5]),[v6 of y],[v7]),[v5 of v1],[v6]),[subset2 of v0],[v5]),[term_of(subset2)],[subset2]),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y),v4:member(v0,y)=>void]==>void=>subset(v1,n::y),
+     tautology(intro then[elim(v5),wfftacs]),lambda(v5,any(v5)),
+     [
+     ]) ext _2437
+    ]) ext _2256,
+    problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y),v4:member(v0,y)]==>subset(v0::v1,y)=>subset(v1,n::y),
+    wave([1],[subset3,left]),su(su(su(su(su(_2731,[v7 of v4],[v5]),[v6 of y],[v7]),[v5 of v1],[v6]),[subset3 of v0],[v5]),[term_of(subset3)],[subset3]),
+    [problem([x:int list,v0:int,v1:int list,v2:y:int list=>n:int=>subset(v1,y)=>subset(v1,n::y),n:int,y:int list,v3:member(v0,n::y),v4:member(v0,y)]==>subset(v1,y)=>subset(v1,n::y),
+     strong_fertilize(v2),su(su(v6,[v5 of n],[v6]),[v2 of y],[v5]),
+     [
+     ]) ext _2731
+    ]) ext _2266
+   ]) ext _2081
+  ]) ext _632
+ ]) ext _203
+]).

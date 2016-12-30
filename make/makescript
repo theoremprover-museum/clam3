@@ -1,0 +1,17 @@
+#! /bin/bash
+
+# make script to run clam;
+# assumes script is not moved (but symbolic link to script will work)
+
+HERE=$(pwd)
+SICSTUS=sicstus
+SAVEBASE=clam.sic
+SAVE=${HERE}/${SAVEBASE}
+
+rm -f clam
+echo "#! /bin/sh" > clam
+echo ${SICSTUS} -r ${SAVE} >> clam
+chmod a+x clam
+
+
+

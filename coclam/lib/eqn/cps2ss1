@@ -1,0 +1,1 @@
+problem([]==>cps2ss(done)=nilST in st(ack, req),_,_,_).

@@ -1,0 +1,2 @@
+problem([]==>l:pnat list=>a:pnat list =>b:pnat list => 
+          app(app(a,evenel(l)),app(b,oddel(l))) = partition(l,a,b) in pnat list,_,_,_). 

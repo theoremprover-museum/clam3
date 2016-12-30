@@ -1,0 +1,1 @@
+une(n,x,y)<==>p_ind(n,nil,[~,r,app(x,y)]).

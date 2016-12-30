@@ -1,0 +1,6 @@
+problem([]==>s2:{bool}=>s1:{bool}=>s0:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>(length(x)=length(y) in pnat)=>aluSpec(s0,s1,s2,x,y,ci)=aluImp(s0,s1,s2,x,ci)of y in{word},_,_,_).
+
+
+%problem([]==>s2:{bool}=>s1:{bool}=>s0:{bool}=>ci:{bool}=>x:{word}=>y:{word}=>aluSpec(s0,s1,s2,x,y,ci)=aluImp(s0,s1,s2,x,ci)of y in{word},_,_,_).
+
+

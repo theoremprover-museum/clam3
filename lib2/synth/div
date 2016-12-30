@@ -1,0 +1,35 @@
+problem([]==>pnat=>pnat=>pnat,
+intro then wfftacs,lambda(v0,_885),
+[problem([v0:pnat]==>pnat=>pnat,
+ intro then wfftacs,lambda(v1,_912),
+ [problem([v0:pnat,v1:pnat]==>pnat,
+  elim(v0),p_ind(v0,_940,[v2,v3,_946]),
+  [problem([v0:pnat,v1:pnat]==>pnat,
+   intro(0),0,
+   [
+   ]) ext _940,
+   problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>pnat,
+   decide(s(v2)=times(v1,s(v3))in pnat),pnat_eq(s(v2),times(v1,s(v3)),su(_1034,[axiom],[v4]),su(_1042,[lambda(~,axiom)],[v4])),
+   [problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat,v4:s(v2)=times(v1,s(v3))in pnat]==>pnat,
+    intro(explicit(s(v3))),s(v3),
+    [problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat,v4:s(v2)=times(v1,s(v3))in pnat]==>s(v3)in pnat,
+     repeat wfftac,axiom,
+     [
+     ])
+    ]) ext _1034,
+    problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat,v4:s(v2)=times(v1,s(v3))in pnat=>void]==>pnat,
+    hyp(v3),v3,
+    [
+    ]) ext _1042,
+    problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>s(v2)in pnat,
+    repeat wfftac,axiom,
+    [
+    ]),
+    problem([v0:pnat,v1:pnat,v2:pnat,v3:pnat]==>times(v1,s(v3))in pnat,
+    repeat wfftac,axiom,
+    [
+    ])
+   ]) ext _946
+  ]) ext _912
+ ]) ext _885
+]).

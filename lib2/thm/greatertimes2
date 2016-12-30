@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>greater(y,s(0))=>greater(times(x,y),x),_,_,_).

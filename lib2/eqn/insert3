@@ -1,0 +1,1 @@
+problem([]==>n:int=>h:int=>t:(int list)=>(n<h=>void)=>insert(n,h::t)=h::insert(n,t)in (int list),_,_,_).

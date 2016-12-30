@@ -1,0 +1,1 @@
+insert(n,l)<==>list_ind(l,n::nil,[v0,v1,v2,less(n,v0,n::v0::v1,v0::v2)]).

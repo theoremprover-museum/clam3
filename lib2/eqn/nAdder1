@@ -1,0 +1,6 @@
+problem([]==>n:pnat=>a:{word}=>b:{word}=>ci:{bool}=>nAdder(n,a,b,ci)=(boolVal(s(n))of plus(plus(val(n,a),val(n,b)),bitval(ci))&
+boolVal(s(n))of plus(plus(val(n,a),val(n,b)),bitval(ci))of s(n))
+in ({word}#{bool})
+,_,_,_).
+
+

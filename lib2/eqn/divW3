@@ -1,0 +1,1 @@
+problem([]==>y:{word}=>divW({true}::nil,y)=nil in{word},_,_,_).

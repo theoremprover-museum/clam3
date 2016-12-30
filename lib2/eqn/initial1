@@ -1,0 +1,3 @@
+problem([]==>value:{word}=>initial({true},value)=zeroes(length(value))in{word},_,_,_).
+
+% problem([]==>reset:flip=>initVal:reg=>initial(reset,initVal)=lambda(t,zeroes(length(initVal of t)))in{word},_,_,_).

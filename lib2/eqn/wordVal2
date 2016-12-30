@@ -1,0 +1,4 @@
+
+problem([]==>n:pnat=>m:pnat=>wordVal(s(n)) of m = (boolV(m)::wordVal(n)of half(m)) in{word},_,_,_).
+
+%problem([]==>n:pnat=>v:pnat=>wordVal(s(n)) of v = (boolV(v)::wordVal(n)of half(v)) in{word},_,_,_).

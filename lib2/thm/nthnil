@@ -1,0 +1,7 @@
+problem([]==>n:pnat=>nth(n,nil)=nil in int list,
+base([1,1],nth2),su(lambda(v0,lambda(v1,su(v2,[v1 of v0],[v2]))of _305),[term_of(nth2)],[nth2]),
+[problem([]==>n:pnat=>nil=nil in int list,
+ identity,lambda(n,axiom),
+ [
+ ]) ext _305
+]).

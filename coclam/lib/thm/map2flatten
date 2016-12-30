@@ -1,0 +1,1 @@
+problem([]==>f:(int=>int)=>l:(int list) list=>flatten(map2(l, f)) = mapcar(flatten(l), f)in int list,_,_,_).

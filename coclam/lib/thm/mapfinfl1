@@ -1,0 +1,1 @@
+problem([]==>a:int=>h:(int=>int)=>t:(int=>int)=>mapcar(iterates(t, a), h)=infl1(a, h, t)in int list,_,_,_).

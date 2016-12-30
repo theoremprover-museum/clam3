@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>y:pnat=>geq(s(x),s(y))=geq(x,y)in u(1),_,_,_).

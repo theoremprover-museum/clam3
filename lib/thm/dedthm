@@ -1,0 +1,4 @@
+problem([]==>p:u(1)=>q:u(1)=>r:u(1)=>(p=>q=>r)=>(p#q)=>r,
+tautology(dequantify_once then dequantify_once then dequantify_once then intro then[intro then[elim(v0)then[elim(v1)then hyp(v2),elim(v2)then[elim(v1)then hyp(v4),hyp(v3)]],wfftacs],wfftacs]),lambda(p,lambda(q,lambda(r,lambda(v0,lambda(v1,su(su(v3,[v2 of spread(v1,[v3,v4,v4])],[v3]),[v0 of spread(v1,[v2,v3,v2])],[v2])))))),
+[
+]).

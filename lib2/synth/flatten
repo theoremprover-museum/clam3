@@ -1,0 +1,37 @@
+problem([]==>x:int nestedlist=>int list,
+intro then wfftacs,lambda(x,_417),
+[problem([x:int nestedlist]==>int list,
+ compute(hyp(x),[[unfold]]),_426,
+ [problem([x:rec(z,(int\z)list)]==>int list,
+  elim(x),rec_ind(x,[v2,v3,_486]),
+  [problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list]==>int list,
+   elim(v3),list_ind(v3,_572,[v4,v5,v6,_580]),
+   [problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list]==>int list,
+    intro(nil)then wfftacs,nil,
+    [
+    ]) ext _572,
+    problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list]==>int list,
+    elim(v4)then thin([v9,v10]),decide(v4,[v7,_789],[v8,_793]),
+    [problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list,v7:int]==>int list,
+     intro(::),_908::_909,
+     [problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list,v7:int]==>int,
+      hyp(v7),v7,
+      [
+      ]) ext _908,
+      problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list,v7:int]==>int list,
+      hyp(v6),v6,
+      [
+      ]) ext _909
+     ]) ext _789,
+     problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list,v8:v0]==>int list,
+     elim(v2,on(v8))then wfftacs,su(_1251,[v2 of v8],[v7]),
+     [problem([x:rec(z,(int\z)list),v0:u(1),v1:x:v0=>x in rec(z,(int\z)list),v2:x:v0=>int list,v3:(int\v0)list,v4:int\v0,v5:(int\v0)list,v6:int list,v8:v0,v7:int list]==>int list,
+      intro(explicit(app(v7,v6)))then wfftacs,app(v7,v6),
+      [
+      ]) ext _1251
+     ]) ext _793
+    ]) ext _580
+   ]) ext _486
+  ]) ext _426
+ ]) ext _417
+]).

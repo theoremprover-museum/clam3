@@ -1,0 +1,190 @@
+problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)])]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y))=>z:pnat=>phi of z,
+autotactic(idtac),_131,
+[problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)])]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y))=>z:pnat=>phi of z,
+ universe(3),_233,
+ [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)])]==>phi:(pnat=>u(2))=>phi of 0=>phi of s(0)=>(x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y))=>z:pnat=>phi of z,
+  repeat (try compute([[unfold]]in _438)then intro),lambda(phi,lambda(v0,lambda(v1,lambda(v2,lambda(z,_457))))),
+  [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat]==>phi of z,
+   elim(z,cv),cv_ind(z,[v5,v3,_572]),
+   [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4]==>phi of v5,
+    decide(v5=0 in pnat),pnat_eq(v5,0,su(_722,[axiom],[v4]),su(_730,[lambda(~,axiom)],[v4])),
+    [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat]==>phi of v5,
+     rewrite(v4)then repeat intro,v0,
+     [
+     ]) ext _722,
+     problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void]==>phi of v5,
+     decide(v5=s(0)in pnat),pnat_eq(v5,s(0),su(_1058,[axiom],[v6]),su(_1066,[lambda(~,axiom)],[v6])),
+     [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat]==>phi of v5,
+      rewrite(v6)then repeat intro,v1,
+      [
+      ]) ext _1058,
+      problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void]==>phi of v5,
+      seq(w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,new[v7]),lambda(v7,_1451)of _1448,
+      [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void]==>w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,
+       intro,lambda(w,_1646),
+       [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat]==>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,
+        elim(w),p_ind(w,_1842,[v7,v8,_1848]),
+        [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat]==>s(0)<*0=>v:pnat#0=plus(s(0),v)in pnat,
+         intro,lambda(v7,_2043),
+         [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:s(0)<*0]==>v:pnat#0=plus(s(0),v)in pnat,
+          seq(s(0)<*0=>void,new[v8]),lambda(v8,_2257)of _2254,
+          [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:s(0)<*0]==>s(0)<*0=>void,
+           because,atom(incomplete),
+           [
+           ]) ext _2254,
+           problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:s(0)<*0,v8:s(0)<*0=>void]==>v:pnat#0=plus(s(0),v)in pnat,
+           elim(v8),su(_2653,[v8 of _2660],[v9]),
+           [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:s(0)<*0,v8:s(0)<*0=>void]==>s(0)<*0,
+            intro,v7,
+            [
+            ]) ext _2660,
+            problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:s(0)<*0,v8:s(0)<*0=>void,v9:void]==>v:pnat#0=plus(s(0),v)in pnat,
+            elim(v9),any(v9),
+            [
+            ]) ext _2653
+           ]) ext _2257
+          ]) ext _2043,
+          problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat]==>s(0)<*0 in u(3),
+          repeat intro,axiom,
+          [
+          ])
+         ]) ext _1842,
+         problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat]==>s(0)<*s(v7)=>v:pnat#s(v7)=plus(s(0),v)in pnat,
+         intro,lambda(v9,_3479),
+         [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7)]==>v:pnat#s(v7)=plus(s(0),v)in pnat,
+          intro(v7),v7&_3716,
+          [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7)]==>v7 in pnat,
+           intro,axiom,
+           [
+           ]),
+           problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7)]==>s(v7)=plus(s(0),v7)in pnat,
+           compute(_4162=[[unfold]]in pnat),_3938,
+           [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7)]==>s(v7)=p_ind(s(0),v7,[l,r,s(r)])in pnat,
+            compute(_4409=[[simplify]]in pnat),_4176,
+            [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7)]==>s(v7)=s(v7)in pnat,
+             repeat intro,axiom,
+             [
+             ]) ext _4176
+            ]) ext _3938
+           ]) ext _3716,
+           problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7),v:pnat]==>s(v7)=plus(s(0),v)in pnat in u(3),
+           repeat intro,axiom,
+           [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat,v9:s(0)<*s(v7),v:pnat]==>plus(s(0),v)in pnat,
+            compute([[unfold]]in pnat)then repeat intro,axiom,
+            [
+            ]) ext _4879
+           ])
+          ]) ext _3479,
+          problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,w:pnat,v7:pnat,v8:s(0)<*v7=>v:pnat#v7=plus(s(0),v)in pnat]==>s(0)<*s(v7)in u(3),
+          repeat intro,axiom,
+          [
+          ])
+         ]) ext _1848
+        ]) ext _1646,
+        problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void]==>pnat in u(3),
+        repeat intro,axiom,
+        [
+        ])
+       ]) ext _1448,
+       problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat]==>phi of v5,
+       elim(v7,on(v5)),su(_5698,[v7 of v5],[v8]),
+       [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat]==>v5 in pnat,
+        intro,axiom,
+        [
+        ]),
+        problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat]==>phi of v5,
+        elim(v8),su(_6138,[v8 of _6145],[v9]),
+        [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat]==>s(0)<*v5,
+         because,atom(incomplete),
+         [
+         ]) ext _6145,
+         problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat]==>phi of v5,
+         elim(v9),spread(v9,[v,v10,_6643]),
+         [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat)]==>phi of v5,
+          subst(at(3),over(v12,phi of v12),v5=plus(s(0),v)in pnat),_6653,
+          [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat)]==>v5=plus(s(0),v)in pnat,
+           intro,axiom,
+           [
+           ]),
+           problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat)]==>phi of plus(s(0),v),
+           elim(v2,on(s(0))),su(_7598,[v2 of s(0)],[v12]),
+           [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat)]==>s(0)in pnat,
+            repeat intro,axiom,
+            [
+            ]),
+            problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y)]==>phi of plus(s(0),v),
+            elim(v12,on(v)),su(_8263,[v12 of v],[v13]),
+            [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y)]==>v in pnat,
+             intro,axiom,
+             [
+             ]),
+             problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v)]==>phi of plus(s(0),v),
+             elim(v13),su(_8979,[v13 of _8986],[v14]),
+             [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v)]==>phi of s(0),
+              intro,v1,
+              [
+              ]) ext _8986,
+              problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>phi of plus(s(0),v),
+              elim(v14),su(_9746,[v14 of _9753],[v15]),
+              [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>phi of v,
+               elim(v3,on(v)),su(_10145,[v3 of v],[v15]),
+               [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v in{v4:pnat\v4<*v5},
+                intro,axiom,
+                [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v in pnat,
+                 intro,axiom,
+                 [
+                 ]),
+                 problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v<*v5,
+                 subst(at(3),over(v15,v<*v15),v5=plus(s(0),v)in pnat),_10931,
+                 [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v5=plus(s(0),v)in pnat,
+                  intro,axiom,
+                  [
+                  ]),
+                  problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v<*plus(s(0),v),
+                  compute(v<*[[unfold]]),_11725,
+                  [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v<*p_ind(s(0),v,[l,r,s(r)]),
+                   compute(v<*[[simplify]]),_12122,
+                   [problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v)]==>v<*s(v),
+                    because,atom(incomplete),
+                    [
+                    ]) ext _12122
+                   ]) ext _11725
+                  ]) ext _10931,
+                  problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v),v15:pnat]==>v<*v15 in u(3),
+                  repeat intro,axiom,
+                  [
+                  ])
+                 ]),
+                 problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v),v15:pnat]==>v15<*v5 in u(3),
+                 repeat intro,axiom,
+                 [
+                 ])
+                ]),
+                problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v),v15:phi of v]==>phi of v,
+                intro,v15,
+                [
+                ]) ext _10145
+               ]) ext _9753,
+               problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:y:pnat=>phi of s(0)=>phi of y=>phi of plus(s(0),y),v13:phi of s(0)=>phi of v=>phi of plus(s(0),v),v14:phi of v=>phi of plus(s(0),v),v15:phi of plus(s(0),v)]==>phi of plus(s(0),v),
+               intro,v15,
+               [
+               ]) ext _9746
+              ]) ext _8979
+             ]) ext _8263
+            ]) ext _7598
+           ]) ext _6653,
+           problem([plus(x,y)<==>p_ind(x,y,[l,r,s(r)]),phi:pnat=>u(2),v0:phi of 0,v1:phi of s(0),v2:x:pnat=>y:pnat=>phi of x=>phi of y=>phi of plus(x,y),z:pnat,v5:pnat,v3:v4:{v4:pnat\v4<*v5}=>phi of v4,v4:v5=0 in pnat=>void,v6:v5=s(0)in pnat=>void,v7:w:pnat=>s(0)<*w=>v:pnat#w=plus(s(0),v)in pnat,v8:s(0)<*v5=>v:pnat#v5=plus(s(0),v)in pnat,v9:v:pnat#v5=plus(s(0),v)in pnat,v:pnat,v10:v5=plus(s(0),v)in pnat,v11:v9=v&v10 in (v:pnat#v5=plus(s(0),v)in pnat),v12:pnat]==>phi of v12 in u(3),
+           repeat intro,axiom,
+           [
+           ])
+          ]) ext _6643
+         ]) ext _6138
+        ]) ext _5698
+       ]) ext _1451
+      ]) ext _1066
+     ]) ext _730
+    ]) ext _572
+   ]) ext _457
+  ]) ext _233
+ ]) ext _131
+]).

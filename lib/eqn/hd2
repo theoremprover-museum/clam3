@@ -1,0 +1,1 @@
+problem([]==>a:int=>l:int list=>hd(a::l)=a in int list,_,_,_).

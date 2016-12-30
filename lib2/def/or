@@ -1,0 +1,2 @@
+or(x,y)<==>decide(x,[l,{true}],[r,y]).
+

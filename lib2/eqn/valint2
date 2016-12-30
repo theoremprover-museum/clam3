@@ -1,0 +1,103 @@
+problem([]==>n:int=>v:{vector}=>0<n=>val(n+1,v)=exp(2,n)*v of n+val(n,v)in int,
+repeat intro then simplify then repeat intro,lambda(n,lambda(v,lambda(v0,_9808))),
+[problem([n:int,v:{vector},v0:0<n]==>ind(n+1,[~,~,0],0,[x,r,exp(2,x-1)*v of (x-1)+r])=ind(n,[~,~,0],1,[~,e,2*e])*v of n+ind(n,[~,~,0],0,[x,r,exp(2,x-1)*v of (x-1)+r])in int,
+ compute(ind(n+1,[~,~,0],0,[x,r,[[unfold]]*v of (x-1)+r])=ind(n,[~,~,0],1,[~,e,2*e])*v of n+ind(n,[~,~,0],0,[x,r,[[unfold]]*v of (x-1)+r])in int),_9817,
+ [problem([n:int,v:{vector},v0:0<n]==>ind(n+1,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],1,[~,e,2*e])*v of n+ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+  reduce(left,up),axiom,
+  [problem([n:int,v:{vector},v0:0<n]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])*v of (n+1-1)+ind(n+1-1,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],1,[~,e,2*e])*v of n+ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+   repeat intro,axiom,
+   [problem([n:int,v:{vector},v0:0<n]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int,
+    seq(n:int=>n+1-1=n in int,new[v1]),lambda(v1,_10567)of _10564,
+    [problem([n:int,v:{vector},v0:0<n]==>n:int=>n+1-1=n in int,
+     repeat intro then arith then repeat intro,lambda(v1,axiom),
+     [
+     ]) ext _10564,
+     problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int,
+     subst(over(q,ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int),n+1-1=n in int)then repeat intro,_10640,
+     [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>n+1-1=n in int,
+      elim(v1,on(n))then repeat intro,su(v2,[v1 of n],[v2]),
+      [
+      ]) ext _10819,
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int,
+      seq(n:int=>n+1-1=n in int,new[v2]),lambda(v2,_11042)of _11039,
+      [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>n:int=>n+1-1=n in int,
+       repeat intro then arith then repeat intro,v1,
+       [
+       ]) ext _11039,
+       problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,v2:n:int=>n+1-1=n in int]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int,
+       subst(over(q,ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int),n+1-1=n in int)then repeat intro,_11135,
+       [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,v2:n:int=>n+1-1=n in int]==>n+1-1=n in int,
+        repeat intro then arith then repeat intro,axiom,
+        [
+        ]) ext _11337,
+        problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,v2:n:int=>n+1-1=n in int]==>ind(n+1-1,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int,
+        subst(over(q,ind(q,[~,~,0],1,[~,e,2*e])=ind(n,[~,~,0],1,[~,e,2*e])in int),n+1-1=n in int)then repeat intro,axiom,
+        [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,v2:n:int=>n+1-1=n in int]==>n+1-1=n in int,
+         repeat intro then arith then repeat intro,axiom,
+         [
+         ]) ext _11638
+        ]) ext _11135
+       ]) ext _11042
+      ]) ext _10640
+     ]) ext _10567
+    ]) ext _10456,
+    problem([n:int,v:{vector},v0:0<n]==>v of (n+1-1)=v of n in int,
+    seq(n:int=>n+1-1=n in int,new[v1]),lambda(v1,_11816)of _11813,
+    [problem([n:int,v:{vector},v0:0<n]==>n:int=>n+1-1=n in int,
+     repeat intro then arith then repeat intro,lambda(v1,axiom),
+     [
+     ]) ext _11813,
+     problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>v of (n+1-1)=v of n in int,
+     subst(over(q,v of q=v of n in int),n+1-1=n in int)then repeat intro,axiom,
+     [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>n+1-1=n in int,
+      repeat intro then arith then repeat intro,axiom,
+      [
+      ]) ext _11994,
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>v of n in int,
+      because,atom(incomplete),
+      [
+      ]) ext _12072,
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,q:int]==>v of q in int,
+      because,atom(incomplete),
+      [
+      ]) ext _12136,
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,q:int]==>v of n in int,
+      because,atom(incomplete),
+      [
+      ]) ext _12205
+     ]) ext _11816
+    ]) ext _11739,
+    problem([n:int,v:{vector},v0:0<n]==>ind(n+1-1,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+    seq(n:int=>n+1-1=n in int,new[v1]),lambda(v1,_12449)of _12446,
+    [problem([n:int,v:{vector},v0:0<n]==>n:int=>n+1-1=n in int,
+     repeat intro then arith then repeat intro,lambda(v1,axiom),
+     [
+     ]) ext _12446,
+     problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>ind(n+1-1,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+     subst(over(q,ind(q,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int),n+1-1=n in int),_12522,
+     [problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>n+1-1=n in int,
+      repeat intro then arith then repeat intro,axiom,
+      [
+      ]),
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int]==>ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+      repeat intro then wfftacs,axiom,
+      [
+      ]) ext _12522,
+      problem([n:int,v:{vector},v0:0<n,v1:n:int=>n+1-1=n in int,q:int]==>ind(q,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])=ind(n,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int in u(1),
+      repeat intro then wfftacs,axiom,
+      [
+      ])
+     ]) ext _12449
+    ]) ext _12274
+   ]),
+   problem([n:int,v:{vector},v0:0<n]==>ind(n+1,[~,~,0],0,[x,r,ind(x-1,[~,~,0],1,[~,e,2*e])*v of (x-1)+r])in int,
+   repeat intro then wfftacs,axiom,
+   [
+   ]),
+   problem([n:int,v:{vector},v0:0<n]==>0<n+1,
+   arith then repeat intro,axiom,
+   [
+   ])
+  ]) ext _9817
+ ]) ext _9808
+]).

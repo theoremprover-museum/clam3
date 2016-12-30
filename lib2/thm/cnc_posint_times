@@ -1,0 +1,10 @@
+problem([]==>u:{posint}=>v:{posint}=>w:{posint}=>v=w in{posint}=>times(u,v)=times(u,w)in{posint},
+normalize([normal(imply_intro),normal(univ_intro),normal(univ_intro),normal(univ_intro)]),lambda(u,lambda(v,lambda(w,lambda(v0,_7995)))),
+[problem([u:{posint},v:{posint},w:{posint},v0:v=w in{posint}]==>times(u,v)=times(u,w)in{posint},
+ sym_eval([equal(v0,left)]),_8004,
+ [problem([u:{posint},v:{posint},w:{posint},v0:v=w in{posint}]==>times(u,v)=times(u,v)in{posint},
+  tautology(identity),axiom,
+  [
+  ]) ext _8004
+ ]) ext _7995
+]).

@@ -1,0 +1,7 @@
+problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>z:{word}=>aluAux(s0,s1,s2,a,b,z)=alu1Carry(s0,s1,s2,a,b,hd(z))::alu1Out(s0,s1,s2,a,b,hd(z))::tl(z)in{word},_,_,_).
+
+
+%problem([]==>s0:{bool}=>s1:{bool}=>s2:{bool}=>a:{bool}=>b:{bool}=>h:{bool}=>z:{word}=>aluAux(s0,s1,s2,a,b,h::z)=alu1Carry(s0,s1,s2,a,b,h)::alu1Out(s0,s1,s2,a,b,h)::z in{word},_,_,_).
+
+
+

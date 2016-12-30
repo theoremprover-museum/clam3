@@ -1,0 +1,1 @@
+problem([]==>x:pnat=>l:pnat list=>member(x,l)=>member(x,sort(l)),_,_,_).

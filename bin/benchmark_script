@@ -1,0 +1,1 @@
+clam.v1.5.qui < '../proof-planning/run_corpus.pl' > '../info-for-users/benchmarking/results
